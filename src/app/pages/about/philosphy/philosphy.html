@@ -1,0 +1,131 @@
+<!-- Philosophy Section -->
+<section class="py-20 bg-gradient-to-br from-white via-slate-50 to-blue-50 relative overflow-hidden">
+  
+  <!-- Background Elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute top-16 left-16 w-72 h-72 bg-blue-200/20 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-16 right-16 w-96 h-96 bg-purple-200/20 rounded-full blur-3xl animate-float-slow-reverse"></div>
+    <div class="absolute top-1/2 left-1/4 w-48 h-48 bg-orange-200/15 rounded-full blur-2xl animate-pulse-slow"></div>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Header -->
+    <div class="text-center mb-20 animate-fade-in-up">
+      <div class="inline-flex items-center space-x-3 bg-gradient-to-r from-blue-100 to-purple-100 text-blue-800 px-8 py-4 rounded-full text-sm font-semibold mb-8 shadow-lg backdrop-blur-md border border-blue-200/50">
+        <i class="pi pi-compass text-blue-600 mr-2"></i>
+        <span>Our Philosophy</span>
+      </div>
+
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-600">
+          Pencil Peel IMT Philosophy
+        </span>
+      </h2>
+      
+      <p class="text-xl md:text-2xl text-gray-600 max-w-5xl mx-auto leading-relaxed">
+        At <span class="font-semibold text-orange-600">Pencil Peel IMT</span>, we believe that building a successful advertising and marketing company 
+        requires a client-centric approach, innovation, and a focus on quality and sustainability. Our philosophy is built around:
+      </p>
+    </div>
+
+    <!-- Core Philosophy Pillars -->
+    <div class="max-w-7xl mx-auto mb-20 grid lg:grid-cols-2 gap-8">
+      <div *ngFor="let pillar of philosophyPillars; let i = index" [style]="{'animation-delay': (400 + i * 200) + 'ms'}" class="group animate-fade-in-up">
+        <div class="relative bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-700 border border-gray-100/50 hover:border-blue-200/50 overflow-hidden h-full group-hover:-translate-y-4">
+          
+          <!-- Gradient Overlay -->
+          <div class="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+               [ngStyle]="{'background': 'linear-gradient(135deg, ' + pillar.gradientFrom + '10, ' + pillar.gradientTo + '10)'}"></div>
+          
+          <!-- Icon & Title -->
+          <div class="relative z-10 mb-8 text-center">
+            <div class="w-20 h-20 rounded-2xl flex items-center justify-center group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-xl mb-6 mx-auto"
+                 [ngStyle]="{'background': 'linear-gradient(135deg, ' + pillar.gradientFrom + ', ' + pillar.gradientTo + ')'}">
+              <i [class]="pillar.icon" class="text-white text-3xl relative z-10"></i>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-6 group-hover:text-blue-600 transition-colors duration-300">
+              {{ pillar.title }}
+            </h3>
+          </div>
+
+          <!-- Content Points -->
+          <div class="relative z-10 space-y-6">
+            <div *ngFor="let point of pillar.points" class="flex items-start space-x-4">
+              <div class="w-3 h-3 rounded-full mt-2 flex-shrink-0"
+                   [ngStyle]="{'background': pillar.gradientFrom}"></div>
+              <div>
+                <h4 class="font-bold text-gray-900 mb-2 text-lg">{{ point.title }}</h4>
+                <p class="text-gray-600 leading-relaxed">{{ point.description }}</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Progress Bar -->
+          <div class="mt-8 relative z-10">
+            <div class="w-full bg-gray-200 rounded-full h-1 overflow-hidden">
+              <div class="h-full rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000 delay-300"
+                   [ngStyle]="{'background': 'linear-gradient(135deg, ' + pillar.gradientFrom + ', ' + pillar.gradientTo + ')'}"></div>
+            </div>
+          </div>
+
+          <!-- Decorative Corner -->
+          <div class="absolute top-4 right-4 w-1 h-16 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+               [ngStyle]="{'background': 'linear-gradient(to bottom, ' + pillar.gradientFrom + ', ' + pillar.gradientTo + ')'}"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Commitment Section -->
+    <div class="max-w-5xl mx-auto animate-fade-in-up animation-delay-1500">
+      <div class="relative bg-white/90 backdrop-blur-md rounded-3xl p-8 lg:p-12 shadow-2xl border border-gray-100/50 overflow-hidden group hover:shadow-3xl transition-all duration-700">
+        
+        <!-- Background Gradient -->
+        <div class="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute top-6 right-6 w-20 h-20 border-2 border-orange-300/30 rounded-full"></div>
+        <div class="absolute bottom-6 left-6 w-16 h-16 border border-blue-300/30 rounded-full"></div>
+        
+        <!-- Header -->
+        <div class="relative z-10 text-center mb-8">
+          <div class="w-24 h-24 bg-gradient-to-br from-orange-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-xl">
+            <i class="pi pi-heart text-white text-3xl"></i>
+          </div>
+          <h3 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-6 group-hover:text-blue-600 transition-colors duration-300">
+            Our Commitment
+          </h3>
+        </div>
+        
+        <!-- Content -->
+        <div class="relative z-10 text-center max-w-4xl mx-auto space-y-6">
+          <p class="text-xl text-gray-700 leading-relaxed mb-4">
+            At <span class="font-semibold text-orange-600">Pencil Peel IMT</span>, we're committed to delivering exceptional value to our clients 
+            through innovative, high-quality, and ethical marketing practices. We prioritize building long-term relationships, continuous learning, 
+            and sustainable growth.
+          </p>
+          
+          <p class="text-lg text-gray-600 leading-relaxed">
+            Our team is passionate about helping businesses succeed in the competitive advertising and marketing industry.
+          </p>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div class="mt-10 relative z-10">
+          <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+            <div class="h-full bg-gradient-to-r from-orange-500 to-blue-600 rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000 delay-300"></div>
+          </div>
+        </div>
+
+        <!-- Commitment Values -->
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+          <div *ngFor="let value of commitmentValues" class="text-center p-4 bg-white/50 rounded-2xl backdrop-blur-md border border-gray-100/50 hover:border-blue-200/50 transition-all duration-300">
+            <i [class]="value.icon" class="text-2xl mb-3 block" [ngStyle]="{'color': value.color}"></i>
+            <h4 class="font-semibold text-gray-900 mb-2">{{ value.title }}</h4>
+            <p class="text-sm text-gray-600">{{ value.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

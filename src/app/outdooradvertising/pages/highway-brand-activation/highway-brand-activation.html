@@ -1,0 +1,69 @@
+<app-outdoor-hero-section [config]="highwayBrandActivationHeroConfig" />
+<app-quotes [testimonials]="testimonials"></app-quotes>
+<!-- What is Brand Activation Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="/outdoor/3dbillboard/3dbillboard3.webp" 
+         alt="City Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-orange-600">Brand Activation?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Brand activation is a marketing strategy that involves creating memorable experiences for customers to interact with a brand. We will use various tactics, such as events, experiential marketing, and promotional campaigns, to bring brands to life and create lasting impressions.
+      </p>
+    </div>
+  </div>
+</section>
+
+<app-benefitsnew [benefits]="benefitsBrandActivation.benefits" [title]="benefitsBrandActivation.title" [description]="benefitsBrandActivation.description"></app-benefitsnew>
+<div class="min-h-screen bg-gray-50 text-gray-800">
+
+  <!-- Hero Section -->
+  <section class="text-center py-20 px-6">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-6 text-orange-600">
+        Highway Brand Activation Services
+      </h1>
+      <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+        At Pencil Peel IMT, we offer a range of brand activation services that drive engagement, boost awareness, and foster customer loyalty.
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="max-w-7xl mx-auto py-16 px-6 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div *ngFor="let service of services" class="bg-white shadow-lg rounded-xl p-6 border-t-4 border-orange-500 hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300">
+      <div class="flex justify-center mb-4">
+        <i class="pi text-5xl text-orange-600" [ngClass]="service.icon"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-orange-600 mb-3 text-center">{{ service.title }}</h3>
+      <p class="text-gray-700 text-sm leading-relaxed text-center">{{ service.description }}</p>
+    </div>
+  </section>
+
+</div>
+
+<app-whycpencilpeel [features]="whyChooseBrandActivation.features" [headerContent]="whyChooseBrandActivation" />
+
+<section class="bg-orange-600 text-white py-20 px-6 text-center">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+      Unlock Your Brand’s Potential
+    </h2>
+    <p class="text-lg md:text-xl leading-relaxed mb-8">
+      Let us help you unlock your brand's potential with our expert brand activation services.  
+      Contact us today to learn more about how <span class="font-semibold">Pencil Peel IMT</span> can help your business thrive.
+    </p>
+    <a
+      href="/contact" 
+      class="inline-block bg-white text-orange-600 font-semibold px-8 py-3 rounded-lg shadow hover:bg-orange-100 transition-all"
+    >
+      Contact Us <i class="pi pi-send "></i>
+    </a>
+  </div>
+</section>

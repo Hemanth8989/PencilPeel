@@ -1,0 +1,21 @@
+.fixed-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  z-index: 999999;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.main-content {
+  margin-top: 88px; /* Match header height */
+  padding: 16px;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    margin-top: 88px; /* Adjust for smaller header on mobile */
+    padding: 8px;
+  }
+}

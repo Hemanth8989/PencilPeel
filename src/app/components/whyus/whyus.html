@@ -1,0 +1,33 @@
+<section class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <h2
+      class="text-3xl md:text-4xl font-bold text-center mb-6 bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+      {{ whyus.title }}
+    </h2>
+    <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto mb-10"></div>
+    <p class="text-lg text-center mb-12 text-gray-600 max-w-3xl mx-auto" [innerHTML]="whyus.description"></p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6" [ngClass]="gridColsClass">
+      <ng-container *ngFor="let item of whyus.List">
+        <div
+          class="relative group bg-white rounded-xl shadow-md border border-gray-100 p-6 flex flex-col items-center justify-center transition-all duration-300 hover:shadow-lg hover:-translate-y-1 h-52 overflow-hidden">
+          <div
+            class="absolute inset-0 flex flex-col items-center justify-center w-full h-full text-center transition-all duration-300">
+            <div class="flex items-center justify-center w-16 h-16 rounded-full text-white mb-3"
+              [ngClass]="[item.background, item.border]">
+              <i class="pi" [ngClass]="item.icon" class="text-2xl"></i>
+            </div>
+            <h3 class="text-lg font-semibold text-gray-800">
+              {{ item.title }}
+            </h3>
+          </div>
+          <div
+            class="absolute inset-0 flex items-center justify-center bg-white text-center px-4 py-2 opacity-0 group-hover:opacity-100 group-hover:z-10 transition-opacity duration-300 rounded-xl">
+            <p class="text-gray-700 text-sm leading-relaxed">
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</section>

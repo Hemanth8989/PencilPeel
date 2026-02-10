@@ -1,0 +1,138 @@
+<app-outdoor-hero-section [config]="interactiveDisplayHeroConfig" />
+<app-quotes [testimonials]="testimonials"></app-quotes>
+<!-- What is Interactive Display Advertising Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="/outdoor/3dbillboard/3dbillboard3.webp" alt="City Background" class="w-full h-full object-cover">
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-orange-600">Interactive Display Advertising?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Interactive display advertising refers to digital displays that allow users to interact with the content through
+        touch, gesture, or other forms of engagement. These displays can be used in various settings, including public
+        spaces, retail environments, and events.
+      </p>
+    </div>
+  </div>
+</section>
+
+<app-benefitsnew [benefits]="benefitsInteractiveDisplay.benefits" [title]="benefitsInteractiveDisplay.title"
+  [description]="benefitsInteractiveDisplay.description"></app-benefitsnew>
+
+<section class="bg-gray-50 py-20 px-6">
+
+  <!-- Section Header -->
+  <div class="max-w-4xl mx-auto text-center mb-16">
+    <h2 class="text-xl md:text-3xl font-bold text-orange-600 mb-4">
+      Process to Deliver Interactive Display Advertising Services
+    </h2>
+    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+      At Pencil Peel IMT, our team follows a structured process to deliver interactive display advertising services that
+      engage audiences and drive results.
+    </p>
+  </div>
+
+  <!-- Steps Grid -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div *ngFor="let step of steps"
+      class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-transform transform hover:-translate-y-1">
+      <div class="flex justify-center mb-4">
+        <i class="pi text-5xl text-orange-600" [ngClass]="step.icon"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-orange-600 mb-2 text-center">{{ step.title }}</h3>
+      <p class="text-gray-700 text-sm text-center">{{ step.description }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="bg-gray-50 py-20 px-6">
+
+  <!-- Section Header -->
+  <div class="max-w-4xl mx-auto text-center mb-16">
+    <h2 class="text-xl md:text-3xl font-bold text-orange-600 mb-4">
+      Technologies Used in Interactive Display Advertising
+    </h2>
+    <p class="text-lg md:text-l text-gray-700 leading-relaxed">
+      At Pencil Peel IMT, we utilize cutting-edge technologies to create innovative interactive display advertising
+      solutions.
+    </p>
+  </div>
+
+  <!-- Technologies Grid -->
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div *ngFor="let tech of technologies"
+      class="bg-white rounded-xl p-6 shadow hover:shadow-lg transition-transform transform hover:-translate-y-1">
+
+      <div class="flex justify-center mb-4 text-orange-600 text-5xl">
+        <i [ngClass]="tech.icon"></i>
+      </div>
+
+      <h3 class="text-xl font-semibold text-orange-600 mb-2 text-center">{{ tech.title }}</h3>
+      <p class="text-gray-700 text-sm text-center">{{ tech.description }}</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="bg-gray-50 py-20 px-6">
+
+  <!-- Page Header -->
+  <div class="max-w-4xl mx-auto text-center mb-16">
+    <h1 class="text-xl md:text-3xl font-bold text-orange-600 mb-4">
+      Where Can You Run Interactive Display Ads?
+    </h1>
+    <p class="text-lg md:text-xl text-gray-700 leading-relaxed">
+      Pencil Peel IMT helps you run interactive display ads across various locations and settings to reach your target audience effectively.
+    </p>
+  </div>
+
+  <!-- Locations -->
+  <div class="max-w-7xl mx-auto space-y-16">
+    <div *ngFor="let loc of adLocations" class="bg-white rounded-xl p-8 shadow-lg">
+      
+      <!-- Category Header -->
+      <div class="flex items-center gap-4 mb-8">
+        <i *ngIf="loc.icon.startsWith('pi-')" class="pi text-4xl text-orange-600" [ngClass]="loc.icon"></i>
+        <i *ngIf="loc.icon.startsWith('fa-')" [ngClass]="loc.icon + ' text-orange-600 text-4xl'"></i>
+        <h2 class="text-2xl md:text-3xl font-semibold text-orange-600">{{ loc.category }}</h2>
+      </div>
+
+      <!-- Locations Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let detail of loc.locations" class="bg-gray-50 rounded-lg p-6 shadow hover:shadow-lg transition-transform transform hover:-translate-y-1">
+          <h3 class="text-lg font-semibold text-orange-600 mb-2">{{ detail.title }}</h3>
+          <p class="text-gray-700 text-sm">{{ detail.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<app-whycpencilpeel [features]="whyChooseInteractiveDisplay.features" [headerContent]="whyChooseInteractiveDisplay" />
+
+<section class="bg-gradient-to-r from-orange-500 to-orange-600 text-white py-24 px-6 text-center rounded-2xl shadow-2xl">
+  <div class="max-w-4xl mx-auto">
+    <!-- Headline -->
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+      Unlock the Full Potential of <span class=" decoration-white/50">Interactive Display Advertising</span>
+    </h2>
+
+    <!-- Subtext -->
+    <p class="text-lg md:text-xl mb-10 text-white/90 leading-relaxed">
+      Partner with <span class="font-semibold">Pencil Peel IMT</span> to drive results, engage audiences, and create immersive campaigns that leave a lasting impression.
+    </p>
+
+    <!-- Call-to-action button -->
+    <a href="/contact"
+       class="inline-block bg-white text-orange-600 font-bold text-lg px-12 py-4 rounded-full shadow-xl hover:scale-105 hover:shadow-2xl transition-transform duration-300">
+      Get Started Today
+    </a>
+  </div>
+</section>

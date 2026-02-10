@@ -1,0 +1,189 @@
+<app-outdoor-hero-section [config]="projectionAdvertisingHeroConfig" />
+<app-quotes [testimonials]="testimonials"></app-quotes>
+
+<!-- Hero Section -->
+<section
+    class="relative bg-gradient-to-br from-purple-600 via-pink-600 to-pink-500 text-white overflow-hidden rounded-xl shadow-lg mx-auto max-w-6xl my-10">
+    <div class="absolute inset-0 opacity-20">
+        <img src="outdoor/projection/projection1.jpg" alt="Projection Advertising Background"
+            class="object-cover w-full h-full" />
+    </div>
+
+    <div class="relative z-10 p-10 md:p-16 flex flex-col md:flex-row items-center md:space-x-10">
+        <!-- Left: Text -->
+        <div class="md:w-1/2 space-y-6 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight drop-shadow-md">
+                Projection Advertising
+            </h1>
+            <p class="text-lg text-gray-100 leading-relaxed">
+                Projection advertising uses light projectors to display images, videos, or animations onto surfaces such
+                as buildings, walls, or other structures. Our team will help you understand the power of projection
+                advertising and how it can benefit your business.
+            </p>
+        </div>
+
+        <!-- Right: Image -->
+        <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+            <div class="group relative inline-block transform transition-all duration-500 ease-out hover:scale-105 hover:-rotate-2">
+                <img src="outdoor/projection/projection2.webp" alt="Projection Display"
+                    class="w-full max-w-md mx-auto drop-shadow-2xl rounded-lg transition-transform duration-500 ease-out group-hover:scale-110" />
+                <div class="absolute inset-0 rounded-lg bg-white/20 opacity-0 group-hover:opacity-20 blur-xl transition-opacity duration-500"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                   bg-gradient-to-r from-purple-400 via-pink-500 to-pink-400">
+            Benefits of Projection Advertising
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our team will highlight the benefits of projection advertising:
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div *ngFor="let benefit of benefits"
+            class="group bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="benefit.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-400 mb-2">{{ benefit.title }}</h3>
+            <p class="text-gray-600">{{ benefit.description }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Services Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                   bg-gradient-to-r from-purple-400 via-pink-500 to-pink-400">
+            Services in Projection Advertising
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our team will provide the following services in projection advertising:
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div *ngFor="let service of services"
+            class="group bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="service.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-400 mb-2">{{ service.title }}</h3>
+            <p class="text-gray-600">{{ service.description }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Industries Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                   bg-gradient-to-r from-purple-400 via-pink-500 to-pink-400">
+            Industries that Can Benefit from Projection Advertising
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            We will help various industries reach their target audience through projection advertising.
+            Some of the industries that can benefit include:
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div *ngFor="let industry of industries"
+            class="group bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="industry.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-400 mb-2">{{ industry.title }}</h3>
+            <p class="text-gray-600">{{ industry.description }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- How Pencil Peel Can Help Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                   bg-gradient-to-r from-purple-400 via-pink-500 to-pink-400">
+            How Pencil Peel IMT Can Help
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our team will help you leverage projection advertising to achieve your marketing goals. We offer:
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div *ngFor="let help of helps"
+            class="group bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="help.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-400 mb-2">{{ help.title }}</h3>
+            <p class="text-gray-600">{{ help.description }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Why Projection Advertising Works Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                   bg-gradient-to-r from-purple-400 via-pink-500 to-pink-400">
+            Why Projection Advertising Works for These Industries
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            At <span class="font-semibold text-pink-600">Pencil Peel IMT</span>, we believe projection advertising is a powerful tool for businesses. We will work with you to develop a customized projection advertising campaign that showcases your brand and drives business growth.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div *ngFor="let reason of reasons"
+            class="group bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="reason.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-400 mb-2">{{ reason.title }}</h3>
+            <p class="text-gray-600">{{ reason.description }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Why Partner Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                   bg-gradient-to-r from-purple-400 via-pink-500 to-pink-400">
+            Why Partner with Pencil Peel IMT
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            We work closely with you to develop a customized projection advertising campaign that meets your unique needs and goals. Let's get started on your projection advertising journey!
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div *ngFor="let point of keyPoints"
+            class="group bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-purple-600 to-pink-500 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="point.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-400 mb-2">{{ point.title }}</h3>
+        </div>
+    </div>
+
+    <div class="bg-purple-600 text-white rounded-2xl shadow-lg p-10 text-center max-w-4xl mx-auto">
+        <h3 class="text-3xl font-extrabold mb-4">Contact Us Today</h3>
+        <p class="text-lg mb-6">
+            If you're interested in learning more about our projection advertising services, contact us today. We'll discuss your marketing goals and develop a customized projection advertising campaign that meets your needs.
+        </p>
+        <a href="/contact"
+           class="inline-block bg-pink-500 hover:bg-pink-600 text-white font-bold py-3 px-8 rounded-full transition-colors duration-300">
+            Get in Touch
+        </a>
+    </div>
+</section>

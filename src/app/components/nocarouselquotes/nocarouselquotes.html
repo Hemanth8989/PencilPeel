@@ -1,0 +1,34 @@
+<section id="hero" class="relative pt-16 pb-20 min-h-screen flex items-center overflow-hidden">
+  <div class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-zoom-slow"
+       [style.backgroundImage]="'url(' + herocontent.image + ')'"></div>
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative w-full z-10 flex flex-col justify-center items-center px-4 sm:px-6 lg:px-8">
+    <div class="max-w-full sm:max-w-2xl lg:max-w-4xl text-center">
+      <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4 inline-block break-words text-white"
+          [innerHTML]="herocontent.title"></h1>
+      <div class="text-lg sm:text-xl text-gray-200 mb-6 max-w-full sm:max-w-2xl mx-auto leading-relaxed"
+           [innerHTML]="herocontent.description"></div>
+      <p-carousel 
+        [value]="quotes"
+        [numVisible]="1"
+        [numScroll]="1"
+        [circular]="true"
+        [autoplayInterval]="3500"
+        [showIndicators]="false"
+        styleClass="w-full sm:max-w-3xl mx-auto my-6"
+      >
+        <ng-template pTemplate="item" let-quote>
+          <blockquote class="text-base sm:text-xl md:text-3xl italic font-medium py-4 px-2 sm:px-4 rounded-xl bg-transparent  bg-gradient-to-r from-orange-500 via-yellow-400 to-indigo-500  bg-clip-text text-transparent drop-shadow-lg">
+            "{{ quote.text }}"
+          </blockquote>
+        </ng-template>
+      </p-carousel>
+      <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center items-center mt-4">
+        <p-button size="large"
+          label="Get a Free Consultation" 
+          styleClass="px-6 py-3 sm:px-8 sm:py-4 bg-yellow-400 text-black font-bold text-base sm:text-lg rounded-lg hover:bg-yellow-300 transition-transform duration-300 transform hover:scale-105 shadow-lg"
+        ></p-button>
+      </div>
+    </div>
+  </div>
+</section>

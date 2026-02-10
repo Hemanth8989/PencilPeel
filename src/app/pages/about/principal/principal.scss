@@ -1,0 +1,283 @@
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) rotate(5deg);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-40px) rotate(-5deg);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin-slow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Animation classes */
+.animate-float {
+  animation: float 10s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 12s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-spin-slow {
+  animation: spin-slow 12s linear infinite;
+}
+
+.scale-102 {
+  transform: scale(1.02);
+}
+
+.animation-delay-1000 {
+  animation-delay: 1000ms;
+}
+
+.animation-delay-1200 {
+  animation-delay: 1200ms;
+}
+
+/* Custom Timeline Styles */
+.timeline-item {
+  position: relative;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(to bottom, #9333ea, #4f46e5, #2563eb);
+    opacity: 0.3;
+    border-radius: 2px;
+  }
+}
+
+/* Enhanced hover effects */
+.group:hover {
+  .floating-elements {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+  
+  .progress-indicator {
+    width: 100%;
+  }
+}
+
+/* Tag customizations */
+::ng-deep .p-tag {
+  font-weight: 600 !important;
+  border-radius: 2rem !important;
+  padding: 1rem 2rem !important;
+  
+  .p-tag-value {
+    display: flex !important;
+    align-items: center !important;
+  }
+}
+
+/* Button customizations */
+::ng-deep .p-button {
+  &.p-button-secondary.p-button-text {
+    color: #9333ea !important;
+    padding: 0.75rem !important;
+    border-radius: 50% !important;
+    width: auto !important;
+    height: auto !important;
+    transition: all 0.3s ease !important;
+    
+    &:hover {
+      color: #7c3aed !important;
+      background: rgba(147, 51, 234, 0.1) !important;
+      transform: scale(1.1) !important;
+    }
+    
+    &:not(.p-button-icon-only) {
+      border-radius: 1rem !important;
+      padding: 0.5rem 1rem !important;
+    }
+  }
+
+  &.p-button-secondary:not(.p-button-text) {
+    background: white !important;
+    color: #9333ea !important;
+    border: 2px solid white !important;
+    border-radius: 1rem !important;
+    transition: all 0.3s ease !important;
+    
+    &:hover {
+      background: #f3f4f6 !important;
+      color: #7c3aed !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+
+  &.p-button-help.p-button-outlined {
+    border: 2px solid white !important;
+    color: white !important;
+    background: transparent !important;
+    border-radius: 1rem !important;
+    transition: all 0.3s ease !important;
+    
+    &:hover {
+      background: white !important;
+      color: #9333ea !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1) !important;
+    }
+  }
+}
+
+/* Knob customizations */
+::ng-deep .p-knob {
+  .p-knob-value {
+    font-weight: 700 !important;
+    font-size: 1.5rem !important;
+    fill: #9333ea !important;
+  }
+
+  .p-knob-text {
+    font-size: 1.25rem !important;
+    font-weight: 600 !important;
+  }
+
+  svg {
+    filter: drop-shadow(0 4px 8px rgba(147, 51, 234, 0.2)) !important;
+    transition: transform 0.3s ease !important;
+    
+    &:hover {
+      transform: scale(1.05) !important;
+    }
+  }
+}
+
+/* Alternating layout improvements */
+.flex-row-reverse {
+  .group:hover {
+    transform: translateX(10px);
+  }
+}
+
+.group:hover {
+  transform: translateX(-10px);
+}
+
+.lg\:block .group:hover {
+  transform: none;
+}
+
+/* Enhanced visual effects */
+.backdrop-blur-effects {
+  backdrop-filter: blur(10px) saturate(180%);
+}
+
+/* Floating elements */
+.floating-elements {
+  opacity: 0;
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(20px);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .text-4xl {
+    font-size: 2rem !important;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem !important;
+  }
+  
+  .text-6xl {
+    font-size: 3rem !important;
+  }
+
+  ::ng-deep .p-knob {
+    svg {
+      width: 80px !important;
+      height: 80px !important;
+    }
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance optimization */
+.group {
+  will-change: transform;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* Special layout enhancements */
+.principle-container {
+  position: relative;
+  
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, transparent 0%, rgba(147, 51, 234, 0.05) 100%);
+    border-radius: 1.5rem;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+  }
+}

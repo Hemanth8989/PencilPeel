@@ -1,0 +1,168 @@
+<app-nocarouselherosection [herocontent]="herocontent"/>
+<app-faqcards [faqcards]="faqcards"/>
+<section class="py-16 bg-gradient-to-br from-emerald-50 via-white to-green-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Our 
+        <span class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+          Link Building Services
+        </span>
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r  from-orange-500 to-yellow-500 mx-auto mb-6"></div>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, we offer a range of Link Building Services designed to help businesses 
+        like yours succeed online. Our comprehensive approach ensures quality backlinks that improve 
+        your online visibility and search rankings.
+      </p>
+    </div>
+
+    <!-- Link Building Services Grid - Using Loop -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-16">
+      
+      <div *ngFor="let service of linkServices; let i = index" class="group">
+        <p-card class="h-full link-service-card transform transition-all duration-300 hover:scale-105"
+                [ngClass]="getServiceCardClass(service.color)">
+          <ng-template pTemplate="header">
+            <div class="p-6 text-white rounded-t-lg"
+                 [ngClass]="getHeaderClass(service.color)">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i [class]="service.icon" class="text-3xl text-gray-700"></i>
+                </div>
+              </div>
+              <h3 class="text-lg font-bold text-center mb-2">{{ service.title }}</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <p class="text-gray-600 leading-relaxed text-center text-base">
+              {{ service.description }}
+            </p>
+          </div>
+        </p-card>
+      </div>
+
+    </div>
+  </div>
+</section>
+<app-whyus [whyus]="whyUs"/>
+<app-contactus [title]="contacttitle" [description]="contactdescription"/>
+<section class="py-16 bg-gradient-to-br from-teal-50 via-white to-cyan-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        How 
+        <span class="bg-gradient-to-r from-orange-500 to-orange-500 bg-clip-text text-transparent">
+          Pencil Peel
+        </span>
+        Can Help
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-orange-500 mx-auto mb-6"></div>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        Our team of experts will provide comprehensive link building services to improve your website's online visibility, 
+        drive more traffic, and increase conversions.
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+      
+      <!-- Conduct Keyword Research -->
+      <div class="group">
+        <p-card class="h-full help-service-card research-card transform transition-all duration-300 hover:scale-105">
+          <ng-template pTemplate="header">
+            <div class="p-6 bg-gradient-to-br from-emerald-500 to-emerald-600 text-white rounded-t-lg">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i class="pi pi-search text-3xl text-gray-700"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-center mb-2">Conduct Keyword Research</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <p class="text-gray-600 leading-relaxed text-center">
+              We'll identify relevant keywords and phrases to target through link building.
+            </p>
+          </div>
+        </p-card>
+      </div>
+
+      <!-- Create High-Quality Content -->
+      <div class="group">
+        <p-card class="h-full help-service-card content-card transform transition-all duration-300 hover:scale-105">
+          <ng-template pTemplate="header">
+            <div class="p-6 bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-t-lg">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i class="pi pi-file-edit text-3xl text-gray-700"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-center mb-2">Create High-Quality Content</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <p class="text-gray-600 leading-relaxed text-center">
+              We'll create high-quality content that attracts links from reputable websites.
+            </p>
+          </div>
+        </p-card>
+      </div>
+
+      <!-- Build Relationships -->
+      <div class="group">
+        <p-card class="h-full help-service-card relationship-card transform transition-all duration-300 hover:scale-105">
+          <ng-template pTemplate="header">
+            <div class="p-6 bg-gradient-to-br from-yellow-500 to-yellow-600 text-white rounded-t-lg">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i class="pi pi-users text-3xl text-gray-700"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-center mb-2">Build Relationships</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <p class="text-gray-600 leading-relaxed text-center">
+              We'll build relationships with other websites and influencers in your industry to acquire high-quality backlinks.
+            </p>
+          </div>
+        </p-card>
+      </div>
+
+      <!-- Monitor and Analyse -->
+      <div class="group">
+        <p-card class="h-full help-service-card monitor-card transform transition-all duration-300 hover:scale-105">
+          <ng-template pTemplate="header">
+            <div class="p-6 bg-gradient-to-br from-indigo-500 to-indigo-600 text-white rounded-t-lg">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i class="pi pi-chart-line text-3xl text-gray-700"></i>
+                </div>
+              </div>
+              <h3 class="text-xl font-bold text-center mb-2">Monitor and Analyse</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <p class="text-gray-600 leading-relaxed text-center">
+              We'll monitor and analyse your link profile to ensure that it's healthy and effective.
+            </p>
+          </div>
+        </p-card>
+      </div>
+
+    </div>
+  </div>
+</section>

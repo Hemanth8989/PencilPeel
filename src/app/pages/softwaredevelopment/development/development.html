@@ -1,0 +1,147 @@
+<app-nocarouselquotes [quotes]="quotes" [herocontent]="herocontent"></app-nocarouselquotes>
+<div class="max-w-7xl mx-auto p-6">
+  <!-- Introductory Content -->
+  <div class="mb-10 text-center max-w-3xl mx-auto">
+    <h1 class="text-4xl font-extrabold text-gray-900 mb-4">
+      Development (Coding) with Pencil Peel IMT
+    </h1>
+    <p class="text-lg text-gray-700">
+      At <strong>Pencil Peel IMT</strong>, we understand the importance of high-quality coding in software development. Our team of experienced developers will write, test, and integrate code to create functional software solutions that meet your business needs.
+    </p>
+  </div>
+  <!-- Mobile Carousel: Image on top, content below -->
+  <div class="block md:hidden max-w-md mx-auto">
+    <p-carousel
+      [value]="phases"
+      [numVisible]="1"
+      [numScroll]="1"
+      [circular]="true"
+      [showIndicators]="true"
+      [showNavigators]="false"
+      [autoplayInterval]="2000"
+      class="rounded-lg overflow-hidden"
+    >
+      <ng-template pTemplate="item" let-phase>
+        <div class="flex flex-col">
+          <!-- Image at top -->
+          <div
+            class="h-64 w-full bg-cover bg-center"
+            [ngStyle]="{'background-image': 'url(' + phase.image + ')'}"
+            role="img"
+            [attr.aria-label]="phase.imageAlt"
+          >
+            <!-- <div class="h-full w-full bg-black bg-opacity-50 rounded-t-lg"></div> -->
+          </div>
+
+          <!-- Content below image -->
+          <div class="bg-white p-6 rounded-b-lg text-gray-900">
+            <h2 class="text-2xl font-bold mb-2">{{ phase.title }}</h2>
+            <p class="mb-4">{{ phase.description }}</p>
+            <ul class="list-disc list-inside space-y-2">
+              <li *ngFor="let point of phase.points">
+                <p class="font-semibold">{{ point.title }}</p>
+                <p>{{ point.description }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+  <!-- Tablet/Desktop Carousel: Full background image with overlay text on left -->
+  <div class="hidden md:block max-w-6xl mx-auto rounded-lg overflow-hidden">
+    <p-carousel
+      [value]="phases"
+      [numVisible]="1"
+      [numScroll]="1"
+      [circular]="true"
+      [showIndicators]="true"
+      [showNavigators]="false"
+      [autoplayInterval]="8000"
+    >
+      <ng-template pTemplate="item" let-phase>
+        <div
+          class="relative w-full h-[600px] bg-cover bg-center"
+          [ngStyle]="{'background-image': 'url(' + phase.image + ')'}"
+          role="img"
+          [attr.aria-label]="phase.imageAlt"
+        >
+          <div class="absolute inset-0 bg-black/30 hover:bg-black/50"></div>
+          <div
+            class="absolute inset-y-0 left-0 flex items-center max-w-lg p-10 text-white"
+          >
+            <div>
+              <h2 class="text-5xl font-extrabold mb-6 drop-shadow-lg">
+                {{ phase.title }}
+              </h2>
+              <p class="text-xl mb-8 drop-shadow-md">
+                {{ phase.description }}
+              </p>
+              <ul class="list-disc list-inside space-y-2 drop-shadow-md">
+                <li *ngFor="let point of phase.points" class="space-y-1">
+                  <p class="font-semibold">{{ point.title }}</p>
+                  <p class="opacity-90">{{ point.description }}</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</div>
+<app-sdemethodlogies></app-sdemethodlogies>
+<app-sdeprocess></app-sdeprocess>
+<app-sdeservices></app-sdeservices>
+<app-sdelanguages />
+<app-sdeframwork />
+<app-sdedatabase />
+<app-benefitsnew [benefits]="benefits" [title]="benefitsTitle"></app-benefitsnew>
+<app-industrycards [items]="industryCards" [title]="indcontent.title" [description]="indcontent.description" />
+<section class="relative w-full h-72 sm:h-80 md:h-96 overflow-hidden flex flex-col">
+  
+  <!-- Heading fixed at top with responsive padding -->
+  <div class="relative z-10 text-center pt-4 sm:pt-6 pb-3 sm:pb-4 px-4">
+    <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800">
+      How We Serve Industries
+    </h2>
+  </div>
+  
+  <!-- Flexible content area for cards -->
+  <div class="flex-1 relative px-4 sm:px-6">
+    <div
+      *ngIf="serveIndustrySteps[currentStep] as step"
+      class="absolute inset-0 w-full h-full transition-all duration-700"
+      [ngStyle]="{'background-image': 'url(' + step.image + ')', 'background-size': 'cover', 'background-position': 'center'}"
+    >
+      <div class="flex items-center justify-center h-full bg-black/10  p-4 sm:p-8">
+        <div class="max-w-xl mx-auto text-center">
+          <h3 class="text-white text-xl sm:text-2xl md:text-3xl font-bold mb-3 drop-shadow">
+            {{ step.title }}
+          </h3>
+          <p class="text-gray-300 text-base sm:text-lg md:text-xl font-medium drop-shadow">
+            {{ step.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-futureofsoftwareengineering />
+<app-impactsection></app-impactsection>
+<section class="max-w-7xl mx-auto px-4 py-12">
+  <h2 class="text-3xl md:text-4xl font-bold text-center mb-10">
+    Why Choose <span class="text-orange-500">Pencil Peel IMT</span> for Software Development
+  </h2>
+  <div class="w-24 h-1 mb-10 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto"></div>
+  <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
+    At <span class="text-orange-500">Pencil Peel IMT</span>, we are committed to delivering high-quality software development services that meet the unique needs of our clients. Our team of experts has extensive experience in software development technologies, and we have a proven track record of delivering successful projects. Here's why you should choose us for your software development needs
+  </p>
+  <app-active-banner [BANNERLIST]="BANNER_SECTIONS" ></app-active-banner>
+</section>
+<app-benefitsnew [benefits]="benefitsPencilpeel.benefits" [title]="benefitsPencilpeel.title" [description]="benefitsPencilpeel.description"></app-benefitsnew>
+<!-- Contact Us Today Section -->
+ <app-contactus [title]="contactUsToday.title" [description]="contactUsToday.description"></app-contactus>
+
+
+

@@ -1,0 +1,164 @@
+/* SVG Logo styling for different sizes */
+.logo-svg {
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-svg-small {
+  width: 64px;
+  height: 64px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.logo-svg-dialog {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+/* Responsive SVG sizes */
+@media (max-width: 768px) {
+  .logo-svg {
+    width: 64px;
+    height: 64px;
+  }
+  
+  .logo-svg-small {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .logo-svg-dialog {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-svg {
+    width: 56px;
+    height: 56px;
+  }
+  
+  .logo-svg-small {
+    width: 48px;
+    height: 48px;
+  }
+  
+  .logo-svg-dialog {
+    width: 64px;
+    height: 64px;
+  }
+}
+
+/* Existing animations and styles */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95) translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-fade-in-scale {
+  animation: fadeInScale 0.7s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 6s ease-in-out infinite;
+}
+
+.animate-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.animate-hidden-scale {
+  opacity: 0;
+  transform: scale(0.95) translateY(30px);
+}
+
+/* Dialog customization */
+::ng-deep .framework-dialog {
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+::ng-deep .framework-dialog .p-dialog-header {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  border-bottom: 1px solid #e2e8f0;
+  padding: 1.5rem;
+}
+
+::ng-deep .framework-dialog .p-dialog-content {
+  padding: 1.5rem;
+}
+
+::ng-deep .framework-dialog .p-dialog-footer {
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  padding: 1rem 1.5rem;
+}
+
+/* Custom styling for PrimeNG text buttons */
+::ng-deep .p-button.p-button-text {
+  width: 100%;
+  justify-content: center;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+::ng-deep .p-button.p-button-text:hover {
+  transform: translateY(-1px);
+  background-color: rgba(59, 130, 246, 0.1);
+}

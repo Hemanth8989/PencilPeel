@@ -1,0 +1,137 @@
+<app-outdoor-hero-section [config]="cutOutAdvertisingHeroConfig" />
+<app-quotes [testimonials]="testimonials"></app-quotes>
+
+<!-- Hero Section -->
+<section
+    class="relative bg-gradient-to-br from-green-500 via-teal-500 to-cyan-500 text-white overflow-hidden rounded-xl shadow-lg mx-auto max-w-6xl my-10">
+    <div class="absolute inset-0 opacity-20">
+        <img src="outdoor/cutout/cutout.png" alt="Cut-out Advertising Background" class="object-cover w-full h-full" />
+    </div>
+
+    <div class="relative z-10 p-10 md:p-16 flex flex-col md:flex-row items-center md:space-x-10">
+        <!-- Text -->
+        <div class="md:w-1/2 space-y-6 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight drop-shadow-md">
+                Cut-out Advertising
+            </h1>
+            <p class="text-lg text-gray-100 leading-relaxed">
+                Cut-out advertising is a form of outdoor advertising that involves using large, eye-catching cut-outs to
+                promote a product, brand, or company. These cut-outs can be placed in high-traffic areas, such as malls,
+                shopping centres, or along highways, to grab the attention of potential customers.
+            </p>
+        </div>
+
+        <!-- Image -->
+        <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+            <div
+                class="group relative inline-block transform transition-all duration-500 ease-out hover:scale-105 hover:-rotate-2">
+                <img src="outdoor/cutout/cutout1.png" alt="Cut-out Advertising Example"
+                    class="w-full max-w-md mx-auto drop-shadow-2xl rounded-lg transition-transform duration-500 ease-out group-hover:scale-110" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Promotion Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                   bg-gradient-to-r from-green-400 via-teal-500 to-cyan-500">
+            How Cut-out Advertising Promotes Your Brand
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our team will use cut-out advertising to promote your brand in a variety of ways, including:
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div *ngFor="let promo of promotions"
+            class="group bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-green-500 to-teal-500 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="promo.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold text-teal-600 mb-2">{{ promo.title }}</h3>
+            <p class="text-gray-600">{{ promo.description }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                   bg-gradient-to-r from-green-400 via-teal-500 to-cyan-500">
+            Benefits of Cut-out Advertising
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            By partnering with Pencil Peel IMT for cut-out advertising, your business can:
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div *ngFor="let benefit of benefits"
+            class="group bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-green-500 to-teal-500 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="benefit.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold text-teal-600 mb-2">{{ benefit.title }}</h3>
+            <p class="text-gray-600">{{ benefit.description }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Execution Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                   bg-gradient-to-r from-green-400 via-teal-500 to-cyan-500">
+            How We Will Execute Cut-out Advertising
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our team will execute cut-out advertising through a structured process:
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div *ngFor="let step of executionSteps"
+            class="group bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-green-500 to-teal-500 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="step.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold text-teal-600 mb-2">{{ step.title }}</h3>
+            <p class="text-gray-600">{{ step.description }}</p>
+        </div>
+    </div>
+</section>
+
+<!-- Effectiveness Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2 class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent 
+                   bg-gradient-to-r from-green-400 via-teal-500 to-cyan-500">
+            Why Cut-out Advertising is Effective with Pencil Peel IMT
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            At Pencil Peel IMT, we believe that cut-out advertising is an effective way to promote your brand because:
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div *ngFor="let factor of effectivenessFactors"
+            class="group bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-green-500 to-teal-500 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="factor.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold text-teal-600 mb-2">{{ factor.title }}</h3>
+            <p class="text-gray-600">{{ factor.description }}</p>
+        </div>
+    </div>
+</section>
+
+<app-whycpencilpeel [features]="whyChooseCutOutAdvertising.features" [headerContent]="whyChooseCutOutAdvertising" />
+
+<app-glass-cta [cta]="cta"></app-glass-cta>

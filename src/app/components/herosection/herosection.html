@@ -1,0 +1,51 @@
+<p-carousel
+  [value]="slides"
+  [numVisible]="1"
+  [numScroll]="1"
+  [circular]="true"
+  [autoplayInterval]="3000"
+  [responsiveOptions]="responsiveOptions"
+  [showIndicators]="true"
+  [showNavigators]="false"
+  class="hero-carousel w-full"
+>
+  <ng-template let-slide pTemplate="item">
+    <section
+      class="relative pt-20 pb-32 flex items-center h-auto lg:min-h-screen"
+    >
+      <!-- Background image -->
+      <div
+        class="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        [style.backgroundImage]="'url(' + slide.image + ')'"
+      ></div>
+
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-black/60"></div>
+
+      <!-- Content -->
+      <div
+        class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center text-white w-full"
+      >
+        <h1
+          class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 inline-block"
+          [innerHTML]="slide.title"
+        ></h1>
+
+        <div
+          class="text-xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed"
+          [innerHTML]="slide.description"
+        ></div>
+
+        <div
+          class="flex flex-col sm:flex-row gap-6 justify-center items-center"
+        >
+          <p-button
+            size="large"
+            label="Get a Free Consultation"
+            styleClass="px-8 py-4 bg-yellow-400 text-black font-bold text-lg rounded-lg hover:bg-yellow-300 transition-transform duration-300 transform hover:scale-105 shadow-lg"
+          ></p-button>
+        </div>
+      </div>
+    </section>
+  </ng-template>
+</p-carousel>

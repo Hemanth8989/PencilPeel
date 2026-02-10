@@ -1,0 +1,76 @@
+<app-nocarouselherosection [herocontent]="twitterHeroContent" />
+<section class="py-20 bg-gradient-to-tr from-cool-gray-100 via-slate-200 to-blue-100">
+  <div class="max-w-5xl mx-auto px-6 text-center">
+    <!-- Heading -->
+    <h2 class="text-4xl md:text-5xl font-extrabold text-gray-900 mb-6 leading-tight">
+      What is 
+      <span class="bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 bg-clip-text text-transparent">
+        Twitter Marketing
+      </span>?
+    </h2>
+
+    <!-- Description -->
+    <p class="text-lg md:text-xl text-gray-800 max-w-3xl mx-auto leading-relaxed mb-6">
+      We will help you understand the power of Twitter marketing, which involves promoting your business, products, or services on Twitter to reach and engage with your target audience.
+    </p>
+  </div>
+</section>
+<app-whyus [whyus]="whyus" />
+<section class="py-20 bg-gradient-to-br from-slate-50 via-gray-50 to-slate-100 min-h-screen">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-6">
+        How We Can Help to Grow Your Business
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Our team of experts will:
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div *ngFor="let service of helpServices" 
+           class="bg-white rounded-2xl shadow-md hover:shadow-xl border-2 border-gray-200 transition-all p-8 flex flex-col items-start cursor-pointer">
+        <div [class]="service.iconColor + ' w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-white text-3xl'">
+          <i [class]="service.icon"></i>
+        </div>
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          {{ service.title }}
+        </h3>
+        <p class="text-gray-700 leading-relaxed font-base">
+          {{ service.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-24 bg-mid min-h-screen flex items-center">
+  <div class="max-w-7xl mx-auto px-6 text-center text-white">
+    <!-- Section Heading -->
+    <h2 class="text-5xl font-bold mb-8 tracking-tight drop-shadow-lg">
+      Twitter Marketing Services with 
+      <span class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+        Pencil Peel IMT
+      </span>
+    </h2>
+    <p class="max-w-3xl mx-auto text-lg md:text-xl font-light text-blue-200 mb-16 leading-relaxed">
+      At Pencil Peel IMT, we specialize in creating effective Twitter marketing strategies that drive business growth and product awareness. Here's what we will do for our clients:
+    </p>
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let service of twitterServices" class="bg-gradient-to-t from-white  to-white rounded-3xl shadow-xl p-8 flex flex-col hover:scale-105 transform transition-transform duration-300 cursor-pointer">
+        <h3 class="text-gray-800 font-semibold drop-shadow-md text-2xl mb-4">
+            {{ service.title }}
+        </h3>
+        <p class="text-gray-600 font-base leading-relaxed flex-grow">
+            {{ service.description }}
+        </p>
+    </div>
+    </div>
+  </div>
+</section>
+<app-contactus [title]="contacttitle" [description]="contactdescription" />
+<app-whycpencilpeel [headerContent]="whycheader" [features]="whycfeatures"></app-whycpencilpeel>
+
+
+

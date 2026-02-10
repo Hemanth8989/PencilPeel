@@ -1,0 +1,153 @@
+<app-outdoor-hero-section [config]="mallDisplayHeroConfig" />
+
+<app-quotes [testimonials]="testimonials"></app-quotes>
+
+<!-- What is Mall Display Advertising Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=1920&q=80" 
+         alt="Shopping Mall Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-orange-600">Mall Display Advertising?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Mall display advertising refers to promotional advertisements placed within shopping malls. Our team will help you understand the power of mall display advertising and how it can benefit your business.
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Types of <span class="text-orange-600">Mall Display Advertising</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        Our team will help you choose the right type of mall display advertising for your business:
+      </p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div 
+        *ngFor="let type of displayTypes; let i = index"
+        class="group relative overflow-hidden rounded-lg shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 cursor-pointer"
+      >
+        <div class="absolute inset-0">
+          <img 
+            [src]="type.image" 
+            [alt]="type.title"
+            class="w-full h-96 lg:h-[500px] object-cover group-hover:scale-110 transition-transform duration-700"
+          />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        <div class="relative z-10 p-6 lg:p-8 h-96 lg:h-[500px] flex flex-col justify-end text-white">
+          <h3 class="text-2xl font-semibold mb-4 leading-tight">
+            {{ type.title }}
+          </h3>
+          <p class="text-gray-200 text-base leading-relaxed group-hover:text-white transition-colors duration-300">
+            {{ type.description }}
+          </p>
+        </div>
+        <div class="absolute inset-0 border-2 border-transparent group-hover:border-orange-400 rounded-lg transition-colors duration-300"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Benefits Section -->
+<section class="py-20 bg-gradient-to-br from-gray-50 to-orange-50 relative">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-5">
+    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=1920&q=80" 
+         alt="Mall Interior Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        <span class="text-orange-600">Benefits</span> of Mall Display Advertising
+      </h2>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        Our team will highlight the major benefits of mall display advertising:
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let benefit of benefits; let i = index"
+           class="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+        <div class="flex items-center mb-4">
+          <div [class]="'w-14 h-14 bg-' + benefit.color + '-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mr-4'">
+            <i [class]="benefit.icon + ' text-2xl text-' + benefit.color + '-600'"></i>
+          </div>
+          <h3 [class]="'text-xl font-bold text-gray-900 group-hover:text-' + benefit.color + '-600'">
+            {{ benefit.title }}
+          </h3>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          {{ benefit.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- How Display Advertising Works Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        How Mall Display Advertising Works for <span class="text-orange-600">Brand Growth</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        At Pencil Peel IMT, we understand the power of display advertising in driving brand growth and product success. Here's how we will help you achieve your goals:
+      </p>
+    </div>
+    
+    <div class="space-y-16">
+      <div *ngFor="let section of growthSections; let i = index"
+           class="group"
+           [class.flex-row-reverse]="i % 2 === 1">
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+             [class.lg:flex-row-reverse]="i % 2 === 1">
+          
+          <!-- Content -->
+          <div [class]="i % 2 === 1 ? 'lg:order-2' : 'lg:order-1'">
+            <div class="flex items-center mb-6">
+              <!-- <div class="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mr-4 group-hover:scale-110 transition-transform duration-300">
+                <i [class]="section.icon + ' text-3xl text-white'"></i>
+              </div> -->
+              <h3 class="text-3xl font-bold text-gray-900 group-hover:text-orange-600 transition-colors duration-300">
+                {{ section.title }}
+              </h3>
+            </div>
+            
+            <div class="space-y-4">
+              <div *ngFor="let detail of section.details" 
+                   class="flex items-start space-x-3 p-4 bg-gray-50 rounded-xl hover:bg-orange-50 transition-colors duration-300">
+                <div class="w-2 h-2 bg-orange-500 rounded-full mt-3 flex-shrink-0"></div>
+                <p class="text-gray-700 leading-relaxed">{{ detail }}</p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Image -->
+          <div [class]="i % 2 === 1 ? 'lg:order-1' : 'lg:order-2'">
+            <div class="relative rounded-2xl overflow-hidden shadow-xl group-hover:shadow-2xl transition-shadow duration-300">
+              <img [src]="section.image" [alt]="section.title" 
+                   class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-500">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-whycpencilpeel [features]="whycfeatures" [headerContent]="whyccontent"/>
+<app-contactus [title]="contact.title" [description]="contact.description"></app-contactus>

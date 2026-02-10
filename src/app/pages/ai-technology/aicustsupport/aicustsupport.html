@@ -1,0 +1,279 @@
+<div class="min-h-screen bg-gray-50">
+  <app-nocarouselherosection [herocontent]="herocontent" />
+  <section class="bg-gray-50 py-16 px-6 md:px-12">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+      The Future of AI Customer Support
+    </h2>
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+      At <span class="font-semibold text-orange-600">Pencil Peel IMT</span>, we're excited about the future of AI customer support. 
+      AI-enabled customer service is revolutionizing the way businesses interact with customers, 
+      providing personalized, proactive experiences that drive engagement. 
+      By leveraging AI-powered tools, core technology, and data, companies can deliver high-quality 
+      customer service across all touchpoints.
+    </p>
+  </div>
+</section>
+
+<section class="bg-white py-16 px-6 md:px-12">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+      Transforming Customer Support
+    </h2>
+    <p class="text-lg md:text-xl text-gray-600 leading-relaxed">
+      At <span class="font-semibold text-orange-600">Pencil Peel IMT</span>, we believe that AI technology is transforming 
+      customer support by enabling businesses to provide proactive, personalized service. 
+      By using AI-powered solutions, our team will analyze customer data, predict their needs, 
+      and offer support before issues escalate. This approach not only improves customer 
+      satisfaction but also reduces costs.
+    </p>
+  </div>
+</section>
+<section class="bg-gray-50 py-16 px-6 md:px-12">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-6">
+      Key Trends in AI Customer Support
+    </h2>
+    <p class="text-lg md:text-xl text-gray-600 text-center max-w-3xl mx-auto mb-12">
+      Our team at <span class="font-semibold text-indigo-600">Pencil Peel IMT</span> 
+      will leverage the following key trends in AI customer support to drive innovation and growth:
+    </p>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div *ngFor="let trend of keytrends" class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition border-2 border-gray-300">
+        <div class="flex items-start">
+          <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-indigo-100 text-indigo-600 rounded-full mr-4">
+            <i class="pi {{trend.icon}} text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 text-xl mb-1">{{ trend.title }}</h3>
+            <p class="text-gray-600 text-base">
+              {{ trend.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<app-mul-benfits [benfits]="aiSupportBenefits" [sectionobj]="befitsec"/>
+
+
+  <!-- What is AI Customer Support -->
+  <section id="what-is-ai" class="py-16 lg:py-24">
+    <div class="container mx-auto px-6">
+      <div class="text-center max-w-4xl mx-auto">
+        <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+            What is AI Customer Support?
+        </h2>
+        <p class="text-lg text-gray-600 leading-relaxed">
+          AI customer support refers to the use of artificial intelligence (AI) and machine learning (ML) technologies to provide automated support to customers. Our AI-powered systems can understand customer inquiries, provide relevant responses, and escalate complex issues to human support agents.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- How Our AI Customer Support Works -->
+  <section class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+            How Our AI Customer Support Works at Pencil Peel IMT
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          We're committed to delivering exceptional customer support through our cutting-edge AI-powered solution. Here's how our system works:
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <p-card *ngFor="let step of supportSteps; let i = index" 
+                class="h-full hover:shadow-lg transition-all duration-300">
+          <ng-template pTemplate="header">
+            <div class="flex items-center p-6 gap-6">
+              <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-lg flex items-center justify-center mb-2">
+                  <i [class]="step.icon + ' text-white text-xl'"></i>
+                </div>
+                <h3 class="text-xl font-semibold text-gray-800">{{ step.title }}</h3>
+            </div>
+          </ng-template>
+          <div>
+            <p class="text-gray-600 mb-4">{{ step.description }}</p>
+            <ul class="space-y-2">
+              <li *ngFor="let detail of step.details" class="text-base text-gray-600 flex items-start">
+                <i class="pi pi-check text-green-500 mt-1 mr-2 text-base"></i>
+                <span>{{ detail }}</span>
+              </li>
+            </ul>
+          </div>
+        </p-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="py-16 lg:py-24 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+            Features of Our AI Customer Support
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          We're committed to delivering exceptional customer support through our cutting-edge AI-powered solution.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <p-card *ngFor="let feature of features" class="h-full">
+          <ng-template pTemplate="header">
+            <div class="flex items-center gap-4 p-6">
+              <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-xl flex items-center justify-center">
+                <i [class]="feature.icon + ' text-white text-2xl'"></i>
+              </div>
+              <h3 class="text-xl font-semibold text-gray-800">{{ feature.title }}</h3>
+            </div>
+          </ng-template>
+          <div>
+            <p class="text-gray-600 mb-4">{{ feature.description }}</p>
+            <ul class="space-y-2">
+              <li *ngFor="let highlight of feature.highlights" class="text-base text-gray-600 flex items-start">
+                <i class="pi pi-check text-green-500 mt-1 mr-2 text-base"></i>
+                <span>{{ highlight }}</span>
+              </li>
+            </ul>
+          </div>
+        </p-card>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries We Serve -->
+  <app-industrycards [items]="industryCards" [title]="indtitle" [description]="inddescription" />
+  <!-- Implementation Process -->
+  <section class="py-16 lg:py-24 bg-gray-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+            Implementation of AI Customer Support
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          At Pencil Peel IMT, we'll implement AI customer support solutions that deliver exceptional customer experiences.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div *ngFor="let step of implementationSteps; let i = index" 
+             class="flex items-start space-x-4 bg-white p-6 rounded-xl shadow-md">
+          <div class="w-12 h-12 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center flex-shrink-0">
+            <i [class]="step.icon + ' text-white text-xl'"></i>
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">{{ step.title }}</h3>
+            <p class="text-gray-600">{{ step.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Benefits -->
+  <!-- <section class="py-16 lg:py-24 bg-white">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+            Benefits of AI Customer Support
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          We're committed to delivering exceptional customer support through our cutting-edge AI-powered solution.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <p-panel *ngFor="let benefit of benefits" class="h-full">
+          <ng-template pTemplate="header">
+            <div class="flex items-center gap-4">
+              <div class="w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-lg flex items-center justify-center">
+                <i [class]="benefit.icon + ' text-white text-xl'"></i>
+              </div>
+              <div>
+                <h3 class="text-xl font-semibold text-gray-800">{{ benefit.title }}</h3>
+                <span class="text-sm text-green-600 font-medium">{{ benefit.impact }}</span>
+              </div>
+            </div>
+          </ng-template>
+          <p class="text-gray-600 leading-relaxed mt-4">{{ benefit.description }}</p>
+        </p-panel>
+      </div>
+    </div>
+  </section> -->
+
+  <!-- Why Choose Us -->
+  <section class="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="container mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+            Why Choose Pencil Peel IMT AI Customer Support?
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="text-center bg-white p-8 rounded-xl shadow-md">
+          <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="pi pi-users text-white text-2xl"></i>
+          </div>
+          <h4 class="text-lg font-semibold mb-3 text-gray-800">Expertise</h4>
+          <p class="text-gray-600 text-sm">Extensive experience in developing and implementing AI-powered customer support solutions</p>
+        </div>
+
+        <div class="text-center bg-white p-8 rounded-xl shadow-md">
+          <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="pi pi-wrench text-white text-2xl"></i>
+          </div>
+          <h4 class="text-lg font-semibold mb-3 text-gray-800">Customization</h4>
+          <p class="text-gray-600 text-sm">Tailor our AI system to meet your specific business needs and requirements</p>
+        </div>
+
+        <div class="text-center bg-white p-8 rounded-xl shadow-md">
+          <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="pi pi-link text-white text-2xl"></i>
+          </div>
+          <h4 class="text-lg font-semibold mb-3 text-gray-800">Integration</h4>
+          <p class="text-gray-600 text-sm">Seamless integration with your existing customer support infrastructure</p>
+        </div>
+
+        <div class="text-center bg-white p-8 rounded-xl shadow-md">
+          <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <i class="pi pi-chart-line text-white text-2xl"></i>
+          </div>
+          <h4 class="text-lg font-semibold mb-3 text-gray-800">Continuous Improvement</h4>
+          <p class="text-gray-600 text-sm">Continuously monitor and improve our AI system for effectiveness and efficiency</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <!-- <section id="contact" class="py-16 lg:py-24 bg-gradient-to-r from-gray-800 to-gray-900 text-white">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-3xl lg:text-4xl font-bold mb-8">
+        Get Started Today
+      </h2>
+      <p class="text-lg mb-12 opacity-90 max-w-3xl mx-auto">
+        If you're interested in learning more about our AI customer support solutions, please contact us at Pencil Peel IMT. We'd be happy to discuss how our solutions can help your business thrive.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <p-button 
+          label="Contact Us Today" 
+          icon="pi pi-envelope" 
+          class="p-button-lg"
+          [raised]="true"
+          severity="secondary">
+        </p-button>
+        <p-button 
+          label="Schedule Demo" 
+          icon="pi pi-calendar" 
+          class="p-button-lg"
+          [outlined]="true"
+          severity="secondary">
+        </p-button>
+      </div>
+    </div>
+  </section> -->
+</div>

@@ -1,0 +1,25 @@
+<section class="py-12 bg-gray-100 min-h-screen" *ngIf="blog; else loading">
+  <div class="max-w-4xl mx-auto px-6 bg-white p-10 rounded-2xl shadow-xl">
+    <h1 class="text-5xl font-extrabold mb-4 text-gray-900 leading-snug" data-aos="fade-up">
+      {{ blog.title }}
+    </h1>
+
+    <p class="text-gray-500 mb-6 italic tracking-wide" data-aos="fade-up" data-aos-delay="100">
+      {{ blog.date | date: 'longDate' }} • {{ blog.author }} • {{ blog.category }}
+    </p>
+
+    <img [src]="blog.image" [alt]="blog.title" class="rounded-2xl mb-10 w-full object-cover shadow-lg" loading="lazy"
+      data-aos="zoom-in" data-aos-delay="200" />
+
+    <div class="blog-post max-w-none text-gray-800">
+      <markdown [data]="blog.content" data-aos="fade-up" data-aos-delay="300"></markdown>
+    </div>
+  </div>
+
+</section>
+
+<ng-template #loading>
+  <div class="flex justify-center items-center min-h-screen text-gray-500 text-lg">
+    Loading blog content...
+  </div>
+</ng-template>

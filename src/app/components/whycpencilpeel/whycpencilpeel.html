@@ -1,0 +1,44 @@
+<section class="py-16 px-6 sm:px-8 lg:px-16">
+  <div class="max-w-7xl mx-auto">
+
+    <!-- Header -->
+    <div class="text-center mb-12 sm:mb-16">
+      <h2 class="text-5xl sm:text-6xl font-extrabold text-transparent bg-gradient-to-r from-amber-500 via-orange-400 to-yellow-400 bg-clip-text animate-gradient-shine">
+        {{ headerContent?.title }}
+      </h2>
+      <div class="w-28 h-1 bg-gradient-to-r from-amber-500 via-orange-400 to-yellow-400 mx-auto my-4 rounded-full shadow-md"></div>
+      <p class="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
+        {{ headerContent?.description }}
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-auto-fit md:[grid-template-columns:repeat(auto-fit,minmax(20rem,1fr))]">
+      <div *ngFor="let feature of features" 
+           class="rounded-2xl border border-gray-200 bg-white shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 w-full mx-auto flex flex-col cursor-pointer overflow-hidden">
+        <div class="p-8 flex flex-col items-center text-center h-full">
+          <!-- Icon -->
+          <div class="flex items-center justify-center w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full mb-5 bg-gradient-to-br from-yellow-400 via-orange-400 to-red-400 text-white group-hover:scale-110 transition-transform duration-500">
+            <i [class]="'pi ' + feature.icon + ' text-2xl sm:text-3xl md:text-4xl'"></i>
+          </div>
+          <!-- Title -->
+          <h3 class="text-2xl font-semibold text-gray-900 mb-3 leading-snug">
+            {{ feature.title }}
+          </h3>
+          <!-- Description -->
+          <p class="text-base text-gray-600 leading-relaxed">
+            {{ feature.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mx-auto my-10" *ngIf="headerContent.footer">
+      <p class="text-lg sm:text-xl text-center text-gray-700 max-w-3xl mx-auto leading-relaxed px-4 sm:px-0">
+        {{ headerContent?.footer }}
+      </p>
+    </div>
+
+  </div>
+</section>

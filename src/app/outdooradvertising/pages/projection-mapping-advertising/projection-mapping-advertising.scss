@@ -1,0 +1,494 @@
+.projection-mapping-process-section {
+  .process-step-card {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: professionalFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+
+    // Staggered professional entrance
+    &:nth-child(1) { animation-delay: 0.1s; }
+    &:nth-child(2) { animation-delay: 0.2s; }
+    &:nth-child(3) { animation-delay: 0.3s; }
+    &:nth-child(4) { animation-delay: 0.4s; }
+    &:nth-child(5) { animation-delay: 0.5s; }
+
+    &:hover {
+      .p-card {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 
+          0 20px 40px -8px rgba(0, 0, 0, 0.12),
+          0 0 0 1px rgba(249, 115, 22, 0.08);
+        transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      // Professional badge animation
+      .step-badge {
+        transform: scale(1.15);
+        box-shadow: 0 8px 25px -5px rgba(249, 115, 22, 0.4);
+        
+        &::before {
+          opacity: 1;
+          transform: scale(1.2);
+        }
+      }
+
+      // Elegant icon animation
+      .step-icon {
+        transform: scale(1.1);
+        
+        i {
+          transform: translateY(-2px);
+        }
+        
+        &::after {
+          opacity: 0.6;
+          transform: scale(1.1);
+        }
+      }
+
+      // Smooth underline reveal
+      .title-underline {
+        width: 100%;
+      }
+
+      // Professional progress animation
+      .progress-bar {
+        &::after {
+          width: 100%;
+        }
+        
+        .progress-shine {
+          opacity: 1;
+          animation: professionalShine 1.5s ease-out;
+        }
+      }
+
+      // Subtle content lift
+      .card-content {
+        transform: translateY(-2px);
+      }
+    }
+  }
+}
+
+// Professional keyframe animations
+@keyframes professionalFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes professionalShine {
+  0% {
+    transform: translateX(-100%) skew(-15deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(200%) skew(-15deg);
+    opacity: 0;
+  }
+}
+
+@keyframes professionalPulse {
+  0%, 100% {
+    opacity: 0.6;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+// Professional hover states
+::ng-deep {
+  .p-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+    border: none !important;
+    box-shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.08) !important;
+  }
+}
+
+
+
+.projection-mapping-hero {
+  // Base responsive layout
+  min-height: 100vh;
+  
+  @media (max-width: 768px) {
+    min-height: auto;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  // Floating elements with responsive visibility
+  .floating-element {
+    animation: float 6s ease-in-out infinite;
+    
+    &.floating-element-1 {
+      animation-delay: 0s;
+      animation-duration: 8s;
+    }
+    
+    &.floating-element-2 {
+      animation-delay: 2s;
+      animation-duration: 10s;
+    }
+    
+    &.floating-element-3 {
+      animation-delay: 4s;
+      animation-duration: 7s;
+    }
+  }
+
+  // Content animations with mobile optimization
+  .hero-content {
+    opacity: 0;
+    animation: slideInUp 1s ease-out 0.3s forwards;
+    
+    @media (max-width: 768px) {
+      animation: slideInUp 0.8s ease-out 0.2s forwards;
+    }
+  }
+
+  .hero-badge {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out 0.5s forwards;
+    
+    &:hover {
+      background: linear-gradient(135deg, #fed7aa, #c084fc);
+      box-shadow: 0 4px 12px rgba(249, 115, 22, 0.3);
+    }
+    
+    @media (max-width: 768px) {
+      animation-delay: 0.3s;
+    }
+  }
+
+  .hero-title {
+    .hero-text-line, .hero-gradient-text {
+      opacity: 0;
+      transform: translateY(30px);
+      animation: fadeInUp 0.8s ease-out forwards;
+      
+      &:nth-child(1) { animation-delay: 0.7s; }
+      &:nth-child(2) { animation-delay: 0.9s; }
+      &:nth-child(3) { animation-delay: 1.1s; }
+      &:nth-child(4) { animation-delay: 1.3s; }
+      
+      @media (max-width: 768px) {
+        &:nth-child(1) { animation-delay: 0.4s; }
+        &:nth-child(2) { animation-delay: 0.6s; }
+        &:nth-child(3) { animation-delay: 0.8s; }
+        &:nth-child(4) { animation-delay: 1.0s; }
+      }
+    }
+    
+    .hero-gradient-text {
+      background-size: 200% 200%;
+      animation: fadeInUp 0.8s ease-out forwards,
+                 gradientShift 4s ease-in-out infinite;
+    }
+  }
+
+  // Visual container responsive behavior
+  .hero-visual {
+    opacity: 0;
+    animation: slideInUp 1s ease-out 0.8s forwards;
+    
+    @media (max-width: 1024px) {
+      animation: slideInUp 0.8s ease-out 0.6s forwards;
+    }
+  }
+
+  .visual-container {
+    &:hover {
+      @media (min-width: 769px) {
+        transform: scale(1.05);
+      }
+      
+      @media (max-width: 768px) {
+        transform: scale(1.02);
+      }
+      
+      .visual-content {
+        transform: translateY(-5px);
+        
+        @media (max-width: 768px) {
+          transform: translateY(-2px);
+        }
+      }
+      
+      .projection-beam {
+        opacity: 1;
+        animation-duration: 1s;
+      }
+    }
+  }
+
+  // Typing effect responsive styles
+  .typing-container {
+    position: relative;
+    z-index: 20;
+    padding: 1rem;
+    
+    @media (max-width: 768px) {
+      padding: 0.5rem;
+    }
+  }
+
+  .typing-text {
+    position: relative;
+    display: inline-block;
+    
+    .text-gradient {
+      background: linear-gradient(45deg, #fb923c, #c084fc, #60a5fa);
+      background-size: 200% 200%;
+      animation: gradientShift 3s ease-in-out infinite;
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .typing-cursor {
+    display: inline-block;
+    background-color: #fb923c;
+    margin-left: 2px;
+    width: 2px;
+    animation: blink 1.5s infinite;
+    
+    @media (max-width: 768px) {
+      width: 1.5px;
+      margin-left: 1px;
+    }
+  }
+
+  // Projection beam responsive effects
+  .projection-beam {
+    animation: projectionBeam 2s ease-in-out infinite;
+    filter: blur(0.5px);
+    
+    @media (max-width: 768px) {
+      filter: blur(0.3px);
+    }
+    
+    &:nth-child(2) { animation-delay: 0.5s; }
+    &:nth-child(3) { animation-delay: 1s; }
+  }
+
+  // Particle animations with responsive sizing
+  .particle-1, .particle-2, .particle-3 {
+    animation: particleFloat 3s ease-in-out infinite;
+    
+    &.particle-1 { animation-delay: 0s; }
+    &.particle-2 { animation-delay: 0.8s; }
+    &.particle-3 { animation-delay: 1.6s; }
+  }
+
+  // Floating cards responsive behavior
+  .floating-card {
+    opacity: 0;
+    animation: fadeInScale 0.6s ease-out forwards;
+    
+    &.floating-card-1 { animation-delay: 2s; }
+    &.floating-card-2 { animation-delay: 2.3s; }
+    &.floating-card-3 { animation-delay: 2.6s; }
+
+    &:hover {
+      @media (min-width: 769px) {
+        transform: translateY(-8px) scale(1.05);
+      }
+      
+      @media (max-width: 768px) {
+        transform: translateY(-4px) scale(1.02);
+      }
+    }
+  }
+}
+
+// Enhanced button animations with mobile optimization
+.hero-primary-btn {
+  ::ng-deep .p-button {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    &:hover {
+      @media (min-width: 769px) {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px -5px rgba(249, 115, 22, 0.4);
+      }
+      
+      @media (max-width: 768px) {
+        transform: translateY(-1px);
+        box-shadow: 0 8px 20px -5px rgba(249, 115, 22, 0.3);
+      }
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s ease;
+    }
+    
+    &:hover::before {
+      left: 100%;
+    }
+  }
+}
+
+.hero-secondary-btn {
+  ::ng-deep .p-button {
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+    // &:hover {
+    //   @media (min-width: 769px) {
+    //     transform: translateY(-2px);
+    //   }
+      
+    //   @media (max-width: 768px) {
+    //     transform: translateY(-1px);
+    //   }
+      
+    //   border-color: #7c3aed;
+    //   color: #7c3aed;
+    //   background-color: rgba(139, 92, 246, 0.05);
+    // }
+  }
+}
+
+// Responsive keyframe animations
+@keyframes slideInUp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(50px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes fadeInUp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(30px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+@keyframes fadeInScale {
+  0% { 
+    opacity: 0; 
+    transform: scale(0.8); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: scale(1); 
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes projectionBeam {
+  0%, 100% { 
+    opacity: 0.6; 
+    transform: scaleX(1) scaleY(1);
+  }
+  50% { 
+    opacity: 1; 
+    transform: scaleX(1.3) scaleY(1.5);
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% { 
+    transform: translateY(0px) scale(1);
+    opacity: 0.8;
+  }
+  50% { 
+    transform: translateY(-10px) scale(1.1);
+    opacity: 1;
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+// Mobile-specific optimizations
+@media (max-width: 640px) {
+  .projection-mapping-hero {
+    .hero-title {
+      font-size: 2rem;
+      line-height: 1.2;
+    }
+    
+    .hero-description {
+      font-size: 1rem;
+      line-height: 1.5;
+    }
+    
+    .visual-content {
+      min-height: 280px;
+    }
+    
+    .floating-card {
+      font-size: 0.75rem;
+      
+      &.floating-card-2 {
+        bottom: -2px;
+        left: -2px;
+        padding: 0.5rem;
+      }
+      
+      &.floating-card-1 {
+        top: -2px;
+        right: -2px;
+        padding: 0.5rem;
+      }
+    }
+  }
+}
+
+// Tablet optimization
+@media (min-width: 641px) and (max-width: 1024px) {
+  .projection-mapping-hero {
+    .hero-title {
+      font-size: 3.5rem;
+    }
+    
+    .visual-content {
+      min-height: 380px;
+    }
+  }
+}
+
+
+

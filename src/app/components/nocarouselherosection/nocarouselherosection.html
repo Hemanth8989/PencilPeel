@@ -1,0 +1,48 @@
+<section id="hero" class="relative pt-20 pb-32 flex items-center min-h-screen overflow-hidden">
+  <div 
+    class="absolute inset-0 bg-cover bg-center bg-no-repeat bg-zoom-slow"
+    [style.backgroundImage]="'url(' + herocontent.image + ')'">
+  </div>
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center text-white">
+    <h1 
+      class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 inline-block"
+      [innerHTML]="herocontent.title">
+    </h1>
+    <div class="text-xl  text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed" [innerHTML]="herocontent.description"></div>
+    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+      <p-button size="large"
+        label="Get a Free Consultation" 
+        styleClass="px-8 py-4 bg-yellow-400 text-black font-bold text-lg rounded-lg hover:bg-yellow-300 transition-transform duration-300 transform hover:scale-105 shadow-lg"
+      ></p-button>
+    </div>
+  </div>
+</section>
+<!-- <section id="hero" class="relative pt-20 pb-32 flex items-center min-h-screen overflow-hidden">
+  <div class="absolute inset-0">
+    <img 
+      [src]="herocontent.image" 
+      alt="Outdoor Advertising Hero Background"
+      class="w-full h-full object-cover object-center"
+    />
+  </div>
+  <div class="absolute inset-0 bg-black/60"></div>
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 text-center text-white">
+    <h1 
+      class="text-4xl md:text-6xl font-extrabold leading-tight mb-6 inline-block"
+      [innerHTML]="herocontent.title">
+    </h1>
+    <div class="text-xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed" 
+         [innerHTML]="herocontent.description">
+    </div>
+    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+      <p-button size="large"
+        label="Get a Free Consultation" 
+        styleClass="px-8 py-4 bg-yellow-400 text-black font-bold text-lg rounded-lg hover:bg-yellow-300 transition-transform duration-300 transform hover:scale-105 shadow-lg"
+      ></p-button>
+    </div>
+  </div>
+</section> -->
+
+
+

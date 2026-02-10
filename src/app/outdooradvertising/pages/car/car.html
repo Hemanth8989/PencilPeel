@@ -1,0 +1,265 @@
+<app-outdoor-hero-section [config]="carAdvertisingHeroConfig" />
+
+<app-quotes [testimonials]="testimonials"></app-quotes>
+
+<!-- What is Car Advertising Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1920&q=80" 
+         alt="Car Advertising Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-orange-600">Car Advertising?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Car advertising is a marketing strategy where advertisements are displayed on vehicles. Our team will help you understand the power of car advertising and how it can benefit your business.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Benefits Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Benefits of <span class="text-orange-600">Car Advertising</span> with Pencil Peel IMT
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto">
+        At Pencil Peel IMT, we understand the power of car advertising in driving business growth and increasing brand awareness. By utilizing car advertising, we will help you reach a wide and diverse audience, increase visibility and reach for your business, and drive sales and revenue.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let benefit of carBenefits; let i = index" 
+           class="group relative bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-gray-100 hover:border-orange-200 hover:-translate-y-2">
+        
+        <!-- Centered Icon -->
+        <div class="flex justify-center mb-6">
+          <div class="w-16 h-16 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300"
+               [class]="'bg-gradient-to-br ' + benefit.gradient">
+            <i [class]="benefit.icon + ' text-2xl text-white'"></i>
+          </div>
+        </div>
+        
+        <div>
+          <!-- Centered Title -->
+          <h3 class="text-2xl font-bold text-gray-900 mb-4 text-center transition-colors duration-300 group-hover:text-orange-600">
+            {{ benefit.title }}
+          </h3>
+          
+          <p class="text-gray-600 mb-6 leading-relaxed">
+            {{ benefit.description }}
+          </p>
+          
+          <div class="space-y-3">
+            <div *ngFor="let point of benefit.points" 
+                 class="flex items-start space-x-3">
+              <div class="flex-shrink-0 mt-2">
+                <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
+              </div>
+              <div>
+                <p class="text-gray-700 text-sm leading-relaxed">
+                  {{ point }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Why These Benefits Matter Section -->
+<section class="py-20 bg-gradient-to-br from-gray-50 to-orange-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Why These <span class="text-orange-600">Benefits</span> Matter
+      </h2>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+      <div class="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-orange-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <i class="pi pi-star text-3xl text-white"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Increase Brand Awareness</h3>
+        <p class="text-gray-700 leading-relaxed">
+          We will increase brand awareness and recognition through effective car advertising campaigns.
+        </p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-green-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <i class="pi pi-chart-line text-3xl text-white"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Drive Sales</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Our team will drive sales and revenue through targeted car advertising campaigns.
+        </p>
+      </div>
+      
+      <div class="bg-white rounded-2xl p-8 shadow-lg text-center hover:shadow-xl transition-shadow duration-300">
+        <div class="w-16 h-16 bg-purple-500 rounded-full flex items-center justify-center mb-6 mx-auto">
+          <i class="pi pi-trophy text-3xl text-white"></i>
+        </div>
+        <h3 class="text-2xl font-bold text-gray-900 mb-4">Competitive Advantage</h3>
+        <p class="text-gray-700 leading-relaxed">
+          Car advertising can help you stand out from competitors and provide a competitive advantage.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<app-industrycards [items]="industryCards" [title]="industry.title" [description]="industry.description" />
+<!-- Car Advertising Process Section -->
+<section class="py-20 bg-gradient-to-b from-white to-gray-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Our Car Advertising <span class="text-orange-600">Process</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        We follow a streamlined 5-step process to deliver exceptional car advertising campaigns that drive real results.
+      </p>
+    </div>
+
+    <!-- Process Steps Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+      <div *ngFor="let step of processSteps; let i = index" 
+           class="group relative">
+        
+        <!-- Step Card -->
+        <div class="bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border-2 border-gray-100 hover:border-orange-200 h-full flex flex-col">
+          
+          <!-- Step Number with Gradient -->
+          <div class="flex justify-center mb-6">
+            <div class="relative">
+              <div class="w-20 h-20 rounded-full flex items-center justify-center shadow-xl group-hover:scale-110 transition-transform duration-300"
+                   [class]="'bg-gradient-to-br ' + step.gradient">
+                <span class="text-2xl font-bold text-white">{{ step.number }}</span>
+              </div>
+              
+              <!-- Floating Icon -->
+              <div class="absolute -bottom-2 -right-2 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center border-2 border-gray-100">
+                <i [class]="step.icon + ' text-lg text-gray-600'"></i>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Step Content -->
+          <div class="text-center flex-1 flex flex-col">
+            <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
+              {{ step.title }}
+            </h3>
+            <p class="text-gray-600 leading-relaxed flex-1">
+              {{ step.description }}
+            </p>
+          </div>
+        </div>
+
+        <!-- Connection Arrow (Desktop Only) -->
+        <div *ngIf="i < processSteps.length - 1" 
+             class="hidden lg:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-10">
+          <div class="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center shadow-lg">
+            <i class="pi pi-arrow-right text-white text-sm"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Call to Action -->
+    <div class="mt-16 text-center">
+      <div class="bg-gradient-to-r from-orange-500 to-amber-500 rounded-3xl p-12 text-white shadow-2xl max-w-4xl mx-auto">
+        <h3 class="text-3xl font-bold mb-4">
+          Ready to Transform Your Business with Car Advertising?
+        </h3>
+        <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          Our proven 5-step process ensures your car advertising campaign delivers maximum impact and ROI.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <p-button 
+            label="Start Your Campaign"
+            icon="pi pi-play"
+            styleClass="bg-white text-orange-600 hover:bg-gray-100 px-8 py-4 text-lg font-bold rounded-xl shadow-xl transition-all duration-300 transform hover:scale-105"
+          ></p-button>
+          
+          <p-button 
+            label="Schedule Consultation"
+            icon="pi pi-calendar"
+            styleClass="bg-transparent border-2 border-white text-white hover:bg-white hover:text-orange-600 px-8 py-4 text-lg font-bold rounded-xl transition-all duration-300 transform hover:scale-105"
+            [outlined]="true"
+          ></p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Importance Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Importance of <span class="text-orange-600">Car Advertising</span> for Product & Company Promotion
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto">
+        Car advertising is a powerful tool for product promotion or company promotion, offering numerous benefits that can drive business growth and increase brand awareness.
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <!-- Why Car Advertising is Important -->
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-3xl p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Why Car Advertising is Important</h3>
+        <div class="space-y-4">
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+            <p class="text-gray-700">Increased Visibility: Car advertising increases visibility and reach for your product or company.</p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+            <p class="text-gray-700">Brand Awareness: Our team will help increase brand awareness through car advertising, making your product or company more recognizable.</p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+            <p class="text-gray-700">Targeted Advertising: We will target specific audiences based on location and demographics.</p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+            <p class="text-gray-700">Cost-Effective: Car advertising is a cost-effective way to promote products and services.</p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 bg-blue-500 rounded-full mt-2"></div>
+            <p class="text-gray-700">Memorable Impressions: Our team will create creative and eye-catching vehicle ads that leave a lasting impression.</p>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Benefits for Product Promotion -->
+      <div class="bg-gradient-to-br from-green-50 to-green-100 rounded-3xl p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6">Benefits for Product Promotion</h3>
+        <div class="space-y-4">
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+            <p class="text-gray-700">Increased Sales: Effective car advertising campaigns can drive sales and revenue.</p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+            <p class="text-gray-700">Product Awareness: Our team will increase awareness of your product through car advertising.</p>
+          </div>
+          <div class="flex items-start space-x-3">
+            <div class="w-2 h-2 bg-green-500 rounded-full mt-2"></div>
+            <p class="text-gray-700">Competitive Advantage: Car advertising can help you stand out from competitors.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

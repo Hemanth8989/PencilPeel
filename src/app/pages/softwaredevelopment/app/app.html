@@ -1,0 +1,1002 @@
+<app-nocarouselquotes [quotes]="quotes" [herocontent]="herocontent"></app-nocarouselquotes>
+<section class="relative overflow-hidden lg:p-20 bg-gradient-to-br from-orange-50 to-white">
+  <div class="relative z-10 max-w-6xl mx-auto bg-white bg-opacity-90 rounded-3xl shadow-xl border-l-8 border-orange-400 px-8 py-12">
+    <h2 class="mb-8 text-3xl md:text-4xl font-bold tracking-tight text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-pink-400 bg-clip-text animate-gradient-shine text-center">
+      The Power of Mobile Applications in Today's Digital Landscape
+    </h2>
+    <p class="mb-6 text-lg font-semibold text-gray-800 text-center">
+      Welcome to the universe of web design and development of <span class="text-orange-500 font-bold">Pencil Peel IMT</span>.
+      The team that we have, the experience, knowledge, dedication and expertise will take you to the new world.
+    </p>
+    <p class="mb-6 text-gray-700 text-center">
+      At <span class="font-bold text-orange-500">Pencil Peel IMT</span>,
+      we recognize the immense potential of mobile applications in transforming businesses and revolutionizing the way people interact with technology. Mobile applications have become an integral part of our daily lives, and their impact is felt across various industries.
+    </p>
+    <p class="mb-6 text-gray-700 text-center">
+      The human race kept changing day by day as the society and culture kept changing. Human’s requirements and opportunities too have increased. The survival of human being has become very easy over the decades. It was then technology had entered the human life. The human is now communicating with the world by just sitting in one place. He started sharing his life, his trade with the world.
+      <span class="font-semibold text-orange-600">
+        By reducing the gap between man and society, man and another man, he increased the demand for websites and mobile applications. Mobile applications have become more important to a man even greater than the mobiles. Mobile applications have become friendlier and more useful in lesser time.
+      </span>
+    </p>
+    <p class="mb-6 text-gray-700 text-center">
+      We call it <span class="font-bold">mobile app</span>. This is a software programme that could be used in computer, mobile, smart phone, tablet. These apps are useful to take our ideas, company, product, organization, to the world and promote them.
+    </p>
+    <blockquote class="max-w-2xl mx-auto pl-6 border-l-4 border-orange-300 text-lg italic text-orange-700 mb-6 text-left md:text-center">
+      "Come to us with an idea. We would work together and develop it. We shall introduce your idea, product to the world.<br>
+      We shall work together for reaching new heights. The trust you have on us will take you to the road of success."
+    </blockquote>
+    <p class="text-gray-700 text-center">
+      Our tech company, <span class="font-bold text-orange-500">Pencil Peel IMT</span> has several experts in mobile application design and development. They have several years of experience in the field. We have earned a name of customer friendly company by designing and developing apps for their best use. We are ready to offer our services to you, your company or your product.
+    </p>
+  </div>
+</section>
+
+<!-- mobile-applications.component.html -->
+<div class="bg-white">
+  
+  <!-- what-are-mobile-apps-section.component.html -->
+  <section class="relative bg-gradient-to-br from-orange-50 to-white py-12 lg:py-16">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <h1 class="text-2xl md:text-5xl font-semibold text-gray-900 mb-8 leading-tight tracking-tight">
+          What are 
+          <span class="text-orange-600">Mobile Applications?</span>
+        </h1>
+        
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-white rounded-2xl p-6 lg:p-8 shadow-lg border border-orange-100">
+            <h2 class="text-2xl md:text-3xl font-semibold text-orange-600 mb-4">
+              Mobile Applications and Pencil Peel IMT
+            </h2>
+            <p class="text-base md:text-base text-gray-700 ">
+              Mobile applications, commonly referred to as <span class="font-medium text-gray-900">mobile apps</span>, are software applications designed to run 
+              on mobile devices such as smartphones and tablets. These apps can be downloaded from app stores like 
+              <span class="font-medium text-gray-900">Apple App Store and Google Play Store</span>, and they offer a wide range of functionalities and services. 
+              At <span class="font-medium text-orange-600">Pencil Peel IMT</span>, we understand the significance of mobile applications in today's digital landscape 
+              and leverage our expertise to create custom mobile apps that cater to the unique needs of businesses and users.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- key-aspects-mobile-apps-section.component.html -->
+  <section class="py-12 lg:py-16 bg-gray-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <h2 class="text-2xl lg:text-5xl font-semibold text-gray-900 mb-6 tracking-tight">
+          Key Aspects of Mobile Applications that 
+          <span class="text-orange-600">Pencil Peel IMT</span> Focuses On
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div *ngFor="let aspect of keyAspects; let i = index" 
+            class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300">
+          
+          <div class="relative h-48 sm:h-56 lg:h-64">
+            <img [src]="aspect.image" 
+                [alt]="aspect.title"
+                class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+            <div class="absolute bottom-4 left-4 right-4">
+              <h3 class="text-base sm:text-lg lg:text-xl font-semibold text-white leading-tight">
+                {{ aspect.title }}
+              </h3>
+            </div>
+          </div>
+
+          <div class="p-6 lg:p-8">
+            <p class="text-sm sm:text-base lg:text-base text-gray-700 leading-relaxed">
+              {{ aspect.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- How Mobile Apps Rule Current Trends -->
+  <section class="py-16 lg:py-24 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-16">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-medium text-gray-900 mb-8 tracking-tight">
+          How are Mobile Applications 
+          <span class="text-orange-600">Ruling the Current Trend?</span>
+        </h1>
+        
+        <div class="max-w-3xl mx-auto">
+          <p class="text-lg text-gray-600 leading-relaxed">
+              Mobile applications are ruling the current trend in several ways:
+          </p>
+        </div>
+      </div>
+
+      <!-- Material Design Feature Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div *ngFor="let feature of trendingFeatures; let i = index"
+            class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 border border-gray-200">
+          
+          <!-- Material Card Header -->
+          <div class="p-6 border-b border-gray-100">
+            <div class="flex items-center space-x-4">
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                  <i [class]="feature.icon + ' text-orange-600 text-xl'"></i>
+                </div>
+              </div>
+              <div class="flex-1">
+                <h3 class="text-xl font-medium text-gray-900 leading-tight">
+                  {{ feature.title }}
+                </h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Material Card Content -->
+          <div class="p-6">
+            <p class="text-gray-600 text-sm md:text-base leading-relaxed">
+              {{ feature.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- key-elements-design.component.html -->
+  <section class="py-12 lg:py-16 bg-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-2xl md:text-5xl font-semibold text-gray-900 mb-6 tracking-tight">
+          Key Elements of 
+          <span class="text-orange-600">Mobile App Design</span>
+        </h2>
+        
+        <div class="max-w-4xl mx-auto">
+          <p class="text-sm md:text-lg  text-gray-600 leading-relaxed">
+            When it comes to designing a mobile app, there are several 
+            <span class="font-medium text-gray-900">key elements that can make or break the user experience</span>. 
+            At <span class="font-medium text-orange-600">Pencil Peel IMT</span>, we understand the importance of incorporating these 
+            elements into our app design process. Here are the key elements of mobile app design that we focus on:
+          </p>
+        </div>
+      </div>
+
+      <!-- Design Elements Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div *ngFor="let element of designElements"
+            class="group bg-white rounded-lg border border-gray-200 hover:border-orange-200 transition-all duration-300 overflow-hidden hover:shadow-md">
+          
+          <!-- Card Header -->
+          <div class="p-4 md:p-6 border-b border-gray-100">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 bg-orange-50 rounded-lg flex items-center justify-center group-hover:bg-orange-100 transition-colors duration-200">
+                <i [class]="element.icon + ' text-orange-600 text-lg'"></i>
+              </div>
+              <h3 class="text-base sm:text-lg lg:text-xl font-medium text-gray-900 leading-tight">
+                {{ element.title }}
+              </h3>
+            </div>
+          </div>
+          
+          <!-- Card Content -->
+          <div class="p-4 md:p-6">
+            <p class="text-sm lg:text-base text-gray-600 leading-relaxed">
+              {{ element.description }}
+            </p>
+          </div>
+
+          <!-- Hover Accent Bar -->
+          <div class="h-1 w-full bg-gradient-to-r from-orange-400 to-orange-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- design-trends.component.html -->
+  <section class="bg-gray-50 py-16 lg:py-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <!-- Material UI Header -->
+      <div class="text-center mb-16">
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-medium text-gray-900 mb-6 tracking-tight">
+          Design Trends in 
+          <span class="text-orange-600">Mobile App Development</span>
+        </h1>
+        
+        <div class="max-w-4xl mx-auto">
+          <p class="text-base lg:text-lg text-gray-600 leading-relaxed">
+              At <span class="font-semibold text-orange-600">Pencil Peel IMT</span>, we stay up-to-date with the 
+              <span class="font-semibold text-gray-900">latest design trends in mobile app development</span> to ensure that our apps are 
+              modern, intuitive, and engaging. Here are some of the design trends we're incorporating into our mobile app development process:
+            </p>
+        </div>
+      </div>
+
+      <!-- Material Design Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+        <div *ngFor="let trend of designTrends; let i = index" 
+            class="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 overflow-hidden border border-gray-200">
+          
+          <!-- Material Card Header with Image -->
+          <div class="relative">
+            <img [src]="trend.image" 
+                [alt]="trend.title"
+                class="w-full h-56 object-cover">
+          </div>
+
+          <!-- Material Card Content -->
+          <div class="p-6">
+            <!-- Material Typography -->
+            <h2 class="text-xl font-medium text-gray-900 mb-4 leading-tight">
+              {{ trend.title }}
+            </h2>
+            
+            <p class="text-gray-600 text-base leading-relaxed mb-6">
+              {{ trend.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- design-tools-technologies-section.component.html -->
+<section class="relative min-h-screen bg-gradient-to-br from-white via-orange-50/30 to-blue-50/30 overflow-hidden py-12 lg:py-16">
+  
+  <!-- Background Elements -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-orange-200/20 to-orange-400/20 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-blue-200/20 to-purple-200/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 3s;"></div>
+    <div class="absolute top-1/4 left-1/6 w-3 h-3 bg-orange-400/40 rounded-full animate-bounce"></div>
+    <div class="absolute top-2/3 right-1/5 w-2 h-2 bg-blue-500/40 rounded animate-bounce" style="animation-delay: 1s;"></div>
+    <div class="absolute top-1/2 right-1/4 w-4 h-4 bg-purple-400/40 rotate-45 animate-bounce" style="animation-delay: 2s;"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-100 to-blue-100 border border-orange-200 rounded-full text-orange-700 text-sm font-medium mb-8 shadow-sm backdrop-blur-sm">
+        <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+        <span>Our Design Arsenal</span>
+      </div>
+      
+      <h1 class="text-2xl lg:text-5xl font-semibold text-slate-900 mb-6 leading-tight tracking-tight">
+        Design Tools and 
+        <span class="bg-gradient-to-r from-orange-500 via-blue-500 to-purple-500 bg-clip-text text-transparent">Technologies</span>
+      </h1>
+      
+      <p class="text-sm md:text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, we utilize a range of design tools and technologies to create innovative and effective mobile app designs. 
+        Our team of experienced designers is skilled in using a variety of tools and technologies to bring our clients' visions to life.
+      </p>
+    </div>
+
+    <!-- Design Tools Section -->
+    <div class="mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">
+          Design Tools
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-blue-500 rounded-full mx-auto mb-6"></div>
+        <p class="text-sm md:text-lg text-slate-600 max-w-3xl mx-auto leading-relaxed">
+          Professional design tools that power our creative process and enable seamless collaboration with clients and stakeholders.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+        <div 
+          *ngFor="let technology of designTools; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+          [ngClass]="getColorClasses(technology.colorScheme).border + ' ' + getColorClasses(technology.colorScheme).hover + ' ' + getColorClasses(technology.colorScheme).shadow"
+          [style.animation-delay]="(i * 0.15) + 's'"
+        >
+          
+          <!-- SVG Logo -->
+          <div class="mb-4">
+            <img 
+              [src]="technology.svgPath" 
+              [alt]="technology.name + ' logo'"
+              class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform duration-300"
+            >
+          </div>
+
+          <!-- Name -->
+          <h3 class="text-base sm:text-lg font-semibold text-slate-900 mb-3">
+            {{ technology.name }}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4" [title]="technology.description">
+            {{ technology.description.length > 100 ? (technology.description | slice:0:100) + '...' : technology.description }}
+          </p>
+
+          <!-- View Details Button -->
+          <button 
+            class="w-full text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+            [ngClass]="getColorClasses(technology.colorScheme).text + ' hover:' + getColorClasses(technology.colorScheme)"
+            (click)="showTechnologyDetails(technology)"
+          >
+            View Details
+            <i class="pi pi-external-link ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Graphic Design Tools Section -->
+    <div class="mb-16">
+      <div class="text-center mb-12">
+        <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">
+          Graphic Design Tools
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-blue-500 rounded-full mx-auto mb-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2  gap-6 lg:gap-8">
+        <div 
+          *ngFor="let technology of graphicTools; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+          [ngClass]="getColorClasses(technology.colorScheme).border + ' ' + getColorClasses(technology.colorScheme).hover + ' ' + getColorClasses(technology.colorScheme).shadow"
+          [style.animation-delay]="(i * 0.15) + 's'"
+        >
+          
+          <!-- SVG Logo -->
+          <div class="mb-4">
+            <img 
+              [src]="technology.svgPath" 
+              [alt]="technology.name + ' logo'"
+              class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform duration-300"
+            >
+          </div>
+
+          <!-- Name -->
+          <h3 class="text-base sm:text-lg font-semibold text-slate-900 mb-3">
+            {{ technology.name }}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4" [title]="technology.description">
+            {{ technology.description.length > 100 ? (technology.description | slice:0:100) + '...' : technology.description }}
+          </p>
+
+          <!-- View Details Button -->
+          <button 
+            class="w-full text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+            [ngClass]="getColorClasses(technology.colorScheme).text + ' hover:' + getColorClasses(technology.colorScheme).bg"
+            (click)="showTechnologyDetails(technology)"
+          >
+            View Details
+            <i class="pi pi-external-link ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Collaboration and Prototyping Tools Section -->
+    <div class="mb-16">
+       <div class="text-center mb-12">
+        <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">
+           Collaboration and Prototyping Tools
+        </h2>
+        <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-blue-500 rounded-full mx-auto mb-6"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+        <div 
+          *ngFor="let technology of collaborationTools; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+          [ngClass]="getColorClasses(technology.colorScheme).border + ' ' + getColorClasses(technology.colorScheme).hover + ' ' + getColorClasses(technology.colorScheme).shadow"
+          [style.animation-delay]="(i * 0.15) + 's'"
+        >
+          
+          <!-- SVG Logo -->
+          <div class="mb-4">
+            <img 
+              [src]="technology.svgPath" 
+              [alt]="technology.name + ' logo'"
+              class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform duration-300"
+            >
+          </div>
+
+          <!-- Name -->
+          <h3 class="text-base sm:text-lg font-semibold text-slate-900 mb-3">
+            {{ technology.name }}
+          </h3>
+
+          <!-- Description -->
+          <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4" [title]="technology.description">
+            {{ technology.description.length > 100 ? (technology.description | slice:0:100) + '...' : technology.description }}
+          </p>
+
+          <!-- View Details Button -->
+          <button 
+            class="w-full text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+            [ngClass]="getColorClasses(technology.colorScheme).text + ' hover:' + getColorClasses(technology.colorScheme).bg"
+            (click)="showTechnologyDetails(technology)"
+          >
+            View Details
+            <i class="pi pi-external-link ml-2"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Software and Programming Languages Section -->
+    <div class="mb-16">
+      <div class="text-center mb-16">
+        <div class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-purple-100 to-pink-100 border border-purple-200 rounded-full text-purple-700 text-sm font-medium mb-8 shadow-sm">
+          <span class="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></span>
+          <span>Development Stack</span>
+        </div>
+        
+        <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 mb-6">
+          Software and Programming Languages We Use
+        </h2>
+        <p class="text-base md:text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
+          At Pencil Peel IMT, we utilize a range of software and programming languages to deliver high-quality mobile applications 
+          that meet our clients' needs and goals. Our team of experts is skilled in using the latest tools and technologies.
+        </p>
+      </div>
+
+      <!-- Programming Languages -->
+      <div class="mb-12">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">
+            Programming Languages
+          </h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-blue-500 rounded-full mx-auto mb-6"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div 
+            *ngFor="let technology of programmingLanguages; let i = index"
+            class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+            [ngClass]="getColorClasses(technology.colorScheme).border + ' ' + getColorClasses(technology.colorScheme).hover + ' ' + getColorClasses(technology.colorScheme).shadow"
+            [style.animation-delay]="(i * 0.15) + 's'"
+          >
+            
+            <!-- SVG Logo -->
+            <div class="mb-4">
+              <img 
+                [src]="technology.svgPath" 
+                [alt]="technology.name + ' logo'"
+                class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform duration-300"
+              >
+            </div>
+
+            <!-- Name -->
+            <h3 class="text-base sm:text-lg font-semibold text-slate-900 mb-3">
+              {{ technology.name }}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4" [title]="technology.description">
+              {{ technology.description.length > 100 ? (technology.description | slice:0:100) + '...' : technology.description }}
+            </p>
+
+            <!-- View Details Button -->
+            <button 
+              class="w-full text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+              [ngClass]="getColorClasses(technology.colorScheme).text + ' hover:' + getColorClasses(technology.colorScheme).bg"
+              (click)="showTechnologyDetails(technology)"
+            >
+              View Details
+              <i class="pi pi-external-link ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Development Frameworks -->
+      <div class="mb-12">
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">
+            Development Frameworks
+          </h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-blue-500 rounded-full mx-auto mb-6"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div 
+            *ngFor="let technology of frameworks; let i = index"
+            class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+            [ngClass]="getColorClasses(technology.colorScheme).border + ' ' + getColorClasses(technology.colorScheme).hover + ' ' + getColorClasses(technology.colorScheme).shadow"
+            [style.animation-delay]="(i * 0.15) + 's'"
+          >
+            
+            <!-- SVG Logo -->
+            <div class="mb-4">
+              <img 
+                [src]="technology.svgPath" 
+                [alt]="technology.name + ' logo'"
+                class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform duration-300"
+              >
+            </div>
+
+            <!-- Name -->
+            <h3 class="text-base sm:text-lg font-semibold text-slate-900 mb-3">
+              {{ technology.name }}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4" [title]="technology.description">
+              {{ technology.description.length > 100 ? (technology.description | slice:0:100) + '...' : technology.description }}
+            </p>
+
+            <!-- View Details Button -->
+            <button 
+              class="w-full text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+              [ngClass]="getColorClasses(technology.colorScheme).text + ' hover:' + getColorClasses(technology.colorScheme).bg"
+              (click)="showTechnologyDetails(technology)"
+            >
+              View Details
+              <i class="pi pi-external-link ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Database Management -->
+      <div>
+        <div class="text-center mb-12">
+          <h2 class="text-2xl md:text-3xl font-semibold text-slate-900 mb-4">
+            Database Management
+          </h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-blue-500 rounded-full mx-auto mb-6"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+          <div 
+            *ngFor="let technology of databases; let i = index"
+            class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+            [ngClass]="getColorClasses(technology.colorScheme).border + ' ' + getColorClasses(technology.colorScheme).hover + ' ' + getColorClasses(technology.colorScheme).shadow"
+            [style.animation-delay]="(i * 0.15) + 's'"
+          >
+            
+            <!-- SVG Logo -->
+            <div class="mb-4">
+              <img 
+                [src]="technology.svgPath" 
+                [alt]="technology.name + ' logo'"
+                class="w-20 h-20 mx-auto group-hover:scale-110 transition-transform duration-300"
+              >
+            </div>
+
+            <!-- Name -->
+            <h3 class="text-base sm:text-lg font-semibold text-slate-900 mb-3">
+              {{ technology.name }}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-slate-600 text-sm md:text-base leading-relaxed mb-4" [title]="technology.description">
+              {{ technology.description.length > 100 ? (technology.description | slice:0:100) + '...' : technology.description }}
+            </p>
+
+            <!-- View Details Button -->
+            <button 
+              class="w-full text-sm font-medium py-2 px-4 rounded-lg transition-colors duration-200"
+              [ngClass]="getColorClasses(technology.colorScheme).text + ' hover:' + getColorClasses(technology.colorScheme).bg"
+              (click)="showTechnologyDetails(technology)"
+            >
+              View Details
+              <i class="pi pi-external-link ml-2"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Technology Details Dialog -->
+  <div *ngIf="displayDialog" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50">
+    <div class="bg-white rounded-2xl max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div class="p-6 border-b border-gray-200">
+        <div class="flex items-center justify-between">
+          <h3 class="text-lg font-semibold text-slate-900">Technology Details</h3>
+          <button (click)="hideDialog()" class="text-gray-400 hover:text-gray-600 transition-colors">
+            <i class="pi pi-times text-xl"></i>
+          </button>
+        </div>
+      </div>
+      
+      <div *ngIf="selectedTechnology" class="p-6">
+        <div class="text-center mb-6">
+          <img 
+            [src]="selectedTechnology.svgPath" 
+            [alt]="selectedTechnology.name + ' logo'"
+            class="w-16 h-16 mx-auto mb-4"
+          >
+          <h2 class="text-xl font-semibold text-slate-900">{{ selectedTechnology.name }}</h2>
+        </div>
+        
+        <div class="bg-gray-50 rounded-lg p-4">
+          <h4 class="font-semibold text-slate-900 mb-2">Description</h4>
+          <p class="text-slate-600 leading-relaxed">{{ selectedTechnology.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-benefitsnew [benefits]="benefits" [title]="benefittitle"></app-benefitsnew>
+
+<!-- mobile-app-types-section.component.html -->
+<section class="py-12 lg:py-16 bg-gradient-to-br from-white via-gray-50 to-orange-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-100 to-purple-100 border border-orange-200 rounded-full text-orange-700 text-sm font-medium mb-8 shadow-sm">
+        <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+        <span>Mobile Solutions</span>
+      </div>
+      
+      <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+        Types of 
+        <span class="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent">Mobile Applications</span>
+      </h1>
+      
+      <div class="max-w-4xl mx-auto">
+        <p class="text-sm sm:text-base lg:text-base text-gray-600 leading-relaxed">
+          At <span class="font-semibold text-orange-600">Pencil Peel IMT</span>, we develop a wide range of mobile applications that cater to different business needs and goals. 
+          Our team of experts is skilled in creating various types of apps that provide unique user experiences and drive business results.
+        </p>
+      </div>
+    </div>
+
+    <!-- Mobile App Types Grid -->
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+      <div 
+        *ngFor="let app of mobileAppTypes" 
+        class="group relative overflow-hidden rounded-xl shadow-lg transition-all duration-500 transform hover:-translate-y-2 cursor-pointer"
+        [ngClass]="[
+          app.isWide ? 'md:col-span-2 lg:col-span-2 h-80 lg:h-96' : 'h-80 lg:h-96',
+          'hover:shadow-xl',
+          getColorClasses(app.colorScheme).shadow
+        ]"
+        (click)="openModal(app)"
+      >
+        <!-- Background Image -->
+        <img 
+          [src]="app.image" 
+          [alt]="app.title + ' mobile application development'"
+          class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500"></div>
+        <!-- Content -->
+        <div class="absolute inset-0 flex flex-col justify-end p-8" [ngClass]="app.isWide ? 'lg:p-12' : ''">
+          <h3 
+            class="text-xl md:text-2xl font-semibold text-white mb-4 transition-colors duration-300"
+            [ngClass]="'group-hover:' + getColorClasses(app.colorScheme).text.replace('text-', 'text-') + ' group-hover:text-opacity-90'"
+          >
+            {{ app.title }}
+          </h3>
+          <p class="text-white/90 leading-relaxed text-base" [ngClass]="app.isWide ? 'max-w-3xl' : ''">
+            {{ app.definition }}
+          </p>
+          
+          <!-- View Details Button -->
+          <div class="mt-4 flex items-center text-white/80 group-hover:text-white transition-colors duration-300">
+            <span class="text-sm font-medium">View Details</span>
+            <i class="pi pi-arrow-right ml-2 transform group-hover:translate-x-1 transition-transform duration-300"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <p-dialog  [modal]="true" [(visible)]="showModal" [style]="{ width: '40rem' }">
+    <!-- Modal Content with All Details -->
+    <div class="overflow-y-auto p-6 space-y-6" *ngIf="selectedApp">
+      <div class="relative h-60">
+      <img 
+        [src]="selectedApp.image" 
+        [alt]="selectedApp.title"
+        class="w-full h-full object-cover rounded-t-2xl">
+      </div>
+      <!-- Title and Category in Content -->
+      <div class="text-center border-b border-gray-200">
+        <h2 class="text-2xl font-bold text-gray-900">{{ selectedApp.title }}</h2>
+      </div>
+      
+      <!-- Definition -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3 flex items-center" [ngClass]="getColorClasses(selectedApp.colorScheme).text">
+          <i class="pi pi-info-circle mr-2"></i>
+          Definition
+        </h3>
+        <div class="p-4 rounded-lg border-l-4">
+          <p class="text-gray-800 leading-relaxed">{{ selectedApp.definition }}</p>
+        </div>
+      </div>
+
+      <!-- Benefits -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3 flex items-center" [ngClass]="getColorClasses(selectedApp.colorScheme).text">
+          <i class="pi pi-star mr-2"></i>
+          Benefits
+        </h3>
+        <div class="p-4 rounded-lg border-l-4" >
+          <p class="text-gray-800 leading-relaxed">{{ selectedApp.benefits }}</p>
+        </div>
+      </div>
+
+      <!-- Examples -->
+      <div>
+        <h3 class="text-lg font-semibold mb-3 flex items-center" [ngClass]="getColorClasses(selectedApp.colorScheme).text">
+          <i class="pi pi-lightbulb mr-2"></i>
+          Examples
+        </h3>
+        <div class="p-4 rounded-lg border-l-4">
+          <p class="text-gray-800 leading-relaxed">{{ selectedApp.examples }}</p>
+        </div>
+      </div>
+    </div>
+  </p-dialog>
+
+</section>
+
+
+
+<section class="py-16 px-4 bg-gradient-to-br from-[#f0f4ff] via-white to-[#f6faed]">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-8 text-gray-900 drop-shadow-md">
+      Benefits of Having a Mobile Application for Pencil Peel IMT
+    </h2>
+    <p class="mb-12 text-gray-700 text-center text-lg">
+      At <span class="text-orange-500">Pencil Peel IMT</span>, we understand the importance of having a mobile application for businesses, organizations, and individuals. By developing a mobile app, we can provide numerous benefits that enhance customer engagement, increase accessibility, and improve brand recognition.
+    </p>
+  </div>
+  <!-- Desktop: Tabs visible from md and above -->
+<div class="hidden md:block">
+  <p-tabs [(value)]="activeIndex" class="bg-white rounded-xl shadow-lg p-6 max-w-7xl mx-auto">
+    <!-- Tab Headers -->
+    <p-tablist class="flex flex-wrap justify-center mb-6 border-b border-gray-200">
+      <p-tab *ngFor="let group of benefitGroups; let i = index" [value]="i" class="px-6 py-3 cursor-pointer text-lg font-semibold text-gray-700">
+        {{ group.group }}
+      </p-tab>
+    </p-tablist>
+
+    <!-- Tab Panels -->
+    <p-tabpanels>
+      <p-tabpanel *ngFor="let group of benefitGroups; let i = index" [value]="i">
+        <h4 class="text-2xl font-bold text-center text-orange-500 mb-6">Benefits</h4>
+        <div class="grid md:grid-cols-2  gap-8 mb-12">
+          <div *ngFor="let benefit of group.benefits" class="flex items-start rounded-2xl bg-white/80 backdrop-blur-md border border-gray-200 shadow-xl p-7 hover:shadow-2xl transition">
+            <div class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl text-white text-2xl mr-4" [ngClass]="benefit.gradient">
+              <i [class]="'pi ' + benefit.icon"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-semibold mb-2">{{ benefit.title }}</h4>
+              <p class="text-gray-700 text-base">{{ benefit.desc }}</p>
+            </div>
+          </div>
+        </div>
+        <ng-container *ngIf="group.howToAchieve">
+          <h4 class="text-2xl font-bold text-center text-orange-500 mb-6">How We'll Achieve These Benefits</h4>
+          <ul class="list-disc list-inside text-gray-700 space-y-3">
+            <li *ngFor="let achieve of group.howToAchieve">
+              <span class="font-semibold">{{ achieve.title }}: </span>{{ achieve.desc }}
+            </li>
+          </ul>
+        </ng-container>
+      </p-tabpanel>
+    </p-tabpanels>
+  </p-tabs>
+</div>
+<!-- Mobile: Stacked content visible below md -->
+<div class="block md:hidden px-4 max-w-6xl mx-auto space-y-16">
+  <div *ngFor="let group of benefitGroups">
+    <h3 class="text-3xl text-center font-bold text-orange-500 mb-6">{{ group.group }}</h3>
+    <div class="grid gap-8">
+      <div *ngFor="let benefit of group.benefits" class="flex items-start rounded-2xl bg-white/80 backdrop-blur-md border border-gray-200 shadow-xl p-7">
+        <div class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl text-white text-2xl mr-4" [ngClass]="benefit.gradient">
+          <i [class]="'pi ' + benefit.icon"></i>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-2">{{ benefit.title }}</h4>
+          <p class="text-gray-700 text-base">{{ benefit.desc }}</p>
+        </div>
+      </div>
+    </div>
+
+    <h4 class="text-2xl text-center font-bold text-orange-500 mt-12 mb-6">How We'll Achieve These Benefits</h4>
+    <ul class="list-disc list-inside text-gray-700 space-y-3">
+      <li *ngFor="let achieve of group.howToAchieve">
+        <span class="font-semibold">{{ achieve.title }}: </span>{{ achieve.desc }}
+      </li>
+    </ul>
+  </div>
+</div>
+</section>
+
+<!-- future-mobile-app-section.component.html -->
+<section class="py-12 lg:py-16 bg-gradient-to-br from-slate-50 via-white to-orange-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-orange-100 to-purple-100 border border-orange-200 rounded-full text-orange-700 text-sm font-medium mb-8 shadow-sm">
+        <span class="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></span>
+        <span>Innovation Ahead</span>
+      </div>
+      
+      <h1 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-6 leading-tight tracking-tight">
+        The Future of Mobile Application Design and Development at 
+        <span class="bg-gradient-to-r from-orange-500 to-purple-500 bg-clip-text text-transparent">Pencil Peel IMT</span>
+      </h1>
+      
+      <div class="max-w-5xl mx-auto">
+        <p class="text-sm sm:text-base lg:text-base text-gray-600 leading-relaxed">
+          At <span class="font-semibold text-orange-600">Pencil Peel IMT</span>, we see the future of mobile application design and development as an exciting landscape of 
+          <span class="font-medium text-gray-900">innovation, user-centricity, and technological advancements</span>. Mobile apps are becoming increasingly integral to businesses, 
+          enabling them to connect with customers, streamline operations, and drive growth.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<div class="max-w-7xl mx-auto mb-16">
+  <h3 class="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-12 text-center">
+    Key Trends in Mobile Application Design and Development:
+  </h3>
+  
+  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+    <!-- Cross-Platform Development -->
+    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 h-80 lg:h-96">
+      <!-- Background Image -->
+      <img 
+        src="https://images.unsplash.com/photo-1555421689-491a97ff2040?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+        alt="Cross-platform mobile app development on multiple devices" 
+        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+      
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500"></div>
+      
+      <!-- Content -->
+      <div class="absolute inset-0 flex flex-col justify-end p-8">
+        <h4 class="text-xl md:text-2xl font-semibold text-white mb-4 group-hover:text-orange-300 transition-colors duration-300">
+          Cross-Platform Development
+        </h4>
+        <p class="text-white/90 leading-relaxed text-base">
+          We'll leverage frameworks that allow us to build apps for both iOS and Android efficiently, ensuring a broader reach for our clients.
+        </p>
+      </div>
+    </div>
+    
+    <!-- AI and Machine Learning Integration -->
+    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 h-80 lg:h-96">
+      <!-- Background Image -->
+      <img 
+        src="https://images.unsplash.com/photo-1555255707-c07966088b7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+        alt="AI and machine learning integration in mobile applications" 
+        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+      
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500"></div>
+      
+      <!-- Content -->
+      <div class="absolute inset-0 flex flex-col justify-end p-8">
+        <h4 class="text-xl md:text-2xl font-semibold text-white mb-4 group-hover:text-orange-300 transition-colors duration-300">
+          AI and Machine Learning Integration
+        </h4>
+        <p class="text-white/90 leading-relaxed text-base">
+          We'll explore the integration of AI and ML in mobile apps to enable features like predictive analytics, personalized user experiences, and intelligent automation.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Enhanced User Experience (UX) -->
+    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 h-80 lg:h-96">
+      <!-- Background Image -->
+      <img 
+        src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+        alt="Enhanced user experience design in mobile applications" 
+        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+      
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500"></div>
+      
+      <!-- Content -->
+      <div class="absolute inset-0 flex flex-col justify-end p-8">
+        <h4 class="text-xl md:text-2xl font-semibold text-white mb-4 group-hover:text-orange-300 transition-colors duration-300">
+          Enhanced User Experience (UX)
+        </h4>
+        <p class="text-white/90 leading-relaxed text-base">
+          We'll focus on crafting intuitive, engaging, and accessible UX designs that meet the evolving needs of mobile users.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Security and Performance (Spans 2 columns) -->
+    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 h-80 lg:h-96 md:col-span-2 lg:col-span-2">
+      <!-- Background Image -->
+      <img 
+        src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80" 
+        alt="Mobile application security and performance optimization" 
+        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+      
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500"></div>
+      
+      <!-- Content -->
+      <div class="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
+        <h4 class="text-xl md:text-2xl font-semibold text-white mb-6 group-hover:text-orange-300 transition-colors duration-300">
+          Security and Performance
+        </h4>
+        <p class="text-white/90 leading-relaxed text-base max-w-3xl">
+          We'll prioritize security and performance optimization in mobile app development, ensuring that apps are both robust and efficient.
+        </p>
+      </div>
+    </div>
+    
+    <!-- Emerging Technologies -->
+    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 h-80 lg:h-96">
+      <!-- Background Image -->
+      <img 
+        src="https://images.unsplash.com/photo-1592478411213-6153e4ebc696?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+        alt="Emerging technologies AR VR 5G in mobile app development" 
+        class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+      
+      <!-- Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500"></div>
+      
+      <!-- Content -->
+      <div class="absolute inset-0 flex flex-col justify-end p-8">
+        <h4 class="text-xl md:text-2xl font-semibold text-white mb-4 group-hover:text-orange-300 transition-colors duration-300">
+          Emerging Technologies
+        </h4>
+        <p class="text-white/90 leading-relaxed text-base">
+          We'll stay abreast of emerging technologies like AR, VR, and 5G, incorporating them into mobile apps where they add value.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- commitment-section.component.html -->
+<section class="lg:py-16 bg-gradient-to-br from-white to-orange-50">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Our Commitment Section -->
+    <div class="mb-16">
+      <div class="bg-white rounded-2xl p-8 lg:p-12 shadow-lg border border-gray-100">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl md:text-3xl font-semibold text-gray-900 mb-6">
+            Our Commitment
+          </h2>
+          <div class="w-16 h-1 bg-gradient-to-r from-orange-500 to-purple-500 rounded-full mx-auto mb-6"></div>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <p class="text-sm sm:text-base lg:text-base text-gray-700 leading-relaxed text-center">
+            At <span class="font-semibold text-orange-600">Pencil Peel IMT</span>, we're committed to delivering mobile application design and development solutions 
+            that meet the unique needs of our clients. We believe in creating apps that are not just functional but also drive business results and enhance user experiences.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Growing with Technology Updates Section -->
+    <div>
+      <div class="bg-gradient-to-r from-orange-500 via-purple-500 to-blue-500 rounded-2xl p-8 lg:p-12 text-white shadow-xl">
+        <div class="text-center mb-8">
+          <div class="w-16 h-16 bg-white bg-opacity-20 rounded-2xl flex items-center justify-center mx-auto mb-6 backdrop-blur-sm">
+            <i class="pi pi-chart-line text-3xl text-gray-800"></i>
+          </div>
+          <h2 class="text-lg sm:text-xl lg:text-2xl font-bold mb-6">
+            Growing with Technology Updates
+          </h2>
+        </div>
+        
+        <div class="max-w-4xl mx-auto">
+          <p class="text-sm sm:text-base lg:text-base leading-relaxed text-center text-white text-opacity-90">
+            We'll grow up with technology updates, staying current with the latest trends and advancements in mobile application design and development. 
+            With our <span class="font-semibold">huge experience and great knowledge in software design and development</span>, we'll deliver high-quality 
+            mobile app solutions that meet the evolving needs of our clients.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-whycpencilpeel [features]="whycfeatures" [headerContent]="whyccontent" />

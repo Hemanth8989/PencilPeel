@@ -1,0 +1,306 @@
+ @keyframes float {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-20px);
+      }
+    }
+
+    @keyframes float-delayed {
+      0%, 100% {
+        transform: translateY(0px);
+      }
+      50% {
+        transform: translateY(-30px);
+      }
+    }
+
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-float {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .animate-float-delayed {
+      animation: float-delayed 8s ease-in-out infinite;
+    }
+
+    .animate-fade-in-up {
+      animation: fade-in-up 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    .animation-delay-300 {
+      animation-delay: 300ms;
+    }
+
+    @media (max-width: 768px) {
+      .text-4xl {
+        font-size: 2rem;
+      }
+      
+      .text-5xl {
+        font-size: 2.5rem;
+      }
+      
+      .text-6xl {
+        font-size: 3rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-30px) rotate(5deg);
+      }
+    }
+
+    @keyframes float-delayed {
+      0%, 100% {
+        transform: translateY(0px) rotate(0deg);
+      }
+      50% {
+        transform: translateY(-40px) rotate(-5deg);
+      }
+    }
+
+    @keyframes fade-in-up {
+      from {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-float {
+      animation: float 10s ease-in-out infinite;
+    }
+
+    .animate-float-delayed {
+      animation: float-delayed 12s ease-in-out infinite;
+    }
+
+    .animate-fade-in-up {
+      animation: fade-in-up 0.8s ease-out forwards;
+      opacity: 0;
+    }
+
+    .animation-delay-1000 {
+      animation-delay: 1000ms;
+    }
+
+    /* Mobile responsiveness */
+    @media (max-width: 640px) {
+      .text-4xl {
+        font-size: 2rem;
+      }
+      
+      .text-5xl {
+        font-size: 2.5rem;
+      }
+      
+      .text-6xl {
+        font-size: 3rem;
+      }
+
+      .grid {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+
+      .group:hover .hover\\:-translate-y-6 {
+        transform: translateY(-12px);
+      }
+
+      .p-8 {
+        padding: 1.5rem;
+      }
+
+      .text-3xl {
+        font-size: 1.75rem;
+      }
+    }
+
+    @media (min-width: 640px) and (max-width: 1024px) {
+      .xl\\:grid-cols-3 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .lg\\:grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+
+    /* Performance optimization */
+    .group {
+      will-change: transform;
+      backface-visibility: hidden;
+      perspective: 1000px;
+    }
+
+    /* Hover effects */
+    .group:hover .group-hover\\:rotate-12 {
+      transform: rotate(12deg);
+    }
+
+    .group:hover .group-hover\\:scale-110 {
+      transform: scale(1.1);
+    }
+
+    .group:hover .group-hover\\:text-purple-600 {
+      color: #9333ea;
+    }
+
+    .group:hover .group-hover\\:opacity-100 {
+      opacity: 1;
+    }
+
+    .group:hover .group-hover\\:scale-x-100 {
+      transform: scaleX(1);
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Global styles for the application
+:host {
+  display: block;
+  min-height: 100vh;
+}
+
+// Custom scrollbar
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ea580c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c2410c;
+}
+
+// Smooth scrolling for anchor links
+html {
+  scroll-behavior: smooth;
+}
+
+// Custom animations
+.hover-lift {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.hover-lift:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+// Gradient text utilities
+.gradient-text {
+  background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+// Custom button hover effects
+.p-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+// Card hover animations
+.p-card:hover {
+  transform: translateY(-5px);
+  transition: all 0.3s ease;
+}
+
+// Mobile responsive adjustments
+@media (max-width: 768px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  
+  .text-4xl {
+    font-size: 2rem;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem;
+  }
+  
+  .text-6xl {
+    font-size: 3rem;
+  }
+}
+
+
+
+
+/* cofounder.component.scss */
+.cofounder-card {
+  transition: all 0.3s ease;
+  &:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+  }
+}

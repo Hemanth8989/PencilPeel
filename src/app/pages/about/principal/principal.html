@@ -1,0 +1,144 @@
+<!-- Six Principles Section -->
+<section class="py-20 bg-gradient-to-br from-white via-slate-50 to-purple-50 relative overflow-hidden">
+  
+  <!-- Background Elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute top-10 left-10 w-48 h-48 bg-purple-200/20 rounded-full blur-3xl animate-float-slow"></div>
+    <div class="absolute bottom-20 right-10 w-64 h-64 bg-orange-200/20 rounded-full blur-3xl animate-float-slow-reverse"></div>
+    <div class="absolute top-1/2 left-1/4 w-32 h-32 bg-blue-200/15 rounded-full blur-2xl animate-pulse-slow"></div>
+  </div>
+
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Header -->
+    <div class="text-center mb-20 animate-fade-in-up">
+      <p-tag 
+        value="Our Foundation" 
+        severity="info"
+        [rounded]="true"
+        class="mb-8 inline-flex items-center space-x-3 bg-gradient-to-r from-purple-100 to-indigo-100 text-purple-800 px-8 py-4 shadow-2xl backdrop-blur-md border border-purple-200/50">
+        <i class="pi pi-bookmark text-purple-500 mr-2"></i>
+      </p-tag>
+
+      <h2 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-8">
+        <span class="text-gray-900">OUR </span>
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-600">
+          SIX PRINCIPLES
+        </span>
+      </h2>
+      
+      <p class="text-xl md:text-2xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        At <span class="font-semibold text-orange-600">Pencil Peel IMT</span>, we are governed by Six principles that always measure our work. They are:
+      </p>
+    </div>
+
+    <!-- Principles Timeline/List Design -->
+    <div class="max-w-6xl mx-auto">
+      
+      <!-- Desktop: Side-by-side Layout -->
+      <div class="hidden lg:block">
+        <div class="space-y-16">
+          <div 
+            *ngFor="let principle of principles; let i = index" 
+            [style]="{'animation-delay': (i * 200) + 'ms'}"
+            [class]="i % 2 === 0 ? 'flex items-center justify-between' : 'flex items-center justify-between flex-row-reverse'"
+            class="group animate-fade-in-up">
+            
+            <!-- Content Side -->
+            <div class="w-1/2 px-8" [class]="i % 2 === 0 ? 'text-right pr-16' : 'text-left pl-16'">
+              <div class="relative">
+                <h3 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-500 tracking-wide">
+                  {{ principle.title }}
+                </h3>
+                
+                <p class="text-lg text-gray-600 leading-relaxed mb-6 group-hover:text-gray-700 transition-colors duration-300">
+                  {{ principle.description }}
+                </p>
+              </div>
+            </div>
+
+            <!-- Visual Side -->
+            <div class="w-1/2 px-8">
+              <div class="relative group-hover:scale-105 transition-transform duration-700">
+                <div class="relative bg-white/90 backdrop-blur-md rounded-3xl p-12 shadow-2xl border border-gray-100/50 group-hover:border-purple-200/50 transition-all duration-500 overflow-hidden">
+                  
+                  <!-- Background Pattern -->
+                  <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-indigo-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                  
+                  <!-- Icon Container -->
+                  <div class="relative flex justify-center mb-6">
+                    <div class="relative">
+                      <div class="w-32 h-32 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-3xl flex items-center justify-center group-hover:rotate-12 group-hover:scale-110 transition-all duration-700 shadow-2xl">
+                        <div class="absolute inset-0 bg-white/20 rounded-3xl backdrop-blur-sm"></div>
+                        <i [class]="principle.icon" class="text-white text-2xl relative z-10"></i>
+                      </div>
+                      <div class="absolute inset-0 w-40 h-40 -top-4 -left-4 border-2 border-dashed border-purple-300/50 rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-spin-slow transition-opacity duration-500"></div>
+                      <div class="absolute inset-0 w-48 h-48 -top-8 -left-8 border border-indigo-200/30 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                    </div>
+                  </div>
+
+                  <!-- Progress Indicator -->
+                  <div class="relative">
+                    <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                      <div class="h-full bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000 delay-300"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Floating Elements -->
+                <div class="absolute -top-4 -right-4 w-8 h-8 bg-orange-400 rounded-full opacity-0 group-hover:opacity-70 transition-all duration-500 group-hover:animate-bounce"></div>
+                <div class="absolute -bottom-4 -left-4 w-6 h-6 bg-purple-400 rounded-full opacity-0 group-hover:opacity-70 transition-all duration-700 group-hover:animate-pulse"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile/Tablet: Stacked Layout -->
+      <div class="lg:hidden space-y-8">
+        <div 
+          *ngFor="let principle of principles; let i = index" 
+          [style]="{'animation-delay': (i * 150) + 'ms'}"
+          class="group animate-fade-in-up">
+          
+          <div class="relative bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-2xl border border-gray-100/50 group-hover:border-purple-200/50 transition-all duration-500 overflow-hidden group-hover:-translate-y-2 group-hover:scale-102">
+            
+            <!-- Background Gradient -->
+            <div class="absolute inset-0 bg-gradient-to-br from-purple-500/5 via-indigo-500/5 to-blue-500/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            
+            <!-- Header Section -->
+            <div class="flex items-center mb-6">
+              <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-yellow-600 rounded-2xl flex items-center justify-center group-hover:rotate-12 group-hover:scale-110 transition-all duration-500 shadow-xl">
+                <i [class]="principle.icon" class="text-white text-3xl relative z-10"></i>
+              </div>
+            </div>
+
+            <!-- Content -->
+            <div class="relative z-10">
+              <h3 class="text-2xl md:text-3xl font-bold text-gray-900 mb-4 group-hover:text-purple-600 transition-colors duration-500 tracking-wide">
+                {{ principle.title }}
+              </h3>
+              
+              <p class="text-gray-600 leading-relaxed text-lg group-hover:text-gray-700 transition-colors duration-300 mb-6">
+                {{ principle.description }}
+              </p>
+
+              <div class="mb-4">
+                <div class="w-full bg-gray-200 rounded-full h-2 overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full transform -translate-x-full group-hover:translate-x-0 transition-transform duration-1000 delay-200"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Decorative Elements -->
+            <div class="absolute top-4 right-4 w-2 h-16 bg-gradient-to-b from-purple-500 to-indigo-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            <div class="absolute bottom-4 left-4 w-16 h-2 bg-gradient-to-r from-indigo-500 to-blue-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-200"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Central Timeline Connector (Desktop Only) -->
+    <div class="hidden lg:block absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 w-1 h-full bg-gradient-to-b from-purple-200 via-indigo-200 to-blue-200 rounded-full opacity-20"></div>
+  </div>
+</section>

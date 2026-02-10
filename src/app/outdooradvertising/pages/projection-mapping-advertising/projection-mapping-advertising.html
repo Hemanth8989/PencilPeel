@@ -1,0 +1,131 @@
+<app-outdoor-hero-section [config]="heroConfig"/>
+<app-quotes [testimonials]="testimonials"></app-quotes>
+<!-- What is Projection Mapping Advertising Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="/outdoor/3dbillboard/3dbillboard3.webp" 
+         alt="City Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-orange-600">Projection Mapping Advertising?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Projection mapping advertising is a dynamic marketing strategy that involves projecting promotional content onto diverse surfaces to captivate target audiences. We will help you harness the power of projection mapping to elevate your brand and leave a lasting impact.
+      </p>
+    </div>
+  </div>
+</section>
+<app-benefitsnew [benefits]="benefitsProjectionMapping.benefits" [title]="benefitsProjectionMapping.title" [description]="benefitsProjectionMapping.description"></app-benefitsnew>
+<app-industrycards [items]="projectionMappingData.industries" [title]="projectionMappingData.title" [description]="projectionMappingData.description" />
+<div class="projection-mapping-process-section py-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-gray-100">
+  <div class="max-w-7xl mx-auto">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+        How Pencil Peel IMT Works on 
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-yellow-500">
+          Projection Mapping Campaigns
+        </span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        Our team follows a structured process to deliver effective projection mapping campaigns.
+      </p>
+    </div>
+
+    <!-- Process Steps -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div 
+        *ngFor="let step of processSteps; let i = index" 
+        class="process-step-card group"
+        [class.lg:col-span-2]="i === 4"
+        [class.lg:col-start-2]="i === 4">
+        
+        <p-card class="h-full cursor-pointer border-0 rounded-2xl overflow-visible">
+          <ng-template pTemplate="content">
+            <div class="card-content relative p-8 bg-white rounded-2xl h-full flex flex-col transition-all duration-300">
+              
+              <!-- Professional Step Badge -->
+              <div class="step-badge absolute -top-4 -left-4 w-12 h-12 bg-gradient-to-br from-orange-500 to-red-600 rounded-full flex items-center justify-center text-white font-bold text-lg shadow-lg transition-all duration-300 relative overflow-hidden">
+                {{ step.id }}
+                
+                <!-- Badge glow effect -->
+                <div class="absolute inset-0 bg-gradient-to-br from-orange-400 to-red-500 rounded-full opacity-0 transition-all duration-300 transform scale-75"></div>
+              </div>
+
+              <!-- Professional Icon Container -->
+              <div class="mb-6 mt-4">
+                <div class="step-icon relative w-16 h-16 rounded-full bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center transition-all duration-300 shadow-sm">
+                  <i [class]="step.icon + ' text-3xl ' + step.color + ' transition-all duration-300'"></i>
+                  
+                  <!-- Icon background glow -->
+                  <div class="absolute inset-0 rounded-full bg-gradient-to-br from-orange-100 to-red-100 opacity-0 transition-all duration-300 transform scale-90"></div>
+                </div>
+              </div>
+
+              <!-- Professional Content -->
+              <h3 class="text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 relative">
+                {{ step.title }}
+                
+                <!-- Elegant underline -->
+                <span class="title-underline absolute bottom-0 left-0 h-0.5 w-0 bg-gradient-to-r from-orange-500 to-red-500 transition-all duration-500"></span>
+              </h3>
+              
+              <p class="text-gray-600 leading-relaxed flex-grow text-lg transition-all duration-300">
+                {{ step.description }}
+              </p>
+
+              <!-- Professional Progress Indicator -->
+              <div class="progress-bar relative mt-6 w-full h-1 bg-gray-200 rounded-full overflow-hidden">
+                <div class="absolute inset-0 w-0 bg-gradient-to-r from-orange-500 to-red-500 rounded-full transition-all duration-700 ease-out">
+                </div>
+                
+                <!-- Shine effect -->
+                <div class="progress-shine absolute inset-0 w-8 bg-gradient-to-r from-transparent via-white to-transparent opacity-0 transform skew-x-12"></div>
+              </div>
+
+              <!-- Professional corner accent -->
+              <div class="absolute top-4 right-4 w-8 h-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                <div class="w-full h-0.5 bg-gradient-to-r from-orange-300 to-transparent"></div>
+                <div class="w-0.5 h-full bg-gradient-to-b from-orange-300 to-transparent absolute top-0 right-0"></div>
+              </div>
+            </div>
+          </ng-template>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="py-16 bg-gradient-to-br from-gray-50 to-gray-100">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+        Places for Promotion in <span class="text-orange-500">Projection Mapping Advertising</span>
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-700 max-w-3xl mx-auto">
+        At <span class="text-orange-500">Pencil Peel IMT</span>, our team will help you identify the best places to use projection mapping advertising for promotion. Here are some examples:
+      </p>
+    </div>
+    <app-outdoorproductcards [services]="projectionMappingLocations" />
+  </div>
+</section>
+<app-whycpencilpeel [features]="whyChooseProjectionMapping.features" [headerContent]="whyChooseProjectionMapping" />
+<section class="py-16 bg-orange-50/30">
+  <div class="text-center max-w-3xl mx-auto">
+    <p class="text-gray-700 text-lg mb-6">
+      By partnering with <span class="font-semibold text-orange-600">Pencil Peel IMT</span>, 
+      you can unlock the full potential of projection mapping advertising and drive results for your business. 
+      Contact us today to learn more about our projection mapping advertising services.
+    </p>
+    <a
+      href="/contact"
+      class="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+    >
+      Contact Us Today
+    </a>
+  </div>
+</section>

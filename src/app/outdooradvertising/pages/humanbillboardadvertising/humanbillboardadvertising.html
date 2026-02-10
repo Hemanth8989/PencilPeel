@@ -1,0 +1,180 @@
+<app-outdoor-hero-section [config]="humanWalkingBillboardHeroConfig" />
+<app-quotes [testimonials]="testimonials"></app-quotes>
+
+<section class="py-20 bg-gradient-to-br from-gray-50 to-slate-100 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="https://images.unsplash.com/photo-1590658006821-04a928eb1f15?auto=format&fit=crop&w=1920&q=80" 
+         alt="Human Walking Billboard Campaign Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is a <span class="text-gray-700">Human Walking Billboard Campaign?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        A human walking billboard campaign is a form of advertising where individuals wear or carry promotional 
+        materials to promote a product, service, or brand. Our team will help you understand the power of human 
+        walking billboard campaigns and how they can benefit your business.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Human Walking Billboard Campaign - Angular Component -->
+<section class="py-12 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Compact Header -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        How We Promote Product Through <span class="text-orange-600"> Human Walking Billboard Campaign</span>
+      </h2>
+      <p class="text-lg text-gray-600">Our team will work closely with you to:</p>
+    </div>
+
+    <!-- Campaign Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div 
+        *ngFor="let service of campaignServices; let i = index" 
+        class="bg-gray-50 rounded-lg p-5 border-l-4 border-1 shadow-lg hover:scale-105 transition transform hover:-translate-y-1"
+        [ngClass]="service.borderColor">
+        <div class="flex items-start space-x-3">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0"
+               [ngClass]="service.iconBg">
+            <i [class]="service.icon + ' text-sm text-white'"></i>
+          </div>
+          <div>
+            <h4 class="font-semibold text-gray-900 mb-2 text-lg">{{ service.title }}</h4>
+            <p class="text-base text-gray-600 leading-relaxed">{{ service.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-industrycards [items]="humanWalkingBillboardData.industries" [title]="humanWalkingBillboardData.title" [description]="humanWalkingBillboardData.description" />
+
+
+<section class="py-16">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <!-- Heading -->
+    <h2 class="text-4xl text-gray-900 font-bold mb-6 drop-shadow-sm">
+      How <span class="text-orange-600">Pencil Peel IMT</span> Works on Human Walking Billboard Campaigns
+    </h2>
+
+    <!-- Intro -->
+    <p class="text-lg mb-10 text-gray-600">
+      {{ intro }}
+    </p>
+
+    <!-- Steps -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <p-card
+        *ngFor="let step of steps; let i = index"
+        class="group transform transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl rounded-xl overflow-hidden"
+        styleClass="h-full border border-gray-100"
+      >
+        <!-- Title -->
+        <ng-template pTemplate="title">
+          <h3 class="text-xl font-semibold text-gray-800 group-hover:text-orange-600 transition-colors">
+            {{ step.title }}
+          </h3>
+        </ng-template>
+
+        <!-- Description -->
+        <p class="text-gray-600 leading-relaxed">
+          {{ step.description }}
+        </p>
+      </p-card>
+    </div>
+
+    <!-- Outro -->
+    <!-- Outro -->
+<div class="mt-16 max-w-4xl mx-auto text-center">
+  <div
+    class="relative bg-gradient-to-r from-orange-500 via-pink-500 to-purple-600 
+           text-white rounded-2xl p-10 shadow-2xl overflow-hidden"
+  >
+    <!-- Decorative overlay -->
+    <div
+      class="absolute inset-0 bg-white/10 backdrop-blur-sm rounded-2xl"
+    ></div>
+
+    <div class="relative z-10">
+      <p class="text-2xl font-semibold leading-relaxed mb-6">
+        {{ outro }}
+      </p>
+    </div>
+  </div>
+</div>
+
+  </div>
+</section>
+
+<section class="py-16 max-w-6xl mx-auto px-6">
+  <!-- Best Practices -->
+  <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-12 text-gray-900">
+    Best Practices for Success with <span class="text-orange-600">Pencil Peel IMT</span>
+  </h2>
+
+  <div class="grid md:grid-cols-2 gap-8 mb-16">
+    <div
+      *ngFor="let practice of practices"
+      class="relative group p-6 rounded-2xl bg-white border border-gray-100 shadow-md overflow-hidden transition-all duration-300 hover:shadow-2xl hover:-translate-y-2"
+    >
+      <!-- Icon circle -->
+      <div
+        class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-400 to-pink-500 text-white text-2xl mb-4 shadow-lg group-hover:scale-110 transform transition-transform duration-300"
+      >
+        <i [ngClass]="practice.icon"></i>
+      </div>
+
+      <!-- Title -->
+      <h3 class="text-xl font-semibold text-gray-800 mb-2 group-hover:text-pink-500 transition-colors">
+        {{ practice.title }}
+      </h3>
+
+      <!-- Description -->
+      <p class="text-gray-600 leading-relaxed">{{ practice.description }}</p>
+
+      <!-- Decorative accent -->
+      <span
+        class="absolute -top-4 -right-4 w-12 h-12 bg-pink-100/50 rounded-full blur-3xl opacity-30 pointer-events-none"
+      ></span>
+    </div>
+  </div>
+
+  <!-- Why Choose Section -->
+  <h2 class="text-3xl md:text-4xl font-bold mb-12 text-gray-900 text-center">
+    Why Choose <span class="text-orange-600">Pencil Peel IMT</span>?
+  </h2>
+
+  <div class="grid md:grid-cols-3 gap-8">
+    <div
+      *ngFor="let point of whyPoints"
+      class="relative p-8 rounded-2xl bg-white border border-gray-100 shadow-md hover:shadow-2xl hover:-translate-y-2 transition-all duration-300"
+    >
+      <!-- Icon circle -->
+      <div
+        class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-400 to-pink-500 text-white text-2xl mb-4 shadow-lg group-hover:scale-110 transform transition-transform duration-300"
+      >
+        <i [ngClass]="point.icon"></i>
+      </div>
+
+      <!-- Title -->
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ point.title }}</h3>
+
+      <!-- Description -->
+      <p class="text-gray-600 leading-relaxed">{{ point.description }}</p>
+
+      <!-- Decorative accent -->
+      <span
+        class="absolute -bottom-4 -left-4 w-12 h-12 bg-orange-100/50 rounded-full blur-3xl opacity-30 pointer-events-none"
+      ></span>
+    </div>
+  </div>
+</section>
+
+<app-glass-cta [cta]="cta"></app-glass-cta>

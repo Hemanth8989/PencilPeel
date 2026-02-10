@@ -1,0 +1,55 @@
+.location-card {
+  height: 450px;
+  background-size: cover;
+  //background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+  .location-card {
+    height: 300px;
+  }
+  
+  .international-locations-section {
+    padding: 2rem 1rem;
+  }
+}
+
+/* Ensure smooth transitions */
+.location-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, transparent 0%, transparent 60%, rgba(0,0,0,0.8) 100%);
+  transition: all 0.3s ease;
+}
+
+.location-card:hover::before {
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.9) 100%);
+}
+
+/* Text positioning and styling */
+.location-card .absolute {
+  z-index: 10;
+}
+
+
+// .parallax-bg {
+//   position: absolute;
+//   inset: 0; /* top:0; bottom:0; left:0; right:0 */
+//   background-image: url('/film/behindscene.webp'); /* Replace this URL */
+//   background-size: cover;
+//   background-repeat: no-repeat;
+//   background-position: center center;
+//   background-attachment: fixed; /* Makes background stay fixed while scroll moves */
+//   opacity: 0.8; /* Transparent */
+//   z-index: 0; /* Behind the content */
+//   pointer-events: none; /* So clicks go through */
+//   will-change: transform;
+//   transition: background-position 0.3s ease-out;
+// }

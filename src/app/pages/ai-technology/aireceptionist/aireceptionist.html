@@ -1,0 +1,342 @@
+<app-nocarouselherosection [herocontent]="herocontent" />
+<section class="py-16 bg-gray-50">
+  <div class="max-w-5xl mx-auto px-4">
+    <!-- Section Title -->
+    <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+      What is an AI Receptionist?
+    </h2>
+    <p class="mb-10 text-lg text-gray-700 max-w-2xl mx-auto text-center">
+      Our AI Receptionist is a virtual assistant that uses artificial intelligence to manage front-desk operations, including:
+    </p>
+
+    <!-- Features -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-14 justify-items-center">
+      <div *ngFor="let feature of features"
+           class="bg-white flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-md border-t-4 border-gray-100 w-full max-w-xs mx-auto transition">
+        <span [ngClass]="[feature.icon, feature.iconColor]" class="pi text-4xl mb-4"></span>
+        <h3 class="font-semibold text-lg mb-2 text-gray-800">{{ feature.title }}</h3>
+        <p class="text-gray-600">{{ feature.description }}</p>
+      </div>
+    </div>
+
+    <!-- How It Works Section -->
+     <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+      How Does Pencil Peel IMT AI Receptionist Work?
+    </h2>
+    <!-- <h2 class="text-2xl font-semibold mb-3 text-gray-900 text-center">How Does Pencil Peel IMT AI Receptionist Work?</h2> -->
+    <p class="mb-8 text-lg text-gray-700 max-w-2xl mx-auto text-center">
+      We utilize these technologies to power our receptionist and integrate with your business:
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 justify-items-center">
+      <div *ngFor="let tech of technologies"
+           class="bg-white flex flex-col items-center text-center p-6 rounded-lg shadow hover:shadow-md border-t-4 border-gray-100 w-full max-w-xs mx-auto transition">
+        <span [ngClass]="[tech.icon, tech.iconColor]" class="pi text-4xl mb-4"></span>
+        <h3 class="font-semibold text-m mb-2 text-gray-800">{{ tech.title }}</h3>
+        <p class="text-gray-600">{{ tech.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Section 1: The Future of AI Receptionists -->
+<section class="bg-orange-50 py-16 px-6 max-w-7xl mx-auto font-sans rounded-lg shadow-lg mb-12">
+  <h2 class="text-4xl font-extrabold text-center mb-8 
+             text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 
+             bg-clip-text animate-gradient-shine">
+    The Future of AI Receptionists at Pencil Peel IMT
+  </h2>
+
+  <p class="text-gray-900 text-lg max-w-4xl mx-auto leading-relaxed text-center">
+    At <strong>Pencil Peel IMT</strong>, we're excited about the future of AI receptionists and their potential 
+    to revolutionize the way businesses manage their front desk operations. By using AI-powered receptionists, 
+    we will transform the way businesses interact with their customers, visitors, and employees.
+  </p>
+</section>
+
+<!-- Section 2: Transforming Reception Operations with AI -->
+<section class="bg-white py-16 px-6 max-w-7xl mx-auto font-sans rounded-lg shadow-lg">
+  <h3 class="text-4xl font-extrabold text-center mb-8 
+             text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 
+             bg-clip-text animate-gradient-shine">
+    Transforming Reception Operations with AI
+  </h3>
+
+  <p class="text-gray-900 text-lg max-w-4xl mx-auto mb-10 leading-relaxed text-center">
+    Our team will leverage <strong>AI to develop intelligent receptionists</strong> that can handle a wide range 
+    of tasks, from answering phone calls and responding to emails to managing schedules and providing customer 
+    support. By automating routine tasks, our AI receptionists will free up staff to focus on more strategic 
+    and creative work, improving productivity and efficiency.
+  </p>
+</section>
+
+
+<!-- AI Receptionist Section -->
+<section class="py-12 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+      How Pencil Peel IMT AI Receptionist Can Help Your Business
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+        Transform your front-desk operations with our intelligent AI Receptionist that automates routine tasks, 
+        enhances customer experience, and boosts overall productivity.
+      </p>
+    </div>
+
+    <!-- Benefits Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+      
+      <!-- Streamline Operations -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+        <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg mb-4">
+          <i class="pi pi-desktop text-xl text-blue-600 dark:text-blue-400"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          Streamline Front-Desk Operations
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Automate routine tasks, improving efficiency and reducing the workload of staff
+        </p>
+      </div>
+
+      <!-- Improve Customer Experience -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+        <div class="flex items-center justify-center w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg mb-4">
+          <i class="pi pi-heart text-xl text-green-600 dark:text-green-400"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          Improve Customer Experience
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Provide personalized support and respond to customer inquiries in a timely and efficient manner
+        </p>
+      </div>
+
+      <!-- Increase Productivity -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+        <div class="flex items-center justify-center w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg mb-4">
+          <i class="pi pi-chart-line text-xl text-purple-600 dark:text-purple-400"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          Increase Productivity
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Free up staff to focus on more important tasks, improving productivity and driving business growth
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Call to Action Section -->
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-full mx-auto mb-4">
+          <i class="pi pi-phone text-2xl text-orange-600 dark:text-orange-400"></i>
+        </div>
+        
+        <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+          Get Started with Pencil Peel IMT AI Receptionist
+        </h3>
+        
+        <p class="text-gray-600 dark:text-gray-300 text-lg mb-6 max-w-3xl mx-auto">
+          If you're interested in learning more about our AI Receptionist and how it can benefit your business, 
+          contact us today to schedule a consultation. We will work with you to understand your specific needs 
+          and develop a customized solution that meets your requirements.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <p-button 
+            label="Schedule Consultation" 
+            icon="pi pi-calendar" 
+            styleClass="p-button-lg p-button-primary">
+          </p-button>
+          
+          <p-button 
+            label="Learn More" 
+            icon="pi pi-info-circle" 
+            styleClass="p-button-lg p-button-outlined">
+          </p-button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<app-productcard [productcards]="aiReceptionistServices" [title]="aireceptionservicetitle" [description]="aireceptiondescription"></app-productcard>
+<!-- AI Receptionist Industry Customization Section -->
+<section class="py-12 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+        Customization for Industries with Pencil Peel IMT AI Receptionist
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+        At Pencil Peel IMT, we understand that different industries have unique needs and requirements. 
+        We customize our AI Receptionist service to meet the specific needs of various industries.
+      </p>
+    </div>
+
+    <!-- Industry-Specific Customization Grid -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-8">
+        Industry-Specific Customization
+      </h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Language Models -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+          <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg mb-4">
+            <i class="pi pi-comments text-xl text-blue-600 dark:text-blue-400"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Industry-Specific Language Models
+          </h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Develop language models that understand industry-specific terminology and jargon for accurate responses
+          </p>
+        </div>
+
+        <!-- Customized Workflows -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+          <div class="flex items-center justify-center w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg mb-4">
+            <i class="pi pi-sitemap text-xl text-green-600 dark:text-green-400"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Customized Workflows
+          </h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Create customized workflows that meet specific industry needs, streamlining processes and improving efficiency
+          </p>
+        </div>
+
+        <!-- System Integration -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+          <div class="flex items-center justify-center w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg mb-4">
+            <i class="pi pi-link text-xl text-purple-600 dark:text-purple-400"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Integration with Industry Systems
+          </h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Integrate with industry-specific systems and tools for seamless support and improved productivity
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Benefits of Customization -->
+    <div class="mb-12">
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-8">
+        Benefits of Customization
+      </h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Improved Accuracy -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+          <div class="flex items-center justify-center w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-lg mb-4">
+            <i class="pi pi-check-circle text-xl text-orange-600 dark:text-orange-400"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Improved Accuracy
+          </h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Customized language models ensure accurate and relevant responses, improving customer satisfaction
+          </p>
+        </div>
+
+        <!-- Increased Efficiency -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+          <div class="flex items-center justify-center w-12 h-12 bg-teal-100 dark:bg-teal-900 rounded-lg mb-4">
+            <i class="pi pi-bolt text-xl text-teal-600 dark:text-teal-400"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Increased Efficiency
+          </h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Customized workflows streamline processes, reducing staff workload and improving productivity
+          </p>
+        </div>
+
+        <!-- Enhanced Experience -->
+        <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+          <div class="flex items-center justify-center w-12 h-12 bg-red-100 dark:bg-red-900 rounded-lg mb-4">
+            <i class="pi pi-star text-xl text-red-600 dark:text-red-400"></i>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Enhanced Customer Experience
+          </h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Provide personalized support and responses, improving customer satisfaction and loyalty
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Implementation Process -->
+    <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-8">
+      <h3 class="text-2xl font-bold text-gray-900 dark:text-white text-center mb-8">
+        How to Implement Customization
+      </h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Step 1: Discovery -->
+        <div class="text-center">
+          <div class="flex items-center justify-center w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full mx-auto mb-4">
+            <span class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">1</span>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+            Discovery Session
+          </h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Conduct a discovery session to understand the specific needs and requirements of your industry
+          </p>
+        </div>
+
+        <!-- Step 2: Development -->
+        <div class="text-center">
+          <div class="flex items-center justify-center w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full mx-auto mb-4">
+            <span class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">2</span>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+            Customization Development
+          </h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Develop customized language models and workflows that meet your specific industry needs
+          </p>
+        </div>
+
+        <!-- Step 3: Integration -->
+        <div class="text-center">
+          <div class="flex items-center justify-center w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-full mx-auto mb-4">
+            <span class="text-2xl font-bold text-indigo-600 dark:text-indigo-400">3</span>
+          </div>
+          <h4 class="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+            Integration and Testing
+          </h4>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">
+            Integrate with industry systems and conduct thorough testing to ensure seamless support
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<app-whyus [whyus]="whyus" />
+<app-contactus />
+<app-whycpencilpeel [features]="whycFeatures" [headerContent]="whyCContent"/>
+
+
+

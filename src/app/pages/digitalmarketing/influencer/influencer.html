@@ -1,0 +1,279 @@
+<app-nocarouselherosection [herocontent]="herocontent"></app-nocarouselherosection>
+<app-quotes [testimonials]="quotes"></app-quotes>
+<app-faqcards [faqcards]="faqcards"></app-faqcards>
+
+<!-- ================= Understanding Influencer Marketing ================= -->
+<section class="relative max-w-7xl mx-auto px-4 py-28">
+  <div class="absolute inset-0 bg-gradient-to-b from-orange-50/70 via-white to-white"></div>
+
+  <div class="relative">
+    <div class="text-center mb-20">
+      <h2
+        class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500">
+        Understanding Influencer Marketing
+      </h2>
+      <div class="w-28 h-1 mx-auto mt-6 bg-gradient-to-r from-orange-400 to-yellow-400 rounded-full"></div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+      <!-- Card 1 -->
+      <div
+        class="relative bg-white/70 backdrop-blur-xl p-8 rounded-3xl border border-orange-200 shadow-xl hover:-translate-y-3 hover:shadow-2xl transition-all">
+        <div class="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-orange-500/20 blur-xl"></div>
+        <div class="text-orange-500 text-4xl mb-6">🌐</div>
+        <p class="text-gray-800 text-lg leading-relaxed">
+          Social media has evolved into a fundamental aspect of our daily lives, akin to a toy that is readily accessible
+          to everyone. It determines our viewing choices, purchasing decisions, and the locations where we seek
+          information, all within a matter of clicks. In summary, our preferences are significantly shaped by the social
+          media platforms we engage with.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="relative bg-white/70 backdrop-blur-xl p-8 rounded-3xl border border-yellow-200 shadow-xl hover:-translate-y-3 hover:shadow-2xl transition-all">
+        <div class="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-yellow-500/20 blur-xl"></div>
+        <div class="text-yellow-500 text-4xl mb-6">🚀</div>
+        <p class="text-gray-800 text-lg leading-relaxed">
+          One prominent trend in the current digital environment is influencer marketing. In this context,
+          influencers—individuals who have amassed considerable followings across different social media platforms—are
+          essential in endorsing brands, products, services, and experiences. This approach is commonly known as
+          influencer marketing.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="relative bg-white/70 backdrop-blur-xl p-8 rounded-3xl border border-red-200 shadow-xl hover:-translate-y-3 hover:shadow-2xl transition-all">
+        <div class="absolute -top-4 -left-4 w-12 h-12 rounded-full bg-red-500/20 blur-xl"></div>
+        <div class="text-red-500 text-4xl mb-6">👥</div>
+        <p class="text-gray-800 text-lg leading-relaxed">
+          Influencers are people who have established a reputation for themselves on the internet, acknowledged as experts
+          in their particular domains. They leverage their platforms to suggest products and services to their followers,
+          many of whom are experiencing comparable circumstances. Generally, these influencers develop a dedicated and
+          interactive audience through various platforms such as blogs, YouTube, Instagram, TikTok, and others.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ================= Benefits Section ================= -->
+<section class="relative bg-gradient-to-b from-purple-50 via-white to-purple-50 py-28 px-4">
+  <div class="max-w-7xl mx-auto space-y-28">
+
+    <div class="text-center">
+      <h2
+        class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500 mb-8">
+        Benefits of Influencer Marketing
+      </h2>
+
+      <p class="max-w-4xl mx-auto text-lg text-gray-700 leading-relaxed mb-20">
+        At Pencil Peel IMT, we understand the benefits of influencer marketing in promoting your brand, products, and
+        services. Our team of experts will work with you to develop a customized influencer marketing strategy that
+        meets your business goals.
+      </p>
+
+      <!-- Core Benefits Cards -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+        <div *ngFor="let benefit of influencerBenefits"
+          class="bg-white/80 backdrop-blur-xl p-8 rounded-3xl border border-orange-200 shadow-xl hover:-translate-y-4 hover:shadow-2xl transition-all">
+
+          <div class="w-16 h-16 mx-auto mb-6 flex items-center justify-center rounded-full 
+               bg-gradient-to-r from-orange-500 to-yellow-500 text-white text-2xl shadow-lg">
+            <i [class]="benefit.icon"></i>
+          </div>
+
+          <h3 class="text-xl font-semibold text-orange-600 mb-4">
+            {{ benefit.title }}
+          </h3>
+
+          <p class="text-gray-700 leading-relaxed">
+            {{ benefit.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Additional Benefits -->
+    <div>
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500 mb-16">
+        Additional Benefits of Influencer Marketing with Pencil Peel IMT
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div *ngFor="let item of additionalBenefits"
+          class="bg-white p-7 rounded-2xl border-l-4 border-orange-500 shadow-md hover:shadow-xl transition-all">
+
+          <div class="flex items-start gap-4">
+            <span class="text-orange-500 text-xl mt-1">
+              <i class="pi pi-check-circle"></i>
+            </span>
+
+            <p class="text-gray-700 leading-relaxed">
+              {{ item }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- How Pencil Peel IMT Helps -->
+    <div>
+      <h2
+        class="text-3xl md:text-4xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500 mb-16">
+        How Pencil Peel IMT Can Help you to Promote Your Product Through Influencer Marketing:
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div *ngFor="let step of influencerProcess; let i = index"
+          class="bg-white/80 backdrop-blur-xl p-8 rounded-2xl shadow-lg border border-orange-200 hover:shadow-xl transition-all">
+
+          <div class="flex items-center gap-4 mb-4">
+            <div class="w-10 h-10 flex items-center justify-center rounded-full bg-orange-500 text-white font-bold">
+              {{ i + 1 }}
+            </div>
+
+            <h3 class="text-lg font-semibold text-orange-600">
+              {{ step.title }}
+            </h3>
+          </div>
+
+          <p class="text-gray-700 leading-relaxed pl-14">
+            {{ step.description }}
+          </p>
+        </div>
+      </div>
+
+      <!-- Static paragraphs -->
+      <div class="mt-14 max-w-5xl mx-auto space-y-6 text-gray-700 leading-relaxed text-lg">
+        <p>
+          Overall, the future of influencer marketing will continue to evolve with advancements in technology, changes
+          in consumer behaviour, and regulatory developments. Brands that adapt to these shifts and prioritize
+          authenticity, data-driven insights, and meaningful engagements with influencers and their audiences will
+          likely thrive in this dynamic landscape.
+        </p>
+
+        <p>
+          We can discuss with our highly experienced team how to promote your product or your company or your business,
+          or the service you are providing... through influencer marketing, which is one of the most trending marketing,
+          and we can provide you with top-level marketing with a proper plan.
+        </p>
+
+        <p>
+          We have many influencers who promote various fields and reach out to people, boasting the highest followings
+          on social media across the country and the world. Through them, we are proud to promote your company or your
+          product or even the service you are providing, and be a part of giving you reach and success for your
+          business.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= Why Choose Pencil Peel ================= -->
+<section class="relative max-w-7xl mx-auto px-4 py-24">
+  <div class="absolute inset-0 bg-gradient-to-b from-orange-50/70 to-white"></div>
+
+  <div class="relative text-center">
+    <h2
+      class="text-4xl md:text-5xl font-extrabold mb-8 text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-yellow-500">
+      Why Choose Pencil Peel IMT for Influencer Marketing?
+    </h2>
+
+    <p class="text-lg max-w-3xl mx-auto mb-20 text-gray-600 leading-relaxed">
+      At Pencil Peel IMT, our team of experts has the knowledge and experience to develop customized influencer marketing
+      strategies that meet your business goals. We will work with you to:
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+
+      <p-card class="shadow-xl rounded-3xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3 text-orange-500">
+            Develop a customized influencer marketing strategy
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            Our team will develop a customized influencer marketing strategy that meets your business goals and target
+            audience.
+          </p>
+        </div>
+      </p-card>
+
+      <p-card class="shadow-xl rounded-3xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3 text-orange-500">
+            Identify and partner with influencers
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            We will identify and partner with influencers who align with your brand values and target audience.
+          </p>
+        </div>
+      </p-card>
+
+      <p-card class="shadow-xl rounded-3xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3 text-orange-500">
+            Create high-quality content
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            We will work with influencers to create high-quality content that resonates with the target audience.
+          </p>
+        </div>
+      </p-card>
+
+      <p-card class="shadow-xl rounded-3xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3 text-orange-500">
+            Monitor and report
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            We will monitor your influencer marketing performance and provide regular reports to ensure that you're getting
+            the best possible results.
+          </p>
+        </div>
+      </p-card>
+
+      <p-card class="shadow-xl rounded-3xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3 text-orange-500">
+            Expertise
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            Our team has extensive experience in influencer marketing and has worked with a variety of brands and
+            influencers.
+          </p>
+        </div>
+      </p-card>
+
+      <p-card class="shadow-xl rounded-3xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3 text-orange-500">
+            Network of Influencers
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            We have a network of influencers across various niches and industries, allowing us to find the perfect fit for
+            your brand.
+          </p>
+        </div>
+      </p-card>
+
+      <p-card class="shadow-xl rounded-3xl hover:shadow-2xl hover:-translate-y-2 transition-all">
+        <div class="p-6">
+          <h3 class="text-xl font-semibold mb-3 text-orange-500">
+            Customized Solutions
+          </h3>
+          <p class="text-gray-700 leading-relaxed">
+            We develop customized influencer marketing solutions that meet your specific marketing goals and objectives.
+          </p>
+        </div>
+      </p-card>
+
+    </div>
+  </div>
+</section>
+
+<app-contactus [title]="contacttitle" [description]="contactdescription"></app-contactus>

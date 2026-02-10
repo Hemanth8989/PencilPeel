@@ -1,0 +1,84 @@
+.how-we-help-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  position: relative;
+  
+  .service-card {
+    animation: fadeInUp 0.6s ease-out both;
+    border: 1px solid #e5e7eb;
+    
+    &:hover {
+      border-color: #ea580c;
+    }
+    
+    .card-header {
+      position: relative;
+      
+      .image-container {
+        border: 3px solid #f3f4f6;
+        transition: border-color 0.3s ease;
+      }
+      
+      .step-number {
+        box-shadow: 0 2px 8px rgba(234, 88, 12, 0.3);
+      }
+    }
+    
+    &:hover .image-container {
+      border-color: #ea580c;
+    }
+  }
+}
+
+// Horizontal card styles
+.how-we-help-section-horizontal {
+  .horizontal-card {
+    animation: slideInLeft 0.6s ease-out both;
+    
+    &:nth-child(even) {
+      animation: slideInRight 0.6s ease-out both;
+    }
+    
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        animation-delay: #{$i * 0.2}s;
+      }
+    }
+  }
+}
+
+// Animations
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(30px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+// Responsive Design
+@media (max-width: 768px) {
+  .how-we-help-section {
+    .grid {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+  }
+  
+  .how-we-help-section-horizontal {
+    .horizontal-card {
+      flex-direction: column !important;
+      text-align: center;
+      
+      .flex-shrink-0 {
+        margin: 0 0 1rem 0 !important;
+      }
+    }
+  }
+}

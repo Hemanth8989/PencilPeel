@@ -1,0 +1,33 @@
+/* Custom hover effects */
+.group:hover .shadow-lg {
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Smooth transitions */
+.transition-all {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.duration-300 {
+  transition-duration: 300ms;
+}
+
+.duration-500 {
+  transition-duration: 500ms;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid {
+    gap: 2rem;
+  }
+  
+  .group:hover {
+    transform: translateY(-4px);
+  }
+}
+
+/* Performance optimizations */
+.transform {
+  will-change: transform;
+}

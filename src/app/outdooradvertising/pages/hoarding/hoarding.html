@@ -1,0 +1,159 @@
+<app-outdoor-hero-section [config]="hoardingHeroConfig" />
+<app-quotes [testimonials]="hoardingAdvertising"></app-quotes>
+
+<!-- What is Hoarding Advertising Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80" 
+         alt="City Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-orange-600">Hoarding Advertising?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Hoarding advertising is a form of outdoor advertising displayed on large boards, typically placed in high-visibility locations like roadsides, construction sites, shopping malls, or busy urban areas. Our team will help you understand the power of hoarding advertising and how it can benefit your business.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Features of <span class="text-orange-600">Hoarding Advertising</span>
+      </h2>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div *ngFor="let feature of features; let i = index" 
+           class="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-orange-200 transition-all duration-300 hover:-translate-y-2">
+        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:scale-110 transition-all duration-300">
+          <i [class]="feature.icon + ' text-3xl text-orange-600 group-hover:text-white'"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600">
+          {{ feature.title }}
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          {{ feature.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Major Benefits Section -->
+<section class="py-20 bg-gradient-to-br from-gray-50 to-orange-50 relative">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-5">
+    <img src="https://images.unsplash.com/photo-1557804506-669a67965ba0?auto=format&fit=crop&w=1920&q=80" 
+         alt="Billboard Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Major <span class="text-orange-600">Benefits</span> of Hoarding Advertising
+      </h2>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div *ngFor="let benefit of majorBenefits; let i = index"
+           class="group bg-white/80 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+        <div class="flex items-start space-x-6">
+          <div [class]="'w-16 h-16 bg-' + benefit.color + '-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300'">
+            <i [class]="benefit.icon + ' text-3xl text-' + benefit.color + '-600'"></i>
+          </div>
+          <div class="flex-1">
+            <h3 [class]="'text-2xl font-bold text-gray-900 mb-4 group-hover:text-' + benefit.color + '-600'">
+              {{ benefit.title }}
+            </h3>
+            <p class="text-gray-700 leading-relaxed">
+              {{ benefit.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- All Benefits Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Complete <span class="text-orange-600">Benefits</span> of Hoarding Advertising
+      </h2>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div *ngFor="let benefit of allBenefits; let i = index"
+           class="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-orange-200">
+        <div [class]="'w-14 h-14 bg-' + benefit.color + '-100 rounded-lg flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300'">
+          <i [class]="benefit.icon + ' text-2xl text-' + benefit.color + '-600'"></i>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600">
+          {{ benefit.title }}
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          {{ benefit.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- When to Use Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        When to Use <span class="text-orange-600">Hoarding Advertising</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        Our team will help you determine when to use hoarding advertising:
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div *ngFor="let useCase of useCases; let i = index"
+           class="group relative overflow-hidden rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 hover:scale-105">
+        
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+          <img [src]="useCase.image" [alt]="useCase.title" 
+               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+        </div>
+        
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent"></div>
+        
+        <!-- Content -->
+        <div class="relative z-10 p-8 h-80 flex flex-col justify-end">
+          <!-- <div class="w-16 h-16 bg-orange-500 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+            <i [class]="useCase.icon + ' text-3xl text-white'"></i>
+          </div> -->
+          <h3 class="text-2xl font-bold text-white mb-4">
+            {{ useCase.title }}
+          </h3>
+          <p class="text-gray-200 leading-relaxed">
+            {{ useCase.description }}
+          </p>
+        </div>
+        
+        <!-- Hover Border -->
+        <div class="absolute inset-0 border-4 border-transparent group-hover:border-orange-400 rounded-3xl transition-colors duration-300"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-whycpencilpeel [features]="whycfeatures" [headerContent]="whyccontent"/>
+<app-contactus [title]="contact.title" [description]="contact.description"></app-contactus>
+
+

@@ -1,0 +1,12 @@
+@keyframes bounce-slow {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.group-hover\:animate-bounce-slow:hover .pi {
+  animation: bounce-slow 0.6s ease-in-out;
+}

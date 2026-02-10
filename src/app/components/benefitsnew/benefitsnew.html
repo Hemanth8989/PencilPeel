@@ -1,0 +1,23 @@
+<section class="py-16 px-4 bg-gradient-to-br from-[#f0f4ff] via-white to-[#f6faed]">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10" [innerHTML]="title"></h2>
+    <div class="w-24 h-1 mb-10 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto"></div>
+    <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto" [innerHTML]="description"></p>
+    <div class="grid gap-8 md:grid-cols-3">
+      <div *ngFor="let benefit of benefits"
+        class="flex items-start rounded-2xl bg-white/60 backdrop-blur-md border-2 border-gray-300 shadow-xl p-7 hover:shadow-2xl transition">
+        <div class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl text-white text-2xl mr-4"
+          [ngClass]="benefit.gradient"
+        >
+          <i [class]="benefit.icon.startsWith('pi') ? 'pi ' + benefit.icon : benefit.icon"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-1">
+            {{ benefit.title }}
+          </h3>
+          <p class="text-gray-700 text-base">{{ benefit.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

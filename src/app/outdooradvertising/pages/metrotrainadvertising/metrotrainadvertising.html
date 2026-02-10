@@ -1,0 +1,371 @@
+<app-outdoor-hero-section [config]="metroTrainHeroConfig" />
+<app-quotes [testimonials]="testimonials"></app-quotes>
+
+<section class="py-20 bg-gradient-to-br from-gray-50 to-slate-100 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="https://images.unsplash.com/photo-1571748982379-2f4d7e8bb5e1?auto=format&fit=crop&w=1920&q=80" 
+         alt="Metro Train Advertising Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-gray-700">Metro Train Advertising?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Metro train advertising involves using the exterior and interior of metro trains as spaces for 
+        promotional materials. Our team will help you understand the power of metro train advertising and 
+        how it can benefit your business.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- Metro Train Advertising - Complete Section -->
+<section class="py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Outside Advertising Section -->
+    <div class="mb-20">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <!-- <div class="inline-flex items-center justify-center w-16 h-16 bg-orange-500 rounded-xl mb-6">
+          <i class="pi pi-car text-2xl text-white"></i>
+        </div> -->
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Outside Advertising on <span class="text-orange-500">Metro Trains</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-4xl mx-auto">
+          We will help you create impactful outside ads that turn the train into a moving billboard, 
+          seen by commuters, pedestrians, and motorists.
+        </p>
+      </div>
+
+      <!-- Outside Industries Grid -->
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-4 md:p-8 mb-12">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          What it Typically Advertises
+        </h3>
+        <p class="text-lg text-gray-600 mb-8">
+          Our team will help various industries reach their target audience through outside metro train advertising, including:
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div 
+            *ngFor="let industry of outsideIndustries" 
+            class="bg-gray-50 rounded-xl p-6 border-l-4"
+            [ngClass]="industry.borderColor">
+            <div class="md:flex items-start space-x-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i [class]="industry.icon + ' text-2xl ' + industry.iconColor"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900 mb-3">{{ industry.title }}</h4>
+                <p class="text-base text-gray-700 leading-relaxed">{{ industry.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outside Benefits -->
+      <div class="bg-gray-50 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          Benefits of Outside Advertising
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div 
+            *ngFor="let benefit of outsideBenefits" 
+            class="md:flex items-start space-x-4">
+            <div class="w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i [class]="benefit.icon + ' text-white'"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-gray-900 mb-2">{{ benefit.title }}</h4>
+              <p class="text-base text-gray-700">{{ benefit.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Inside Advertising Section -->
+    <div class="mb-12">
+      <!-- Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-gray-900 mb-4">
+          Inside Advertising on <span class="text-blue-500">Metro Trains</span>
+        </h2>
+        <p class="text-lg text-gray-600 max-w-4xl mx-auto">
+          We will help you create targeted inside ads that reach commuters who are seated or standing for extended periods.
+        </p>
+      </div>
+
+      <!-- Inside Industries Grid -->
+      <div class="bg-white rounded-2xl shadow-lg border border-gray-200 p-8 mb-12">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          What it Typically Advertises
+        </h3>
+        <p class="text-lg text-gray-600 mb-8">
+          Our team will help various industries reach their target audience through inside metro train advertising, including:
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div 
+            *ngFor="let industry of insideIndustries" 
+            class="bg-gray-50 rounded-xl p-6 border-l-4"
+            [ngClass]="industry.borderColor">
+            <div class="flex items-start space-x-4">
+              <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                <i [class]="industry.icon + ' text-2xl ' + industry.iconColor"></i>
+              </div>
+              <div>
+                <h4 class="text-lg font-bold text-gray-900 mb-3">{{ industry.title }}</h4>
+                <p class="text-base text-gray-700 leading-relaxed">{{ industry.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inside Benefits -->
+      <div class="bg-gray-50 rounded-2xl p-8">
+        <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+          Benefits of Inside Advertising
+        </h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div 
+            *ngFor="let benefit of insideBenefits" 
+            class="md:flex items-start space-x-4">
+            <div class="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center flex-shrink-0">
+              <i [class]="benefit.icon + ' text-white'"></i>
+            </div>
+            <div>
+              <h4 class="text-lg font-bold text-gray-900 mb-2">{{ benefit.title }}</h4>
+              <p class="text-base text-gray-700">{{ benefit.description }}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Best Practices for Metro Train Advertising Section -->
+<section class="py-20 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/70 to-black/60 z-10"></div>
+    <img 
+      src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+      alt="Metro Train Station" 
+      class="w-full h-full object-cover"
+    />
+  </div>
+
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center bg-orange-500 rounded-full px-6 py-3 mb-8">
+        <i class="pi pi-lightbulb text-white mr-3"></i>
+        <span class="text-white font-semibold">Best Practices</span>
+      </div>
+      
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+        Best Practices for Metro Train Advertising<br>
+        with <span class="text-orange-400">Pencil Peel IMT</span>
+      </h2>
+      
+      <p class="text-xl text-gray-200 max-w-4xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, we understand the importance of creating effective metro train advertising campaigns 
+        that drive business growth and increase brand visibility. Here are some best practices for metro train advertising:
+      </p>
+    </div>
+
+    <!-- Best Practices Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div 
+        *ngFor="let practice of bestPractices; let i = index" 
+        class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 border border-white/20 hover:bg-white/15 transition-all duration-300">
+        <div class="w-16 h-16 rounded-2xl flex items-center justify-center mb-6"
+             [ngClass]="practice.iconBg">
+          <i [class]="practice.icon + ' text-2xl text-white'"></i>
+        </div>
+        
+        <h3 class="text-xl font-bold text-white mb-4">{{ practice.title }}</h3>
+        <p class="text-gray-200 leading-relaxed">{{ practice.description }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+<app-industrycards [items]="metroTrainAdvertisingData.industries" [title]="metroTrainAdvertisingData.title" [description]="metroTrainAdvertisingData.description" />
+<app-whycpencilpeel [features]="whyChooseMetroTrain.features" [headerContent]="whyChooseMetroTrain" />
+
+
+<!-- Metro Train Advertising: Content-Focused Redesign -->
+<section class="py-20 bg-gradient-to-br from-gray-50 to-orange-50/20 relative overflow-hidden">
+  <!-- Background Elements -->
+  <div class="absolute inset-0">
+    <div class="absolute top-40 right-20 w-64 h-64 bg-orange-200/20 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-20 left-10 w-80 h-80 bg-blue-200/20 rounded-full blur-3xl"></div>
+  </div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center bg-white rounded-full px-6 py-3 shadow-lg border border-gray-200 mb-8">
+        <i class="pi pi-car text-orange-500 mr-3"></i>
+        <span class="text-gray-700 font-semibold">Metro Train Advertising Solutions</span>
+      </div>
+      
+      <h1 class="text-5xl md:text-6xl font-black text-gray-900 mb-6 leading-tight">
+        <span class="text-orange-500">Inside</span> and <span class="text-blue-500">Outside</span>
+        <br>Advertising Options
+      </h1>
+      
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, we offer a comprehensive range of options for promoting your brand through strategic metro train advertising placements.
+      </p>
+    </div>
+
+    <!-- Inside Advertising Hero Section -->
+    <div class="mb-20">
+      <!-- Hero Image with Content -->
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl mb-12">
+        <img 
+          src="https://images.unsplash.com/photo-1553224114-f6e8e61ab291?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+          alt="Metro Train Interior Advertising" 
+          class="w-full h-[500px] object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900/90 via-blue-800/70 to-blue-600/50"></div>
+        
+        <!-- Hero Content Overlay -->
+        <div class="absolute inset-0 flex items-center">
+          <div class="max-w-4xl mx-auto px-8 text-center text-white">
+            <div class="mb-8">
+              <div class="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
+                <i class="pi pi-users text-white mr-3"></i>
+                <span class="font-semibold">Inside the Metro Train Advertising</span>
+              </div>
+              <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Captivate Commuters During Their Journey
+              </h2>
+              <p class="text-2xl text-blue-100 leading-relaxed max-w-3xl mx-auto">
+                Reach engaged passengers with strategic interior placements that ensure maximum visibility 
+                and impact throughout their daily commute experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inside Options - Content Highlighted -->
+      <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 lg:p-12">
+        <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Interior Advertising Placements</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div 
+            *ngFor="let option of insideOptions; let i = index" 
+            class="group relative bg-blue-50 rounded-2xl p-6 border-2 border-blue-100 hover:border-blue-300 hover:shadow-lg transition-all duration-300">
+            
+            <div class="pt-4">
+              <h4 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                {{ option.title }}
+              </h4>
+              <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                {{ option.description }}
+              </p>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Outside Advertising Hero Section -->
+    <div class="mb-16">
+      <!-- Hero Image with Content -->
+      <div class="relative rounded-3xl overflow-hidden shadow-2xl mb-12">
+        <img 
+          src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+          alt="Metro Train Exterior Advertising" 
+          class="w-full h-[500px] object-cover"
+        />
+        <div class="absolute inset-0 bg-gradient-to-r from-orange-900/90 via-orange-800/70 to-orange-600/50"></div>
+        
+        <!-- Hero Content Overlay -->
+        <div class="absolute inset-0 flex items-center">
+          <div class="max-w-4xl mx-auto px-8 text-center text-white">
+            <div class="mb-8">
+              <div class="inline-flex items-center bg-white/20 backdrop-blur-sm rounded-full px-6 py-3 mb-6">
+                <i class="pi pi-eye text-white mr-3"></i>
+                <span class="font-semibold">Outside the Metro Train Advertising</span>
+              </div>
+              <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+                Transform Trains into Moving Billboards
+              </h2>
+              <p class="text-2xl text-orange-100 leading-relaxed max-w-3xl mx-auto">
+                Maximize brand visibility with exterior placements that reach pedestrians, motorists, 
+                and waiting passengers across the entire metropolitan network.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Outside Options - Content Highlighted -->
+      <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 lg:p-12">
+        <h3 class="text-3xl font-bold text-gray-900 mb-8 text-center">Exterior Advertising Placements</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div 
+            *ngFor="let option of outsideOptions; let i = index" 
+            class="group relative bg-orange-50 rounded-2xl p-6 border-2 border-orange-100 hover:border-orange-300 hover:shadow-lg transition-all duration-300">
+            
+            <div class="pt-4">
+              <h4 class="text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
+                {{ option.title }}
+              </h4>
+              <p class="text-lg text-gray-700 leading-relaxed mb-6">
+                {{ option.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enhanced Call to Action -->
+    <div class="bg-gradient-to-r from-orange-500 via-orange-600 to-blue-600 rounded-3xl p-12 text-center text-white relative overflow-hidden">
+      <div class="absolute inset-0 bg-black/10"></div>
+      <div class="relative z-10">
+        <h3 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          Ready to Unlock Metro Advertising Potential?
+        </h3>
+        <p class="text-xl mb-8 opacity-90 max-w-4xl mx-auto leading-relaxed">
+          By partnering with Pencil Peel IMT, you can unlock the full potential of metro train advertising 
+          and drive unprecedented business growth through strategic placement solutions.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <button class="bg-white text-gray-900 px-10 py-4 rounded-2xl font-bold text-xl hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 shadow-2xl">
+            <i class="pi pi-phone mr-3"></i>
+            Contact Us Today
+          </button>
+          <button class="border-2 border-white text-white px-10 py-4 rounded-2xl font-semibold text-xl hover:bg-white hover:text-gray-900 transition-all duration-300 transform hover:scale-105">
+            <i class="pi pi-download mr-3"></i>
+            Learn More About Services
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+
+
+

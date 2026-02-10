@@ -1,0 +1,79 @@
+<app-nocarouselherosection [herocontent]="snapchatHeroContent" />
+<section class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    <!-- Heading -->
+    <h2 class="text-3xl font-extrabold text-gray-900 sm:text-4xl bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text text-transparent">
+      What is Snapchat Marketing?
+    </h2>
+    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+      We will help you understand the power of Snapchat marketing, which involves promoting your business, products, or services on Snapchat to reach and engage with your target audience.
+    </p>
+  </div>
+</section>
+<app-whyus [whyus]="whyus" />
+
+<section class="relative bg-white py-16 md:py-24 lg:py-32">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-start gap-12">
+    <!-- LEFT: Text -->
+    <div class="flex-1 max-w-lg md:flex md:flex-col md:justify-center text-center md:text-left">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-transparent 
+                 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text">
+        How Pencil Peel IMT Will Provide Snapchat Marketing Services
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-700">
+        Our team of experts will deliver end-to-end Snapchat marketing solutions tailored to your business goals.
+      </p>
+    </div>
+
+    <!-- RIGHT: Cards -->
+    <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <ng-container *ngFor="let service of snapchatServices">
+        <div class="bg-yellow-50 rounded-xl shadow-lg p-6 flex flex-col min-h-[184px]">
+          <div class="mb-4">
+            <i class="pi" [ngClass]="[service.icon, service.iconColor]" style="font-size: 2rem;"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-yellow-700 mb-2">{{ service.title }}</h3>
+          <p class="text-gray-700">{{ service.description }}</p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- Decorative shapes -->
+  <div class="absolute top-0 left-0 w-44 h-44 bg-gradient-to-br from-yellow-200 to-pink-100 rounded-full blur-2xl -z-10"></div>
+  <div class="absolute bottom-0 right-0 w-64 h-28 bg-gradient-to-tl from-pink-100 to-purple-100 rounded-full blur-2xl -z-10"></div>
+</section>
+<section class="relative bg-white py-16 md:py-24 lg:py-32">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-start gap-12">
+    <!-- LEFT: Text -->
+    <div class="flex-1 max-w-lg md:flex md:flex-col md:justify-center text-center md:text-left">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-transparent 
+                 bg-gradient-to-r from-yellow-400 via-pink-500 to-purple-600 bg-clip-text">
+        Major Strategies of Snapchat Marketing
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-700">
+        Our team uses multiple strategies to ensure your Snapchat marketing campaigns perform at their best.
+      </p>
+    </div>
+
+    <!-- RIGHT: Cards -->
+    <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <ng-container *ngFor="let strategy of snapchatStrategies">
+        <div class="bg-pink-50 rounded-xl shadow-lg p-6 flex flex-col min-h-[184px]">
+          <div class="mb-4">
+            <i class="pi" [ngClass]="[strategy.icon, strategy.iconColor]" style="font-size: 2rem;"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-pink-600 mb-2">{{ strategy.title }}</h3>
+          <p class="text-gray-700">{{ strategy.description }}</p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- Decorative shapes -->
+  <div class="absolute top-0 left-0 w-44 h-44 bg-gradient-to-br from-yellow-200 to-pink-100 rounded-full blur-2xl -z-10"></div>
+  <div class="absolute bottom-0 right-0 w-64 h-28 bg-gradient-to-tl from-pink-100 to-purple-100 rounded-full blur-2xl -z-10"></div>
+</section>
+<app-contactus [title]="snapchatContact.title" [description]="snapchatContact.description"/>
+<app-whycpencilpeel [headerContent]="whycheader" [features]="whycSnapchatFeatures"></app-whycpencilpeel>
+

@@ -1,0 +1,247 @@
+<app-nocarouselherosection [herocontent]="herocontent" />
+<app-faqcards [faqcards]="faqcards" />
+<app-whyus [whyus]="whyUs" />
+<section class="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-b from-gray-50 to-gray-100">
+  <!-- Header -->
+  <div class="max-w-5xl mx-auto text-center mb-14">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+      How We Provide <span class="text-yellow-500">Social Media Marketing Services</span>
+    </h2>
+    <p class="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+      At <span class="font-semibold text-gray-800">Pencil Peel IMT</span>, we provide comprehensive social media marketing services designed to help businesses like yours succeed in the ever-changing digital landscape.
+    </p>
+  </div>
+
+  <!-- Service Cards Grid -->
+  <div class="max-w-7xl mx-auto">
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div *ngFor="let service of socialMediaServices; let i = index">
+        <p-card 
+          [style]="{ boxShadow: 'none', border: '1px solid #f3f4f6' }" 
+          styleClass="h-full transition-all duration-300 hover:shadow-lg">
+          
+          <!-- Service Icon & Title -->
+          <ng-template pTemplate="header">
+            <div class="relative p-8 bg-gradient-to-br text-white rounded-t-lg h-48" [ngClass]="'from bg-' + service.accentColor + '-500' + ' to bg-' + service.accentColor + '-600'">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i [class]="service.icon + ' text-3xl'" [ngClass]="service.iconColor"></i>
+                </div>
+              </div>
+              <h3 class="text-2xl font-bold text-center mb-2">{{ service.title }}</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          <!-- Service Details List -->
+          <div class="space-y-4">
+            <div *ngFor="let detail of service.details" 
+                 class="border-l-4 pl-4 py-2 transition-all duration-200 hover:bg-gray-50"
+                 [ngClass]="service.borderColor">
+              <div class="flex items-start space-x-3">
+                <i [class]="detail.icon + ' mt-1'" [ngClass]="'text-'+service.accentColor+'-400'"></i>
+                <div>
+                  <h4 class="font-medium text-gray-800 mb-1">{{ detail.title }}</h4>
+                  <p class="text-sm text-gray-600">{{ detail.description }}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</section>
+<app-services [services]="services" [title]="servicetitle"/>
+<section class="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-b from-white to-gray-50">
+  <!-- Header -->
+  <div class="max-w-5xl mx-auto text-center mb-14">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+      Our <span class="text-yellow-500">Social Media Marketing Process</span>
+    </h2>
+    <p class="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+      At <span class="font-semibold text-gray-800">Pencil Peel IMT</span>, we follow a comprehensive social media marketing process designed to help businesses like yours succeed in the ever-changing digital landscape.
+    </p>
+  </div>
+
+  <!-- Desktop Timeline (Hidden on Mobile) -->
+  <div class="hidden md:block max-w-6xl mx-auto mb-16">
+    <p-timeline [value]="processSteps" align="alternate" styleClass="custom-timeline">
+      <ng-template pTemplate="marker" let-step>
+        <div class="flex items-center justify-center w-12 h-12 rounded-full shadow-lg transition-all duration-300"
+             [ngClass]="step.markerColor">
+          <i [class]="step.icon + ' text-white text-lg'"></i>
+        </div>
+      </ng-template>
+      
+      <ng-template pTemplate="content" let-step let-i="index">
+        <div class="bg-white rounded-xl p-6 shadow-xl hover:shadow-3xl transition-all duration-300 border-2 border-gray-200 max-w-md">
+          <div class="flex items-center mb-4">
+            <span class="text-sm font-bold px-3 py-1 rounded-full"
+                  [ngClass]="step.badgeColor">
+              {{ step.step }}
+            </span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">{{ step.title }}</h3>
+          <ul class="space-y-2">
+            <li *ngFor="let detail of step.details" 
+                class="flex items-start space-x-2 text-gray-600">
+              <i class="pi pi-check-circle text-green-500 text-sm mt-1"></i>
+              <div>
+                <span class="font-medium">{{ detail.title }}:</span>
+                <span class="ml-1">{{ detail.description }}</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </ng-template>
+    </p-timeline>
+  </div>
+
+  <!-- Mobile Card Flow (Hidden on Desktop) -->
+  <div class="md:hidden max-w-2xl mx-auto space-y-6 mb-12">
+    <div *ngFor="let step of processSteps; let i = index" 
+         class="transform transition-all duration-300">
+      <p-card styleClass="shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200">
+        <ng-template pTemplate="header">
+          <div class="flex items-center p-4 pb-0">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full shadow-md mr-4"
+                 [ngClass]="step.markerColor">
+              <i [class]="step.icon + ' text-white text-lg'"></i>
+            </div>
+            <div>
+              <span class="text-xs font-bold px-2 py-1 rounded-full"
+                    [ngClass]="step.badgeColor">
+                {{ step.step }}
+              </span>
+              <h3 class="text-lg font-bold text-gray-800 mt-1">{{ step.title }}</h3>
+            </div>
+          </div>
+        </ng-template>
+        
+        <div class="px-4 pb-4">
+          <ul class="space-y-3">
+            <li *ngFor="let detail of step.details" 
+                class="border-l-4 border-gray-200 pl-4 py-2">
+              <div class="flex items-start space-x-2">
+                <i class="pi pi-check-circle text-green-500 text-sm mt-1"></i>
+                <div class="text-gray-600">
+                  <span class="font-medium text-gray-800">{{ detail.title }}:</span>
+                  <p class="text-sm mt-1">{{ detail.description }}</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </p-card>
+    </div>
+  </div>
+
+  <!-- CTA Section -->
+  <!-- <div class="max-w-3xl mx-auto text-center">
+    <h3 class="text-2xl font-semibold text-gray-700 mb-4">Ready to Start Your Social Media Journey?</h3>
+    <p class="text-gray-600 mb-6">Let's create an effective social media strategy tailored to your business needs.</p>
+    <p-button
+      label="Get Started Today"
+      styleClass="p-button-rounded p-button-lg"
+      [style]="{ backgroundColor: '#f59e0b', borderColor: '#f59e0b' }"
+      icon="pi pi-arrow-right"
+      iconPos="right">
+    </p-button>
+  </div> -->
+</section>
+<section class="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-b from-gray-50 to-white">
+  <!-- Header -->
+  <div class="max-w-6xl mx-auto text-center mb-16">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+      Products & Services That Need <span class="text-yellow-500">Social Media Marketing</span>
+    </h2>
+    <p class="text-gray-600 text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">
+      At <span class="font-semibold text-gray-800">Pencil Peel IMT</span>, we understand the importance of social media marketing for various products and services. Here's how we help different industries stand out and reach their target audience.
+    </p>
+  </div>
+
+  <!-- Products Section -->
+  <div class="max-w-7xl mx-auto mb-20">
+    <div class="text-center mb-12">
+      <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+        Products That Need Social Media Marketing
+      </h3>
+      <div class="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+    </div>
+
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div *ngFor="let service of productCategories; let i = index">
+        <p-card class="h-full industry-card">
+        <ng-template pTemplate="header">
+            <div class="relative overflow-hidden rounded-t-lg">
+            <img 
+                [src]="service.image" 
+                [alt]="service.imageAlt" 
+                class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300"
+            />
+            </div>
+        </ng-template>
+        
+        <div class="p-6">
+            <div class="flex items-center mb-4">
+            <i [class]="service.icon + ' text-2xl mr-3'" [ngClass]="service.iconColor"></i>
+            <h3 class="text-xl font-semibold text-gray-900">{{ service.displayName }}</h3>
+            </div>
+            
+            <div class="space-y-4">
+            <div 
+                *ngFor="let item of service.items" 
+                class="border-l-4 pl-4"
+                [ngClass]="service.borderColor">
+                <h4 class="font-medium text-gray-800 mb-2">{{ item.title }}</h4>
+                <p class="text-gray-600 text-sm">{{ item.description }}</p>
+            </div>
+            </div>
+        </div>
+        </p-card>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services Section -->
+   <div class="text-center mb-12">
+      <h3 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+        Services That Need Social Media Marketing
+      </h3>
+      <div class="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+    </div>
+  <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div *ngFor="let service of serviceCategories; let i = index">
+        <p-card class="h-full industry-card">
+        <ng-template pTemplate="header">
+            <div class="relative overflow-hidden rounded-t-lg">
+            <img 
+                [src]="service.image" 
+                [alt]="service.imageAlt" 
+                class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300"
+            />
+            </div>
+        </ng-template>
+        
+        <div class="p-6">
+            <div class="flex items-center mb-4">
+            <i [class]="service.icon + ' text-2xl mr-3'" [ngClass]="service.iconColor"></i>
+            <h3 class="text-xl font-semibold text-gray-900">{{ service.displayName }}</h3>
+            </div>
+            
+            <div class="space-y-4">
+            <div 
+                *ngFor="let item of service.items" 
+                class="border-l-4 pl-4"
+                [ngClass]="service.borderColor">
+                <h4 class="font-medium text-gray-800 mb-2">{{ item.title }}</h4>
+                <p class="text-gray-600 text-sm">{{ item.description }}</p>
+            </div>
+            </div>
+        </div>
+        </p-card>
+    </div>
+</div>
+
+</section>
+

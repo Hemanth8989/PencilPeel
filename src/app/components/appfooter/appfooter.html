@@ -1,0 +1,110 @@
+<footer class="bg-gray-900 text-gray-300 py-10 px-6 md:px-16">
+  <!-- TOP SECTION -->
+  <div class="grid md:grid-cols-4 gap-10 border-b border-gray-700 pb-8">
+
+    <!-- About + Logo Section -->
+    <div>
+      <div class="flex flex-col space-x-3 mb-4">
+        <img src="/logo.png" alt="Pencil Peel IMT Logo"
+          class="w-50 h-14 mb-4 hover:scale-105 transition-transform duration-300" />
+        <div>
+          <h3 class="text-lg font-semibold text-white leading-tight">Pencil Peel IMT</h3>
+          <p class="text-xs text-gray-400">Integrated Marketing Technology</p>
+        </div>
+      </div>
+      <p class="text-sm leading-relaxed">
+        Pencil Peel IMT is India's largest and top-ranked advertising company,
+        specializing in Integrated Marketing Technology. Our team of young and creative
+        professionals is dedicated to making our clients successful in all aspects.
+      </p>
+      <p class="mt-3 text-sm font-semibold text-blue-400">
+        Your Partner in Integrated Marketing Technology
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Quick Links</h3>
+      <ul class="space-y-2">
+        <li *ngFor="let link of quickLinks">
+          <a [routerLink]="link.path" class="hover:text-blue-400 text-sm">{{ link.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Services -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Services</h3>
+      <ul class="space-y-2">
+        <li *ngFor="let service of services">
+          <a [routerLink]="service.path" class="hover:text-blue-400 text-sm">{{ service.name }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Industries -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-4">Industries</h3>
+      <ul class="space-y-2">
+        <li *ngFor="let industry of industries">
+          <a class="hover:text-blue-400 text-sm">{{ industry }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- MIDDLE SECTION -->
+  <div class="mt-8 grid md:grid-cols-3 gap-6 border-b border-gray-700 pb-6">
+
+    <!-- Blog & News -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-3">Blog & News</h3>
+      <p class="text-sm">Stay tuned for updates and marketing insights from Pencil Peel IMT.</p>
+      <!-- Blog Button -->
+      <div class="mt-3">
+        <button
+          pButton
+          label="Read Our Blog"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md font-semibold"
+          [routerLink]="'/blog'"
+        ></button>
+      </div>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-3">Contact Us</h3>
+      <p class="text-sm">
+        Kavuri Hills, Madhapur, Hyderabad, Telangana, India<br />
+        Vijayawada | Vizag| Rajamundry | Ongole | Tirupati | Kurnool <br/>
+        <span>Email:</span> <a href="mailto:info@pencilpeel.in" class="text-blue-400">info@pencilpeel.in</a><br /><a href="mailto:pencilpeelone@gmail.com" class="text-blue-400">pencilpeelone@gmail.com</a><br />
+        <span>Phone:</span> <a href="tel:+918106929326" class="text-blue-400">+91 8106929326</a>
+      </p>
+    </div>
+
+    <!-- Socials + Contact Button -->
+    <div>
+      <h3 class="text-lg font-semibold text-white mb-3">Follow Us</h3>
+      <div class="flex space-x-4 mb-3">
+        <a *ngFor="let s of socials" [href]="s.link" target="_blank" rel="noopener" class="hover:text-blue-400">
+          <i [class]="s.icon + ' text-2xl'"></i>
+        </a>
+      </div>
+      <p class="text-sm mb-3">WhatsApp & Arattai: <span class="text-blue-400">+91 8106929326</span></p>
+      <!-- Contact Button -->
+      <div>
+        <button pButton label="Contact Us"
+          class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-md font-semibold"
+          (click)="showContactForm()"></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM SECTION -->
+  <div class="text-center text-sm mt-6 text-gray-500">
+    © {{ currentYear }} Pencil Peel IMT. All Rights Reserved.
+  </div>
+
+  <!-- Dialog Contact Form -->
+  <app-contact-form [(visible)]="contactVisible"></app-contact-form>
+</footer>

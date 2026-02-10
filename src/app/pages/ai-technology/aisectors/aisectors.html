@@ -1,0 +1,169 @@
+<app-nocarouselquotes [herocontent]="herocontent" [quotes]="quotes"></app-nocarouselquotes>
+
+<section class="py-20 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 text-white">
+    <div class="text-center mb-16">
+        <h2 class="text-5xl font-extrabold bg-gradient-to-r from-blue-400 to-purple-400 text-transparent bg-clip-text">
+            AI-Powered Industry Solutions
+        </h2>
+        <p class="text-gray-300 mt-4 text-lg max-w-3xl mx-auto">
+            Pencil Peel IMT empowers industries with next-generation AI solutions that transform challenges into
+            opportunities.
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 px-6 md:px-16">
+        <div *ngFor="let item of solutions" data-aos="fade-up"
+            class="overflow-hidden rounded-2xl shadow-xl bg-white/10 border border-white/10 backdrop-blur-lg transition-all duration-500 transform hover:-translate-y-2 hover:shadow-2xl hover:bg-white/20">
+
+            <!-- Card Image -->
+            <div class="relative w-full h-48 overflow-hidden">
+                <img [src]="item.image" alt="{{ item.title }}"
+                    class="w-full h-full object-cover transition-transform duration-700 hover:scale-110" />
+                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                <h3 class="absolute bottom-3 left-4 text-2xl font-bold text-white drop-shadow-lg">{{ item.title }}</h3>
+            </div>
+
+            <!-- Card Content -->
+            <div class="p-6 space-y-3">
+                <div class="h-1 w-24 rounded-full bg-gradient-to-r {{ item.color }}"></div>
+                <p class="text-gray-300"><strong class="text-white">Problem:</strong> {{ item.problem }}</p>
+                <p class="text-gray-300"><strong class="text-white">AI Solution:</strong> {{ item.aiSolution }}</p>
+                <p class="text-gray-100 font-medium"><strong class="text-white">Pencil Peel IMT's Solution:</strong> {{
+                    item.companySolution }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-gradient-to-br from-gray-900 via-slate-900 to-gray-800 text-white">
+    <div class="text-center mb-16">
+        <h2
+            class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-cyan-400 to-green-400 text-transparent bg-clip-text">
+            How Government Sector Can Use AI
+        </h2>
+        <p class="text-gray-300 mt-4 text-lg max-w-3xl mx-auto">
+            Empowering Government Sector with AI-Powered Solutions
+        </p>
+    </div>
+
+    <div class="max-w-5xl mx-auto text-center mb-16 text-gray-300">
+        <p class="text-lg leading-relaxed">
+            At <span class="font-bold text-orange-500">Pencil Peel IMT</span>, we believe that Artificial Intelligence
+            (AI) can
+            revolutionize the government sector by improving governance, citizen
+            service delivery, and innovation. We develop and implement AI-powered
+            solutions that help government agencies leverage the power of data and
+            analytics to drive informed decision-making and improve outcomes.
+        </p>
+    </div>
+
+    <!-- Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-20">
+        <div *ngFor="let card of cards" data-aos="fade-up"
+            class="rounded-2xl bg-white/10 border border-white/10 backdrop-blur-lg p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:bg-white/20 hover:shadow-2xl">
+            <div
+                class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-r {{ card.color }} mb-6">
+                <i class="{{ card.icon }} text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3">{{ card.title }}</h3>
+            <p class="text-gray-300 leading-relaxed">
+                {{ card.description }}
+            </p>
+        </div>
+    </div>
+
+    <!-- Benefits Section -->
+    <div class="max-w-5xl mx-auto mt-20 text-center">
+        <h3 class="text-3xl font-bold mb-6 bg-gradient-to-r from-teal-400 to-green-400 text-transparent bg-clip-text">
+            Benefits of AI in Government
+        </h3>
+        <p class="text-gray-300 mb-12">
+            By leveraging AI-powered solutions, government agencies can:
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-6 md:px-20 text-left" data-aos="fade-left">
+            <div
+                class="p-6 bg-white/10 border border-white/10 rounded-xl hover:bg-white/20 transition hover:-translate-y-2 hover:shadow-2xl">
+                <h4 class="font-semibold text-lg mb-2 text-green-400">
+                    <i class="fa-solid fa-gauge-high mr-2 text-green-400"></i>
+                    Improve Efficiency
+                </h4>
+                <p class="text-gray-300">
+                    Automate routine tasks and processes, reducing bureaucracy and
+                    improving productivity.
+                </p>
+            </div>
+
+            <div
+                class="p-6 bg-white/10 border border-white/10 rounded-xl hover:bg-white/20 transition hover:-translate-y-2 hover:shadow-2xl">
+                <h4 class="font-semibold text-lg mb-2 text-blue-400">
+                    <i class="fa-solid fa-user-check mr-2 text-blue-400"></i>
+                    Enhance Citizen Experience
+                </h4>
+                <p class="text-gray-300">
+                    Provide citizens with personalized assistance and support, improving
+                    citizen engagement and satisfaction.
+                </p>
+            </div>
+
+            <div
+                class="p-6 bg-white/10 border border-white/10 rounded-xl hover:bg-white/20 transition hover:-translate-y-2 hover:shadow-2xl">
+                <h4 class="font-semibold text-lg mb-2 text-yellow-400">
+                    <i class="fa-solid fa-chart-line mr-2 text-yellow-400"></i>
+                    Inform Decision-Making
+                </h4>
+                <p class="text-gray-300">
+                    Use data analytics to improve decision-making with data analytics,
+                    reducing the risk of errors and improving outcomes.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="py-20 bg-gradient-to-br from-slate-900 via-gray-900 to-gray-800 text-white">
+    <div class="text-center mb-16">
+        <h2
+            class="text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-purple-400 to-pink-400 text-transparent bg-clip-text">
+            How Pencil Peel IMT Can Help Government
+        </h2>
+    </div>
+
+    <div class="max-w-5xl mx-auto text-center mb-16 text-gray-300">
+        <p class="text-lg leading-relaxed">
+            At <span class="font-bold text-purple-400">Pencil Peel IMT</span>, we're committed to helping government agencies leverage
+            AI technology to drive innovation and growth. Our team of experts can:
+        </p>
+    </div>
+
+    <!-- Help Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 px-6 md:px-20 mb-20" data-aos="fade-down">
+        <div *ngFor="let help of helps"
+            class="rounded-2xl bg-white/10 border border-white/10 backdrop-blur-lg p-8 shadow-lg transition-all duration-500 hover:-translate-y-2 hover:bg-white/20 hover:shadow-2xl text-center">
+            <div
+                class="w-16 h-16 mx-auto flex items-center justify-center rounded-full bg-gradient-to-r {{ help.color }} mb-6">
+                <i class="{{ help.icon }} text-2xl text-white"></i>
+            </div>
+            <h3 class="text-2xl font-semibold mb-3 text-orange-500">
+                {{ help.title }}
+            </h3>
+            <p class="text-gray-300 leading-relaxed">
+                {{ help.description }}
+            </p>
+        </div>
+    </div>
+
+    <!-- Partnership Summary -->
+    <div class="max-w-4xl mx-auto text-center px-6" data-aos="fade-right">
+        <p class="text-lg text-gray-300 leading-relaxed">
+            By partnering with <span class="font-bold text-blue-400">Pencil Peel IMT</span>, government agencies can leverage our
+            expertise and technology to drive innovation and growth, improving
+            governance, citizen service delivery, and innovation in various sectors.
+        </p>
+    </div>
+
+    <div class="mt-10 text-center">
+        <button pButton type="button" label="Get Started Today" icon="pi pi-arrow-right"
+            class="p-button-rounded p-button-lg bg-blue-600 hover:bg-blue-700 text-white font-medium border-none shadow-md hover:shadow-lg transition-all transform hover:-translate-y-1"
+            [routerLink]="['/contact']"></button>
+    </div>
+</section>

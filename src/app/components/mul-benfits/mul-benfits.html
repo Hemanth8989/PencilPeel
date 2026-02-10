@@ -1,0 +1,21 @@
+<section class="py-16 bg-mid">
+  <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+    <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+       {{sectionobj.title}}
+    </h2>
+    <p class="text-lg text-gray-300 max-w-3xl mx-auto">
+      {{sectionobj.description}}
+    </p>
+  </div>
+  <div class="max-w-7xl mx-auto px-4 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+    <div *ngFor="let b of benfits" class="bg-white rounded-xl shadow-2xl p-6 h-full border-3 border-gray-200">
+        <h3 class="text-xl font-semibold text-orange-500 mb-4">{{ b.title }}</h3>
+        <ul class="space-y-2 text-gray-600 text-base text-left">
+            <li *ngFor="let point of b.points">
+                <span class="font-medium">{{point.title}} : </span>
+                <span>{{point.description}}</span>
+            </li>
+        </ul>
+    </div>
+  </div>
+</section>

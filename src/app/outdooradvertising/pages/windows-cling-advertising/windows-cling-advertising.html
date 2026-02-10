@@ -1,0 +1,371 @@
+<app-outdoor-hero-section [config]="windowClingsHeroConfig" />
+
+<app-quotes [testimonials]="testimonials"></app-quotes>
+<!-- What is Window Clings Advertising Section -->
+<section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=1920&q=80"
+      alt="Glass Window Background" class="w-full h-full object-cover">
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-blue-600">Window Clings Advertising?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Window clings advertising involves using custom-designed vinyl graphics or decals that adhere to glass surfaces
+        without adhesives.
+        Our team will help you understand the power of window clings advertising and how it can benefit your business.
+      </p>
+    </div>
+  </div>
+</section>
+<app-benefitsnew [benefits]="benefitsWindowClings.benefits" [title]="benefitsWindowClings.title"
+  [description]="benefitsWindowClings.description"></app-benefitsnew>
+<!-- Window Clings Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Types of <span class="text-orange-600">Window Clings</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        We offer two main types of window clings to suit your needs:
+      </p>
+    </div>
+    <app-imagecards [imageCards]="clingTypes" />
+  </div>
+</section>
+
+<div class="relative bg-white py-12 px-4 lg:px-6 overflow-hidden">
+  <!-- Background Elements -->
+  <div class="absolute inset-0 bg-gradient-to-br from-slate-50 via-white to-orange-50"></div>
+  <div class="absolute top-0 right-0 w-96 h-96 bg-orange-100 rounded-full opacity-20 -translate-y-48 translate-x-48">
+  </div>
+  <div class="absolute bottom-0 left-0 w-64 h-64 bg-blue-100 rounded-full opacity-20 translate-y-32 -translate-x-32">
+  </div>
+
+  <div class="relative max-w-7xl mx-auto">
+    <!-- Hero Section -->
+    <div class="text-center mb-10">
+      <div
+        class="inline-flex items-center bg-orange-100 text-orange-800 px-3 py-1.5 rounded-full text-sm font-medium mb-4">
+        <i class="pi pi-star-fill mr-2"></i>
+        Expert Window Cling Solutions
+      </div>
+      <h1 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4 leading-tight">
+        Choosing the Right Type of
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-600 to-orange-500">
+          Window Cling
+        </span>
+      </h1>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        Our team will help you choose the perfect window cling solution tailored to your business needs and campaign
+        goals
+      </p>
+    </div>
+
+    <!-- Comparison Layout -->
+    <div class="grid lg:grid-cols-2 gap-6 lg:gap-8">
+      <!-- Temporary/Seasonal Option -->
+      <div class="group relative">
+        <div
+          class="absolute -inset-2 bg-gradient-to-r from-orange-500 to-orange-400 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+        </div>
+        <div
+          class="relative bg-white rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden">
+
+          <!-- Card Header -->
+          <div class="relative p-5 pb-3">
+            <div class="flex items-center space-x-3 mb-3">
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-orange-500 to-orange-600 rounded-lg flex items-center justify-center shadow-lg">
+                <i class="pi pi-clock text-white text-base"></i>
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-gray-900">Temporary Use</h2>
+                <p class="text-orange-600 font-medium text-sm">Seasonal Campaigns</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="px-5 pb-5">
+            <div class="bg-gradient-to-br from-orange-50 to-orange-50 rounded-lg p-4 mb-4">
+              <h3 class="text-base font-bold text-gray-900 mb-2">Static Clings</h3>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                We will recommend static clings for temporary or seasonal campaigns.
+              </p>
+            </div>
+
+            <!-- Benefits Grid -->
+            <div class="grid grid-cols-1 gap-2">
+              <div class="flex items-start space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                <div class="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                  <i class="pi pi-check text-white text-xs"></i>
+                </div>
+                <p class="font-medium text-gray-900 text-sm">Easy to install and remove</p>
+              </div>
+
+              <div class="flex items-start space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                <div class="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                  <i class="pi pi-check text-white text-xs"></i>
+                </div>
+                <p class="font-medium text-gray-900 text-sm">No residue left on the glass surface</p>
+              </div>
+
+              <div class="flex items-start space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                <div class="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                  <i class="pi pi-check text-white text-xs"></i>
+                </div>
+                <p class="font-medium text-gray-900 text-sm">Ideal for temporary promotions</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Long-Term Option -->
+      <div class="group relative">
+        <div
+          class="absolute -inset-2 bg-gradient-to-r from-blue-600 to-blue-500 rounded-2xl opacity-0 group-hover:opacity-10 transition-opacity duration-500">
+        </div>
+        <div
+          class="relative bg-white rounded-xl border border-gray-200 shadow-lg hover:shadow-xl transition-all duration-500 overflow-hidden">
+
+          <!-- Card Header -->
+          <div class="relative p-5 pb-3">
+            <div class="flex items-center space-x-3 mb-3">
+              <div
+                class="w-10 h-10 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center shadow-lg">
+                <i class="pi pi-shield text-white text-base"></i>
+              </div>
+              <div>
+                <h2 class="text-xl font-bold text-gray-900">Long-Term Use</h2>
+                <p class="text-blue-600 font-medium text-sm">Durable Solutions</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="px-5 pb-5">
+            <div class="bg-gradient-to-br from-blue-50 to-blue-50 rounded-lg p-4 mb-4">
+              <h3 class="text-base font-bold text-gray-900 mb-2">Adhesive Vinyl Clings</h3>
+              <p class="text-gray-700 text-sm leading-relaxed">
+                Our team will suggest adhesive vinyl clings for more durable and long-term use.
+              </p>
+            </div>
+
+            <!-- Benefits Grid -->
+            <div class="grid grid-cols-1 gap-2">
+              <div class="flex items-start space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                <div class="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                  <i class="pi pi-check text-white text-xs"></i>
+                </div>
+                <p class="font-medium text-gray-900 text-sm">More durable and long-lasting</p>
+              </div>
+
+              <div class="flex items-start space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                <div class="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                  <i class="pi pi-check text-white text-xs"></i>
+                </div>
+                <p class="font-medium text-gray-900 text-sm">Suitable for outdoor use</p>
+              </div>
+
+              <div class="flex items-start space-x-2 p-2 rounded-lg hover:bg-gray-50 transition-colors">
+                <div class="w-4 h-4 bg-green-500 rounded-full flex items-center justify-center mt-0.5 flex-shrink-0">
+                  <i class="pi pi-check text-white text-xs"></i>
+                </div>
+                <p class="font-medium text-gray-900 text-sm">Can withstand environmental changes</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center my-10">
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+        By partnering with Pencil Peel IMT, you can unlock the full potential of window clings advertising and drive
+        business growth. Contact us to learn more about our window clings advertising services.
+      </p>
+    </div>
+
+  </div>
+</div>
+<app-whycpencilpeel [features]="whyChooseWindowClings.features" [headerContent]="whyChooseWindowClings" />
+
+<!-- pencil-peel-help.component.html -->
+<div class="bg-white py-16 px-4 lg:px-6">
+  <div class="max-w-6xl mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-gray-900 mb-6">
+        How <span class="relative">
+          <span class="text-orange-600">Pencil Peel</span>
+          <div
+            class="absolute -bottom-2 left-0 right-0 h-1 bg-gradient-to-r from-orange-400 to-orange-600 rounded-full">
+          </div>
+        </span> Can Help
+      </h2>
+      <p class="text-xl text-gray-600 font-light">
+        Our team will help you:
+      </p>
+    </div>
+
+    <!-- Services Layout -->
+    <div class="space-y-8">
+      <!-- Service 1: Promote Sales or Events -->
+      <div class="group relative">
+        <div
+          class="flex flex-col lg:flex-row items-center bg-gradient-to-r from-orange-50 to-red-50 rounded-3xl p-8 lg:p-12 hover:shadow-xl transition-all duration-500">
+
+          <!-- Icon Section -->
+          <div class="flex-shrink-0 mb-6 lg:mb-0 lg:mr-12">
+            <div class="relative">
+              <div
+                class="w-24 h-24 bg-gradient-to-br from-orange-500 to-red-500 rounded-2xl flex items-center justify-center shadow-xl">
+                <i class="pi pi-megaphone text-white text-3xl"></i>
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-yellow-400 rounded-full flex items-center justify-center">
+                <span class="text-xs font-bold text-gray-900">1</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Section -->
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              Promote Sales or Events
+            </h3>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl">
+              We will create window clings that promote sales or events without long-term commitments.
+            </p>
+            <div class="inline-flex items-center bg-white bg-opacity-80 px-4 py-2 rounded-full">
+              <i class="pi pi-lightning-bolt text-orange-500 mr-2"></i>
+              <span class="text-sm font-semibold text-gray-800">Quick & Flexible Solutions</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2: Leverage Prime Glass Spaces -->
+      <div class="group relative">
+        <div
+          class="flex flex-col lg:flex-row-reverse items-center bg-gradient-to-l from-blue-50 to-indigo-50 rounded-3xl p-8 lg:p-12 hover:shadow-xl transition-all duration-500">
+
+          <!-- Icon Section -->
+          <div class="flex-shrink-0 mb-6 lg:mb-0 lg:ml-12">
+            <div class="relative">
+              <div
+                class="w-24 h-24 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-2xl flex items-center justify-center shadow-xl">
+                <i class="pi pi-building text-white text-3xl"></i>
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-cyan-400 rounded-full flex items-center justify-center">
+                <span class="text-xs font-bold text-gray-900">2</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Section -->
+          <div class="flex-1 text-center lg:text-right">
+            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              Leverage Prime Glass Spaces
+            </h3>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl lg:ml-auto">
+              Our team will help you leverage prime glass spaces for marketing without altering the building.
+            </p>
+            <div class="inline-flex items-center bg-white bg-opacity-80 px-4 py-2 rounded-full">
+              <i class="pi pi-shield text-blue-500 mr-2"></i>
+              <span class="text-sm font-semibold text-gray-800">Non-Invasive Marketing</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3: Refresh Your Branding -->
+      <div class="group relative">
+        <div
+          class="flex flex-col lg:flex-row items-center bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 lg:p-12 hover:shadow-xl transition-all duration-500">
+
+          <!-- Icon Section -->
+          <div class="flex-shrink-0 mb-6 lg:mb-0 lg:mr-12">
+            <div class="relative">
+              <div
+                class="w-24 h-24 bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl flex items-center justify-center shadow-xl">
+                <i class="pi pi-refresh text-white text-3xl"></i>
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-lime-400 rounded-full flex items-center justify-center">
+                <span class="text-xs font-bold text-gray-900">3</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Content Section -->
+          <div class="flex-1 text-center lg:text-left">
+            <h3 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+              Refresh Your Branding
+            </h3>
+            <p class="text-lg text-gray-700 leading-relaxed mb-6 max-w-2xl">
+              We will help you refresh your branding regularly with minimal effort and cost.
+            </p>
+            <div class="inline-flex items-center bg-white bg-opacity-80 px-4 py-2 rounded-full">
+              <i class="pi pi-dollar text-green-500 mr-2"></i>
+              <span class="text-sm font-semibold text-gray-800">Cost-Effective Updates</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats/Trust Section -->
+    <div class="mt-16">
+      <div class="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+          <div class="absolute top-0 left-0 w-32 h-32 bg-orange-400 rounded-full -translate-x-16 -translate-y-16"></div>
+          <div class="absolute bottom-0 right-0 w-40 h-40 bg-blue-400 rounded-full translate-x-20 translate-y-20"></div>
+        </div>
+
+        <div class="relative">
+          <!-- Window Clings CTA -->
+
+          <div class="text-center mb-8">
+            <h3 class="text-3xl font-bold text-white mb-4">
+              Ready to Transform Your Business Windows?
+            </h3>
+            <p class="text-gray-200 text-lg max-w-2xl mx-auto mb-4">
+              By partnering with <span class="font-semibold text-orange-400">Pencil Peel</span>,
+              you can unlock the full potential of window clings advertising and drive business growth.
+              Contact us to learn more about our window clings advertising services.
+            </p>
+          </div>
+
+          <!-- Stats Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div class="text-center">
+              <div class="text-4xl font-bold text-orange-400 mb-2">500+</div>
+              <p class="text-gray-300">Projects Completed</p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-blue-400 mb-2">100%</div>
+              <p class="text-gray-300">Client Satisfaction</p>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl font-bold text-green-400 mb-2">24hr</div>
+              <p class="text-gray-300">Quick Turnaround</p>
+            </div>
+          </div>
+          <div class="text-center">
+            <!-- CTA Button -->
+            <a href="/contact"
+              class="inline-block mt-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+              Contact Us Today
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

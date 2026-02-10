@@ -1,0 +1,318 @@
+<app-nocarouselquotes [herocontent]="serviceSlides"></app-nocarouselquotes>
+<!-- Testimonials Section -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <p-carousel
+      [value]="testimonials"
+      [numVisible]="1"
+      [numScroll]="1"
+      [circular]="true"
+      [autoplayInterval]="2500"
+      styleClass="modern-carousel"
+    >
+      <ng-template let-testimonial pTemplate="item">
+        <div class="px-4 sm:px-6 lg:px-8">
+          <div
+            class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 max-w-4xl mx-auto"
+          >
+            <div
+              class="flex flex-col sm:flex-row sm:items-start sm:space-x-6 space-y-4 sm:space-y-0"
+            >
+              <!-- Quote Icon -->
+              <div
+                class="flex-shrink-0 flex justify-center sm:justify-start"
+              >
+                <div
+                  class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="fas fa-quote-left text-orange-600 text-xl"></i>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 text-center sm:text-left">
+                <p
+                  class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed italic"
+                >
+                  "{{ testimonial.text }}"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</section>
+
+
+<app-faqcards [faqcards]="faqcards"></app-faqcards>
+
+<app-whyus [whyus]="whyUs"></app-whyus>
+
+<section class="relative bg-gradient-to-br from-orange-50 via-white to-yellow-50 py-24 px-6 lg:px-12 overflow-hidden">
+  <!-- Floating gradient orbs -->
+  <div
+    class="absolute -top-20 -left-20 w-96 h-96 bg-gradient-to-r from-orange-400 to-red-400 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float">
+  </div>
+  <div
+    class="absolute bottom-0 right-0 w-[28rem] h-[28rem] bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-float-slow">
+  </div>
+
+  <div class="relative max-w-6xl mx-auto text-center">
+    <!-- Heading -->
+    <h2
+      class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-500 to-yellow-400 mb-8 animate-text-shimmer">
+      Why Personal Branding Matters at Pencil Peel IMT
+    </h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-16 leading-relaxed">
+      At Pencil Peel IMT, we believe that personal branding is essential for individuals who want to establish
+      themselves as experts in their field. A strong personal brand helps you stand out, build credibility, attract
+      opportunities, and achieve personal growth.
+    </p>
+
+    <!-- Cards Grid -->
+    <div class="grid gap-10 sm:grid-cols-2 lg:grid-cols-3 text-left">
+      <!-- Card 1 -->
+      <div
+        class="group bg-white/90 backdrop-blur-sm border border-orange-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl font-semibold text-gray-800">Differentiation</h3>
+          <div
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-400 to-yellow-500 shadow-md">
+            <i class="pi pi-sparkles text-white text-lg"></i>
+          </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          Stand out from the crowd with a personal brand that highlights your unique strengths, values, and passions.
+          Position yourself as a thought leader in your industry.
+        </p>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="group bg-white/90 backdrop-blur-sm border border-orange-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl font-semibold text-gray-800">Opportunities</h3>
+          <div
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-orange-400 to-red-400 shadow-md">
+            <i class="pi pi-briefcase text-white text-lg"></i>
+          </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          A strong brand attracts career opportunities and partnerships. Leverage your expertise to open new doors
+          and achieve your professional goals.
+        </p>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="group bg-white/90 backdrop-blur-sm border border-orange-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl font-semibold text-gray-800">Credibility</h3>
+          <div
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-green-400 to-emerald-500 shadow-md">
+            <i class="pi pi-shield text-white text-lg"></i>
+          </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          Build credibility and trust by sharing high-quality content, engaging your audience, and showcasing your
+          expertise consistently.
+        </p>
+      </div>
+
+      <!-- Card 4 -->
+      <div
+        class="group bg-white/90 backdrop-blur-sm border border-orange-200 rounded-2xl p-8 shadow-lg hover:shadow-2xl hover:-translate-y-3 transition-all duration-300 sm:col-span-2 lg:col-span-1">
+        <div class="flex items-center justify-between mb-4">
+          <h3 class="text-xl font-semibold text-gray-800">Excellence</h3>
+          <div
+            class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-r from-yellow-500 to-amber-600 shadow-md">
+            <i class="pi pi-crown text-white text-lg"></i>
+          </div>
+        </div>
+        <p class="text-gray-600 leading-relaxed">
+          Excellence in personal branding empowers you to achieve growth, gain recognition, and stand as a role
+          model of professionalism and success.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Section 1: Timeline -->
+<section class="relative bg-gradient-to-br from-orange-50 via-purple-50 to-pink-50 py-24 px-6 lg:px-12 overflow-hidden">
+  <h2
+    class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-purple-500 to-pink-500 bg-clip-text animate-text-shimmer">
+    How Pencil Peel IMT Can Help
+  </h2>
+
+  <div class="card bg-white/70 backdrop-blur-md rounded-2xl border border-white/30 shadow-xl p-4 sm:p-6">
+    <p-timeline [value]="timeline" [align]="isMobile ? 'left' : 'alternate'" class="customized-timeline">
+
+      <!-- Timeline Marker -->
+      <ng-template #marker let-event>
+        <span
+          class="flex w-8 h-8 sm:w-10 sm:h-10 items-center justify-center text-white rounded-full shadow-md text-sm sm:text-base"
+          [ngClass]="event.color">
+          <i [class]="event.icon"></i>
+        </span>
+      </ng-template>
+
+      <!-- Timeline Content -->
+      <ng-template #content let-event>
+        <p-card [header]="event.title"
+          class="bg-white/70 backdrop-blur-sm border border-white/20 rounded-xl w-full sm:w-[90%] mb-6 sm:mb-4">
+          <p class="text-sm sm:text-base leading-relaxed">{{ event.description }}</p>
+        </p-card>
+      </ng-template>
+
+
+    </p-timeline>
+  </div>
+</section>
+
+<!-- Section 2: Who Needs Branding -->
+<section class="relative bg-gradient-to-br from-orange-50 via-white to-amber-50 py-16 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2
+      class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-yellow-400 to-red-500 mb-6 animate-text-shimmer">
+      Who Needs Personal Branding with Pencil Peel IMT?
+    </h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+      We help professionals, entrepreneurs and leaders build strong personal brands that showcase skills, expertise and
+      values.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+      <div *ngFor="let c of categories">
+        <p-card
+          class="rounded-xl bg-white/70 backdrop-blur-md border border-white/30 shadow-lg hover:shadow-2xl transition h-full">
+          <div class="flex justify-center mb-4">
+            <i [class]="c.icon" class="text-4xl text-orange-600"></i>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">{{ c.title }}</h3>
+          <p class="text-gray-600">{{ c.description }}</p>
+        </p-card>
+      </div>
+    </div>
+
+    <!-- Accordion -->
+    <div class="mt-12">
+      <p-accordion [value]="activeAccordionValue" [multiple]="multiple" class="shadow-none">
+        <ng-container *ngFor="let item of accordionItems">
+          <p-accordion-panel [value]="item.value"
+            class="bg-white/70 backdrop-blur-md border border-white/30 rounded-xl overflow-hidden shadow-md">
+            <p-accordion-header>
+              <div class="flex items-center gap-3">
+                <i *ngIf="item.icon" [class]="item.icon + ' text-orange-600'"></i>
+                <span class="font-semibold">{{ item.header }}</span>
+              </div>
+            </p-accordion-header>
+            <p-accordion-content>
+              <p class="text-gray-700 m-0">{{ item.content }}</p>
+            </p-accordion-content>
+          </p-accordion-panel>
+        </ng-container>
+      </p-accordion>
+    </div>
+  </div>
+</section>
+
+<!-- Section 3: Future & Power -->
+<section class="relative bg-gradient-to-br from-indigo-50 via-white to-green-50 py-16 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2
+      class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-green-500 to-teal-400 mb-6 animate-text-shimmer">
+      The Power and Future of Personal Branding at Pencil Peel IMT
+    </h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+      At Pencil Peel IMT, we believe that personal branding is a powerful tool for individuals looking to establish
+      themselves as experts.
+    </p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+      <p-card class="bg-white/70 backdrop-blur-md border border-white/30 rounded-xl shadow-lg">
+        <h2 class="text-2xl font-bold mb-6 text-indigo-600">Our Approach</h2>
+        <ul class="space-y-6">
+          <li *ngFor="let item of approach"
+            class="flex items-start gap-4 p-4 rounded-lg bg-white/60 hover:bg-indigo-50 hover:shadow-md transition">
+            <i [class]="item.icon" class="text-2xl text-indigo-500"></i>
+            <div>
+              <h3 class="font-semibold text-lg text-gray-800">{{ item.title }}</h3>
+              <p class="text-gray-600">{{ item.text }}</p>
+            </div>
+          </li>
+        </ul>
+      </p-card>
+
+      <p-card class="bg-white/70 backdrop-blur-md border border-white/30 rounded-xl shadow-lg">
+        <h2 class="text-2xl font-bold mb-6 text-green-600">The Benefits</h2>
+        <ul class="space-y-6">
+          <li *ngFor="let item of benefits"
+            class="flex items-start gap-4 p-4 rounded-lg bg-white/60 hover:bg-green-50 hover:shadow-md transition">
+            <i [class]="item.icon" class="text-2xl text-green-500"></i>
+            <div>
+              <h3 class="font-semibold text-lg text-gray-800">{{ item.title }}</h3>
+              <p class="text-gray-600">{{ item.text }}</p>
+            </div>
+          </li>
+        </ul>
+      </p-card>
+    </div>
+  </div>
+</section>
+
+<!-- Section 4: Why Choose Us -->
+<section class="relative bg-gradient-to-br from-sky-50 via-white to-cyan-50 py-16 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2
+      class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-sky-500 via-cyan-500 to-blue-500 mb-6 animate-text-shimmer">
+      Why Choose Pencil Peel IMT?
+    </h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+      At Pencil Peel IMT, we have a team of experienced professionals who are skilled in personal branding.
+    </p>
+
+    <div class="grid gap-8 grid-cols-1 sm:grid-cols-2 md:[grid-template-columns:repeat(auto-fit,minmax(18rem,1fr))]">
+      <div *ngFor="let item of whyChoose"
+        class="bg-white/70 backdrop-blur-md border border-white/30 rounded-xl shadow-lg hover:shadow-2xl transition-all hover:-translate-y-1 cursor-pointer">
+        <div class="p-6 flex flex-col items-center text-center h-full">
+          <div class="flex items-center justify-center w-16 h-16 rounded-full mb-4 shadow-md"
+            [ngClass]="'bg-' + item.iconBgColor">
+            <i class="pi" [ngClass]="item.icon + ' text-2xl'"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-gray-900 mb-2">{{ item.title }}</h3>
+          <p class="text-gray-600">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-white py-16 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto text-center">
+    <!-- HEADING -->
+    <h2
+      class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-yellow-400 to-red-500 mb-6 animate-gradient">
+      Contact Us Today
+    </h2>
+
+    <!-- DESCRIPTION -->
+    <p class="text-lg text-gray-600 mb-8">
+      If you're interested in building your personal brand, let us help you.
+      Contact us today to schedule a consultation.
+      Our team at <span class="font-semibold text-orange-600">Pencil Peel IMT</span> will work with you to develop
+      a customized personal branding strategy that meets your needs and goals.
+      Let's get started!
+    </p>
+
+    <!-- CTA BUTTON -->
+    <button pButton type="button" label="Get Started"
+      class="p-button-lg bg-purple-600 text-white font-semibold px-8 py-4 rounded-lg shadow-md hover:bg-purple-700 hover:shadow-lg transition duration-300 ease-in-out">
+    </button>
+  </div>
+</section>

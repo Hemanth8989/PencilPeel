@@ -1,0 +1,147 @@
+<div class="top-20">
+    <app-home-hero-section />
+</div>
+<app-home-about-us />
+<app-servicesnew [service]="service" />
+<!-- Why Choose Pencil Peel IMT Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-right">
+
+        <!-- Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Why Choose <span class="text-orange-600">Pencil Peel IMT?</span>
+            </h2>
+            <p class="text-lg text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                Partner with us and experience the power of integrated marketing technology.
+            </p>
+        </div>
+
+        <!-- Reasons Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Card 1 -->
+            <div
+                class="group bg-white rounded-2xl shadow-md hover:shadow-xl p-8 transition-all duration-500 hover:scale-105 border-t-4 border-orange-500">
+                <div class="flex items-center space-x-4 mb-4">
+                    <i class="pi pi-clock text-orange-600 text-2xl"></i>
+                    <h3 class="text-xl font-semibold text-gray-900">10+ Years of Experience</h3>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    Our team has been serving client requirements and driving success for over a decade.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+                class="group bg-white rounded-2xl shadow-md hover:shadow-xl p-8 transition-all duration-500 hover:scale-105 border-t-4 border-orange-500">
+                <div class="flex items-center space-x-4 mb-4">
+                    <i class="pi pi-briefcase text-orange-600 text-2xl"></i>
+                    <h3 class="text-xl font-semibold text-gray-900">Expertise</h3>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    We bring deep knowledge and experience to deliver exceptional results.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+                class="group bg-white rounded-2xl shadow-md hover:shadow-xl p-8 transition-all duration-500 hover:scale-105 border-t-4 border-orange-500">
+                <div class="flex items-center space-x-4 mb-4">
+                    <i class="pi pi-lightbulb text-orange-600 text-2xl"></i>
+                    <h3 class="text-xl font-semibold text-gray-900">Innovation</h3>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    Our team stays ahead of the curve to provide cutting-edge solutions.
+                </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+                class="group bg-white rounded-2xl shadow-md hover:shadow-xl p-8 transition-all duration-500 hover:scale-105 border-t-4 border-orange-500">
+                <div class="flex items-center space-x-4 mb-4">
+                    <i class="pi pi-users text-orange-600 text-2xl"></i>
+                    <h3 class="text-xl font-semibold text-gray-900">Partnership</h3>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    We work closely with our clients to understand their needs and goals.
+                </p>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+                class="group bg-white rounded-2xl shadow-md hover:shadow-xl p-8 transition-all duration-500 hover:scale-105 border-t-4 border-orange-500">
+                <div class="flex items-center space-x-4 mb-4">
+                    <i class="pi pi-star text-orange-600 text-2xl"></i>
+                    <h3 class="text-xl font-semibold text-gray-900">Excellence</h3>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    Our team strives for perfection in everything we do.
+                </p>
+            </div>
+
+            <!-- Card 6 -->
+            <div
+                class="group bg-white rounded-2xl shadow-md hover:shadow-xl p-8 transition-all duration-500 hover:scale-105 border-t-4 border-orange-500">
+                <div class="flex items-center space-x-4 mb-4">
+                    <i class="pi pi-chart-line text-orange-600 text-2xl"></i>
+                    <h3 class="text-xl font-semibold text-gray-900">Growth</h3>
+                </div>
+                <p class="text-gray-700 leading-relaxed">
+                    We're committed to empowering our clients' success and long-term growth.
+                </p>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="text-center mt-16">
+            <p class="text-gray-800 text-lg mb-4 font-medium">
+                Partner with <span class="text-orange-600 font-semibold">Pencil Peel IMT</span> today and experience the
+                power of integrated marketing technology. Contact us Today, to learn more about our services and how we
+                can help you scale up your business to great heights.
+            </p>
+            <p class="mt-4 text-gray-700 italic">Let Us Help You Achieve Your Goals!</p>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits of Connecting Section -->
+<section class="py-20 bg-gradient-to-br  from-gray-50 via-white to-gray-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+
+        <!-- Section Header -->
+        <div class="text-center mb-16">
+            <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+                Benefits of Connecting with <span class="text-orange-600">Pencil Peel IMT</span>
+            </h2>
+            <p class="text-lg font-bold text-gray-700 max-w-3xl mx-auto leading-relaxed">
+                Experience unmatched creativity, technology, and strategy — all under one roof.
+            </p>
+        </div>
+
+        <!-- Dynamic Benefits Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div *ngFor="let benefit of benefits; let i = index"
+                class="group bg-white rounded-2xl shadow-lg hover:shadow-2xl border-t-4 border-orange-500 p-8 transition-all duration-500 hover:scale-105"
+                data-aos="zoom-in" [attr.data-aos-delay]="i * 100">
+
+                <!-- Icon -->
+                <div class="flex items-center space-x-3 mb-4">
+                    <i [class]="'pi ' + benefit.icon + ' text-orange-600 text-3xl'"></i>
+                    <h3 class="text-xl font-semibold text-gray-900">
+                        {{ benefit.title }}
+                    </h3>
+                </div>
+
+                <!-- Description -->
+                <p class="text-gray-700 leading-relaxed whitespace-pre-line">
+                    {{ benefit.content }}
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<app-testimonials />
+<app-mission-section />
+<app-faq />

@@ -1,0 +1,1345 @@
+<!-- Hero Section -->
+<section class="relative min-h-screen bg-gradient-to-br from-orange-50 via-white to-amber-50 overflow-hidden">
+  <!-- Floating Elements -->
+  <div class="absolute top-20 left-10 w-24 h-24 bg-orange-200/30 rounded-full blur-xl animate-pulse"></div>
+  <div class="absolute bottom-32 right-16 w-32 h-32 bg-amber-200/30 rounded-full blur-xl animate-bounce"></div>
+  <div class="absolute top-1/2 left-1/4 w-16 h-16 bg-orange-300/20 rounded-full blur-lg animate-pulse"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 container mx-auto px-4 py-24 lg:py-32">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left Content -->
+        <div class="text-gray-800 space-y-8">
+          <div
+            class="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full text-orange-600 font-medium text-sm">
+            <i class="pi pi-star-fill mr-2"></i>
+            #1 Outdoor Advertising Agency
+          </div>
+
+          <h1 class="text-5xl lg:text-7xl font-bold leading-tight">
+            Unlock your
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">
+              Outdoor Advertising
+            </span>
+            Solutions with Pencil Peel IMT
+          </h1>
+
+          <p class="text-xl lg:text-2xl text-gray-600 leading-relaxed">
+            At <strong class="text-orange-600">Pencil Peel IMT</strong>, we understand the power of outdoor advertising
+            in reaching a broad audience and driving results. Our team of experts specializes in creating impactful
+            outdoor advertising campaigns that help businesses increase brand awareness, drive website traffic, and
+            generate sales.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4">
+            <p-button label="Start Your Campaign" icon="pi pi-arrow-right"
+              styleClass="p-button-lg px-8 py-4 bg-orange-500 hover:bg-orange-600 border-0 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+            </p-button>
+
+            <p-button label="Watch Demo" icon="pi pi-play"
+              styleClass="p-button-lg p-button-outlined px-8 py-4 border-2 border-orange-500 text-orange-600 hover:bg-orange-50 rounded-xl font-semibold transition-all duration-300">
+            </p-button>
+          </div>
+        </div>
+        <!-- Right Visual -->
+        <div class="relative">
+          <div class="relative bg-gradient-to-br from-orange-100 to-amber-100 rounded-3xl p-8 shadow-2xl">
+
+            <!-- Hero Visual Image -->
+            <div class="aspect-square bg-white rounded-2xl shadow-lg flex items-center justify-center overflow-hidden">
+              <img src="/outdoor/outdoor-hero.png" alt="Billboard Campaign Preview"
+                class="w-full h-full object-cover rounded-2xl" />
+            </div>
+
+            <!-- Floating cards -->
+            <div class="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-lg">
+              <div class="flex items-center space-x-2">
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                <span class="text-sm font-medium text-gray-700">Campaign Active</span>
+              </div>
+            </div>
+            <!-- Optional ROI Card (commented out) -->
+            <!-- <div class="absolute -bottom-6 -left-6 bg-orange-500 text-white rounded-xl p-4 shadow-lg">
+              <div class="text-sm font-bold">+156% ROI</div>
+              <div class="text-xs opacity-90">This Month</div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <p-carousel
+      [value]="testimonials"
+      [numVisible]="1"
+      [numScroll]="1"
+      [circular]="true"
+      [autoplayInterval]="2500"
+      styleClass="modern-carousel"
+    >
+      <ng-template let-testimonial pTemplate="item">
+        <div class="px-4 sm:px-6 lg:px-8">
+          <div
+            class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gray-100 max-w-4xl mx-auto"
+          >
+            <div class="flex flex-col sm:flex-row sm:items-start sm:space-x-6 space-y-4 sm:space-y-0">
+              <!-- Quote Icon -->
+              <div class="flex-shrink-0 flex justify-center sm:justify-start">
+                <div
+                  class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center"
+                >
+                  <i class="fa fa-quote-left text-orange-600 text-xl"></i>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1 text-center sm:text-left">
+                <p
+                  class="text-base sm:text-lg md:text-xl text-gray-700 leading-relaxed italic"
+                >
+                  "{{ testimonial.text }}"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</section>
+
+
+<!-- About Section -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <!-- Left Content -->
+        <div>
+          <div
+            class="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full text-orange-600 font-medium text-sm mb-6">
+            <i class="pi pi-info-circle mr-2"></i>
+            About Outdoor Advertising
+          </div>
+
+          <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-8">
+            What is <span class="text-orange-500">Outdoor Advertising?</span>
+          </h2>
+
+          <div class="space-y-6">
+            <p class="text-xl text-gray-600 leading-relaxed">
+              Outdoor advertising, also known as <strong>Out-Of-Home (OOH) Advertising</strong>, refers to any form of
+              advertising that reaches consumers while they are outside their homes. This can include billboards,
+              posters, digital screens, and other forms of advertising that are displayed in public spaces.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right Visual -->
+        <div class="relative">
+          <div class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-8">
+            <div class="grid grid-cols-2 gap-4">
+              <!-- Billboard Type -->
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
+                  <i class="pi pi-tablet text-orange-600"></i>
+                </div>
+                <h4 class="font-semibold text-gray-800 mb-1">Digital Billboards</h4>
+                <p class="text-sm text-gray-600">Dynamic content display</p>
+              </div>
+
+              <!-- Transit Type -->
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
+                  <i class="pi pi-car text-orange-600"></i>
+                </div>
+                <h4 class="font-semibold text-gray-800 mb-1">Transit Ads</h4>
+                <p class="text-sm text-gray-600">Mobile advertising reach</p>
+              </div>
+
+              <!-- Street Type -->
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
+                  <i class="pi pi-building text-orange-600"></i>
+                </div>
+                <h4 class="font-semibold text-gray-800 mb-1">Street Furniture</h4>
+                <p class="text-sm text-gray-600">Urban integration</p>
+              </div>
+
+              <!-- Airport Type -->
+              <div class="bg-white rounded-xl p-4 shadow-sm">
+                <div class="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
+                  <i class="pi pi-send text-orange-600"></i>
+                </div>
+                <h4 class="font-semibold text-gray-800 mb-1">Airport Display</h4>
+                <p class="text-sm text-gray-600">Premium audience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section with Full Original Content -->
+<section class="py-24 bg-gradient-to-br from-gray-50 to-orange-50">
+  <div class="container mx-auto px-4">
+    <!-- Section Header -->
+    <div class="text-center mb-20">
+      <div
+        class="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full text-orange-600 font-medium text-sm mb-6">
+        <i class="pi pi-star mr-2"></i>
+        Key Benefits
+      </div>
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+        Benefits of Outdoor Advertising with <span class="text-orange-500">Pencil Peel IMT</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, we specialize in creating impactful outdoor advertising campaigns that help businesses
+        achieve their marketing goals. Here are some of the key advantages of outdoor advertising that we can leverage
+        for your business:
+      </p>
+    </div>
+
+    <!-- Benefits Cards -->
+    <div class="space-y-12 max-w-7xl mx-auto">
+      <!-- Benefit 1: Wide Reach -->
+      <div
+        class="group grid lg:grid-cols-2 bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 benefit-card"
+        data-animation-delay="100">
+        <!-- Content Side -->
+        <div class="p-8 lg:p-16 flex flex-col justify-center order-2 lg:order-1 benefit-content">
+          <div class="flex items-center mb-8">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mr-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              01
+            </div>
+            <h3 class="text-3xl lg:text-4xl font-bold text-gray-900">Wide Reach</h3>
+          </div>
+
+          <div class="space-y-6 text-gray-700 leading-relaxed">
+            <p class="text-lg">
+              We can help you reach a large and diverse audience with our outdoor advertising solutions. Our ads can be
+              displayed in public spaces, such as streets, shopping centres, and transportation hubs, where people from
+              all walks of life tend to congregate.
+            </p>
+            <p>
+              With the right placement and design, our outdoor ads can be seen by thousands of people every day, making
+              them an effective way to build brand awareness and reach new customers. Whether you're looking to target a
+              specific demographic or reach a wide audience, outdoor advertising can help you achieve your goals.
+            </p>
+          </div>
+
+          <!-- Stats -->
+          <div class="grid grid-cols-2 gap-4 mt-8">
+            <div class="bg-orange-50 rounded-xl p-4 text-center">
+              <div class="text-2xl font-bold text-orange-600">10K+</div>
+              <div class="text-sm text-gray-600">Daily Views</div>
+            </div>
+            <div class="bg-orange-50 rounded-xl p-4 text-center">
+              <div class="text-2xl font-bold text-orange-600">300%</div>
+              <div class="text-sm text-gray-600">Reach Increase</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Side -->
+        <div class="relative h-80 lg:h-auto order-1 lg:order-2">
+          <img src="/outdoor/hoarding/hoarding.webp" alt="Large audience in urban setting"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-transparent"></div>
+        </div>
+      </div>
+
+      <!-- Benefit 2: Cost-Effective -->
+      <div
+        class="group grid lg:grid-cols-2 bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 benefit-card"
+        data-animation-delay="200">
+        <!-- Image Side -->
+        <div class="relative h-80 lg:h-auto">
+          <img src="/outdoor/pillar/steetpoles.webp" alt="Cost-effective ROI visualization"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-l from-green-600/20 to-transparent"></div>
+        </div>
+
+        <!-- Content Side -->
+        <div class="p-8 lg:p-16 flex flex-col justify-center benefit-content">
+          <div class="flex items-center mb-8">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mr-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              02
+            </div>
+            <h3 class="text-3xl lg:text-4xl font-bold text-gray-900">Cost-Effective</h3>
+          </div>
+
+          <div class="space-y-6 text-gray-700 leading-relaxed">
+            <p class="text-lg">
+              We believe in providing cost-effective advertising, which is why we offer outdoor advertising solutions
+              that can provide a significant return on investment (ROI). Our ads stay visible to the public 24/7,
+              providing ongoing exposure to your target audience.
+            </p>
+            <p>
+              With the right strategy and placement, our outdoor ads can provide a substantial ROI, making them a
+              valuable addition to your marketing mix. This makes outdoor advertising a cost-effective way to reach a
+              large audience.
+            </p>
+          </div>
+
+          <!-- ROI Indicator -->
+          <div class="mt-8 p-6 bg-green-50 rounded-2xl border border-green-100">
+            <div class="flex items-center justify-between">
+              <span class="text-gray-700 font-medium">Average ROI</span>
+              <div class="text-3xl font-bold text-green-600">400%</div>
+            </div>
+            <div class="text-sm text-gray-600 mt-2">Based on client campaigns</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Benefit 3: High Visibility -->
+      <div
+        class="group grid lg:grid-cols-2 bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 benefit-card"
+        data-animation-delay="300">
+        <!-- Content Side -->
+        <div class="p-8 lg:p-16 flex flex-col justify-center order-2 lg:order-1 benefit-content">
+          <div class="flex items-center mb-8">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mr-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              03
+            </div>
+            <h3 class="text-3xl lg:text-4xl font-bold text-gray-900">High Visibility</h3>
+          </div>
+
+          <div class="space-y-6 text-gray-700 leading-relaxed">
+            <p class="text-lg">
+              We understand the importance of strategic placement in outdoor advertising. By placing our ads in
+              high-traffic areas, such as busy streets or shopping centres, we can ensure repeated exposure and increase
+              the visibility of your brand.
+            </p>
+            <p>
+              This can help build brand awareness and reinforce your message, making it more likely that people will
+              remember your brand. By placing outdoor ads in strategic locations, you can increase the visibility of
+              your brand and build a strong presence in the market.
+            </p>
+          </div>
+
+          <!-- Visibility Metrics -->
+          <div class="mt-8 grid grid-cols-3 gap-4">
+            <div class="text-center">
+              <div class="text-xl font-bold text-purple-600">24/7</div>
+              <div class="text-xs text-gray-600">Visibility</div>
+            </div>
+            <div class="text-center">
+              <div class="text-xl font-bold text-purple-600">95%</div>
+              <div class="text-xs text-gray-600">Recall Rate</div>
+            </div>
+            <div class="text-center">
+              <div class="text-xl font-bold text-purple-600">85%</div>
+              <div class="text-xs text-gray-600">Recognition</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Side -->
+        <div class="relative h-80 lg:h-auto order-1 lg:order-2">
+          <img src="outdoor/airport/airportcrowd2.webp" alt="High visibility billboard in busy area"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-r from-purple-600/20 to-transparent"></div>
+        </div>
+      </div>
+
+      <!-- Benefit 4: Geographic Targeting -->
+      <div
+        class="group grid lg:grid-cols-2 bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 benefit-card"
+        data-animation-delay="400">
+        <!-- Image Side -->
+        <div class="relative h-80 lg:h-auto">
+          <img src="/outdoor/airport/airportparking.webp" alt="Geographic targeting with location mapping"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-l from-indigo-600/20 to-transparent"></div>
+        </div>
+
+        <!-- Content Side -->
+        <div class="p-8 lg:p-16 flex flex-col justify-center benefit-content">
+          <div class="flex items-center mb-8">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mr-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              04
+            </div>
+            <h3 class="text-3xl lg:text-4xl font-bold text-gray-900">Geographic Targeting</h3>
+          </div>
+
+          <div class="space-y-6 text-gray-700 leading-relaxed">
+            <p class="text-lg">
+              We can help you target specific local audiences or communities with our outdoor advertising solutions. By
+              placing ads in specific locations, we can target your message to the people who are most likely to be
+              interested in your products or services.
+            </p>
+            <p>
+              This is particularly useful for businesses that operate in specific geographic areas, such as retail
+              stores or restaurants. Geographic targeting can also be used to target specific demographics or
+              psychographics, such as young professionals in downtown shopping districts.
+            </p>
+          </div>
+
+          <!-- Location Types -->
+          <div class="mt-8 grid grid-cols-2 gap-3">
+            <div class="flex items-center p-3 bg-indigo-50 rounded-xl">
+              <i class="pi pi-map-marker text-indigo-600 mr-3"></i>
+              <span class="text-sm font-medium text-gray-700">Local Areas</span>
+            </div>
+            <div class="flex items-center p-3 bg-indigo-50 rounded-xl">
+              <i class="pi pi-building text-indigo-600 mr-3"></i>
+              <span class="text-sm font-medium text-gray-700">Urban Centers</span>
+            </div>
+            <div class="flex items-center p-3 bg-indigo-50 rounded-xl">
+              <i class="pi pi-shopping-cart text-indigo-600 mr-3"></i>
+              <span class="text-sm font-medium text-gray-700">Shopping Areas</span>
+            </div>
+            <div class="flex items-center p-3 bg-indigo-50 rounded-xl">
+              <i class="pi pi-users text-indigo-600 mr-3"></i>
+              <span class="text-sm font-medium text-gray-700">Demographics</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Benefit 5: Brand Awareness -->
+      <div
+        class="group grid lg:grid-cols-2 bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 benefit-card"
+        data-animation-delay="500">
+        <!-- Content Side -->
+        <div class="p-8 lg:p-16 flex flex-col justify-center order-2 lg:order-1 benefit-content">
+          <div class="flex items-center mb-8">
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-teal-500 to-teal-600 text-white rounded-2xl flex items-center justify-center text-2xl font-bold mr-6 shadow-lg group-hover:scale-110 transition-transform duration-300">
+              05
+            </div>
+            <h3 class="text-3xl lg:text-4xl font-bold text-gray-900">Boosts Brand Awareness</h3>
+          </div>
+
+          <div class="space-y-6 text-gray-700 leading-relaxed">
+            <p class="text-lg">
+              Our outdoor ads can be designed to grab attention and build brand awareness, making them an effective way
+              to establish your brand in the market. By using bold graphics, striking images, and clear messaging, we
+              can help your brand stand out from the competition.
+            </p>
+            <p>
+              Whether you're looking to build brand awareness, drive website traffic, or generate sales, our outdoor
+              advertising solutions can help you achieve your goals. By using bold graphics, striking images, and clear
+              messaging, outdoor ads can help your brand stand out from the competition.
+            </p>
+          </div>
+
+          <!-- Brand Impact -->
+          <div class="mt-8 p-6 bg-gradient-to-r from-teal-50 to-cyan-50 rounded-2xl">
+            <h4 class="font-bold text-gray-900 mb-4">Brand Impact Results</h4>
+            <div class="space-y-2">
+              <div class="flex justify-between">
+                <span class="text-gray-600">Brand Recognition</span>
+                <span class="font-bold text-teal-600">+250%</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Customer Engagement</span>
+                <span class="font-bold text-teal-600">+180%</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-gray-600">Market Presence</span>
+                <span class="font-bold text-teal-600">+320%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Side -->
+        <div class="relative h-80 lg:h-auto order-1 lg:order-2">
+          <img src="/outdoor/airport/airportcrowd1.webp" alt="Brand awareness and recognition analytics"
+            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          <div class="absolute inset-0 bg-gradient-to-r from-teal-600/20 to-transparent"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary Statement -->
+    <!-- <div class="mt-20 text-center">
+      <div class="bg-white rounded-3xl p-12 shadow-xl border border-gray-100 max-w-5xl mx-auto">
+        <h3 class="text-3xl font-bold text-gray-900 mb-6">Ready to Transform Your Business?</h3>
+        <p class="text-xl text-gray-700 leading-relaxed mb-8">
+          At <strong class="text-orange-600">Pencil Peel IMT</strong>, we believe that outdoor advertising is a powerful tool that can help businesses achieve their marketing goals. By leveraging these benefits, we can help you increase brand awareness, drive website traffic, and generate sales.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <p-button 
+            label="Start Your Campaign" 
+            icon="pi pi-arrow-right"
+            styleClass="p-button-lg px-8 py-4 bg-orange-500 hover:bg-orange-600 border-0 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          </p-button>
+          
+          <p-button 
+            label="View Portfolio" 
+            icon="pi pi-eye"
+            styleClass="p-button-lg p-button-outlined px-8 py-4 border-2 border-orange-500 text-orange-600 hover:bg-orange-50 rounded-xl font-semibold transition-all duration-300">
+          </p-button>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</section>
+<app-outdoor-services />
+<!-- Future Trends Section with Full Content -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <div
+        class="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full text-orange-600 font-medium text-sm mb-4">
+        <i class="pi pi-bolt mr-2"></i>
+        Innovation & Future
+      </div>
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+        The Future of Outdoor Advertising with <span class="text-orange-500">Pencil Peel IMT</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, we're excited about the future of outdoor advertising and the opportunities it presents for
+        businesses to reach and engage with their target audiences. Here are some key trends and benefits that highlight
+        the potential of outdoor advertising:
+      </p>
+    </div>
+
+    <!-- Key Trends Gallery -->
+    <div class="max-w-7xl mx-auto mb-16">
+      <h3 class="text-3xl font-bold text-gray-800 mb-12 text-center">Key Trends:</h3>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-2">
+        <!-- AI-Driven Personalization -->
+        <div
+          class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 h-80 lg:h-96">
+          <!-- Background Image -->
+          <img
+            src="/outdoor/3dbillboard/ai-billboards.png"
+            alt="AI-powered digital advertising displays"
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500">
+          </div>
+
+          <!-- Content -->
+          <div class="absolute inset-0 flex flex-col justify-end p-8">
+            <h4
+              class="text-xl md:text-2xl font-semibold text-white mb-4 group-hover:text-orange-300 transition-colors duration-300">
+              AI-Driven Personalization
+            </h4>
+            <p class="text-white/90 leading-relaxed text-base">
+              We'll leverage AI-powered billboards to analyze consumer behaviour and display personalized messages
+              tailored to demographics, time of day, and weather conditions.
+            </p>
+          </div>
+        </div>
+
+        <!-- Digital Domination -->
+        <div
+          class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 h-80 lg:h-96">
+          <!-- Background Image -->
+          <img
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Digital outdoor advertising displays and DOOH technology"
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500">
+          </div>
+
+          <!-- Content -->
+          <div class="absolute inset-0 flex flex-col justify-end p-8">
+            <h4
+              class="text-xl md:text-2xl font-semibold text-white mb-4 group-hover:text-orange-300 transition-colors duration-300">
+              Digital Domination
+            </h4>
+            <p class="text-white/90 leading-relaxed text-base">
+              We'll utilize digital out-of-home (DOOH) advertising to deliver dynamic, high-impact campaigns that offer
+              flexibility and creativity.
+            </p>
+          </div>
+        </div>
+
+        <!-- Sustainability -->
+        <div
+          class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 h-80 lg:h-96">
+          <!-- Background Image -->
+          <img
+            src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Solar-powered sustainable outdoor advertising display"
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500">
+          </div>
+
+          <!-- Content -->
+          <div class="absolute inset-0 flex flex-col justify-end p-8">
+            <h4
+              class="text-xl md:text-2xl font-semibold  text-white mb-4 group-hover:text-orange-300 transition-colors duration-300">
+              Sustainability
+            </h4>
+            <p class="text-white/90 leading-relaxed text-base">
+              We'll incorporate eco-friendly materials, solar-powered digital screens, and biodegradable posters into
+              our outdoor advertising solutions to align with environmentally conscious consumers.
+            </p>
+          </div>
+        </div>
+
+        <!-- Immersive Experiential Installations -->
+        <div
+          class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 h-80 lg:h-96 md:col-span-2 lg:col-span-2">
+          <!-- Background Image -->
+          <img
+            src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+            alt="Interactive AR outdoor advertising installation"
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500">
+          </div>
+
+          <!-- Content -->
+          <div class="absolute inset-0 flex flex-col justify-end p-8 lg:p-12">
+            <h4
+              class="text-xl md:text-2xl font-semibold  text-white mb-6 group-hover:text-orange-300 transition-colors duration-300">
+              Immersive Experiential Installations
+            </h4>
+            <p class="text-white/90 leading-relaxed text-base max-w-3xl">
+              We'll create interactive and memorable experiences, such as pop-up installations and augmented reality
+              activations, to engage with audiences and build brand awareness.
+            </p>
+          </div>
+        </div>
+
+        <!-- Mobile Integration -->
+        <div
+          class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 h-80 lg:h-96">
+          <!-- Background Image -->
+          <img
+            src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+            alt="Mobile device integration with outdoor advertising"
+            class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+
+          <!-- Overlay -->
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-500">
+          </div>
+
+          <!-- Content -->
+          <div class="absolute inset-0 flex flex-col justify-end p-8">
+            <h4
+              class="text-xl md:text-2xl font-semibold  text-white mb-4 group-hover:text-orange-300 transition-colors duration-300">
+              Integration with Mobile Devices
+            </h4>
+            <p class="text-white/90 leading-relaxed text-base">
+              We'll enable seamless integration with mobile devices to allow consumers to interact with brands in
+              immersive ways, enhancing brand development.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- How We Help Section with Full Content and Images -->
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <div
+        class="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full text-orange-600 font-medium text-sm mb-4">
+        <i class="pi pi-cog mr-2"></i>
+        Our Process
+      </div>
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+        How Pencil Peel IMT Can Help You with Outdoor Advertising
+      </h2>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, we understand the importance of effective outdoor advertising in reaching your target
+        audience and achieving your marketing goals. Our team of experts can help you navigate the complexities of
+        outdoor advertising and create a campaign that drives results. Here's how we can help:
+      </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto space-y-16">
+      <!-- Service 1 - Identify Target Audience (Image on Left, Content on Right) -->
+      <div class="group">
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+          <div class="grid lg:grid-cols-2 min-h-[500px]">
+            <!-- Left Side - Image -->
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Team analyzing target audience data and demographics"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+              <!-- Overlay with Step Number -->
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-indigo-700/80 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div
+                    class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <span class="text-4xl font-bold">1</span>
+                  </div>
+                  <h3 class="text-2xl font-bold">Research Phase</h3>
+                  <p class="text-sm opacity-90 mt-2">Audience Analysis</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side - Content -->
+            <div class="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-blue-50 to-indigo-50">
+              <div class="mb-6">
+                <div class="flex items-center mb-4">
+                  <div
+                    class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mr-4">
+                    1
+                  </div>
+                  <h3 class="text-3xl font-bold text-gray-800">Identify Target Audience</h3>
+                </div>
+                <div class="w-16 h-1 bg-blue-500 mb-6"></div>
+              </div>
+
+              <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                  We start by identifying your target demographic to choose the best locations and formats for your ads.
+                  Our team will work with you to understand your target audience's characteristics, behaviours, and
+                  preferences. This information will help us select the most effective locations and effective ad
+                  formats to reach your target audience.
+                </p>
+
+                <p>
+                  By understanding your target audience, we can create ads that resonate with them and increase the
+                  likelihood of them engaging with your brand. Whether you're looking to target a specific age group,
+                  interest, or behaviour, we can help you identify and reach your target audience.
+                </p>
+
+                <!-- Key Features -->
+                <div class="space-y-3 pt-6">
+                  <div class="flex items-center">
+                    <i class="pi pi-check-circle text-blue-600 mr-3"></i>
+                    <span>Demographic Analysis</span>
+                  </div>
+                  <div class="flex items-center">
+                    <i class="pi pi-check-circle text-blue-600 mr-3"></i>
+                    <span>Behavioral Insights</span>
+                  </div>
+                  <div class="flex items-center">
+                    <i class="pi pi-check-circle text-blue-600 mr-3"></i>
+                    <span>Market Research</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 2 - Design Creative Content (Content on Left, Image on Right) -->
+      <div class="group">
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+          <div class="grid lg:grid-cols-2 min-h-[500px]">
+            <!-- Left Side - Content -->
+            <div
+              class="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-purple-50 to-pink-50 order-2 lg:order-1">
+              <div class="mb-6">
+                <div class="flex items-center mb-4">
+                  <div
+                    class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mr-4">
+                    2
+                  </div>
+                  <h3 class="text-3xl font-bold text-gray-800">Design Creative Content</h3>
+                </div>
+                <div class="w-16 h-1 bg-purple-500 mb-6"></div>
+              </div>
+
+              <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                  Our team of designers will create visually appealing ads that grab attention and resonate with your
+                  audience. We understand the importance of creative content in outdoor advertising, and we'll work with
+                  you to develop ads that reflect your brand's message and values.
+                </p>
+
+                <p>
+                  Our design team will use bold graphics, striking images, and clear messaging to create ads that stand
+                  out from the competition. Whether you're looking to build brand awareness, drive website traffic, or
+                  generate sales, we'll create ads that help you achieve your goals.
+                </p>
+
+                <!-- Design Process -->
+                <div class="space-y-3 pt-6">
+                  <div class="flex items-center">
+                    <div
+                      class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                      •</div>
+                    <span>Brand Message Integration</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div
+                      class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                      •</div>
+                    <span>Visual Impact Design</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div
+                      class="w-8 h-8 bg-purple-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                      •</div>
+                    <span>Multi-Format Optimization</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side - Image -->
+            <div class="relative overflow-hidden order-1 lg:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1542831371-d531d36971e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Creative team designing outdoor advertising campaigns and graphics"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+              <!-- Overlay with Step Number -->
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-purple-600/80 to-pink-700/80 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div
+                    class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <span class="text-4xl font-bold">2</span>
+                  </div>
+                  <h3 class="text-2xl font-bold">Creative Phase</h3>
+                  <p class="text-sm opacity-90 mt-2">Design & Development</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 3 - Select Locations (Image on Left, Content on Right) -->
+      <div class="group">
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+          <div class="grid lg:grid-cols-2 min-h-[500px]">
+            <!-- Left Side - Image -->
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1494526585095-c41746248156?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Urban billboards and outdoor advertising displays in high-traffic areas"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+              <!-- Overlay with Step Number -->
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-green-600/80 to-emerald-700/80 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div
+                    class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <span class="text-4xl font-bold">3</span>
+                  </div>
+                  <h3 class="text-2xl font-bold">Placement Phase</h3>
+                  <p class="text-sm opacity-90 mt-2">Strategic Locations</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side - Content -->
+            <div class="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-green-50 to-emerald-50">
+              <div class="mb-6">
+                <div class="flex items-center mb-4">
+                  <div
+                    class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mr-4">
+                    3
+                  </div>
+                  <h3 class="text-3xl font-bold text-gray-800">Select Locations</h3>
+                </div>
+                <div class="w-16 h-1 bg-green-500 mb-6"></div>
+              </div>
+
+              <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                  We'll select high-traffic areas such as highways, urban centres, shopping districts, and transit hubs
+                  to maximize visibility for your ads. Our team will work with you to identify the best locations for
+                  your ads based on your target audience and marketing goals.
+                </p>
+
+                <p>
+                  By placing ads in high-traffic areas, we can increase the visibility of your brand and reach a large
+                  audience. Whether you're looking to target a specific geographic area or reach a wider audience, we
+                  can help you select the best locations for your ads.
+                </p>
+
+                <!-- Location Types -->
+                <div class="grid grid-cols-2 gap-4 pt-6">
+                  <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                    <i class="pi pi-car text-2xl text-green-600 mb-2"></i>
+                    <div class="font-semibold text-sm">Highways</div>
+                  </div>
+                  <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                    <i class="pi pi-building text-2xl text-green-600 mb-2"></i>
+                    <div class="font-semibold text-sm">Urban Centers</div>
+                  </div>
+                  <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                    <i class="pi pi-shopping-cart text-2xl text-green-600 mb-2"></i>
+                    <div class="font-semibold text-sm">Shopping Districts</div>
+                  </div>
+                  <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                    <i class="pi pi-send text-2xl text-green-600 mb-2"></i>
+                    <div class="font-semibold text-sm">Transit Hubs</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Service 4 - Monitor and Measure Success (Content on Left, Image on Right) -->
+      <div class="group">
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+          <div class="grid lg:grid-cols-2 min-h-[500px]">
+            <!-- Left Side - Content -->
+            <div
+              class="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-orange-50 to-red-50 order-2 lg:order-1">
+              <div class="mb-6">
+                <div class="flex items-center mb-4">
+                  <div
+                    class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center font-bold text-lg mr-4">
+                    4
+                  </div>
+                  <h3 class="text-3xl font-bold text-gray-800">Monitor and Measure Success</h3>
+                </div>
+                <div class="w-16 h-1 bg-orange-500 mb-6"></div>
+              </div>
+
+              <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                  We'll track the success of your campaign through metrics like increased foot traffic, brand awareness
+                  surveys, or sales data. Our team will work with you to establish clear goals and metrics for your
+                  campaign, and we'll provide regular reporting and analysis to help you understand the effectiveness of
+                  your ads.
+                </p>
+
+                <p>
+                  By tracking the success of your campaign, we can identify areas for improvement and make data-driven
+                  decisions to optimize your ads and increase their effectiveness. Whether you're looking to build brand
+                  awareness, drive website traffic, or generate sales, we'll help you measure the success of your
+                  campaign and make adjustments as needed.
+                </p>
+
+                <!-- Metrics -->
+                <div class="space-y-3 pt-6">
+                  <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                    <span class="flex items-center">
+                      <i class="pi pi-chart-bar text-orange-600 mr-3"></i>
+                      Foot Traffic Analysis
+                    </span>
+                    <i class="pi pi-arrow-right text-gray-400"></i>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                    <span class="flex items-center">
+                      <i class="pi pi-eye text-orange-600 mr-3"></i>
+                      Brand Awareness Surveys
+                    </span>
+                    <i class="pi pi-arrow-right text-gray-400"></i>
+                  </div>
+                  <div class="flex items-center justify-between p-3 bg-white rounded-lg shadow-sm">
+                    <span class="flex items-center">
+                      <i class="pi pi-dollar text-orange-600 mr-3"></i>
+                      Sales Data Tracking
+                    </span>
+                    <i class="pi pi-arrow-right text-gray-400"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side - Image -->
+            <div class="relative overflow-hidden order-1 lg:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Analytics dashboard showing campaign performance metrics and data"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+              <!-- Overlay with Step Number -->
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-orange-600/80 to-red-700/80 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div
+                    class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <span class="text-4xl font-bold">4</span>
+                  </div>
+                  <h3 class="text-2xl font-bold">Analytics Phase</h3>
+                  <p class="text-sm opacity-90 mt-2">Performance Tracking</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Commitment Statement -->
+    <div class="mt-20 text-center">
+      <div class="bg-white rounded-3xl p-12 shadow-lg border border-gray-100 max-w-6xl mx-auto">
+        <div class="max-w-4xl mx-auto">
+          <div
+            class="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full text-orange-600 font-medium text-sm mb-6">
+            <i class="pi pi-heart mr-2"></i>
+            Our Commitment
+          </div>
+          <h3 class="text-3xl font-bold text-gray-800 mb-6">Ready to Start Your Journey?</h3>
+          <p class="text-xl text-gray-700 leading-relaxed mb-8">
+            At <strong class="text-orange-600">Pencil Peel IMT</strong>, we're committed to helping you achieve your
+            outdoor advertising goals. Our team of experts will work with you to create a customized campaign that meets
+            your needs and drives results.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <p-button label="Start Your Campaign" icon="pi pi-arrow-right"
+              styleClass="p-button-lg px-8 py-4 bg-orange-500 hover:bg-orange-600 border-0 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+            </p-button>
+
+            <p-button label="Schedule Consultation" icon="pi pi-calendar"
+              styleClass="p-button-lg p-button-outlined px-8 py-4 border-2 border-orange-500 text-orange-600 hover:bg-orange-50 rounded-xl font-semibold transition-all duration-300">
+            </p-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Why Choose Us Section with Real Images -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-16">
+      <div
+        class="inline-flex items-center px-4 py-2 bg-orange-100 rounded-full text-orange-600 font-medium text-sm mb-4">
+        <i class="pi pi-star mr-2"></i>
+        Why Choose Us
+      </div>
+      <h2 class="text-4xl lg:text-5xl font-bold text-gray-800 mb-6">
+        Why Choose <span class="text-orange-500">Pencil Peel IMT?</span>
+      </h2>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, we understand the importance of effective outdoor advertising in reaching your target
+        audience and achieving your marketing goals. Here are some reasons why you should choose us for your outdoor
+        advertising needs:
+      </p>
+    </div>
+
+    <div class="max-w-7xl mx-auto space-y-16">
+      <!-- Card 1 - Expertise (Image on Left, Content on Right) -->
+      <div class="group">
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+          <div class="grid lg:grid-cols-2 min-h-[500px]">
+            <!-- Left Side - Image -->
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Team of experts working on outdoor advertising campaign"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+              <!-- Overlay with Icon -->
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-indigo-700/80 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div
+                    class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <i class="pi pi-users text-4xl"></i>
+                  </div>
+                  <h3 class="text-2xl font-bold">Industry Expertise</h3>
+                  <p class="text-sm opacity-90 mt-2">Years of Experience</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side - Content -->
+            <div class="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-blue-50 to-indigo-50">
+              <div class="mb-6">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Expertise</h3>
+                <div class="w-16 h-1 bg-blue-500 mb-6"></div>
+              </div>
+
+              <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                  Our team has extensive experience in outdoor advertising and has worked with a variety of brands and
+                  industries. We have a deep understanding of the outdoor advertising landscape and know what it takes
+                  to create effective campaigns that drive results.
+                </p>
+
+                <p>
+                  With years of experience in the industry, we've developed a wealth of knowledge and expertise that we
+                  can leverage to help your brand succeed. From billboards to digital displays, we've worked with a
+                  range of outdoor advertising formats and can help you choose the best options for your campaign.
+                </p>
+
+                <p>
+                  Our team's expertise extends beyond just the creative aspects of outdoor advertising. We also have a
+                  strong understanding of the strategic and technical aspects of your campaigns, including planning,
+                  execution, and measurement.
+                </p>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-2 gap-4 pt-6">
+                  <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                    <div class="text-2xl font-bold text-blue-600">10+</div>
+                    <div class="text-sm text-gray-600">Years Experience</div>
+                  </div>
+                  <div class="text-center p-4 bg-white rounded-xl shadow-sm">
+                    <div class="text-2xl font-bold text-blue-600">500+</div>
+                    <div class="text-sm text-gray-600">Campaigns</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 - Creative Solutions (Content on Left, Image on Right) -->
+      <div class="group">
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+          <div class="grid lg:grid-cols-2 min-h-[500px]">
+            <!-- Left Side - Content -->
+            <div
+              class="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-purple-50 to-pink-50 order-2 lg:order-1">
+              <div class="mb-6">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Creative Solutions</h3>
+                <div class="w-16 h-1 bg-purple-500 mb-6"></div>
+              </div>
+
+              <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                  At Pencil Peel IMT, we believe that creative solutions are key to making your brand stand out in a
+                  crowded market. Our team of designers and creatives are passionate about developing innovative and
+                  effective outdoor advertising campaigns that capture the attention of your target audience.
+                </p>
+
+                <p>
+                  We understand that every brand is unique, and we'll work with you to develop a customized creative
+                  solution that reflects your brand's message and values. Whether you're looking to build brand
+                  awareness, drive website traffic, or generate sales, we'll create ads that are tailored to your
+                  specific goals and objectives.
+                </p>
+
+                <p>
+                  Our creative solutions are designed to be attention-grabbing and memorable, using a combination of
+                  bold graphics, striking images, and clear messaging to communicate your brand's message.
+                </p>
+
+                <!-- Features -->
+                <div class="space-y-3 pt-6">
+                  <div class="flex items-center">
+                    <i class="pi pi-check-circle text-purple-600 mr-3"></i>
+                    <span>Custom Design Solutions</span>
+                  </div>
+                  <div class="flex items-center">
+                    <i class="pi pi-check-circle text-purple-600 mr-3"></i>
+                    <span>Brand Identity Integration</span>
+                  </div>
+                  <div class="flex items-center">
+                    <i class="pi pi-check-circle text-purple-600 mr-3"></i>
+                    <span>Multi-Format Campaigns</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side - Image -->
+            <div class="relative overflow-hidden order-1 lg:order-2">
+              <img
+                src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Creative team designing outdoor advertising campaigns"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+              <!-- Overlay with Icon -->
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-purple-600/80 to-pink-700/80 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div
+                    class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <i class="pi pi-palette text-4xl"></i>
+                  </div>
+                  <h3 class="text-2xl font-bold">Creative Excellence</h3>
+                  <p class="text-sm opacity-90 mt-2">Award-Winning Designs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 - Strategic Planning (Image on Left, Content on Right) -->
+      <div class="group">
+        <div
+          class="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100">
+          <div class="grid lg:grid-cols-2 min-h-[500px]">
+            <!-- Left Side - Image -->
+            <div class="relative overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80"
+                alt="Strategic planning session for advertising campaigns"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+
+              <!-- Overlay with Icon -->
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-green-600/80 to-emerald-700/80 flex items-center justify-center">
+                <div class="text-center text-white">
+                  <div
+                    class="w-20 h-20 bg-white/20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-4">
+                    <i class="pi pi-chart-line text-4xl"></i>
+                  </div>
+                  <h3 class="text-2xl font-bold">Strategic Planning</h3>
+                  <p class="text-sm opacity-90 mt-2">Data-Driven Approach</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Side - Content -->
+            <div class="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-green-50 to-emerald-50">
+              <div class="mb-6">
+                <h3 class="text-3xl font-bold text-gray-800 mb-4">Strategic Planning</h3>
+                <div class="w-16 h-1 bg-green-500 mb-6"></div>
+              </div>
+
+              <div class="space-y-6 text-gray-700 leading-relaxed">
+                <p class="text-lg">
+                  At Pencil Peel IMT, we understand the importance of strategic planning in outdoor advertising. We'll
+                  work with you to develop a customized outdoor advertising strategy that meets your specific marketing
+                  goals and objectives.
+                </p>
+
+                <p>
+                  Our team will conduct thorough research and analysis to identify the best locations, formats, and
+                  messaging for your ads. We'll also work with you to establish clear goals and metrics for your
+                  campaign, and provide regular reporting and analysis to help you understand the effectiveness of your
+                  ads.
+                </p>
+
+                <p>
+                  Our strategic planning process is designed to ensure that your outdoor advertising campaign is aligned
+                  with your overall marketing goals and objectives. We'll work with you to develop a comprehensive
+                  strategy that integrates outdoor advertising with other marketing channels.
+                </p>
+
+                <!-- Process Steps -->
+                <div class="space-y-3 pt-6">
+                  <div class="flex items-center">
+                    <div
+                      class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                      1</div>
+                    <span>Research & Analysis</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div
+                      class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                      2</div>
+                    <span>Strategy Development</span>
+                  </div>
+                  <div class="flex items-center">
+                    <div
+                      class="w-8 h-8 bg-green-500 text-white rounded-full flex items-center justify-center text-sm font-bold mr-3">
+                      3</div>
+                    <span>Performance Tracking</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Summary Statement -->
+    <div class="mt-20 text-center">
+      <div
+        class="bg-gradient-to-br from-orange-50 to-amber-50 rounded-3xl p-12 border border-orange-100 max-w-6xl mx-auto">
+        <div class="max-w-4xl mx-auto">
+          <h3 class="text-3xl font-bold text-gray-800 mb-6">Ready to Get Started?</h3>
+          <p class="text-xl text-gray-700 leading-relaxed mb-8">
+            By choosing <strong class="text-orange-600">Pencil Peel IMT</strong> for your outdoor advertising needs,
+            you'll benefit from our expertise, creative solutions, and strategic planning capabilities. We'll work with
+            you to develop a customized campaign that drives results and helps you achieve your marketing goals - you
+            can increase brand awareness, drive website traffic, and generate sales.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <p-button label="Contact Us Today" icon="pi pi-phone"
+              styleClass="p-button-lg px-8 py-4 bg-orange-500 hover:bg-orange-600 border-0 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+            </p-button>
+
+            <p-button label="View Our Portfolio" icon="pi pi-eye"
+              styleClass="p-button-lg p-button-outlined px-8 py-4 border-2 border-orange-500 text-orange-600 hover:bg-orange-50 rounded-xl font-semibold transition-all duration-300">
+            </p-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Final CTA Section with Mission Statement -->
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="bg-gradient-to-br from-gray-50 to-orange-50 rounded-3xl p-12 text-center border border-orange-100">
+        <div
+          class="inline-flex items-center px-6 py-3 bg-orange-500 text-white rounded-full font-semibold text-lg mb-8">
+          <i class="pi pi-bolt mr-2"></i>
+          Ready to Transform Your Brand?
+        </div>
+
+        <h2 class="text-4xl lg:text-6xl font-bold text-gray-800 mb-8">
+          Let's Create Something <span class="text-orange-500">Amazing</span> Together
+        </h2>
+
+        <p class="text-xl text-gray-600 mb-12 max-w-4xl mx-auto leading-relaxed">
+          Join hundreds of successful brands who trust Pencil Peel IMT to amplify their message and drive real business
+          results through strategic outdoor advertising. Let us journey together - let us achieve victory together.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+          <p-button label="Start Your Campaign" icon="pi pi-arrow-right"
+            styleClass="p-button-lg px-8 py-4 bg-orange-500 hover:bg-orange-600 border-0 rounded-xl font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300">
+          </p-button>
+
+          <p-button label="Schedule Consultation" icon="pi pi-calendar"
+            styleClass="p-button-lg p-button-outlined px-8 py-4 border-2 border-orange-500 text-orange-600 hover:bg-orange-50 rounded-xl font-semibold transition-all duration-300">
+          </p-button>
+        </div>
+
+        <!-- Mission Statement -->
+        <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-100">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">Our Mission</h3>
+          <p class="text-lg text-gray-600 leading-relaxed">
+            We take pride in stating that our company, which was established with the main objective of brand marketing,
+            promotion, and advertising, along with our innovative team, has successfully promoted numerous brands to
+            connect with their customers and contribute to their achievements. Furthermore, we aspire to promote many
+            additional brands, organizations, products, and any other entities that require promotion, thereby adding
+            another milestone to our collection of successes.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

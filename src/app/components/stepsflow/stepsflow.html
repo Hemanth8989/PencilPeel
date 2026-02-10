@@ -1,0 +1,53 @@
+<section class="py-16 px-4 sm:px-6 lg:px-8  dark:bg-slate-900 bg-gray-50">
+  <div class="max-w-5xl mx-auto text-center mb-10">
+    <h2 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">
+      {{steptitle}}
+    </h2>
+    <p class="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+      {{stepdescription}}
+    </p>
+  </div>
+
+  <div class="flex justify-center ">
+    
+    <!-- DESKTOP VIEW -->
+    <div class="hidden md:block w-full max-w-5xl">
+      <p-stepper [value]="currentStep" class="w-full md:w-[5xl] mx-auto">
+        <p-step-list class="flex">
+          <p-step *ngFor="let step of steps" [value]="step.value" class="flex-1 text-center" >
+            {{ step.title }}
+          </p-step>
+        </p-step-list>
+        <p-step-panel *ngFor="let step of steps" [value]="step.value">
+          <ng-template #content let-activateCallback="activateCallback">
+            <div class="flex flex-col gap-6">
+              <div class="w-full max-w-[600px] mx-auto px-4">
+                <img
+                  [src]="step.backgroundImage"
+                  alt="{{ step.title }}"
+                  class="block mx-auto max-w-full h-auto object-contain"
+                />
+              </div>
+              <div class="px-4 text-gray-800 dark:text-white text-lg text-center font-medium leading-relaxed">
+                {{ step.description }}
+              </div>
+              
+            </div>
+          </ng-template>
+        </p-step-panel>
+      </p-stepper>
+    </div>
+    <div class="block md:hidden px-4">
+      <div *ngFor="let step of steps" class="mb-6 rounded-lg shadow-md overflow-hidden border border-gray-200 dark:border-surface-700 bg-white dark:bg-surface-900">
+        <div class="px-4 pt-4 pb-2 text-lg text-center font-semibold text-gray-800 dark:text-white">
+          {{ step.title }}
+        </div>
+        <div class="h-48 w-full bg-cover bg-center" [ngStyle]="{ 'background-image': 'url(' + step.backgroundImage + ')' }"></div>
+        <div class="p-4 text-gray-700 text-center dark:text-gray-300 text-sm">
+          {{ step.description }}
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

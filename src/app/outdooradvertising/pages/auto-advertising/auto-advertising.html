@@ -1,0 +1,142 @@
+<app-outdoor-hero-section [config]="autoAudioAdvertisingHeroConfig" />
+<app-quotes [testimonials]="testimonials"></app-quotes>
+
+<!-- Hero Section -->
+<section
+    class="relative bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 text-white overflow-hidden rounded-xl shadow-lg mx-auto max-w-6xl my-10">
+    <div class="absolute inset-0 opacity-20">
+        <img src="outdoor/auto/auto.png" alt="Auto Advertising Background" class="object-cover w-full h-full" />
+    </div>
+
+    <div class="relative z-10 p-10 md:p-16 flex flex-col md:flex-row items-center md:space-x-10">
+        <!-- Text -->
+        <div class="md:w-1/2 space-y-6 text-center md:text-left">
+            <h1 class="text-4xl md:text-5xl font-extrabold leading-tight drop-shadow-md">
+                Auto Advertising with Audio Announcements
+            </h1>
+            <p class="text-lg text-gray-100 leading-relaxed">
+                Auto advertising with audio announcements is a form of advertising that involves using vehicles with
+                audio systems to promote products or services. Our team will create customized audio announcements that
+                showcase your brand's message and reach a large audience.
+            </p>
+        </div>
+
+        <!-- Image -->
+        <div class="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+            <div
+                class="group relative inline-block transform transition-all duration-500 ease-out hover:scale-105 hover:-rotate-2">
+                <img src="outdoor/auto/auto2.png" alt="Auto Advertising Example"
+                    class="w-full max-w-md mx-auto drop-shadow-2xl rounded-lg transition-transform duration-500 ease-out group-hover:scale-110" />
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Brand & Product Promotion -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2
+            class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700">
+            How Auto Advertising with Audio Announcements Works for Brand and Product Promotion
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            At Pencil Peel IMT, we will use auto advertising with audio announcements to promote your brand and products
+            in a variety of ways. Here's how it will work:
+        </p>
+    </div>
+
+    <!-- Brand Promotion Cards -->
+    <div class="mb-16">
+        <h3 class="text-3xl font-bold text-blue-700 mb-8 text-center">Brand Promotion</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div *ngFor="let brand of brandPromotion"
+                class="group bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                <div
+                    class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                    <i [class]="brand.icon + ' text-2xl'"></i>
+                </div>
+                <h4 class="text-xl font-bold text-indigo-600 mb-2">{{ brand.title }}</h4>
+                <p class="text-gray-600">{{ brand.description }}</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Product Promotion Cards -->
+    <div>
+        <h3 class="text-3xl font-bold text-blue-700 mb-8 text-center">Product Promotion</h3>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+            <div *ngFor="let product of productPromotion"
+                class="group bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+                <div
+                    class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                    <i [class]="product.icon + ' text-2xl'"></i>
+                </div>
+                <h4 class="text-xl font-bold text-indigo-600 mb-2">{{ product.title }}</h4>
+                <p class="text-gray-600">{{ product.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2
+            class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700">
+            Benefits for Brands and Products
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            By partnering with Pencil Peel IMT for auto advertising with audio announcements, your brand and products
+            can benefit from:
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mb-16">
+        <div *ngFor="let benefit of benefits"
+            class="group bg-white rounded-2xl shadow-lg p-8 text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="benefit.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold text-indigo-600 mb-2">{{ benefit.title }}</h3>
+            <p class="text-gray-600">{{ benefit.description }}</p>
+        </div>
+    </div>
+
+    <div class="text-center">
+        <p class="text-lg text-gray-700 mb-6">
+            Let us help you promote your brand and products through <span class="text-blue-600 font-semibold">auto
+                advertising with audio announcements</span>. Contact us today to learn more about how <span
+                class="text-blue-600 font-semibold">Pencil Peel IMT</span> can help your business thrive.
+        </p>
+    </div>
+</section>
+
+<!-- Execution Section -->
+<section class="max-w-7xl mx-auto my-20 px-6">
+    <div class="text-center mb-12">
+        <h2
+            class="text-4xl font-extrabold mb-4 bg-clip-text text-transparent bg-gradient-to-r from-blue-500 via-indigo-600 to-purple-700">
+            How We Will Execute Auto Advertising with Audio Announcements
+        </h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+            Our team will execute auto advertising with audio announcements in the following ways:
+        </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div *ngFor="let step of executionSteps"
+            class="group bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center text-center transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl">
+            <div
+                class="w-16 h-16 flex items-center justify-center rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 text-white mb-6 shadow-md transition-transform duration-500 group-hover:scale-110">
+                <i [class]="step.icon + ' text-2xl'"></i>
+            </div>
+            <h3 class="text-xl font-bold text-indigo-600 mb-2">{{ step.title }}</h3>
+            <p class="text-gray-600">{{ step.description }}</p>
+        </div>
+    </div>
+</section>
+
+<app-whycpencilpeel [features]="whyChooseAutoAdvertising.features" [headerContent]="whyChooseAutoAdvertising" />
+
+<app-glass-cta [cta]="cta"></app-glass-cta>

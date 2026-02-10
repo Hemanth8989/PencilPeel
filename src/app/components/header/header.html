@@ -1,0 +1,80 @@
+<header class="shadow-lg fixed top-0 left-0 right-0 bg-white">
+  <div class="hidden md:block border-b border-yellow-400/5">
+    <div class="container mx-auto px-6 py-1">
+      <div class="flex justify-between items-center">
+        <div class="flex items-center justify-center">
+          <a routerLink="/">  <img src="/logo.png" alt="logo" class="w-50 h-14" /> </a>
+        </div>
+        <p-button label="Let's Talk" [rounded]="true"></p-button>
+      </div>
+    </div>
+  </div>
+  <!--mobile menu mobile-->
+  <div class="md:hidden">
+    <div class="container flex justify-between mx-auto  py-3 px-4 items-center">
+        <div class="flex justify-between items-center">
+          <p-button icon="pi pi-bars" (click)="toggleDrawer()"styleClass="p-button-text p-button-rounded"></p-button>
+          <div class="flex items-center justify-center">
+            <a routerLink="/">  <img src="/logo.png" alt="logo" class="w-50 h-14" /> </a>
+          </div>
+        </div>
+          <p-button label="Let's Talk" size="small" [rounded]="true"></p-button>
+    </div>
+    <p-drawer [(visible)]="visible" id="mobileDrawer" header="Menu" position="left" styleClass="md:hidden" (onHide)="toggleDrawer()"role="region">
+    <p-menu [model]="items" styleClass="w-full border-none"></p-menu>
+    </p-drawer>
+  </div>
+  <!--2ndrow-->
+  <div class="hidden md:block mx-auto">
+      <div class="container mx-auto px-2 m-1">
+        <nav class="flex items-center justify-center">
+          <div class="flex items-center space-x-1 gap-2">
+            <div *ngFor="let item of navigationItems" [ngClass]="{'relative group': true,'active': activeDropdown === item.key}" (click)="onNavItemClick(item, $event)" class="relative group">
+              <ng-container *ngIf="item.key === 'about'; else defaultNavItem">
+                <a [routerLink]="item.href"
+                   class="relative text-gray-700 hover:text-yellow-400 transition-all duration-500 px-3 py-2 rounded-full overflow-hidden text-xs xl:text-sm font-medium nav-glow whitespace-nowrap block"
+                >
+                  <span class="relative z-10">{{ item.text }}</span>
+                  <div class="absolute inset-0 bg-yellow-400/10 border border-yellow-400/20 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-95 group-hover:scale-100"></div>
+                </a>
+              </ng-container>
+              <ng-template #defaultNavItem>
+                <div class="flex items-center bg-transparent hover:bg-yellow-400/10 border border-transparent hover:border-yellow-400/20 rounded-full transition-all duration-500 overflow-hidden">
+                  <a [routerLink]="item.href" class="text-gray-700 hover:text-yellow-400 transition-all duration-500 px-1 py-2 text-xs xl:text-sm font-medium whitespace-nowrap flex-1">
+                    <span class="relative z-10">{{ item.text }}</span>
+                  </a>
+                  <button (click)="handleDropdownToggle(item.key, $event); op.toggle($event)" class="px-1 py-2 hover:bg-yellow-400/20 rounded-r-full transition-all duration-300">
+                    <i class="pi pi-chevron-down fontsm text-gray-500 transition-transform duration-300" [ngClass]="{'rotate-180': activeDropdown === item.key}"></i>
+                  </button>
+                </div>
+              </ng-template>
+              <p-popover #op [baseZIndex]="10000" appendTo="body">
+                <div *ngIf="activeDropdown && dropdownData[activeDropdown]" class="p-8">
+                            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                              <div *ngFor="let service of dropdownData[activeDropdown]; let i = index" 
+                                  class="group glass-card rounded-xl p-6 hover:bg-orange-400/5 transition-all duration-300 cursor-pointer">
+                                <div class="flex items-start space-x-4">
+                                  <div class="flex-shrink-0">
+                                    <div class="w-12 h-12 rounded-lg bg-orange-400/10 flex items-center justify-center transition-all duration-300">
+                                      <i [class]="service.icon + ' text-gray-600 hover:text-orange-500'"></i>
+                                    </div>
+                                  </div>
+                                  <div class="flex-1">
+                                    <h3 class="text-lg font-semibold text-gray-600 mb-2 group-hover:text-orange-400 transition-colors duration-300">
+                                      {{ service.title }}
+                                    </h3>
+                                    <p class="text-gray-500 text-sm leading-relaxed">
+                                      {{ service.description }}
+                                    </p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                  </div>
+              </p-popover>
+            </div>
+          </div>
+        </nav>
+      </div>
+  </div>
+</header>

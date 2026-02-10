@@ -1,0 +1,247 @@
+<app-outdoor-hero-section [config]="billboardHeroConfig" />
+
+<app-quotes [testimonials]="testimonials"></app-quotes>
+
+<section class="py-16 bg-gray-50">
+  <div class="mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+        Types of Billboards
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+        Explore our comprehensive range of billboard advertising solutions designed to maximize your brand visibility
+      </p>
+    </div>
+
+    <!-- Billboard Types Grid - 2 columns -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      <div 
+        *ngFor="let billboard of billboardTypes; let i = index" 
+        class="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 animate-fade-in-up cursor-pointer h-120"
+        [style.animation-delay]="(i + 1) * 200 + 'ms'"
+      >
+        <div class="absolute inset-0">
+          <img 
+            [src]="billboard.image" 
+            [alt]="billboard.name" 
+            class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+          />
+        </div>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 right-0 p-6 text-white">
+          <h3 class="text-2xl md:text-3xl font-bold mb-3 leading-tight">
+            {{ billboard.name }}
+          </h3>
+          <p class="text-gray-200 text-base md:text-lg leading-relaxed mb-4">
+            {{ billboard.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="relative py-24 bg-gradient-to-br from-indigo-950 via-blue-950 to-indigo-950 overflow-hidden">
+  <!-- Animated Background Elements -->
+  <div class="absolute inset-0 overflow-hidden">
+    <div class="absolute -top-40 -right-40 w-80 h-80 bg-blue-400/15 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute -bottom-40 -left-40 w-80 h-80 bg-indigo-400/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
+    <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-cyan-400/10 rounded-full blur-3xl animate-pulse delay-500"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Hero Header -->
+    <div class="text-center mb-20 animate-fade-in-up">
+      <h1 class="text-3xl md:text-5xl font-black text-white mb-6 leading-tight">
+        Why Choose
+        <span class="text-transparent bg-clip-text bg-gradient-to-r from-orange-300 via-yellow-300 to-orange-500 animate-gradient">
+          Pencil Peel IMT
+        </span>
+      </h1>
+      
+      <p class="text-2xl text-blue-100 max-w-3xl mx-auto leading-relaxed">
+        Unlock the power of strategic billboard advertising with our proven advantages
+      </p>
+    </div>
+
+    <!-- Modern Advantages Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+      <div 
+        *ngFor="let advantage of advantages; let i = index"
+        class="group relative animate-fade-in-up"
+        [style.animation-delay]="(i + 1) * 200 + 'ms'"
+      >
+        <!-- Glass Card with Midnight Blue Theme -->
+        <div class="relative bg-blue-900/20 backdrop-blur-sm rounded-3xl p-8 border border-blue-400/20 hover:bg-blue-800/30 hover:border-blue-300/40 transition-all duration-500 transform hover:scale-105 hover:-translate-y-2 shadow-2xl hover:shadow-blue-900/50">
+          
+          <!-- Floating Icon -->
+          <div class="relative mb-8">
+            <div class="flex items-center space-x-6">
+              <div 
+                [class]="'w-20 h-20 rounded-full flex items-center justify-center transition-all duration-300 group-hover:scale-110 shadow-xl ' + advantage.bgColor"
+              >
+                <i [class]="advantage.icon + ' text-xl' + advantage.color"></i>
+              </div>
+              
+              <!-- Number Badge -->
+              <div class="text-8xl font-black text-blue-100/10 group-hover:text-blue-100/20 transition-colors duration-300">
+                {{ i + 1 }}
+              </div>
+            </div>
+          </div>
+          
+          <!-- Content -->
+          <div class="relative">
+            <h3 class="text-xl font-bold text-white mb-6 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-cyan-300 group-hover:to-blue-300 transition-all duration-300">
+              {{ advantage.title }}
+            </h3>
+            
+            <p class="text-blue-100 text-base leading-relaxed group-hover:text-white transition-colors duration-300">
+              {{ advantage.description }}
+            </p>
+          </div>
+          
+          <!-- Animated Border -->
+          <div class="absolute inset-0 rounded-3xl bg-gradient-to-r from-cyan-400/20 via-blue-400/20 to-indigo-400/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 -z-10 blur-sm"></div>
+          
+          <!-- Corner Accent -->
+          <div class="absolute top-6 right-6 w-3 h-3 bg-cyan-400 rounded-full opacity-0 group-hover:opacity-100 transition-all duration-300 shadow-lg shadow-cyan-400/50"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Section -->
+    <!-- <div class="text-center animate-fade-in-up delay-1000">
+      <div class="bg-blue-900/20 backdrop-blur-xl rounded-3xl p-12 border border-blue-400/20 max-w-4xl mx-auto">
+        <h3 class="text-4xl font-bold text-white mb-6">
+          Ready to Dominate the Billboard Market?
+        </h3>
+        <p class="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+          Transform your brand visibility with our strategic billboard advertising solutions
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 justify-center">
+          <p-button 
+            label="Start Your Campaign"
+            icon="pi pi-rocket"
+            styleClass="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-12 py-4 text-xl font-bold rounded-2xl shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 border-0"
+          ></p-button>
+          
+          <p-button 
+            label="View Success Stories"
+            icon="pi pi-chart-line"
+            styleClass="bg-blue-500/20 backdrop-blur-sm border-2 border-blue-300/30 text-white hover:bg-white hover:text-blue-950 px-12 py-4 text-xl font-bold rounded-2xl transition-all duration-300 transform hover:scale-105"
+            [outlined]="true"
+          ></p-button>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</section>
+<section class="py-20  overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <div class="inline-flex items-center px-4 py-2 bg-red-100 rounded-full text-red-700 font-semibold mb-6">
+        <i class="pi pi-exclamation-triangle mr-2"></i>
+        Strategic Solutions
+      </div>
+      
+      <h2 class="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
+        Challenges We Address Together
+      </h2>
+      
+      <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+        Every challenge becomes an opportunity with our expert solutions and strategic approach
+      </p>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div 
+        *ngFor="let challenge of challenges; let i = index"
+        class="group relative animate-fade-in-up border-2 rounded-3xl overflow-hidden shadow-lg transition-all duration-500 transform hover:scale-105 hover:-translate-y-4 hover:rotate-1 cursor-pointer"
+        [ngClass]="cardAnimationColors[i % cardAnimationColors.length]"
+        [style.animation-delay]="(i + 1) * 200 + 'ms'">
+        <div class="absolute inset-0 bg-gradient-to-br from-white/95 to-gray-50/95 backdrop-blur-sm"></div>
+        <div class="relative p-8">
+          <div class="relative mb-8 flex items-center justify-center">
+            <div class="w-20 h-20 bg-gradient-to-br from-red-100 to-pink-100 rounded-2xl flex items-center justify-center transition-all duration-300 group-hover:scale-110 group-hover:rotate-12 shadow-lg group-hover:shadow-xl">
+              <i [class]="challenge.icon + ' text-4xl text-red-600 transition-colors duration-300 group-hover:text-red-700'"></i>
+            </div>
+          </div>
+          <div class="text-center space-y-4">
+            <h3 class="text-xl font-semibold text-gray-900 transition-colors duration-300 group-hover:text-red-600">
+              {{ challenge.title }}
+            </h3>
+            
+            <p class="text-gray-700 text-base leading-relaxed transition-colors duration-300 group-hover:text-gray-800">
+              {{ challenge.description }}
+            </p>
+          </div>
+        </div>
+        
+        <!-- Animated Border Glow -->
+        <div class="absolute inset-0 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-r from-red-200/20 via-pink-200/20 to-rose-200/20 blur-sm -z-10"></div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="relative py-20 overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    <img 
+      src="outdoor/Billboard/digitalbillboard.webp"
+      alt="Key Considerations Background"
+      class="w-full h-full object-cover"
+    />
+  </div>
+
+  <div class="absolute inset-0 bg-black/70"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16 animate-fade-in-up">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+        Key <span class="text-blue-400">Considerations</span>
+      </h2>
+      <p class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
+        Our strategic approach ensures your billboard advertising campaign delivers maximum impact and results
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div 
+        *ngFor="let consideration of keyConsiderations; let i = index"
+        class="group text-center animate-fade-in-up"
+        [style.animation-delay]="(i + 1) * 200 + 'ms'"
+      >
+        <!-- Icon Container -->
+        <div class="relative mx-auto w-20 h-20 mb-6">
+          <div class="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full opacity-20 group-hover:opacity-30 transition-opacity duration-300"></div>
+          <div class="relative flex items-center justify-center w-full h-full bg-white/10 backdrop-blur-sm rounded-full border border-white/20 group-hover:bg-white/20 group-hover:scale-110 transition-all duration-300">
+            <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" [attr.d]="consideration.icon"/>
+            </svg>
+          </div>
+        </div>
+
+        <!-- Content -->
+        <h3 class="text-2xl font-bold text-white mb-4 group-hover:text-blue-400 transition-colors duration-300">
+          {{ consideration.title }}
+        </h3>
+        <p class="text-gray-300 text-lg leading-relaxed group-hover:text-white transition-colors duration-300">
+          {{ consideration.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<app-contactus [title]="contact.title" [description]="contact.description"></app-contactus>
+
+
+
+
+
+
+
+
+
+

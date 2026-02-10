@@ -1,0 +1,20 @@
+:host ::ng-deep p-accordion .p-accordion-panel {
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(16,24,40,0.06);
+  transition: transform .18s ease, box-shadow .18s ease;
+  overflow: hidden;
+}
+
+:host ::ng-deep p-accordion .p-accordion-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(16,24,40,0.08);
+}
+
+/* Header padding override for sleeker look */
+:host ::ng-deep .p-accordion-header {
+  padding: 1rem 1.25rem !important;
+}
+
+:host ::ng-deep .p-icon {
+  display: none !important;
+}

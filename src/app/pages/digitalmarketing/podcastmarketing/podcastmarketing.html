@@ -1,0 +1,312 @@
+<app-nocarouselherosection [herocontent]="herocontent"/>
+<app-quotes [testimonials]="quotes"></app-quotes>
+<app-faqcards [faqcards]="faqcards"/>
+<section>
+  <div class="p-2">
+    <h2
+      class="text-3xl md:text-4xl font-bold text-center mb-10 bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent"
+    >
+      Podcast Creation and Promotion with Pencil Peel IMT
+    </h2>
+
+    <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-center">
+      At Pencil Peel IMT, our team of experts specializes in creating and promoting podcasts that resonate with your target audience, build brand awareness, engage listeners, and drive specific goals like website traffic or lead generation.
+    </p>
+  </div>
+
+  <div class="card flex justify-center">
+    <p-stepper [value]="stepValue" class="basis-[50rem] w-full">
+      <p-step-list>
+        <p-step [value]="1">Podcast Creation</p-step>
+        <p-step [value]="2">Podcast Promotion</p-step>
+      </p-step-list>
+
+      <p-step-panels>
+        <!-- STEP 1: Podcast Creation -->
+        <p-step-panel [value]="1">
+          <ng-template #content>
+            <div class="mb-6 flex justify-center text-center">
+              <p class="text-lg font-medium text-gray-600 max-w-xl">
+                We'll help you develop a podcast that aligns with your brand or personal goals. Here's how:
+              </p>
+            </div>
+
+            <p-timeline
+              [value]="podcreationtimeline"
+              align="alternate"
+              class="customized-timeline"
+            >
+              <ng-template #marker let-event>
+                <span
+                  class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                  [ngClass]="event.color"
+                >
+                  <i [class]="event.icon"></i>
+                </span>
+              </ng-template>
+
+              <ng-template #content let-event>
+                <p-card [header]="event.title" class="mb-4">
+                  <p>{{ event.description }}</p>
+                </p-card>
+              </ng-template>
+            </p-timeline>
+          </ng-template>
+        </p-step-panel>
+
+        <!-- STEP 2: Podcast Promotion -->
+        <p-step-panel [value]="2">
+          <ng-template #content>
+            <div class="mb-6 flex justify-center text-center">
+              <p class="text-lg font-medium text-gray-600 max-w-xl">
+                We'll help you promote your podcast to reach the right audience and gain traction. Here's how:
+              </p>
+            </div>
+
+            <p-timeline
+              [value]="promotionTimeline"
+              align="alternate"
+              class="customized-timeline"
+            >
+              <ng-template #marker let-event>
+                <span
+                  class="flex w-8 h-8 items-center justify-center text-white rounded-full z-10 shadow-sm"
+                  [ngClass]="event.color"
+                >
+                  <i [class]="event.icon"></i>
+                </span>
+              </ng-template>
+
+              <ng-template #content let-event>
+                <p-card [header]="event.title" class="mb-4">
+                  <p>{{ event.description }}</p>
+                </p-card>
+              </ng-template>
+            </p-timeline>
+          </ng-template>
+        </p-step-panel>
+      </p-step-panels>
+    </p-stepper>
+  </div>
+</section>
+
+<section class="relative py-16 px-4 sm:px-6 lg:px-12 bg-gray-50">
+  
+  <!-- Decorative Gradient Blur -->
+  <div class="absolute inset-0 -z-10">
+    <div class="absolute top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-orange-200 opacity-30 blur-3xl rounded-full"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="text-center mb-14">
+    <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+      Key Components of Podcast Creation
+    </h2>
+    <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+      At <span class="text-orange-600 font-bold">Pencil Peel IMT</span>, our team of experts understands the key components that are necessary to create a successful podcast. We will work with you to develop a customized podcast strategy that meets your business goals and target audience.
+    </p>
+  </div>
+
+  <!-- Cards Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    
+    <div
+      *ngFor="let item of keycomponents"
+      class="group relative bg-white/80 backdrop-blur rounded-2xl p-6 sm:p-7 border border-gray-200 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+    >
+      
+      <!-- Icon -->
+      <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 text-white mb-5 shadow-md">
+        <i class="pi pi-microphone text-xl"></i>
+      </div>
+
+      <!-- Title -->
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 group-hover:text-orange-500 transition">
+        {{ item.title }}
+      </h3>
+
+      <!-- Description -->
+      <p class="text-gray-600 text-sm leading-relaxed">
+        {{ item.description }}
+      </p>
+
+      <!-- Hover Accent -->
+      <span class="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-orange-500 to-yellow-400 opacity-0 group-hover:opacity-100 rounded-b-2xl transition"></span>
+    </div>
+
+  </div>
+</section>
+
+<section class="relative py-16 px-4 sm:px-6 lg:px-12 bg-white">
+
+  <!-- Header -->
+  <div class="text-center mb-14">
+    <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+      Major Industries That Benefit from Podcast Creation
+    </h2>
+    <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base leading-relaxed">
+      We help businesses across industries leverage podcasting to build authority, connect with audiences, and drive sustainable growth.
+    </p>
+  </div>
+
+  <!-- Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+    <!-- Card -->
+    <div class="group bg-white/90 backdrop-blur border border-gray-200 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 text-white mb-5 shadow-md">
+        <i class="pi pi-heart text-xl"></i>
+      </div>
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 group-hover:text-orange-500 transition">
+        Healthcare & Wellness
+      </h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        We create informative and trustworthy podcasts focused on health, wellness, and patient education—helping healthcare brands build credibility and meaningful audience relationships.
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div class="group bg-white/90 backdrop-blur border border-gray-200 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 text-white mb-5 shadow-md">
+        <i class="pi pi-desktop text-xl"></i>
+      </div>
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 group-hover:text-orange-500 transition">
+        Technology & Software
+      </h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Our podcasts highlight emerging technologies, product innovations, and industry trends—helping tech brands establish thought leadership and increase digital visibility.
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div class="group bg-white/90 backdrop-blur border border-gray-200 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 text-white mb-5 shadow-md">
+        <i class="pi pi-wallet text-xl"></i>
+      </div>
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 group-hover:text-orange-500 transition">
+        Finance & Banking
+      </h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        We produce expert-driven podcasts covering financial insights, market trends, and advisory topics—helping finance and banking brands build trust and attract informed audiences.
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div class="group bg-white/90 backdrop-blur border border-gray-200 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 text-white mb-5 shadow-md">
+        <i class="pi pi-book text-xl"></i>
+      </div>
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 group-hover:text-orange-500 transition">
+        Education & Training
+      </h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        Our educational podcasts deliver valuable learning content, expert discussions, and skill-building insights—helping institutions and trainers attract and engage learners.
+      </p>
+    </div>
+
+    <!-- Card -->
+    <div class="group bg-white/90 backdrop-blur border border-gray-200 rounded-2xl p-6 sm:p-7 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
+      <div class="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-orange-500 to-yellow-400 text-white mb-5 shadow-md">
+        <i class="pi pi-megaphone text-xl"></i>
+      </div>
+      <h3 class="text-lg sm:text-xl font-semibold text-gray-900 mb-3 group-hover:text-orange-500 transition">
+        Marketing & Advertising
+      </h3>
+      <p class="text-gray-600 text-sm leading-relaxed">
+        We craft podcasts that share marketing insights, campaign strategies, and industry trends—positioning agencies and brands as thought leaders and attracting new clients.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+<section class="bg-white dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto space-y-10">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+        How Podcast Creation and Promotion Can Help Businesses Grow
+    </h2>
+    <p class="text-gray-700 dark:text-gray-300 text-center max-w-3xl mx-auto">
+      We will help businesses grow through podcast creation and promotion in several ways, including:
+    </p>
+
+    <!-- Benefits list -->
+    <div class="space-y-8 max-w-3xl mx-auto">
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+        <h3 class="text-xl font-semibold text-orange-600 dark:text-orange-400 mb-2">Building brand awareness</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Our team will create podcasts that showcase your brand's expertise and thought leadership, helping you build brand awareness and credibility.
+        </p>
+      </div>
+
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+        <h3 class="text-xl font-semibold text-orange-600 dark:text-orange-400 mb-2">Engaging listeners</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          We will develop podcasts that engage listeners and encourage them to take action, driving website traffic and lead generation.
+        </p>
+      </div>
+
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+        <h3 class="text-xl font-semibold text-orange-600 dark:text-orange-400 mb-2">Establishing thought leadership</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Our team will help you establish thought leadership in your industry by creating high-quality, informative podcasts that showcase your expertise.
+        </p>
+      </div>
+
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+        <h3 class="text-xl font-semibold text-orange-600 dark:text-orange-400 mb-2">Driving website traffic</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          We will optimize your podcast for search engines and promote it through various channels, driving website traffic and increasing conversions.
+        </p>
+      </div>
+
+      <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+        <h3 class="text-xl font-semibold text-orange-600 dark:text-blue-400 mb-2">Generating leads</h3>
+        <p class="text-gray-700 dark:text-gray-300">
+          Our team will help you generate leads by creating podcasts that encourage listeners to take action and contact your business.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="px-4 py-16 bg-white md:px-12 lg:px-24">
+  <div class="max-w-7xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+         Why Choose Pencil Peel IMT for Podcast Creation and Promotion?
+      </h2>
+      <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+        At Pencil Peel IMT, our team of experts has the knowledge and experience to create and promote podcasts that drive business growth.
+      </p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-3">
+      <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+        <div class="text-xl font-semibold text-gray-800 mb-2">
+          🎯 Develop a customized podcast strategy
+        </div>
+        <p class="text-gray-600">
+          Our team will develop a customized podcast strategy that meets your business goals and target audience.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+        <div class="text-xl font-semibold text-gray-800 mb-2">
+          🎙️ Create high-quality podcast content
+        </div>
+        <p class="text-gray-600">
+          We will create high-quality podcast content that resonates with your target audience and showcases your brand's expertise.
+        </p>
+      </div>
+
+      <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition duration-300">
+        <div class="text-xl font-semibold text-gray-800 mb-2">
+          📢 Promote your podcast
+        </div>
+        <p class="text-gray-600">
+           Our team will promote your podcast through various channels, including social media, email marketing, and paid advertising.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<app-contactus [title]="contacttitle" [description]="contactdescription"/>

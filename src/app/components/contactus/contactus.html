@@ -1,0 +1,170 @@
+<!-- <div class="flex justify-center px-4 py-20 bg-white">
+  <div class="relative w-full max-w-4xl bg-orange-500 rounded-3xl p-8 md:p-14 text-white shadow-xl overflow-hidden">
+    <div class="absolute -top-10 -right-10 w-40 h-40 bg-orange-300 rounded-full blur-3xl opacity-30 pointer-events-none"></div>
+    <div class="relative z-10 flex flex-col items-center text-center space-y-6">
+      <h3 class="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
+        {{ title }}
+      </h3>
+      <p class="text-base sm:text-lg md:text-xl max-w-2xl leading-relaxed opacity-90">
+        {{ description }}
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 mt-4">
+        <button class="px-8 py-4 rounded-xl font-semibold text-lg bg-white text-orange-600 hover:bg-orange-50 hover:text-orange-700 transition duration-300 flex items-center justify-center space-x-3 shadow-lg">
+          <i class="pi pi-calendar text-lg"></i>
+          <span>Contact Us</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div> -->
+<!-- 
+<div class="text-center mt-20 lg:mt-24">
+      <div class="bg-gradient-to-r from-orange-500 to-blue-500 p-0.5 rounded-3xl shadow-2xl max-w-4xl mx-auto">
+        <div class="bg-white rounded-3xl p-8 lg:p-12">
+          <h2 class="text-2xl lg:text-3xl font-bold text-slate-900 mb-4">
+            {{ title }}
+          </h2>
+          <p class="text-lg text-slate-600 mb-8 max-w-3xl mx-auto">
+             {{ description }}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <button class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-full hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+              <span>Start Your Project</span>
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+    <!-- contact-block.component.html -->
+<div class="text-center mt-20 lg:mt-24 relative">
+
+  <!-- Main contact card -->
+  <div 
+    class="relative gradient-border p-0.5 rounded-3xl shadow-2xl max-w-4xl mx-auto card-hover-effect"
+    [class.animate-hidden-scale]="!isVisible"
+    [class.animate-scale-in]="isVisible"
+    [class.animate-glow]="cardHovered"
+    data-animate="contact-block"
+    (mouseenter)="onCardHover(true)"
+    (mouseleave)="onCardHover(false)"
+  >
+    <!-- Glass card content -->
+    <div class="glass-effect rounded-3xl p-8 lg:p-12 relative overflow-hidden">
+      
+      <!-- Background shimmer effect -->
+      <div 
+        class="absolute inset-0 opacity-20"
+        [class.animate-shimmer]="cardHovered"
+      ></div>
+
+      <!-- Content -->
+      <div class="relative z-10">
+        <!-- Title with typing effect -->
+        <h2 
+          class="text-2xl lg:text-3xl font-bold text-slate-900 mb-4 bg-gradient-to-r from-orange-600 via-slate-900 to-blue-600 bg-clip-text text-transparent"
+          [class.animate-hidden]="!isVisible"
+          [class.animate-fade-in-up]="isVisible"
+          style="animation-delay: 0.2s"
+        >
+          {{ title }}
+        </h2>
+
+        <!-- Description -->
+        <p 
+          class="text-lg text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed"
+          [class.animate-hidden]="!isVisible"
+          [class.animate-fade-in-up]="isVisible"
+          style="animation-delay: 0.4s"
+        >
+          {{ description }}
+        </p>
+
+        <!-- Buttons container -->
+        <div 
+          class="flex flex-col sm:flex-row gap-4 justify-center"
+          [class.animate-hidden]="!isVisible"
+          [class.animate-fade-in-up]="isVisible"
+          style="animation-delay: 0.6s"
+        >
+          <!-- Primary button -->
+          <button 
+            class="group relative inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold rounded-full hover:from-orange-600 hover:to-orange-700 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 button-enhanced overflow-hidden"
+            (mouseenter)="onButtonHover(true)"
+            (mouseleave)="onButtonHover(false)"
+          >
+            <!-- Button shine effect -->
+            <div class="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 group-hover:animate-shimmer"></div>
+            
+            <span class="relative z-10">{{ primaryButtonText }}</span>
+            
+            <!-- Animated arrow -->
+            <svg 
+              class="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:translate-x-1" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+
+            <!-- Ripple effect on click -->
+            <div class="absolute inset-0 rounded-full bg-white/30 scale-0 group-active:animate-ripple"></div>
+          </button>
+
+          <!-- Secondary button (optional) -->
+          <!-- <button 
+            *ngIf="showSecondaryButton && secondaryButtonText"
+            class="group relative inline-flex items-center gap-2 px-8 py-4 border-2 border-slate-300 text-slate-700 font-semibold rounded-full hover:border-slate-400 hover:bg-slate-50 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 overflow-hidden"
+          >
+            <div class="absolute inset-0 bg-gradient-to-r from-orange-50 to-blue-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+            
+            <span class="relative z-10">{{ secondaryButtonText }}</span>
+            <svg 
+              class="w-5 h-5 relative z-10 transition-transform duration-300 group-hover:rotate-12" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-3.582 8-8 8a8.003 8.003 0 01-7.799-6.44c0-.018-.002-.036-.002-.054 0-.018.002-.036.002-.054A8.001 8.001 0 0121 12z"></path>
+            </svg>
+          </button> -->
+        </div>
+
+        <!-- Contact info or additional elements -->
+        <div 
+          class="mt-8 flex flex-wrap justify-center gap-6 text-sm text-slate-500"
+          [class.animate-hidden]="!isVisible"
+          [class.animate-fade-in-up]="isVisible"
+          style="animation-delay: 0.8s"
+        >
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Free Consultation</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+            </svg>
+            <span>24/7 Support</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <svg class="w-4 h-4 text-orange-500" fill="currentColor" viewBox="0 0 20 20">
+              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
+            </svg>
+            <span>Quick Response</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

@@ -1,0 +1,63 @@
+<section class="bg-white py-20 px-6 md:px-20 text-gray-800">
+    <!-- Section Heading -->
+    <div class="text-center mb-14">
+        <h2 class="text-4xl font-bold text-[#ff6600] mb-3">Frequently Asked Questions</h2>
+        <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+            We hope this set of questions and answers helps you identify Pencil Peel IMT as your ideal digital
+            transformation partner.
+        </p>
+    </div>
+
+    <!-- Two-column FAQ Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div *ngFor="let col of [0, 1]">
+            <p-accordion [value]="activePanels[col]" (valueChange)="onPanelChange(col, $event)" class="space-y-5">
+                <p-accordion-panel *ngFor="let faq of getFaqColumn(col); let i = index" data-aos="fade-left" [value]="i.toString()"
+                    class="rounded-2xl overflow-hidden bg-white/90 backdrop-blur-md border border-orange-100 hover:border-orange-300 hover:text-orange-600 shadow-md hover:shadow-orange-200/70 transition-all duration-300">
+                    <!-- Header -->
+                    <p-accordion-header>
+                        <div class="flex justify-between items-center w-full">
+                            <div class="flex items-center gap-3">
+                                <h3 class="text-lg font-semibold text-gray-900 hover:text-orange-600 transition-colors">
+                                    {{ faq.question }}
+                                </h3>
+                            </div>
+
+                            <!-- Dynamic Icon -->
+                            <div class="ml-4 flex-shrink-0">
+                                <i class="pi transition-transform duration-300" [ngClass]="
+                    activePanels[col] === i.toString()
+                      ? 'pi-times text-orange-500 rotate-90'
+                      : 'pi-plus text-gray-400 hover:text-orange-500'
+                  "></i>
+                            </div>
+                        </div>
+                    </p-accordion-header>
+
+                    <!-- Content -->
+                    <p-accordion-content class="!px-6 !pb-5 text-gray-700 leading-relaxed text-[15px]">
+                        {{ faq.answer }}
+                    </p-accordion-content>
+                </p-accordion-panel>
+            </p-accordion>
+        </div>
+    </div>
+
+    <!-- CTA -->
+    <div
+        class="mt-20 text-center bg-gradient-to-r from-orange-500 to-orange-600 text-white py-12 px-8 rounded-2xl shadow-xl">
+        <h3 class="text-3xl font-bold mb-4">Ready to Elevate Your Brand?</h3>
+        <p class="text-lg mb-6">
+            Partner with Pencil Peel IMT today and experience the power of integrated marketing technology. 
+        </p>
+        <p class="text-lg mb-6">
+            Contact us Today, to learn more about our services and how we can help you scale up your business to great heights.
+        </p>
+        <p class="text-lg mb-8">
+            <span class="font-bold text-blue-700">Let Us Help </span>You Achieve Your Goals!
+        </p>
+        <a href="/contact"
+            class="bg-white text-orange-600 font-semibold py-3 px-8 rounded-full shadow-md hover:shadow-lg hover:bg-gray-100 transition-all duration-300">Contact
+            Us</a>
+    </div>
+</section>

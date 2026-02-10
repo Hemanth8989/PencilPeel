@@ -1,0 +1,158 @@
+<!-- future-web-design.component.html -->
+<section class="relative min-h-screen bg-gradient-to-br from-slate-50 via-orange-50/30 to-blue-50/30 overflow-hidden py-16 lg:py-24">
+  
+  <!-- Background Decorative Elements -->
+  <div class="absolute inset-0 pointer-events-none">
+    <!-- Large gradient orbs -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-orange-200/40 to-orange-400/40 rounded-full blur-3xl animate-subtle-pulse"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-blue-200/40 to-purple-400/40 rounded-full blur-3xl animate-subtle-pulse" style="animation-delay: 2s;"></div>
+    
+    <!-- Grid pattern overlay -->
+    <div class="absolute inset-0 opacity-[0.015]" style="background-image: radial-gradient(circle at 2px 2px, rgb(71 85 105) 2px, transparent 0); background-size: 60px 60px;"></div>
+    
+    <!-- Floating geometric shapes -->
+    <div class="absolute top-1/4 left-1/6 w-3 h-3 bg-orange-400/60 rounded-full animate-float"></div>
+    <div class="absolute top-2/3 right-1/5 w-2 h-2 bg-blue-500/60 rounded animate-float" style="animation-delay: 1s;"></div>
+    <div class="absolute top-1/2 left-3/4 w-4 h-4 bg-purple-400/60 rotate-45 animate-float" style="animation-delay: 2s;"></div>
+    <div class="absolute top-3/4 left-1/4 w-2.5 h-2.5 bg-cyan-400/60 rounded-full animate-float" style="animation-delay: 3s;"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Main Header Section -->
+    <div 
+      class="text-center mb-20 lg:mb-24"
+      [class.animate-hidden]="!headerVisible"
+      [class.animate-fade-in-up]="headerVisible"
+      data-animate="main-header"
+    >
+
+      <!-- Main Title -->
+      <h1 class="text-4xl sm:text-5xl font-bold text-slate-900 mb-6 leading-tight">
+        The Future of Web Design at <span class="text-orange-500">Pencil Peel IMT</span>
+      </h1>
+      
+      <!-- Subtitle -->
+      <p class="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-4xl mx-auto leading-relaxed">
+        At <span class="text-orange-500">Pencil Peel IMT</span>, we're excited about the future of web design and the opportunities it brings to create innovative and user-centric digital experiences. By leveraging the latest technologies and trends, we'll continue to push the boundaries of what's possible on the web.
+      </p>
+    </div>
+    <div class="mb-20 lg:mb-24">
+      <div 
+        class="text-center mb-16"
+        [class.animate-hidden]="!trendsHeaderVisible"
+        [class.animate-fade-in-up]="trendsHeaderVisible"
+        data-animate="trends-header"
+      >
+        
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          {{ keyTrendsTitle }}
+        </h2>
+        <div class="w-32 h-1.5 bg-gradient-to-r from-orange-500 via-red-500 to-blue-500 rounded-full mx-auto"></div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
+        <div 
+          *ngFor="let trend of keyTrends; let i = index" 
+          class="group relative bg-white/90 backdrop-blur-sm border-2 rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-700 hover:-translate-y-3"
+          [ngClass]="getColorClasses(trend.colorScheme).border + ' ' + getColorClasses(trend.colorScheme).shadow"
+          [class.animate-hidden-scale]="!trend.isVisible"
+          [class.animate-fade-in-scale]="trend.isVisible"
+          [attr.data-animate]="'trend-card'"
+          [attr.data-index]="i"
+        >
+          <div class="relative h-48 lg:h-56 overflow-hidden">
+            <img 
+              [src]="trend.image" 
+              [alt]="trend.title"
+              class="w-full h-full object-cover image-overlay-hover"
+            >
+            <div 
+              class="absolute inset-0 bg-gradient-to-t opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+              [ngClass]="'bg-gradient-to-t ' + getColorClasses(trend.colorScheme).overlay + ' to-transparent'"
+            ></div>
+          </div>
+          <div class="p-6 lg:p-8">
+            <h3 class="text-xl lg:text-2xl font-bold text-slate-900 mb-4 group-hover:text-orange-600 transition-colors duration-300">
+              {{ trend.title }}
+            </h3>
+            <p class="text-slate-600 leading-relaxed text-base lg:text-lg">
+              {{ trend.description }}
+            </p>
+          </div>
+          <div 
+            class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            [ngClass]="'bg-gradient-to-r ' + getColorClasses(trend.colorScheme).overlay.replace('/80', '')"
+          ></div>
+        </div>
+      </div>
+    </div>
+    <div class="mb-20 lg:mb-24">
+      <div 
+        class="text-center mb-16"
+        [class.animate-hidden]="!commitmentsHeaderVisible"
+        [class.animate-fade-in-up]="commitmentsHeaderVisible"
+        data-animate="commitments-header"
+      >
+        
+        <h2 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-slate-900 mb-4">
+          {{ commitmentTitle }}
+        </h2>
+        <div class="w-28 h-1.5 bg-gradient-to-r from-blue-500 via-purple-500 to-indigo-500 rounded-full mx-auto"></div>
+      </div>
+      <div class="text-center mb-12">
+        <p class="text-lg text-slate-600 max-w-4xl mx-auto leading-relaxed">
+          {{ commitmentDescription }}
+        </p>
+      </div>
+      <div class="mb-12">
+        <h3 class="text-xl font-bold text-slate-900 text-center mb-8">
+          {{ whatToExpectTitle }}
+        </h3>
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div 
+            *ngFor="let commitment of commitments; let i = index" 
+            class="group relative bg-white border-2 border-slate-200 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:border-blue-300 transition-all duration-500 hover:-translate-y-2"
+            [class.animate-hidden-left]="!commitment.isVisible && i % 2 === 0"
+            [class.animate-hidden-right]="!commitment.isVisible && i % 2 !== 0"
+            [class.animate-slide-in-left]="commitment.isVisible && i % 2 === 0"
+            [class.animate-slide-in-right]="commitment.isVisible && i % 2 !== 0"
+            [attr.data-animate]="'commitment-card'"
+            [attr.data-index]="i"
+          >
+            <div class="relative h-40 lg:h-48 overflow-hidden">
+              <img 
+                [src]="commitment.image" 
+                [alt]="commitment.title"
+                class="w-full h-full object-cover image-overlay-hover"
+              >
+              <div class="absolute inset-0 bg-gradient-to-t from-blue-600/80 via-purple-600/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+            </div>
+            <div class="p-6 lg:p-8">
+              <h4 class="text-xl lg:text-2xl font-bold text-slate-900 mb-4 group-hover:text-blue-600 transition-colors duration-300">
+                {{ commitment.title }}
+              </h4>
+              <p class="text-slate-600 leading-relaxed">
+                {{ commitment.description }}
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Growth Section -->
+    <div class="mb-16">
+      <div class="bg-gradient-to-r from-orange-500/10 via-orange-400/10 to-orange-600/10 backdrop-blur-sm rounded-3xl p-8 lg:p-12 border border-orange-200 shadow-xl">
+        <div class="text-center mb-8">
+          <h3 class="text-2xl lg:text-3xl font-bold text-slate-900 mb-4">
+            {{ growthTitle }}
+          </h3>
+          <p class="text-slate-700 text-lg leading-relaxed max-w-3xl mx-auto">
+            {{ growthDescription }}
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,338 @@
+<section class="relative min-h-screen bg-gradient-to-br from-white via-slate-50/30 to-indigo-50/20 overflow-hidden py-16 lg:py-24">
+  
+  <!-- Background Elements -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-indigo-200/20 to-purple-400/20 rounded-full blur-3xl animate-pulse"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-blue-200/20 to-cyan-200/20 rounded-full blur-3xl animate-pulse" style="animation-delay: 3s;"></div>
+    <div class="absolute inset-0 opacity-[0.01]" style="background-image: radial-gradient(circle at 2px 2px, rgb(71 85 105) 2px, transparent 0); background-size: 50px 50px;"></div>
+    <div class="absolute top-1/4 left-1/6 w-3 h-3 bg-indigo-400/40 rounded-full animate-bounce"></div>
+    <div class="absolute top-2/3 right-1/5 w-2 h-2 bg-cyan-500/40 rounded animate-bounce" style="animation-delay: 1s;"></div>
+    <div class="absolute top-1/2 right-1/4 w-4 h-4 bg-purple-400/40 rotate-45 animate-bounce" style="animation-delay: 2s;"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section -->
+    <div class="text-center mb-20 lg:mb-24 animate-fade-in-up">
+      <div class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-indigo-100 to-cyan-100 border border-indigo-200 rounded-full text-indigo-700 text-base font-semibold mb-8 shadow-md backdrop-blur-sm">
+        <span class="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></span>
+        <span>Database & Cloud Solutions</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+        Databases & Cloud 
+        <span class="bg-gradient-to-r from-indigo-500 via-purple-500 to-cyan-500 bg-clip-text text-transparent">Platforms</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-5xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, our team of experts will work with various databases and cloud platforms to develop and deploy scalable and secure solutions for your business.
+      </p>
+    </div>
+
+    <!-- Relational Databases Section -->
+    <div class="mb-20">
+      <div class="text-center mb-16 animate-fade-in-up" style="animation-delay: 0.2s;">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          Relational Databases
+        </h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-orange-500 to-red-500 rounded-full mx-auto mb-6"></div>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          Structured data storage solutions for enterprise applications with ACID compliance and strong consistency.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div 
+          *ngFor="let db of relationalDatabases; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+          [ngClass]="getColorClasses(db.colorScheme).border + ' ' + getColorClasses(db.colorScheme).hover + ' ' + getColorClasses(db.colorScheme).shadow"
+          [style.animation-delay]="(0.4 + i * 0.1) + 's'"
+        >
+          <div class="mb-4">
+            <img [src]="db.svgPath" [alt]="db.name + ' logo'" class="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300">
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">{{ db.name }}</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4" [title]="db.description">
+            {{ db.description | truncate:80:true:'...' }}
+          </p>
+          <p-button label="View Details" [text]="true" icon="pi pi-external-link" iconPos="right" (click)="showTechnologyDetails(db)" [ngClass]="getColorClasses(db.colorScheme).text" styleClass="w-full"></p-button>
+        </div>
+      </div>
+    </div>
+
+    <!-- NoSQL Databases Section -->
+    <div class="mb-20">
+      <div class="text-center mb-16 animate-fade-in-up" style="animation-delay: 0.8s;">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          NoSQL Databases
+        </h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-green-500 to-purple-500 rounded-full mx-auto mb-6"></div>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          Flexible data storage solutions for modern applications requiring scalability and performance.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div 
+          *ngFor="let db of nosqlDatabases; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+          [ngClass]="getColorClasses(db.colorScheme).border + ' ' + getColorClasses(db.colorScheme).hover + ' ' + getColorClasses(db.colorScheme).shadow"
+          [style.animation-delay]="(1.2 + i * 0.1) + 's'"
+        >
+          <div class="mb-4">
+            <img [src]="db.svgPath" [alt]="db.name + ' logo'" class="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300">
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">{{ db.name }}</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4" [title]="db.description">
+            {{ db.description | truncate:80:true:'...' }}
+          </p>
+          <p-button label="View Details" [text]="true" icon="pi pi-external-link" iconPos="right" (click)="showTechnologyDetails(db)" [ngClass]="getColorClasses(db.colorScheme).text" styleClass="w-full"></p-button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cloud Databases Section -->
+    <div class="mb-20">
+      <div class="text-center mb-16 animate-fade-in-up" style="animation-delay: 1.6s;">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          Cloud Databases
+        </h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full mx-auto mb-6"></div>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          Managed database services with automatic scaling, backup, and maintenance in the cloud.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div 
+          *ngFor="let db of cloudDatabases; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+          [ngClass]="getColorClasses(db.colorScheme).border + ' ' + getColorClasses(db.colorScheme).hover + ' ' + getColorClasses(db.colorScheme).shadow"
+          [style.animation-delay]="(2.0 + i * 0.15) + 's'"
+        >
+          <div class="mb-4">
+            <img [src]="db.svgPath" [alt]="db.name + ' logo'" class="w-18 h-18 mx-auto group-hover:scale-110 transition-transform duration-300">
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">{{ db.name }}</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4" [title]="db.description">
+            {{ db.description | truncate:90:true:'...' }}
+          </p>
+          <p-button label="View Details" [text]="true" icon="pi pi-external-link" iconPos="right" (click)="showTechnologyDetails(db)" [ngClass]="getColorClasses(db.colorScheme).text" styleClass="w-full"></p-button>
+        </div>
+      </div>
+    </div>
+
+    <!-- AWS Services Section -->
+    <div class="mb-20">
+      <div class="text-center mb-16 animate-fade-in-up" style="animation-delay: 2.5s;">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          Amazon Web Services (AWS)
+        </h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-orange-500 to-yellow-500 rounded-full mx-auto mb-6"></div>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          Comprehensive cloud computing platform with compute, storage, and serverless solutions.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div 
+          *ngFor="let service of awsServices; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+          [ngClass]="getColorClasses(service.colorScheme).border + ' ' + getColorClasses(service.colorScheme).hover + ' ' + getColorClasses(service.colorScheme).shadow"
+          [style.animation-delay]="(2.8 + i * 0.15) + 's'"
+        >
+          <div class="mb-4">
+            <img [src]="service.svgPath" [alt]="service.name + ' logo'" class="w-18 h-18 mx-auto group-hover:scale-110 transition-transform duration-300">
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">{{ service.name }}</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4" [title]="service.description">
+            {{ service.description | truncate:90:true:'...' }}
+          </p>
+          <p-button label="View Details" [text]="true" icon="pi pi-external-link" iconPos="right" (click)="showTechnologyDetails(service)" [ngClass]="getColorClasses(service.colorScheme).text" styleClass="w-full"></p-button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Azure Services Section -->
+    <div class="mb-20">
+      <div class="text-center mb-16 animate-fade-in-up" style="animation-delay: 3.3s;">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          Microsoft Azure
+        </h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full mx-auto mb-6"></div>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          Enterprise cloud platform with integrated services for compute, storage, and serverless applications.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div 
+          *ngFor="let service of azureServices; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+          [ngClass]="getColorClasses(service.colorScheme).border + ' ' + getColorClasses(service.colorScheme).hover + ' ' + getColorClasses(service.colorScheme).shadow"
+          [style.animation-delay]="(3.6 + i * 0.15) + 's'"
+        >
+          <div class="mb-4">
+            <img [src]="service.svgPath" [alt]="service.name + ' logo'" class="w-18 h-18 mx-auto group-hover:scale-110 transition-transform duration-300">
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">{{ service.name }}</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4" [title]="service.description">
+            {{ service.description | truncate:90:true:'...' }}
+          </p>
+          <p-button label="View Details" [text]="true" icon="pi pi-external-link" iconPos="right" (click)="showTechnologyDetails(service)" [ngClass]="getColorClasses(service.colorScheme).text" styleClass="w-full"></p-button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Google Cloud Platform Section -->
+    <div class="mb-20">
+      <div class="text-center mb-16 animate-fade-in-up" style="animation-delay: 4.1s;">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          Google Cloud Platform (GCP)
+        </h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-red-500 to-green-500 rounded-full mx-auto mb-6"></div>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          Google's cloud computing services with machine learning, data analytics, and scalable infrastructure.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div 
+          *ngFor="let service of gcpServices; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+          [ngClass]="getColorClasses(service.colorScheme).border + ' ' + getColorClasses(service.colorScheme).hover + ' ' + getColorClasses(service.colorScheme).shadow"
+          [style.animation-delay]="(4.4 + i * 0.15) + 's'"
+        >
+          <div class="mb-4">
+            <img [src]="service.svgPath" [alt]="service.name + ' logo'" class="w-18 h-18 mx-auto group-hover:scale-110 transition-transform duration-300">
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">{{ service.name }}</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4" [title]="service.description">
+            {{ service.description | truncate:90:true:'...' }}
+          </p>
+          <p-button label="View Details" [text]="true" icon="pi pi-external-link" iconPos="right" (click)="showTechnologyDetails(service)" [ngClass]="getColorClasses(service.colorScheme).text" styleClass="w-full"></p-button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Other Cloud Platforms Section -->
+    <div class="mb-20">
+      <div class="text-center mb-16 animate-fade-in-up" style="animation-delay: 4.9s;">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          Other Cloud Platforms
+        </h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto mb-6"></div>
+        <p class="text-lg text-slate-600 max-w-3xl mx-auto">
+          Additional cloud services and platforms for specialized deployment and hosting requirements.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div 
+          *ngFor="let platform of otherCloudPlatforms; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center animate-fade-in-scale"
+          [ngClass]="getColorClasses(platform.colorScheme).border + ' ' + getColorClasses(platform.colorScheme).hover + ' ' + getColorClasses(platform.colorScheme).shadow"
+          [style.animation-delay]="(5.2 + i * 0.1) + 's'"
+        >
+          <div class="mb-4">
+            <img [src]="platform.svgPath" [alt]="platform.name + ' logo'" class="w-16 h-16 mx-auto group-hover:scale-110 transition-transform duration-300">
+          </div>
+          <div *ngIf="platform.badge" class="inline-block px-2 py-1 text-white text-xs font-bold rounded-full mb-3" [ngClass]="getColorClasses(platform.colorScheme).badge">
+            {{ platform.badge }}
+          </div>
+          <h3 class="text-lg font-bold text-slate-900 mb-3">{{ platform.name }}</h3>
+          <p class="text-slate-600 text-sm leading-relaxed mb-4" [title]="platform.description">
+            {{ platform.description | truncate:85:true:'...' }}
+          </p>
+          <p-button label="View Details" [text]="true" icon="pi pi-external-link" iconPos="right" (click)="showTechnologyDetails(platform)" [ngClass]="getColorClasses(platform.colorScheme).text" styleClass="w-full"></p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PrimeNG Dialog -->
+  <p-dialog 
+    [(visible)]="displayDialog" 
+    [modal]="true"
+    responsive="true" 
+    [style]="{'width': '90vw', 'max-width': '600px'}"
+    styleClass="technology-dialog animate-fade-in-scale"
+  >
+    <!-- Dialog Header -->
+    <ng-template pTemplate="header">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-lg flex items-center justify-center animate-pulse">
+          <i class="pi pi-database text-white text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-900">Technology Details</h3>
+          <p class="text-sm text-slate-600">Complete information about this solution</p>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- Dialog Content -->
+    <div *ngIf="selectedTechnology" class="space-y-6">
+      <!-- Technology Logo in Dialog -->
+      <div class="text-center bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-8 animate-fade-in-up">
+        <img 
+          [src]="selectedTechnology.svgPath" 
+          [alt]="selectedTechnology.name + ' logo'"
+          class="w-24 h-24 mx-auto mb-4 hover:scale-110 transition-transform duration-300"
+        >
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">{{ selectedTechnology.name }}</h2>
+        <div 
+          *ngIf="selectedTechnology.badge"
+          class="inline-block px-4 py-2 bg-indigo-600 text-white text-sm font-semibold rounded-full animate-pulse"
+        >
+          {{ selectedTechnology.badge }}
+        </div>
+      </div>
+
+      <!-- Full Description -->
+      <div class="bg-slate-50 rounded-xl p-6 animate-fade-in-up" style="animation-delay: 0.1s;">
+        <h4 class="text-lg font-bold text-slate-900 mb-3 flex items-center gap-2">
+          <i class="pi pi-info-circle text-indigo-600"></i>
+          Description
+        </h4>
+        <p class="text-slate-700 leading-relaxed">
+          {{ selectedTechnology.description }}
+        </p>
+      </div>
+
+      <!-- Key Features -->
+      <div class="bg-white border border-slate-200 rounded-xl p-6 animate-fade-in-up" style="animation-delay: 0.2s;">
+        <h4 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+          <i class="pi pi-star text-orange-500"></i>
+          Key Features
+        </h4>
+        <div class="space-y-4">
+          <div 
+            *ngFor="let feature of selectedTechnology.features; let i = index" 
+            class="bg-slate-50 rounded-lg p-4 hover:bg-slate-100 transition-colors duration-200 animate-fade-in-up"
+            [style.animation-delay]="(0.3 + i * 0.1) + 's'"
+          >
+            <div class="flex gap-3">
+              <div class="w-2 h-2 bg-indigo-500 rounded-full mt-2 flex-shrink-0"></div>
+              <div>
+                <h5 class="font-semibold text-slate-900 mb-2">{{ feature.title }}</h5>
+                <p class="text-slate-600 text-sm leading-relaxed">{{ feature.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dialog Footer -->
+    <ng-template pTemplate="footer">
+      <p-button 
+        label="Close" 
+        icon="pi pi-times"
+        [text]="true"
+        (click)="hideDialog()"
+        class="animate-fade-in-up"
+      ></p-button>
+    </ng-template>
+  </p-dialog>
+</section>

@@ -1,0 +1,128 @@
+<app-outdoor-hero-section [config]="arHeroConfig" />
+<app-quotes [testimonials]="testimonials"></app-quotes>
+<!-- What is AR Advertising Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="/outdoor/3dbillboard/3dbillboard3.webp" alt="City Background" class="w-full h-full object-cover">
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-orange-600">AR Advertising?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Augmented Reality (AR) advertising is a form of digital marketing that uses AR technology to overlay interactive
+        digital elements onto the real world. Our team will help you understand the power of AR advertising and how it
+        can benefit your business.
+      </p>
+    </div>
+  </div>
+</section>
+
+<app-benefitsnew [benefits]="benefitsAR.benefits" [title]="benefitsAR.title"
+  [description]="benefitsAR.description"></app-benefitsnew>
+
+<section class="py-16 bg-white">
+  <!-- Heading -->
+  <div class="text-center mb-12">
+    <h1
+      class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent mb-4">
+      Industries that Can Benefit from AR Advertising
+    </h1>
+    <p class="text-gray-600 max-w-2xl mx-auto text-base">
+      We help various industries reach their target audience through AR advertising.
+      Explore some of the industries that can benefit from our innovative solutions.
+    </p>
+  </div>
+
+  <!-- Industries Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div *ngFor="let industry of arIndustries"
+      class="group bg-white border border-orange-100 rounded-2xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+      <div
+        class="mx-auto mb-5 w-16 h-16 flex items-center justify-center rounded-full bg-orange-100 text-orange-600 transition-all duration-500 group-hover:bg-orange-500 group-hover:text-white">
+        <i [class]="industry.icon + ' text-2xl'"></i>
+      </div>
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">
+        {{ industry.title }}
+      </h3>
+      <p class="text-sm text-gray-600">{{ industry.desc }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-orange-50/30">
+  <!-- Heading -->
+  <div class="text-center mb-12">
+    <h1
+      class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent mb-4">
+      How Pencil Peel IMT Works on AR Advertising Campaigns
+    </h1>
+    <p class="text-gray-600 max-w-2xl mx-auto text-base">
+      Our team collaborates closely with you to deliver AR advertising campaigns that drive results.
+    </p>
+  </div>
+
+  <!-- Steps Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div *ngFor="let step of arCampaignSteps"
+      class="group bg-white border border-orange-100 rounded-2xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+      <div
+        class="mx-auto mb-5 w-16 h-16 flex items-center justify-center rounded-full bg-orange-100 text-orange-600 transition-all duration-500 group-hover:bg-orange-500 group-hover:text-white">
+        <i [class]="step.icon + ' text-2xl'"></i>
+      </div>
+
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">
+        {{ step.title }}
+      </h3>
+      <p class="text-sm text-gray-600">{{ step.desc }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-white">
+  <!-- Heading -->
+  <div class="text-center mb-12">
+    <h1
+      class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent mb-4">
+      How Pencil Peel IMT Can Help You Grow
+    </h1>
+    <p class="text-gray-600 max-w-2xl mx-auto text-base">
+      Our team will help you achieve tangible results with AR advertising campaigns.
+    </p>
+  </div>
+
+  <!-- Benefits Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div *ngFor="let benefit of growthBenefits"
+      class="group bg-white border border-orange-100 rounded-2xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+      <div
+        class="mx-auto mb-5 w-16 h-16 flex items-center justify-center rounded-full bg-orange-100 text-orange-600 transition-all duration-500 group-hover:bg-orange-500 group-hover:text-white">
+        <i [class]="benefit.icon + ' text-2xl'"></i>
+      </div>
+
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">
+        {{ benefit.title }}
+      </h3>
+      <p class="text-sm text-gray-600">{{ benefit.desc }}</p>
+    </div>
+  </div>
+</section>
+
+<app-whycpencilpeel [features]="whyChooseARAdvertising.features" [headerContent]="whyChooseARAdvertising" />
+
+<section class="py-16 bg-orange-50/30">
+  <div class="text-center max-w-3xl mx-auto">
+    <p class="text-gray-700 text-lg mb-6">
+      By partnering with <span class="font-semibold text-orange-600">Pencil Peel IMT</span>,
+      you can unlock the full potential of AR advertising and drive business growth.
+      Contact us today to learn more about our AR advertising services.
+    </p>
+    <a href="/contact"
+      class="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
+      Contact Us Today
+    </a>
+  </div>
+</section>

@@ -1,0 +1,391 @@
+<app-outdoor-hero-section [config]="retailAdvertisingHeroConfig" />
+<app-quotes [testimonials]="testimonials"></app-quotes>
+
+<section class="relative bg-orange-50 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-6 lg:px-20 py-16 lg:py-24 flex flex-col-reverse lg:flex-row items-center gap-12">
+
+    <!-- Text Content -->
+    <div class="lg:w-1/2 space-y-6">
+      <h2 class="text-4xl lg:text-5xl font-extrabold text-orange-600 drop-shadow-md">
+        What is Retail Advertising?
+      </h2>
+      <p class="text-lg lg:text-xl text-gray-700 leading-relaxed">
+        Retail advertising refers to the promotion of a retail business's products or services directly to consumers to drive sales, attract foot traffic, and increase brand visibility.
+      </p>
+      <p class="text-lg lg:text-xl text-gray-700 leading-relaxed">
+        Our team will help you understand the power of retail advertising and how it can benefit your business.
+      </p>
+      <button pButton type="button" label="Learn More" class="bg-orange-600 text-white font-semibold px-8 py-3 rounded-xl shadow-lg hover:bg-orange-500 hover:scale-105 transition-transform duration-300"></button>
+    </div>
+
+    <!-- Image Content -->
+    <div class="lg:w-1/2 flex justify-center lg:justify-end">
+      <img src="outdoor/retail/retail2.webp" alt="Retail Advertising" class="rounded-xl shadow-2xl w-full max-w-md transform hover:scale-105 transition-transform duration-500">
+    </div>
+
+  </div>
+
+  <!-- Decorative Blobs -->
+  <div class="absolute top-0 left-0 w-64 h-64 bg-orange-200 opacity-20 rounded-full -translate-x-32 -translate-y-32 animate-pulse"></div>
+  <div class="absolute bottom-0 right-0 w-96 h-96 bg-orange-300 opacity-20 rounded-full translate-x-32 translate-y-32 animate-pulse"></div>
+</section>
+
+<div class="container mx-auto px-6 py-12">
+  <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-gray-900">
+    Types of Retail Advertising
+  </h2>
+  <p class="text-center text-gray-600 mb-12 text-lg md:text-xl max-w-2xl mx-auto">
+    Discover the best retail advertising strategies tailored for your business growth.
+  </p>
+
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <ng-container *ngFor="let ad of advertisingTypes">
+      <p-card
+        [style]="{'background': 'linear-gradient(135deg, #7f5af0, #ff6ec7, #ff416c)'}"
+        [styleClass]="'relative overflow-hidden rounded-2xl p-6 shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl group'"
+      >
+        <!-- Card Title -->
+        <ng-template pTemplate="title">
+          <div class="flex flex-col items-center justify-center gap-4 mb-4">
+            <i class="{{ ad.icon }} text-5xl md:text-6xl text-white transition-transform group-hover:rotate-12"></i>
+            <span class="text-white text-2xl md:text-3xl font-extrabold text-center">
+              {{ ad.title }}
+            </span>
+          </div>
+        </ng-template>
+
+        <!-- Card Content -->
+        <ng-template pTemplate="content">
+          <p class="text-white text-center text-md md:text-lg">
+            {{ ad.description }}
+          </p>
+        </ng-template>
+      </p-card>
+    </ng-container>
+  </div>
+</div>
+
+
+<div class="container mx-auto px-6 py-12">
+  <!-- Section Heading -->
+  <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-8 text-gray-900">
+    How to Execute Retail Advertising
+  </h2>
+  <p class="text-center text-gray-600 mb-12 text-lg md:text-xl max-w-3xl mx-auto">
+    Our team works closely with you to create campaigns that reach the right audience, generate results, and grow your business.
+  </p>
+
+  <!-- Dynamic Cards Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <ng-container *ngFor="let step of retailExecutionSteps">
+      <p-card
+        [style]="{'background': 'linear-gradient(135deg, #06b6d4, #3b82f6, #8b5cf6)'}"
+        [styleClass]="'relative overflow-hidden rounded-2xl p-6 shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl group'"
+      >
+        <!-- Icon inside Circle -->
+        <ng-template pTemplate="title">
+          <div class="flex flex-col items-center mb-4">
+            <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
+              <i class="{{ step.icon }} text-2xl md:text-3xl text-white"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-white text-center">{{ step.title }}</h3>
+          </div>
+        </ng-template>
+
+        <!-- Content -->
+        <ng-template pTemplate="content">
+          <p class="text-white text-center text-sm md:text-md">{{ step.description }}</p>
+        </ng-template>
+      </p-card>
+    </ng-container>
+  </div>
+</div>
+
+<div class="container mx-auto px-6 py-12">
+  <!-- Section Heading -->
+  <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-8 text-gray-900">
+    Benefits of Retail Advertising
+  </h2>
+  <p class="text-center text-gray-600 mb-12 text-lg md:text-xl max-w-3xl mx-auto">
+    Our team highlights the benefits of retail advertising, helping your business grow and engage customers effectively.
+  </p>
+
+  <!-- Benefits Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <ng-container *ngFor="let benefit of retailAdvertisingBenefits">
+      <p-card
+        [style]="{'background': 'linear-gradient(135deg, #10b981, #3b82f6, #6366f1)'}"
+        [styleClass]="'relative overflow-hidden rounded-2xl p-6 shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl group'"
+      >
+        <!-- Icon inside Circle -->
+        <ng-template pTemplate="title">
+          <div class="flex flex-col items-center mb-4">
+            <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
+              <i class="{{ benefit.icon }} text-2xl md:text-3xl text-white"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-white text-center">{{ benefit.title }}</h3>
+          </div>
+        </ng-template>
+
+        <!-- Content -->
+        <ng-template pTemplate="content">
+          <p class="text-white text-center text-sm md:text-md">{{ benefit.description }}</p>
+        </ng-template>
+      </p-card>
+    </ng-container>
+  </div>
+</div>
+
+
+<div class="container mx-auto px-6 py-16">
+  <!-- Section Heading -->
+  <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-gray-900">
+    Why Retail Advertising is Important
+  </h2>
+  <p class="text-center text-gray-600 mb-12 text-lg md:text-xl max-w-3xl mx-auto">
+    Discover how retail advertising can elevate your business, boost revenue, and strengthen your brand.
+  </p>
+
+  <!-- Benefits List -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <ng-container *ngFor="let item of retailAdvertisingImportance">
+      <div class="flex items-start bg-gray-50 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow group">
+        <!-- Icon Circle -->
+        <div class="w-14 h-14 flex-shrink-0 rounded-full bg-indigo-500 flex items-center justify-center text-white text-xl mr-4 transition-transform group-hover:scale-110">
+          <i class="{{ item.icon }}"></i>
+        </div>
+        <!-- Text -->
+        <div>
+          <h3 class="text-lg md:text-xl font-semibold text-gray-900 mb-1">{{ item.title }}</h3>
+          <p class="text-gray-700 text-sm md:text-md">{{ item.description }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- Call to Action Panel -->
+  <div class="mt-12 bg-indigo-600 text-white rounded-2xl p-8 text-center shadow-lg hover:shadow-2xl transition-shadow">
+    <h3 class="text-2xl md:text-3xl font-bold mb-4">
+      Unlock the Full Potential of Retail Advertising
+    </h3>
+    <p class="text-md md:text-lg mb-6">
+      Partner with Pencil Peel to drive business growth and achieve your marketing objectives.
+    </p>
+    <button class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition-colors">
+      Contact Us
+    </button>
+  </div>
+</div>
+
+<div class="container mx-auto px-6 py-16">
+  <!-- Section Heading -->
+  <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-gray-900">
+    Industries that Can Benefit from Retail Advertising
+  </h2>
+  <p class="text-center text-gray-600 mb-12 text-lg md:text-xl max-w-3xl mx-auto">
+    We help various industries reach their target audience through retail advertising.
+  </p>
+
+  <!-- Industries Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <ng-container *ngFor="let industry of industries">
+      <p-card
+        [style]="{'background': 'linear-gradient(135deg, #f472b6, #8b5cf6, #6366f1)'}"
+        [styleClass]="'relative overflow-hidden rounded-2xl p-6 shadow-lg transition-transform transform hover:scale-105 hover:shadow-2xl group'"
+      >
+        <!-- Icon Circle -->
+        <ng-template pTemplate="title">
+          <div class="flex flex-col items-center mb-4">
+            <div class="w-16 h-16 rounded-full bg-white/20 flex items-center justify-center mb-3 transition-transform group-hover:scale-110">
+              <i class="{{ industry.icon }} text-2xl md:text-3xl text-white"></i>
+            </div>
+            <h3 class="text-xl md:text-2xl font-bold text-white text-center">{{ industry.title }}</h3>
+          </div>
+        </ng-template>
+
+        <!-- Description -->
+        <ng-template pTemplate="content">
+          <p class="text-white text-center text-sm md:text-md">{{ industry.description }}</p>
+        </ng-template>
+      </p-card>
+    </ng-container>
+  </div>
+</div>
+
+<div class="container mx-auto px-6 py-16">
+  <!-- Section Heading -->
+  <h2 class="text-4xl md:text-5xl font-extrabold text-center mb-6 text-gray-900">
+    How Pencil Peel IMT Works on Retail Advertising Campaigns
+  </h2>
+  <p class="text-center text-gray-600 mb-12 text-lg md:text-xl max-w-3xl mx-auto">
+    Our team works closely with you to craft campaigns that deliver results and drive business growth.
+  </p>
+
+  <!-- Steps Zig-Zag -->
+  <div class="space-y-12">
+    <ng-container *ngFor="let step of retailCampaignSteps; let i = index">
+      <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-6" [ngClass]="{'md:flex-row-reverse': i % 2 !== 0}">
+        <!-- Icon -->
+        <div class="flex-shrink-0 w-20 h-20 rounded-full flex items-center justify-center text-white text-2xl md:text-3xl font-bold"
+             [ngStyle]="{'background': step.color}">
+          <i class="{{ step.icon }}"></i>
+        </div>
+
+        <!-- Content Box -->
+        <div class="bg-gray-50 rounded-2xl p-6 md:w-2/3 shadow-lg hover:shadow-2xl transition-shadow mt-4 md:mt-0">
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-2">{{ step.title }}</h3>
+          <p class="text-gray-700 text-sm md:text-md">{{ step.description }}</p>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+
+  <!-- Call to Action Panel -->
+  <div class="mt-16 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white rounded-2xl p-10 text-center shadow-lg hover:shadow-2xl transition-shadow">
+    <h3 class="text-2xl md:text-3xl font-bold mb-4">
+      Unlock the Full Potential of Retail Advertising
+    </h3>
+    <p class="text-md md:text-lg mb-6">
+      Partner with Pencil Peel to create campaigns that engage, convert, and grow your business.
+    </p>
+    <button class="bg-white text-indigo-600 font-semibold px-6 py-3 rounded-full shadow-md hover:bg-gray-100 transition-colors">
+      Contact Us
+    </button>
+  </div>
+</div>
+
+<section class="relative bg-gradient-to-br from-orange-50 via-white to-amber-50 py-16 px-6">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2
+      class="text-4xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-yellow-400 to-red-500 mb-6 animate-text-shimmer">
+      Best Practices for Retail Advertising with Pencil Peel IMT
+    </h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+      At Pencil Peel IMT, we help brands create impactful retail advertising campaigns that drive results.
+    </p>
+
+    <!-- Accordion for detailed practices -->
+    <div class="mt-12">
+      <p-accordion [value]="activeAccordionValue" [multiple]="true" class="shadow-none">
+        <ng-container *ngFor="let item of accordionItems">
+          <p-accordion-panel [value]="item.value"
+            class="bg-white/70 backdrop-blur-md mb-2 border border-white/30 rounded-xl overflow-hidden shadow-md">
+            <p-accordion-header>
+              <div class="flex items-center gap-3">
+                <i *ngIf="item.icon" [class]="item.icon + ' text-orange-600'"></i>
+                <span class="font-semibold">{{ item.header }}</span>
+              </div>
+            </p-accordion-header>
+            <p-accordion-content>
+              <p class="text-gray-700 m-0 text-left">{{ item.content }}</p>
+            </p-accordion-content>
+          </p-accordion-panel>
+        </ng-container>
+      </p-accordion>
+    </div>
+  </div>
+</section>
+
+<section class="relative bg-gradient-to-br from-orange-100 via-yellow-50 to-red-50 py-20 px-6">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2
+      class="text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 mb-8 animate-text-shimmer">
+      Why Choose Pencil Peel IMT for Retail Advertising?
+    </h2>
+    <p class="text-lg md:text-xl text-gray-700 max-w-4xl mx-auto mb-16">
+      At Pencil Peel IMT, we craft retail advertising campaigns that engage your audience, elevate your brand, and deliver measurable growth.
+    </p>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+      <!-- Card Template -->
+      <div class="group relative rounded-2xl bg-gradient-to-br from-white via-yellow-50 to-orange-50 border border-orange-200 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 flex flex-col items-start">
+        <div class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-gradient-to-tr from-orange-400 to-red-400 text-white text-2xl shadow-lg">
+          <i class="fas fa-user-tie"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 group-hover:text-red-500 transition-colors">Expertise</h3>
+        <p class="text-gray-700">Our team has years of experience creating retail advertising campaigns that grow businesses and boost brand visibility.</p>
+      </div>
+
+      <div class="group relative rounded-2xl bg-gradient-to-br from-white via-yellow-50 to-orange-50 border border-orange-200 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 flex flex-col items-start">
+        <div class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-gradient-to-tr from-orange-400 to-red-400 text-white text-2xl shadow-lg">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 group-hover:text-red-500 transition-colors">Customized Approach</h3>
+        <p class="text-gray-700">We design strategies tailored to your business goals, ensuring every campaign is aligned with your objectives.</p>
+      </div>
+
+      <div class="group relative rounded-2xl bg-gradient-to-br from-white via-yellow-50 to-orange-50 border border-orange-200 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 flex flex-col items-start">
+        <div class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-gradient-to-tr from-orange-400 to-red-400 text-white text-2xl shadow-lg">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 group-hover:text-red-500 transition-colors">Creative Content</h3>
+        <p class="text-gray-700">Engaging and visually appealing content that resonates with your audience and drives action.</p>
+      </div>
+
+      <div class="group relative rounded-2xl bg-gradient-to-br from-white via-yellow-50 to-orange-50 border border-orange-200 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 flex flex-col items-start">
+        <div class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-gradient-to-tr from-orange-400 to-red-400 text-white text-2xl shadow-lg">
+          <i class="fas fa-network-wired"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 group-hover:text-red-500 transition-colors">Multi-Channel Expertise</h3>
+        <p class="text-gray-700">We are experts in print, digital, broadcast, out-of-home, in-store, and direct mail advertising.</p>
+      </div>
+
+      <div class="group relative rounded-2xl bg-gradient-to-br from-white via-yellow-50 to-orange-50 border border-orange-200 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 flex flex-col items-start">
+        <div class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-gradient-to-tr from-orange-400 to-red-400 text-white text-2xl shadow-lg">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 group-hover:text-red-500 transition-colors">Measurable Results</h3>
+        <p class="text-gray-700">Detailed analytics help assess campaign performance and guide data-driven decisions for improvement.</p>
+      </div>
+
+      <div class="group relative rounded-2xl bg-gradient-to-br from-white via-yellow-50 to-orange-50 border border-orange-200 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 flex flex-col items-start">
+        <div class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-gradient-to-tr from-orange-400 to-red-400 text-white text-2xl shadow-lg">
+          <i class="fas fa-dollar-sign"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 group-hover:text-red-500 transition-colors">ROI-Driven Approach</h3>
+        <p class="text-gray-700">We optimize every campaign to maximize ROI and achieve tangible business objectives.</p>
+      </div>
+
+      <div class="group relative rounded-2xl bg-gradient-to-br from-white via-yellow-50 to-orange-50 border border-orange-200 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 flex flex-col items-start">
+        <div class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-gradient-to-tr from-orange-400 to-red-400 text-white text-2xl shadow-lg">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 group-hover:text-red-500 transition-colors">Customer-Centric Approach</h3>
+        <p class="text-gray-700">Our strategies are designed to meet customer needs and offer meaningful value at every touchpoint.</p>
+      </div>
+
+      <div class="group relative rounded-2xl bg-gradient-to-br from-white via-yellow-50 to-orange-50 border border-orange-200 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 flex flex-col items-start">
+        <div class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-gradient-to-tr from-orange-400 to-red-400 text-white text-2xl shadow-lg">
+          <i class="fas fa-calendar-alt"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 group-hover:text-red-500 transition-colors">Seasonal Campaigns</h3>
+        <p class="text-gray-700">We plan around holidays, back-to-school periods, and major sales events for maximum impact.</p>
+      </div>
+
+      <div class="group relative rounded-2xl bg-gradient-to-br from-white via-yellow-50 to-orange-50 border border-orange-200 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 flex flex-col items-start">
+        <div class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-gradient-to-tr from-orange-400 to-red-400 text-white text-2xl shadow-lg">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 group-hover:text-red-500 transition-colors">Local Market Expertise</h3>
+        <p class="text-gray-700">We help your brand establish a strong local presence and effectively engage your community.</p>
+      </div>
+
+      <div class="group relative rounded-2xl bg-gradient-to-br from-white via-yellow-50 to-orange-50 border border-orange-200 shadow-xl hover:shadow-2xl transition-transform transform hover:-translate-y-2 p-8 flex flex-col items-start">
+        <div class="flex items-center justify-center w-16 h-16 mb-5 rounded-full bg-gradient-to-tr from-orange-400 to-red-400 text-white text-2xl shadow-lg">
+          <i class="fas fa-headset"></i>
+        </div>
+        <h3 class="text-2xl font-semibold mb-3 group-hover:text-red-500 transition-colors">Ongoing Support</h3>
+        <p class="text-gray-700">We provide continuous guidance and support to ensure the lasting success of your campaigns.</p>
+      </div>
+    </div>
+
+    <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mt-16 mb-6">
+      Partner with <span class="font-semibold text-red-500">Pencil Peel IMT</span> to unlock the full potential of retail advertising and drive your business growth.
+    </p>
+
+    <a href="/contact" 
+       class="inline-block mt-4 px-8 py-4 text-white font-semibold rounded-full bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 shadow-lg hover:shadow-2xl transition-transform transform hover:-translate-y-1 hover:scale-105">
+      Contact Us
+    </a>
+  </div>
+</section>

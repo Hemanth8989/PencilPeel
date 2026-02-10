@@ -1,0 +1,91 @@
+<app-outdoor-hero-section [config]="floorGraphicsHeroConfig" />
+<app-quotes [testimonials]="testimonials"></app-quotes>
+<!-- What is Floor Graphics Advertising Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="/outdoor/3dbillboard/3dbillboard3.webp" alt="City Background" class="w-full h-full object-cover">
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-orange-600">Floor Graphics Advertising?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Floor graphics advertising uses custom-designed vinyl decals or stickers applied to floors to convey marketing
+        messages, brand promotions, or directional signage. Our team will help you understand the power of floor
+        graphics advertising and how it can benefit your business.
+      </p>
+    </div>
+  </div>
+</section>
+
+<app-benefitsnew [benefits]="benefitsFloorGraphics.benefits" [title]="benefitsFloorGraphics.title"
+  [description]="benefitsFloorGraphics.description"></app-benefitsnew>
+<section class="relative py-20 bg-white overflow-hidden">
+  <!-- Industries Section -->
+  <div class="max-w-6xl mx-auto px-6 lg:flex lg:items-center lg:gap-12">
+    <!-- Text -->
+    <div class="lg:w-1/2 mb-12 lg:mb-0">
+      <h1
+        class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent mb-4">
+        Industries that Can Benefit from Floor Graphics Advertising
+      </h1>
+      <p class="text-gray-600 text-base mb-6">
+        We help various industries reach their target audience through innovative floor graphics advertising.
+      </p>
+    </div>
+
+    <!-- Dynamic Cards -->
+    <div class="lg:w-1/2 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div *ngFor="let industry of floorIndustries"
+        class="group bg-orange-50 border border-orange-100 rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2 hover:bg-gradient-to-r hover:from-orange-100 hover:to-orange-200">
+        <div
+          class="mb-4 w-16 h-16 flex items-center justify-center mx-auto rounded-full bg-orange-100 text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-all duration-500">
+          <i [class]="industry.icon + ' text-2xl'"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ industry.title }}</h3>
+        <p class="text-sm text-gray-600">{{ industry.desc }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- How We Help Section -->
+  <div class="mt-24 max-w-6xl mx-auto px-6">
+    <h2
+      class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent mb-12 text-center">
+      How Pencil Peel IMT Can Help Your Brand Growth
+    </h2>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div *ngFor="let benefit of floorBenefits"
+        class="group relative bg-white border border-orange-100 rounded-2xl p-6 text-center shadow-md hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+        <div
+          class="mb-4 w-16 h-16 flex items-center justify-center mx-auto rounded-full bg-orange-100 text-orange-600 group-hover:bg-orange-500 group-hover:text-white transition-all duration-500">
+          <i [class]="benefit.icon + ' text-2xl'"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">{{ benefit.title }}</h3>
+        <p class="text-sm text-gray-600">{{ benefit.desc }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-whycpencilpeel [features]="whyChooseFloorGraphics.features" [headerContent]="whyChooseFloorGraphics" />
+
+<section class="py-16 bg-orange-50/30">
+  <div class="text-center max-w-3xl mx-auto">
+    <p class="text-gray-700 text-lg mb-6">
+      By partnering with <span class="font-semibold text-orange-600">Pencil Peel IMT</span>, 
+      you can unlock the full potential of floor graphics advertising and drive business growth. 
+      Contact us today to learn more about our floor graphics advertising services.
+    </p>
+    <a
+      href="/contact"
+      class="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+    >
+      Contact Us Today
+    </a>
+  </div>
+</section>

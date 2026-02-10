@@ -1,0 +1,9 @@
+.hero-carousel {
+  touch-action: pan-y !important; /* Enables vertical scroll on mobile */
+}
+
+@media (max-width: 768px) {
+  .hero-carousel {
+    overflow-y: auto; /* allow vertical scrolling */
+  }
+}

@@ -1,0 +1,551 @@
+<app-nocarouselquotes [quotes]="quotes" [herocontent]="herocontent"></app-nocarouselquotes>
+<section class="bg-white py-16 px-6 md:px-12 lg:px-24">
+  <div class="max-w-6xl mx-auto text-center">
+    <!-- Main Heading -->
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+      Welcome to <span class="text-orange-500">Pencil Peel IMT</span> - Crafting Exceptional Digital Experiences
+    </h2>
+
+    <!-- Original Content -->
+    <div class="text-lg text-gray-700 leading-relaxed space-y-6 text-justify">
+      <p>
+        The website is a portal that can be used to inform the world about our business or our organization and our organization.
+        In the modern era of changing age, we all know how computer usage has increased. 
+        - At a time when the world is locked in the web, we need to be different to be identified, 
+        and it is here that we help you have your own identity on the web.
+      </p>
+
+      <p>
+        Many prominent companies use the website to market their businesses. 
+        And also, it is a place on the World Wide Web, which contains a combination of web pages. 
+        We design your website that reflect your taste and protect your identity. 
+        We build and develop it as you desire.
+      </p>
+
+      <p>
+        <strong class="text-orange-500">Pencil Peel IMT</strong>’s star principle is designing the client’s website
+        to achieve and ensure <span class="font-semibold">Brand Awareness, Deeper Engagement, Increased Conversions, 
+        and High Brand Loyalty.</span>
+      </p>
+
+      <blockquote class="text-xl font-medium text-gray-900 italic border-l-4 border-indigo-500 pl-4">
+        “Count on our experience and bank on our competence.”
+      </blockquote>
+
+      <p>
+        At Pencil Peel IMT, we will help you create a website that not only looks great but also drives results for your business. 
+        Our team of experienced web designers and developers will work closely with you to understand your needs and goals, 
+        and develop a website that meets your expectations.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="relative bg-white py-16 md:py-24 lg:py-32">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-start gap-12">
+
+    <!-- Left: Section Title and Lead -->
+    <div class="flex-1 max-w-lg md:flex md:flex-col md:justify-center md:items-center text-center md:text-left">
+      <h2
+        class="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-gradient-to-r from-blue-600 via-teal-400 to-indigo-500 bg-clip-text animate-gradient-shine">
+        Why Your Company Must Have a Website?
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-700 font-base">
+        In today's digital age, having a website is no longer a luxury, but a necessity for businesses of all sizes.
+        At <span class="font-semibold text-indigo-600">Pencil Peel IMT</span>, we believe that a website is a crucial tool 
+        for establishing your online presence, reaching new customers, and driving business growth.
+      </p>
+    </div>
+
+    <!-- Right: Service Cards Grid -->
+    <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <ng-container *ngFor="let feature of websiteBenefits">
+        <div
+          [ngClass]="{
+            'rounded-xl shadow-lg p-6 flex flex-col min-h-[184px] border border-gray-100 hover:shadow-xl transition': true,
+            'sm:col-span-2': feature.fullWidth
+          }"
+        >
+          <div class="mb-4">
+            <i class="pi" [ngClass]="[feature.icon, feature.iconColor]" style="font-size: 2.25rem;"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-blue-700 mb-2">{{ feature.title }}</h3>
+          <p class="text-gray-700">{{ feature.description }}</p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- Decorative shapes -->
+  <div class="absolute top-0 left-0 w-44 h-44 bg-gradient-to-br from-blue-200 to-teal-100 rounded-full blur-2xl -z-10"></div>
+  <div class="absolute bottom-0 right-0 w-64 h-28 bg-gradient-to-tl from-teal-100 to-indigo-100 rounded-full blur-2xl -z-10"></div>
+</section>
+<section class="py-16 px-4 bg-gradient-to-br from-[#f0f4ff] via-white to-[#f6faed]">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12 text-center text-gray-900 drop-shadow-md">
+      Benefits of Having a Website with Pencil Peel IMT
+    </h2>
+    <div class="grid gap-8 md:grid-cols-2">
+      <div
+        *ngFor="let benefit of benefits"
+        class="flex items-start rounded-2xl bg-white/60 backdrop-blur-md border border-gray-200 shadow-xl p-7 hover:shadow-2xl transition"
+      >
+        <div
+          class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl text-white text-2xl mr-4"
+          [ngClass]="benefit.gradient"
+        >
+          <i [class]="'pi ' + benefit.icon"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-1">
+            {{ benefit.title }}
+          </h3>
+          <p class="text-gray-700 text-base">{{ benefit.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-ctacard />
+<section class="py-16 px-6 bg-white">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row gap-12">
+    
+    <!-- Left Panel: Heading and Intro -->
+    <div class="flex-1 flex flex-col justify-center text-center md:text-left max-w-lg mx-auto md:mx-0">
+      <h2
+        class="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-gradient-to-r from-indigo-500 via-purple-600 to-pink-500 bg-clip-text animate-gradient-shine"
+      >
+        How We Will Do for Your Company Growth
+      </h2>
+      <p class="text-lg text-gray-700 leading-relaxed">
+        Our team will:
+      </p>
+    </div>
+
+    <!-- Right Panel: Cards with Key Points -->
+    <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto md:mx-0">
+      
+      <div
+        class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-xl shadow-lg p-6 flex flex-col min-h-[160px] border border-gray-200 hover:shadow-xl transition"
+      >
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">
+          Design a visually appealing website
+        </h3>
+        <p class="text-gray-700">
+          We will design a website that is visually appealing, user-friendly, and consistent with your brand identity.
+        </p>
+      </div>
+
+      <div
+        class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-xl shadow-lg p-6 flex flex-col min-h-[160px] border border-gray-200 hover:shadow-xl transition"
+      >
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">
+          Develop a functional website
+        </h3>
+        <p class="text-gray-700">
+          We will develop a website that is functional, efficient, and scalable, ensuring that it meets your business needs.
+        </p>
+      </div>
+
+      <div
+        class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-xl shadow-lg p-6 flex flex-col min-h-[160px] border border-gray-200 hover:shadow-xl transition"
+      >
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">
+          Ensure responsive design
+        </h3>
+        <p class="text-gray-700">
+          We will ensure that your website is responsive, meaning it will look great and function well on all devices, including desktops, laptops, tablets, and smartphones.
+        </p>
+      </div>
+
+      <div
+        class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-xl shadow-lg p-6 flex flex-col min-h-[160px] border border-gray-200 hover:shadow-xl transition"
+      >
+        <h3 class="text-xl font-semibold text-indigo-600 mb-2">
+          Optimize for search engines
+        </h3>
+        <p class="text-gray-700">
+          We will optimize your website for search engines, ensuring that it is visible and easily found by your target audience.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+<section class="py-16 px-4 bg-gradient-to-br from-[#f0f4ff] via-white to-[#f6faed]">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12 text-center text-gray-900 drop-shadow-md">
+      Benefits of Website Design & Development with Pencil Peel IMT
+    </h2>
+    <div class="grid gap-8 md:grid-cols-2">
+      <div
+        *ngFor="let benefit of webdbenfits"
+        class="flex items-start rounded-2xl bg-white/60 backdrop-blur-md border border-gray-200 shadow-xl p-7 hover:shadow-2xl transition"
+      >
+        <div
+          class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl text-white text-2xl mr-4"
+          [ngClass]="benefit.gradient"
+        >
+          <i [class]="'pi ' + benefit.icon"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-1">
+            {{ benefit.title }}
+          </h3>
+          <p class="text-gray-700 text-base">
+            {{ benefit.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-16 px-4 sm:px-6 md:px-8 lg:px-12 bg-gradient-to-b from-white to-gray-50">
+  <!-- Header -->
+  <div class="max-w-5xl mx-auto text-center mb-14">
+    <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
+      The <span class="text-yellow-500">Website Design & Development Process</span>
+    </h2>
+    <p class="text-gray-600 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+      Our team will follow a structured process to ensure that your website meets your needs and expectations. Here's an overview of our process:
+    </p>
+  </div>
+
+  <!-- Desktop Timeline (Hidden on Mobile) -->
+  <div class="hidden md:block max-w-6xl mx-auto mb-16">
+    <p-timeline [value]="processSteps" align="alternate" styleClass="custom-timeline">
+      <ng-template pTemplate="marker" let-step>
+        <div class="flex items-center justify-center w-12 h-12 rounded-full shadow-lg transition-all duration-300"
+             [ngClass]="step.markerColor">
+          <i [class]="step.icon + ' text-white text-lg'"></i>
+        </div>
+      </ng-template>
+      <ng-template pTemplate="content" let-step let-i="index">
+        <div class="bg-white rounded-xl p-6 shadow-xl hover:shadow-3xl transition-all duration-300 border-2 border-gray-200 max-w-md">
+          <div class="flex items-center mb-4">
+            <span class="text-sm font-bold px-3 py-1 rounded-full"
+                  [ngClass]="step.badgeColor">
+              {{ step.step }}
+            </span>
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3">{{ step.title }}</h3>
+          <ul class="space-y-2">
+            <li *ngFor="let detail of step.details" class="flex items-start space-x-2 text-gray-600">
+              <i class="pi pi-check-circle text-green-500 text-sm mt-1"></i>
+              <span class="ml-1">{{ detail.description }}</span>
+            </li>
+          </ul>
+        </div>
+      </ng-template>
+    </p-timeline>
+  </div>
+
+  <!-- Mobile Card Flow (Hidden on Desktop) -->
+  <div class="md:hidden max-w-2xl mx-auto space-y-6 mb-12">
+    <div *ngFor="let step of processSteps; let i = index" class="transform transition-all duration-300">
+      <p-card styleClass="shadow-lg hover:shadow-xl transition-all duration-300 border-2 border-gray-200">
+        <ng-template pTemplate="header">
+          <div class="flex items-center p-4 pb-0">
+            <div class="flex items-center justify-center w-12 h-12 rounded-full shadow-md mr-4"
+                 [ngClass]="step.markerColor">
+              <i [class]="step.icon + ' text-white text-lg'"></i>
+            </div>
+            <div>
+              <span class="text-xs font-bold px-2 py-1 rounded-full"
+                    [ngClass]="step.badgeColor">
+                {{ step.step }}
+              </span>
+              <h3 class="text-lg font-bold text-gray-800 mt-1">{{ step.title }}</h3>
+            </div>
+          </div>
+        </ng-template>
+        <div class="px-4 pb-4">
+          <ul class="space-y-3">
+            <li *ngFor="let detail of step.details" class="border-l-4 border-gray-200 pl-4 py-2">
+              <div class="flex items-start space-x-2">
+                <i class="pi pi-check-circle text-green-500 text-sm mt-1"></i>
+                <p class="text-gray-600 text-sm mt-1">{{ detail.description }}</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </p-card>
+    </div>
+  </div>
+</section>
+<section class="py-16 px-4 bg-gradient-to-br from-[#f0f4ff] via-white to-[#f6faed]">
+  <div class="max-w-7xl mx-auto">
+    <!-- Title & Subtitle -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-transparent bg-gradient-to-r from-indigo-700 via-purple-500 to-pink-400 bg-clip-text mb-6 drop-shadow-md">
+        Our Services at Pencil Peel IMT
+      </h2>
+      <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-medium">
+        At <span class="font-semibold text-indigo-700">Pencil Peel IMT</span>, we offer a comprehensive range of services to create and maintain your strong online presence. Our experienced professionals work closely with you to understand your goals and deliver high-quality solutions that meet your expectations.
+      </p>
+    </div>
+
+    <!-- Service Cards Grid -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        *ngFor="let service of services"
+        [ngClass]="'bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200 shadow-xl p-8 hover:shadow-2xl transition ' + service.colorClass"
+      >
+        <h3 class="text-2xl font-semibold mb-3 text-current">
+          {{ service.title }}
+        </h3>
+        <p class="text-gray-700 mb-4 whitespace-pre-line">
+          {{ service.summary }}
+        </p>
+        <ul class="space-y-4 text-gray-600 list-disc pl-5">
+          <li *ngFor="let highlight of service.highlights">
+            <strong class="block font-semibold mb-1">{{ highlight.title }}</strong>
+            <span>{{ highlight.description }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-16 px-4 bg-gradient-to-br from-[#f0f4ff] via-white to-[#f6faed]">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-transparent bg-gradient-to-r from-indigo-700 via-purple-500 to-pink-400 bg-clip-text mb-6 drop-shadow-md">
+        Global Services with Pencil Peel IMT
+      </h2>
+      <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-medium">
+        At <span class="font-semibold text-indigo-700">Pencil Peel IMT</span>, we understand the importance of reaching a global audience. Our team provides top-notch services to help you expand your online presence globally. Here's what we will do:
+      </p>
+    </div>
+
+    <!-- Services Grid -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        *ngFor="let service of globalServices"
+        [ngClass]="'bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200 shadow-xl p-8 hover:shadow-2xl transition ' + service.colorClass"
+      >
+        <h3 class="text-2xl font-semibold mb-3 text-current">
+          {{ service.title }}
+        </h3>
+        <p class="text-gray-700 mb-4 whitespace-pre-line">
+          {{ service.summary }}
+        </p>
+        <ul class="space-y-4 text-gray-600 list-disc pl-5">
+          <li *ngFor="let highlight of service.highlights">
+            <strong class="block font-semibold mb-1">{{ highlight.title }}</strong>
+            <span>{{ highlight.description }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-16 px-4 bg-gradient-to-br from-[#f0f4ff] via-white to-[#f6faed]">
+  <div class="max-w-7xl mx-auto">
+    <!-- Section Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-transparent bg-gradient-to-r from-indigo-700 via-purple-500 to-pink-400 bg-clip-text mb-6 drop-shadow-md">
+        Website Hosting with Pencil Peel IMT
+      </h2>
+      <p class="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-medium">
+        At <span class="font-semibold text-indigo-700">Pencil Peel IMT</span>, we understand the importance of reliable website hosting for your online presence. Our team will provide top-notch website hosting services that ensure your website is always up and running, with minimal downtime. Here's what we will do:
+      </p>
+    </div>
+
+    <!-- Hosting Services Grid -->
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+      <div
+        *ngFor="let service of websiteHostingServices"
+        [ngClass]="'bg-white/80 backdrop-blur-md rounded-2xl border border-gray-200 shadow-xl p-8 hover:shadow-2xl transition ' + service.colorClass"
+      >
+        <h3 class="text-2xl font-semibold mb-3 text-current">
+          {{ service.title }}
+        </h3>
+        <p class="text-gray-700 mb-4 whitespace-pre-line">
+          {{ service.summary }}
+        </p>
+        <ul class="space-y-4 text-gray-600 list-disc pl-5">
+          <li *ngFor="let highlight of service.highlights">
+            <strong class="block font-semibold mb-1">{{ highlight.title }}</strong>
+            <span>{{ highlight.description }}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-16 px-4 bg-gradient-to-br from-[#f0f4ff] via-white to-[#f6faed]">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-4xl font-bold mb-12 text-center text-gray-900 drop-shadow-md">
+      Benefits of Website Hosting with Pencil Peel IMT
+    </h2>
+    <div class="grid gap-8 md:grid-cols-2">
+      <div
+        *ngFor="let benefit of hostingBenefits"
+        class="flex items-start rounded-2xl bg-white/60 backdrop-blur-md border border-gray-200 shadow-xl p-7 hover:shadow-2xl transition"
+      >
+        <div
+          class="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl text-white text-2xl mr-4"
+          [ngClass]="benefit.gradient"
+        >
+          <i [class]="'pi ' + benefit.icon"></i>
+        </div>
+        <div>
+          <h3 class="text-lg font-semibold mb-1">
+            {{ benefit.title }}
+          </h3>
+          <p class="text-gray-700 text-base">{{ benefit.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-whycpencilpeel [features]="whycfeatures" [headerContent]="whyccontent" />
+<section class="py-16 px-6 bg-gradient-to-br from-[#f0f4ff] via-white to-[#f6faed]">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-4xl font-extrabold text-gray-900 mb-6">
+      Website Domain with Pencil Peel IMT
+    </h2>
+    <p class="text-lg text-gray-700 max-w-3xl mx-auto mb-12">
+      At <strong>Pencil Peel IMT</strong>, we understand the importance of a domain for your online presence.
+      Our team will help you register and manage your domain, ensuring that your website is accessible to your target audience.<br>
+      <span class="block mt-2 font-medium text-indigo-700">Here's what we will do:</span>
+    </p>
+
+    <!-- Card Grid -->
+    <div class="grid gap-8 md:grid-cols-3">
+      <!-- Domain Registration Card -->
+      <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 flex flex-col items-center hover:shadow-2xl transition">
+        <div class="w-14 h-14 rounded-full bg-indigo-500 flex items-center justify-center mb-4">
+          <i class="pi pi-lock text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Domain Registration</h3>
+        <p class="text-gray-700 text-base">
+          We will register your domain name, ensuring that it is secured and protected.
+        </p>
+      </div>
+
+      <!-- Domain Management Card -->
+      <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 flex flex-col items-center hover:shadow-2xl transition">
+        <div class="w-14 h-14 rounded-full bg-purple-500 flex items-center justify-center mb-4">
+          <i class="pi pi-cog text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Domain Management</h3>
+        <p class="text-gray-700 text-base">
+          We will manage your domain settings, ensuring that it is configured correctly and pointing to your website.
+        </p>
+      </div>
+
+      <!-- Domain Renewal Card -->
+      <div class="bg-white rounded-2xl shadow-xl border border-gray-200 p-8 flex flex-col items-center hover:shadow-2xl transition">
+        <div class="w-14 h-14 rounded-full bg-pink-500 flex items-center justify-center mb-4">
+          <i class="pi pi-refresh text-white text-2xl"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-2">Domain Renewal</h3>
+        <p class="text-gray-700 text-base">
+          We will remind you of domain renewal dates, ensuring that your domain remains active and secure.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="relative py-20 px-4 md:px-12 lg:px-24 overflow-hidden">
+  <div class="relative z-10 mx-auto">
+    <!-- Section Heading -->
+    <h2
+      class="text-3xl md:text-4xl font-bold mb-8 text-center text-transparent bg-gradient-to-r from-orange-500 via-yellow-500 to-pink-500 bg-clip-text"
+    >
+      Software, and Frameworks We Use
+    </h2>
+    <p class="mb-8 text-gray-700 text-center text-lg font-medium">
+      At <span class="font-bold text-orange-600">Pencil Peel IMT</span>, we are committed to delivering high-quality website design and development services that meet the unique needs of our clients.<br>
+      To achieve this, we use a variety of software, programming languages, and frameworks that enable us to build scalable, efficient, and effective websites.
+    </p>
+
+    <!-- Desktop Carousel -->
+    <div class="hidden lg:block">
+      <p-carousel
+        [value]="designCarouselSlides"
+        [numVisible]="1"
+        [numScroll]="1"
+        circular
+        [autoplayInterval]="5200"
+        class="p-carousel-custom"
+        [style]="{ 'borderRadius': '1.5rem', overflow: 'visible', background: 'none' }"
+      >
+        <ng-template let-slide pTemplate="item">
+          <div class="p-8 bg-white rounded-2xl shadow-lg border-2 border-gray-100 mx-auto">
+            <h3 class="text-xl md:text-2xl font-semibold text-orange-600 mb-2 text-center">
+              {{ slide.group }}
+            </h3>
+            <p class="mb-6 text-gray-700 text-center">{{ slide.description }}</p>
+            <div class="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div
+                *ngFor="let tool of slide.tools"
+                class="rounded-xl p-6 flex flex-col items-center shadow hover:shadow-xl transition"
+              >
+                <img
+                  [src]="tool.image"
+                  [alt]="tool.name"
+                  class="mb-4 w-full h-30 object-contain bg-white"
+                />
+                <span class="text-lg font-semibold mb-1">{{ tool.name }}</span>
+                <span class="text-gray-700 text-center text-base">{{ tool.desc }}</span>
+              </div>
+            </div>
+          </div>
+        </ng-template>
+      </p-carousel>
+    </div>
+
+    <!-- Mobile Card Flow -->
+    <div class="block lg:hidden space-y-12">
+      <div
+        *ngFor="let slide of designCarouselSlides"
+        class="p-6 bg-white rounded-2xl shadow-lg border-2 border-gray-100"
+      >
+        <h3 class="text-xl font-bold text-orange-600 mb-4 text-center">
+          {{ slide.group }}
+        </h3>
+        <p class="mb-6 text-gray-700 text-center">{{ slide.description }}</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          <div
+            *ngFor="let tool of slide.tools"
+            class="rounded-xl p-5 flex flex-col items-center shadow hover:shadow-md transition"
+          >
+            <img
+              [src]="tool.image"
+              [alt]="tool.name"
+              class="mb-3 w-14 h-14 object-contain"
+            />
+            <span class="text-lg font-semibold mb-1">{{ tool.name }}</span>
+            <span class="text-gray-700 text-center text-sm sm:text-base">{{ tool.desc }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<app-industrycards [items]="industryCards" [title]="industrySectionContent.title" [description]="industrySectionContent.description" />
+<app-futureofweb />
+<app-benefitsnew [benefits]="industry_need_webiste.benefits" [title]="industry_need_webiste.title" [description]="industry_need_webiste.description" />
+<app-whycpencilpeel [features]="PencilPeelIMT_can_help.features" [headerContent]="PencilPeelIMT_can_help" />
+<app-why-choosus9 />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

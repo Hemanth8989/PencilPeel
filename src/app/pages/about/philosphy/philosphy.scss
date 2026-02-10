@@ -1,0 +1,228 @@
+/* Custom animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-35px) rotate(6deg);
+  }
+}
+
+@keyframes float-delayed {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-45px) rotate(-6deg);
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation classes */
+.animate-float {
+  animation: float 14s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float-delayed 16s ease-in-out infinite;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 1s ease-out forwards;
+  opacity: 0;
+}
+
+.animation-delay-300 {
+  animation-delay: 300ms;
+}
+
+.animation-delay-1200 {
+  animation-delay: 1200ms;
+}
+
+.animation-delay-1500 {
+  animation-delay: 1500ms;
+}
+
+/* Enhanced shadow utilities */
+.shadow-3xl {
+  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Philosophy pillar hover effects */
+.group:hover {
+  .pillar-icon {
+    transform: rotate(12deg) scale(1.1);
+  }
+  
+  .progress-bar {
+    transform: translateX(0);
+  }
+  
+  .floating-elements {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+/* Enhanced card transitions */
+.philosophy-card {
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  &:hover {
+    transform: translateY(-16px) scale(1.02);
+    
+    .card-icon {
+      transform: rotate(12deg) scale(1.1);
+    }
+    
+    .progress-indicator {
+      transform: translateX(0);
+    }
+  }
+}
+
+/* Innovation section enhancements */
+.innovation-pillar {
+  &:hover {
+    .innovation-icon {
+      transform: scale(1.1) rotate(5deg);
+    }
+  }
+}
+
+/* Commitment section styling */
+.commitment-card {
+  &:hover {
+    .commitment-icon {
+      transform: rotate(12deg) scale(1.1);
+    }
+  }
+}
+
+/* Value cards hover effects */
+.value-card {
+  transition: all 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Typography enhancements */
+.enhanced-text {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Background pattern effects */
+.pattern-overlay {
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(147, 51, 234, 0.1) 0%, transparent 50%);
+}
+
+/* Responsive enhancements */
+@media (max-width: 640px) {
+  .text-4xl {
+    font-size: 2rem !important;
+  }
+  
+  .text-5xl {
+    font-size: 2.5rem !important;
+  }
+  
+  .text-6xl {
+    font-size: 3rem !important;
+  }
+
+  .group:hover {
+    transform: translateY(-8px) scale(1.01) !important;
+  }
+
+  .innovation-pillar,
+  .philosophy-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1024px) {
+  .lg\:grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+  
+  .lg\:grid-cols-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Performance optimizations */
+.animate-element {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .bg-gradient-to-r {
+    background: #2563eb !important;
+  }
+  
+  .text-transparent {
+    color: #2563eb !important;
+    -webkit-text-fill-color: unset !important;
+  }
+}
+
+/* Focus states for accessibility */
+.focusable-element:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+/* Enhanced visual effects */
+.backdrop-enhancement {
+  backdrop-filter: blur(12px) saturate(200%);
+}
+
+/* Print styles */
+@media print {
+  .animate-float,
+  .animate-float-delayed,
+  .animate-pulse {
+    animation: none !important;
+  }
+  
+  .shadow-2xl,
+  .shadow-3xl {
+    box-shadow: none !important;
+  }
+  
+  .bg-gradient-to-r {
+    background: #f8fafc !important;
+    color: #1e293b !important;
+  }
+}

@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+.group {
+  position: relative;
+}
+
+.group:hover > div:first-child {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.group:hover > div:last-child {
+  opacity: 1;
+  z-index: 10;
+  transition: opacity 0.3s ease-in-out;
+}

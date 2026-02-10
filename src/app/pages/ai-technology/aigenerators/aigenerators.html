@@ -1,0 +1,137 @@
+<app-nocarouselherosection [herocontent]="herocontent" />
+<!-- AI Lead Generator Section -->
+<section class="py-12 bg-gray-50 dark:bg-gray-900">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header -->
+    <div class="text-center mb-10">
+      <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+        What is an AI Lead Generator?
+      </h2>
+      <p class="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+        A tool that uses artificial intelligence to identify and generate high-quality leads for businesses. 
+        It leverages machine learning algorithms to analyse vast amounts of data, identify patterns, and predict potential customer interest.
+      </p>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      
+      <!-- Data Analysis -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+        <div class="flex items-center justify-center w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg mb-4">
+          <i class="pi pi-database text-xl text-blue-600 dark:text-blue-400"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          Data Analysis
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Analyzes vast amounts of data from multiple sources to identify potential leads
+        </p>
+      </div>
+
+      <!-- Pattern Recognition -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+        <div class="flex items-center justify-center w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg mb-4">
+          <i class="pi pi-search text-xl text-green-600 dark:text-green-400"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          Pattern Recognition
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Identifies patterns and behaviors that indicate customer interest and intent
+        </p>
+      </div>
+
+      <!-- Predictive Analytics -->
+      <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 p-6">
+        <div class="flex items-center justify-center w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg mb-4">
+          <i class="pi pi-chart-line text-xl text-purple-600 dark:text-purple-400"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          Predictive Analytics
+        </h3>
+        <p class="text-gray-600 dark:text-gray-300 text-sm">
+          Predicts potential customer interest using advanced machine learning algorithms
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Section 1: The Future of AI Lead Generation -->
+<section class="bg-orange-50 py-16 px-6 max-w-7xl mx-auto font-sans rounded-lg shadow-lg mb-12">
+  <h2 class="text-4xl font-extrabold text-center mb-8 
+             text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 
+             bg-clip-text animate-gradient-shine">
+    The Future of AI Lead Generation at Pencil Peel IMT
+  </h2>
+
+  <p class="text-gray-900 text-lg max-w-4xl mx-auto leading-relaxed text-center">
+    At <strong>Pencil Peel IMT</strong>, we're excited about the future of AI lead generation and its potential 
+    to revolutionize the way businesses identify, engage, and convert leads. Our team will leverage AI-powered 
+    tools and technologies to develop innovative lead generation solutions that drive business growth and innovation.
+  </p>
+</section>
+
+
+<!-- Section 2: Transforming Lead Generation with AI -->
+<section class="bg-white py-16 px-6 max-w-7xl mx-auto font-sans rounded-lg shadow-lg">
+  <h3 class="text-4xl font-extrabold text-center mb-8 
+             text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 
+             bg-clip-text animate-gradient-shine">
+    Transforming Lead Generation with AI
+  </h3>
+
+  <p class="text-gray-900 text-lg max-w-4xl mx-auto mb-8 leading-relaxed text-center">
+    Our team will use AI to automate repetitive tasks, provide personalized outreach, and streamline lead qualification. 
+    By analyzing historical data and market trends, our AI-powered lead generation tools will identify prospects most 
+    likely to convert, allowing sales teams to focus their efforts on high-potential leads. We'll also use AI-powered 
+    chatbots to engage website visitors in meaningful conversations, guiding them through simple questionnaires to gather 
+    essential information and qualify leads on the spot.
+  </p>
+</section>
+
+
+<section class="bg-gray-50 py-16 px-6 md:px-12">
+  <div class="max-w-6xl mx-auto">
+
+    <!-- Updated Title for Lead Generation -->
+    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 text-center mb-6">
+      Key Trends in AI Lead Generation
+    </h2>
+
+    <!-- Updated Intro -->
+    <p class="text-lg md:text-xl text-gray-600 text-center max-w-3xl mx-auto mb-12">
+      Our team at <span class="font-semibold text-orange-600">Pencil Peel IMT</span> 
+      is leveraging these key AI lead generation trends to revolutionize how businesses identify, engage, and convert high-quality prospects.
+    </p>
+
+    <!-- Dynamic Cards -->
+    <div class="grid md:grid-cols-2 gap-8">
+      <div *ngFor="let trend of keytrends" 
+           class="bg-white rounded-2xl shadow-lg p-6 hover:shadow-xl transition border-2 border-gray-300">
+        <div class="flex items-start">
+          <div class="flex-shrink-0 w-12 h-12 flex items-center justify-center bg-orange-100 text-orange-600 rounded-full mr-4">
+            <i class="pi {{trend.icon}} text-xl"></i>
+          </div>
+          <div>
+            <h3 class="font-semibold text-gray-800 text-xl mb-1">{{ trend.title }}</h3>
+            <p class="text-gray-600 text-base">
+              {{ trend.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<app-productcard [productcards]="leadworkflow" [title]="ptitle" [description]="pdescription"/>
+<app-pointcard [pointcards]="leadGenerationStrategies" [headerContent]="pointcardcontent" />
+<app-whyus [whyus]="whyus" />
+<app-whycpencilpeel [features]="whycfeautures" [headerContent]="whyCContent" />

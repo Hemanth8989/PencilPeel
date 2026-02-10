@@ -1,0 +1,151 @@
+<app-outdoor-hero-section [config]="busShelterHeroConfig" />
+
+<app-quotes [testimonials]="testimonials"></app-quotes>
+
+<!-- What is Bus Shelter Advertising Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1920&q=80" 
+         alt="Bus Transit Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-orange-600">Bus Shelter Advertising?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Bus shelter advertising is a type of outdoor advertising that places promotional messages or visuals on bus shelters. Our team will help you understand the power of bus shelter advertising and how it can benefit your business.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Features of <span class="text-orange-600">Bus Shelter Advertising</span>
+      </h2>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div *ngFor="let feature of features; let i = index" 
+           class="group bg-white rounded-2xl p-8 shadow-lg border border-gray-100 hover:shadow-xl hover:border-orange-200 transition-all duration-300 hover:-translate-y-2">
+        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:scale-110 transition-all duration-300">
+          <i [class]="feature.icon + ' text-3xl text-orange-600 group-hover:text-white'"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600">
+          {{ feature.title }}
+        </h3>
+        <p class="text-gray-600 leading-relaxed">
+          {{ feature.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="py-20 bg-gradient-to-br from-gray-50 to-orange-50 relative">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-5">
+    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?auto=format&fit=crop&w=1920&q=80" 
+         alt="Urban Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        <span class="text-orange-600">Benefits</span> of Bus Shelter Advertising
+      </h2>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let benefit of benefits; let i = index"
+           class="group bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+        <div class="flex items-center mb-4">
+          <div [class]="'w-14 h-14 bg-' + benefit.color + '-100 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mr-4'">
+            <i [class]="benefit.icon + ' text-2xl text-' + benefit.color + '-600'"></i>
+          </div>
+          <h3 [class]="'text-xl font-bold text-gray-900 group-hover:text-' + benefit.color + '-600'">
+            {{ benefit.title }}
+          </h3>
+        </div>
+        <p class="text-gray-700 leading-relaxed">
+          {{ benefit.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<app-industrycards [items]="industryCards" [title]="industry.title" [description]="industry.description" />
+
+<!-- Services Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 relative">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-5">
+    <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=1920&q=80" 
+         alt="Street Background" class="w-full h-full object-cover">
+  </div>
+  
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        How Pencil Peel IMT Will Provide <span class="text-orange-600">Bus Shelter Advertising Services</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+        We will provide efficient and effective bus shelter advertising services to help businesses reach their target audience. Here's how:
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div *ngFor="let service of services; let i = index"
+           class="group bg-white/90 backdrop-blur-sm rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+        <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6 group-hover:bg-orange-500 group-hover:scale-110 transition-all duration-300">
+          <i [class]="service.icon + ' text-3xl text-orange-600 group-hover:text-white'"></i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-900 mb-4 group-hover:text-orange-600">
+          {{ service.title }}
+        </h3>
+        <p class="text-gray-700 leading-relaxed">
+          {{ service.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Efficiency Section -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Efficiency of Pencil Peel IMT <span class="text-orange-600">Bus Shelter Advertising Services</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-3xl mx-auto mb-8">
+        We will provide efficient bus shelter advertising services by:
+      </p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      <div *ngFor="let eff of efficiency; let i = index"
+           class="group bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-300 border border-gray-100 hover:border-orange-200 text-center">
+        <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-4 mx-auto group-hover:bg-orange-500 group-hover:scale-110 transition-all duration-300">
+          <i [class]="eff.icon + ' text-2xl text-orange-600 group-hover:text-white'"></i>
+        </div>
+        <h3 class="text-lg font-bold text-gray-900 mb-3 group-hover:text-orange-600">
+          {{ eff.title }}
+        </h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          {{ eff.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-whycpencilpeel [headerContent]="whyccontent" [features]="whycfeatures"></app-whycpencilpeel>
+<app-contactus [title]="contact.title" [description]="contact.description"></app-contactus>

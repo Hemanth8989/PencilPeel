@@ -1,0 +1,169 @@
+<app-nocarouselquotes [herocontent]="herocontent" [quotes]="quotes"></app-nocarouselquotes>
+<!-- Education Section -->
+<section class="py-20 bg-gradient-to-r from-indigo-50 to-purple-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-indigo-900 mb-12">
+            <span class="text-purple-700">Education</span>
+        </h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div *ngFor="let card of educationCards"
+                [ngClass]="card.gradient ? 'bg-gradient-to-r from-indigo-500 to-purple-500 text-white' : 'bg-white text-gray-700'"
+                class="rounded-3xl shadow-xl p-8 hover:scale-105 transform transition duration-500"
+                [class]="card.border">
+                <div class="flex items-center mb-4">
+                    <i [class]="card.icon + ' text-3xl mr-4'"></i>
+                    <h3 class="font-bold text-2xl" [innerHTML]="card.title"></h3>
+                </div>
+                <p class="text-lg" [innerHTML]="card.description"
+                    [ngClass]="card.gradient ? 'text-white' : 'text-gray-700'"></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AI-Powered Education Solutions Section -->
+<section class="py-20 bg-gradient-to-r from-indigo-50 to-purple-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-indigo-900 mb-12">
+            AI-Powered <span class="text-purple-700">Education Solutions</span>
+        </h2>
+        <p class="text-center text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-12">
+            At <span class="font-semibold text-indigo-700">Pencil Peel IMT</span>, we're committed to harnessing the
+            power of <span class="font-bold text-purple-700">AI</span> to improve education outcomes and enhance the
+            learning experience. Our AI-powered education solutions are designed to provide personalized learning
+            experiences, support teachers, and improve student outcomes.
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div *ngFor="let solution of aiSolutions"
+                class="bg-white rounded-3xl shadow-xl p-8 hover:scale-105 transform transition duration-500 text-center">
+                <img [src]="solution.image" alt="{{solution.title}}"
+                    class="mx-auto h-48 w-full object-cover rounded-lg mb-4">
+                <h3 class="font-bold text-2xl mb-2 text-indigo-700">{{ solution.title }}</h3>
+                <p class="text-gray-700">{{ solution.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits of AI Section -->
+<section class="py-20 bg-gradient-to-r from-purple-50 to-indigo-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-indigo-900 mb-12">
+            Benefits of <span class="text-purple-700">AI in Education</span>
+        </h2>
+        <p class="text-xl md:text-xl font-bold text-center text-grey-400 mb-12">
+            The use of AI in education can have numerous benefits, including:
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div *ngFor="let benefit of aiBenefits"
+                class="bg-white rounded-3xl shadow-xl p-8 hover:scale-105 transform transition duration-500 text-center">
+                <div class="flex justify-center mb-4">
+                    <i [class]="benefit.icon + ' text-purple-600 text-4xl'"></i>
+                </div>
+                <h3 class="font-bold text-2xl mb-2 text-purple-700">{{ benefit.title }}</h3>
+                <p class="text-gray-700">{{ benefit.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- How Pencil Peel IMT Can Help Section -->
+<section class="py-20 bg-gradient-to-r from-indigo-50 to-purple-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-indigo-900 mb-12">
+            How <span class="text-purple-700">Pencil Peel IMT</span> Can Help
+        </h2>
+        <p class="text-xl md:text-xl font-bold text-center text-grey-400 mb-12">
+            At <span class="text-indigo-600">Pencil Peel IMT</span>, we're committed to helping educators and
+            policymakers leverage AI technology to improve
+            education outcomes and enhance the learning experience. Our team of experts can: </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div *ngFor="let help of howWeHelp"
+                class="bg-white rounded-3xl shadow-xl p-8 hover:scale-105 transform transition duration-500 text-center">
+                <div class="flex justify-center mb-4">
+                    <i [class]="help.icon + ' text-indigo-700 text-4xl'"></i>
+                </div>
+                <h3 class="font-bold text-2xl mb-2 text-indigo-700">{{ help.title }}</h3>
+                <p class="text-gray-700">{{ help.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Future of AI Section -->
+<section class="py-20 bg-gradient-to-r from-purple-50 to-indigo-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-indigo-900 mb-12">
+            The Power and Future of <span class="text-purple-700">AI in Education</span>
+        </h2>
+        <p class="text-xl md:text-xl font-bold text-center text-grey-400 mb-12">
+            At <span class="text-indigo-600">Pencil Peel IMT</span>, we believe that AI has the potential to
+            revolutionize the education sector by providing
+            personalized learning experiences, enhancing teacher productivity, and increasing student engagement. Our
+            AI-powered solutions are designed to analyze student performance data, identify knowledge gaps, and provide
+            real-time feedback, enabling teachers to tailor their instruction to meet individual needs. </p>
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-indigo-900 mb-12">
+            The Future of <span class="text-purple-700">AI in Education</span>
+        </h2>
+        <p class="text-xl md:text-xl font-bold text-center text-grey-400 mb-12">
+            At <span class="text-indigo-600">Pencil Peel IMT</span>, we're committed to staying at the forefront of AI
+            innovation in education. Our vision
+            for the future includes:
+        </p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div *ngFor="let future of futureAI"
+                class="bg-white rounded-3xl shadow-xl p-8 hover:scale-105 transform transition duration-500 text-center">
+                <div class="flex justify-center mb-4">
+                    <i [class]="future.icon + ' text-purple-600 text-4xl'"></i>
+                </div>
+                <h3 class="font-bold text-2xl mb-2 text-purple-700">{{ future.title }}</h3>
+                <p class="text-gray-700">{{ future.description }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Pencil Peel IMT Section -->
+<section class="py-20 bg-gradient-to-r from-indigo-50 to-purple-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-4xl md:text-5xl font-bold text-center text-indigo-900 mb-12">
+            Why Choose <span class="text-purple-700">Pencil Peel IMT?</span>
+        </h2>
+        <p class="text-xl md:text-xl font-bold text-center text-grey-400 mb-12">
+            At <span class="text-indigo-600">Pencil Peel IMT</span>,, we're dedicated to revolutionizing education with
+            cutting-edge <span class="text-orange-600">AI-powered solutions</span>. Our team of experts collaborates
+            with educators and institutions to drive
+            transformative change. Here's what sets us apart:
+        </p>
+        <div class="grid md:grid-cols-3 gap-8">
+            <div *ngFor="let card of whyChoose"
+                class="bg-white rounded-3xl shadow-xl p-8 hover:scale-105 transform transition duration-500 text-center">
+                <div class="flex justify-center mb-4">
+                    <i [class]="card.icon + ' text-indigo-700 text-4xl'"></i>
+                </div>
+                <h3 class="font-bold text-2xl mb-4 text-indigo-700">{{ card.title }}</h3>
+                <div *ngFor="let point of card.points" class="text-left mb-4">
+                    <h4 class="font-semibold text-indigo-600">{{ point.title }}</h4>
+                    <p class="text-gray-700">{{ point.description }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20 bg-gradient-to-r from-indigo-600 to-purple-600">
+    <div class="container mx-auto px-4 text-center">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+            Join the <span class="text-purple-200">Pencil Peel IMT Advantage</span>
+        </h2>
+        <p class="text-lg md:text-xl text-indigo-100 mb-8 max-w-2xl mx-auto">
+            Partner with us to unlock the full potential of AI in education. Together, let's create more inclusive,
+            effective, and engaging learning experiences that empower students to succeed.
+        </p>
+        <a href="/contact"
+            class="inline-block bg-white text-indigo-700 font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transform transition duration-300">
+            Contact Us
+        </a>
+    </div>
+</section>

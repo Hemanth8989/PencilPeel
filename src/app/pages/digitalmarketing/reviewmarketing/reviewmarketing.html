@@ -1,0 +1,420 @@
+<app-nocarouselherosection [herocontent]="herocontent"></app-nocarouselherosection>
+<app-quotes [testimonials]="quotes"></app-quotes>
+<section class="relative py-24 px-4 sm:px-6 lg:px-12 bg-[#0f0f0f] overflow-hidden">
+
+  <!-- Background Accents -->
+  <div class="absolute inset-0">
+    <div
+      class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-500/10 via-transparent to-yellow-400/10">
+    </div>
+    <div class="absolute -top-32 -left-32 w-[500px] h-[500px] bg-orange-500/20 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-400/20 blur-[120px] rounded-full"></div>
+  </div>
+
+  <!-- Content -->
+  <div class="relative max-w-5xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+
+      <!-- Accent Column -->
+      <div class="hidden lg:flex lg:col-span-1 justify-center">
+        <span class="w-[2px] h-full bg-gradient-to-b from-orange-500 to-yellow-400 rounded-full"></span>
+      </div>
+
+      <!-- Text Card -->
+      <div
+        class="lg:col-span-11 bg-white/5 backdrop-blur-2xl border border-white/10 rounded-3xl p-8 sm:p-12 shadow-2xl">
+
+        <div class="space-y-8 text-gray-200 text-sm sm:text-base leading-relaxed">
+
+          <!-- Paragraph 1 with Drop Cap -->
+          <p class="relative">
+            <span class="float-left text-5xl sm:text-6xl font-bold text-orange-400 leading-none mr-3 mt-1">
+              W
+            </span>
+            e keep asking people about the quality of a product or service, whenever we wanted them.
+            We keep going for those products or services if we know the brand. But now things have changed.
+            As generations develop and technology too gets updated, we buy a product or get a service only
+            after going through the review of that product or service.
+          </p>
+
+          <!-- Paragraph 2 -->
+          <p class="border-l-4 border-orange-400/60 pl-6 italic text-gray-300">
+            We read a lot about a product or service before going for them.
+            Crafting outstanding online product reviews is among the easiest ways to sell or buy anything
+            while simultaneously generating income.
+          </p>
+
+          <!-- Paragraph 3 Highlighted -->
+          <p class="bg-white/5 border border-white/10 rounded-2xl p-6 text-gray-200">
+            In fact, 40% of consumers make their decisions based on reading only one to three product reviews,
+            and 92% of consumers consult online reviews prior to making a purchase.
+            Consequently, writing reviews is an essential aspect of the role for all online marketers,
+            including affiliates.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-faqcards [faqcards]="faqcards" />
+
+<section class="relative py-24 px-4 sm:px-6 lg:px-12 bg-[#0f0f0f] overflow-hidden">
+  <!-- Background Effects -->
+  <div class="absolute inset-0">
+    <div
+      class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-orange-500/20 blur-[140px] rounded-full">
+    </div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-400/20 blur-[120px] rounded-full"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="relative max-w-4xl mx-auto text-center mb-20">
+    <h2
+      class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+      Pencil Peel IMT Review Marketing Services
+    </h2>
+    <p class="mt-6 text-gray-300 text-sm sm:text-base leading-relaxed">
+      At Pencil Peel IMT, we offer a wide range of review services to help businesses and consumers make informed
+      decisions.
+      Our team of experts will work with you to develop customized review services that meet your needs.
+    </p>
+  </div>
+
+  <!-- Dynamic Grid -->
+  <div class="relative max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+    <div *ngFor="let service of reviewServices" class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-7 shadow-xl
+             hover:shadow-2xl transition-all duration-300 hover:-translate-y-1">
+      <!-- Icon -->
+      <div class="w-12 h-12 mb-5 flex items-center justify-center rounded-xl
+               bg-gradient-to-br from-orange-500 to-yellow-400 text-black shadow-lg
+               group-hover:scale-110 transition">
+        <i class="pi {{ service.icon }} text-xl"></i>
+      </div>
+      <!-- Title -->
+      <h3 class="text-lg font-semibold text-orange-400 mb-3">
+        {{ service.title }}
+      </h3>
+
+      <!-- Description -->
+      <p class="text-gray-300 text-sm leading-relaxed">
+        {{ service.description }}
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="relative py-24 px-4 sm:px-6 lg:px-12 bg-[#0f0f0f] overflow-hidden">
+
+  <!-- Background Glow -->
+  <div class="absolute inset-0">
+    <div class="absolute -top-40 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-orange-500/20 blur-[140px] rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-400/20 blur-[120px] rounded-full"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="relative max-w-4xl mx-auto text-center mb-20">
+    <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+      Benefits of Review Marketing with Pencil Peel IMT
+    </h2>
+    <p class="mt-6 text-gray-300 text-sm sm:text-base leading-relaxed">
+      By partnering with Pencil Peel IMT, you can trust that you're working with a team of experts who are dedicated to delivering innovative review marketing solutions that drive business growth. We will help you:
+    </p>
+  </div>
+
+  <!-- Dynamic Grid -->
+  <div class="relative max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+
+    <div
+      *ngFor="let benefit of reviewMarketingBenefits"
+      class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-7 shadow-xl
+             hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+    >
+
+      <!-- Icon -->
+      <div
+        class="w-12 h-12 mb-5 flex items-center justify-center rounded-xl
+               bg-gradient-to-br from-orange-500 to-yellow-400 text-black shadow-lg
+               group-hover:scale-110 transition"
+      >
+        <i class="pi {{ benefit.icon }} text-xl"></i>
+      </div>
+
+      <!-- Title -->
+      <h3 class="text-lg font-semibold text-orange-400 mb-3">
+        {{ benefit.title }}
+      </h3>
+
+      <!-- Description -->
+      <p class="text-gray-300 text-sm leading-relaxed">
+        {{ benefit.description }}
+      </p>
+
+    </div>
+
+  </div>
+</section>
+
+<section class="relative py-24 px-4 sm:px-6 lg:px-12 bg-[#0f0f0f] overflow-hidden">
+
+  <!-- Background Glow -->
+  <div class="absolute inset-0">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-500/20 blur-[140px] rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-400/20 blur-[120px] rounded-full"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="relative max-w-4xl mx-auto text-center mb-16">
+    <h2
+      class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent mb-4">
+      Giving Reviews Can Be a Form Of
+    </h2>
+    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+      Learn how reviews play a vital role in modern marketing strategies.
+    </p>
+  </div>
+
+  <!-- Benefits Cards -->
+  <div class="relative max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+
+    <p-card class="custom-dark-card">
+      <h3 class="text-xl font-semibold text-orange-400 mb-3">Word-of-Mouth Marketing</h3>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Word-of-mouth marketing refers to the promotion of a product, service, or company through personal
+        recommendations and reviews.
+        Reviews can be a powerful way to build trust and credibility with potential customers.
+      </p>
+    </p-card>
+
+    <p-card class="custom-dark-card">
+      <h3 class="text-xl font-semibold text-orange-400 mb-3">Influencer Marketing</h3>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        In some cases, reviews can also be a form of influencer marketing, where individuals with a large following or
+        expertise in a particular area share their opinions and experiences with others.
+      </p>
+    </p-card>
+
+    <p-card class="custom-dark-card">
+      <h3 class="text-xl font-semibold text-orange-400 mb-3">User-Generated Content</h3>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Reviews can also be considered a type of user-generated content, where customers share their experiences and
+        opinions about a product or service.
+      </p>
+    </p-card>
+
+  </div>
+
+  <!-- Bottom Section / Summary -->
+  <div class="relative max-w-4xl mx-auto bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 sm:p-12 shadow-xl">
+    <p class="text-gray-300 text-base sm:text-lg leading-relaxed">
+      By sharing reviews, individuals can help others make informed decisions and build trust in a product or service.
+      We promote your product and its brand. We make customers understand your price. We provide content marketing and
+      reviews to support your product or service.
+      We work hard to promote your product or service. Our clients are taking reviews and guidance from us for their
+      success.
+      They are ahead of their rivals in the market. We feel proud of them. <br /><br />
+      We share our client’s success and their happiness. Pencil Peel IMT team always works for the success of its
+      clients.
+      In fact, we are honoured by the success of our clients.
+    </p>
+  </div>
+
+</section>
+
+
+<section class="relative py-24 px-4 sm:px-6 lg:px-12 bg-[#0f0f0f] overflow-hidden">
+
+  <!-- Background Glow -->
+  <div class="absolute inset-0">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-500/20 blur-[120px] rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-400/20 blur-[120px] rounded-full"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="relative max-w-4xl mx-auto text-center mb-20">
+    <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent">
+      How We Work for Our Clients
+    </h2>
+    <p class="mt-4 text-gray-400 text-sm sm:text-base max-w-2xl mx-auto">
+      A transparent and structured approach designed to deliver measurable results.
+    </p>
+  </div>
+
+  <!-- Timeline -->
+  <div class="relative max-w-5xl mx-auto">
+    <p-timeline
+      [value]="timelineItems"
+      align="alternate"
+      class="custom-timeline premium-timeline"
+    >
+
+      <!-- Content -->
+      <ng-template pTemplate="content" let-item>
+        <div
+          class="bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 shadow-xl
+                 transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
+        >
+          <h3 class="text-lg font-semibold mb-3 text-orange-400">
+            {{ item.status }}
+          </h3>
+          <p class="text-gray-300 text-sm leading-relaxed">
+            {{ item.description }}
+          </p>
+        </div>
+      </ng-template>
+
+      <!-- Marker -->
+      <ng-template pTemplate="marker" let-item>
+        <span
+          class="flex items-center justify-center w-12 h-12 rounded-full shadow-xl
+                 transition-all duration-300 hover:scale-110"
+          [style.background]="item.color"
+        >
+          <i class="{{ item.icon }} text-white text-lg"></i>
+        </span>
+      </ng-template>
+
+    </p-timeline>
+  </div>
+</section>
+
+<app-industrycards [items]="industryCards" [title]="indtitle" [description]="inddescription" />
+<app-industrycards [items]="servicecards" [title]="sertitle" [description]="serdescription" />
+<section class="relative py-24 px-4 sm:px-6 lg:px-12 bg-[#0f0f0f] overflow-hidden">
+
+  <!-- Background Glow -->
+  <div class="absolute inset-0">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-500/20 blur-[140px] rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-400/20 blur-[120px] rounded-full"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="relative max-w-4xl mx-auto text-center mb-16">
+    <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent mb-4">
+      Benefits of Review Marketing Services with Pencil Peel
+    </h2>
+    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+      By partnering with Pencil Peel for review marketing services, you'll benefit from:
+    </p>
+  </div>
+
+  <!-- Dynamic Benefits Grid -->
+  <div class="relative max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+
+    <p-card class="custom-dark-card">
+      <div class="flex items-center mb-4">
+        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-yellow-400 text-black mr-3">
+          <i class="pi pi-shield text-lg"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-orange-400">Increased credibility</h3>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Positive reviews can increase credibility and trust with potential customers.
+      </p>
+    </p-card>
+
+    <p-card class="custom-dark-card">
+      <div class="flex items-center mb-4">
+        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-yellow-400 text-black mr-3">
+          <i class="pi pi-thumbs-up text-lg"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-orange-400">Improved reputation</h3>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Review marketing services can improve business reputation and credibility.
+      </p>
+    </p-card>
+
+    <p-card class="custom-dark-card">
+      <div class="flex items-center mb-4">
+        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-yellow-400 text-black mr-3">
+          <i class="pi pi-chart-line text-lg"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-orange-400">Increased sales</h3>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Positive reviews can increase sales and revenue growth.
+      </p>
+    </p-card>
+
+    <p-card class="custom-dark-card">
+      <div class="flex items-center mb-4">
+        <div class="w-10 h-10 flex items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-yellow-400 text-black mr-3">
+          <i class="pi pi-trophy text-lg"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-orange-400">Competitive advantage</h3>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Businesses with positive reviews can gain a competitive advantage over competitors.
+      </p>
+    </p-card>
+
+  </div>
+
+</section>
+<section class="relative py-24 px-4 sm:px-6 lg:px-12 bg-[#0f0f0f] overflow-hidden">
+
+  <!-- Background Glow -->
+  <div class="absolute inset-0">
+    <div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-orange-500/20 blur-[140px] rounded-full"></div>
+    <div class="absolute bottom-0 right-0 w-[400px] h-[400px] bg-yellow-400/20 blur-[120px] rounded-full"></div>
+  </div>
+
+  <!-- Header -->
+  <div class="relative max-w-4xl mx-auto text-center mb-16">
+    <h2 class="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-orange-400 to-yellow-400 bg-clip-text text-transparent mb-4">
+      Why Choose Pencil Peel IMT for Review Marketing Services?
+    </h2>
+    <p class="text-gray-300 text-base sm:text-lg max-w-2xl mx-auto">
+      At Pencil Peel IMT, our team of experts has extensive experience in review marketing services. Here's why you
+      should choose us:
+    </p>
+  </div>
+
+  <!-- Benefits Cards Grid -->
+  <div class="relative max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+    <!-- Card 1: Expertise -->
+    <p-card class="custom-dark-card">
+      <div class="flex items-center mb-4">
+        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-yellow-400 text-black mr-3">
+          <i class="pi pi-briefcase text-lg"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-orange-400">Expertise</h3>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Our team has extensive experience in review marketing services and understands how to build and protect your
+        online reputation.
+      </p>
+    </p-card>
+
+    <!-- Card 2: Customized Solutions -->
+    <p-card class="custom-dark-card">
+      <div class="flex items-center mb-4">
+        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-yellow-400 text-black mr-3">
+          <i class="pi pi-cog text-lg"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-orange-400">Customized Solutions</h3>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        We’ll develop a personalized review marketing strategy that aligns with your business goals, audience, and
+        industry needs.
+      </p>
+    </p-card>
+
+    <!-- Card 3: Proven Results -->
+    <p-card class="custom-dark-card">
+      <div class="flex items-center mb-4">
+        <div class="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-br from-orange-500 to-yellow-400 text-black mr-3">
+          <i class="pi pi-check-circle text-lg"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-orange-400">Proven Results</h3>
+      </div>
+      <p class="text-gray-300 text-sm leading-relaxed">
+        Our review marketing services have consistently delivered measurable results by increasing customer trust and
+        boosting visibility.
+      </p>
+    </p-card>
+
+  </div>
+</section>

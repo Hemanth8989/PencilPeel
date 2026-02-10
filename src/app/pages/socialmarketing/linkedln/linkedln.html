@@ -1,0 +1,92 @@
+<app-nocarouselherosection [herocontent]="linkedinHeroContent" />
+<section class="py-20 bg-gradient-to-tr from-slate-100 via-blue-50 to-gray-200">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <!-- Heading -->
+    <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+      What is 
+      <span class="bg-gradient-to-r from-blue-700 via-cyan-600 to-emerald-500 bg-clip-text text-transparent">
+        LinkedIn Marketing
+      </span>?
+    </h2>
+
+    <!-- Description -->
+    <p class="text-lg text-gray-700 max-w-2xl mx-auto leading-relaxed mb-6">
+      LinkedIn marketing refers to the use of LinkedIn, a professional networking platform, to promote businesses, products, and services. At Pencil Peel IMT, we leverage LinkedIn marketing strategies to help businesses achieve their goals.
+    </p>
+  </div>
+</section>
+<app-whyus [whyus]="whyus" />
+<!-- SECTION 1 - Key Components -->
+<section class="py-20 bg-gradient-to-tr from-slate-50 via-blue-50 to-gray-100">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Section Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-6 leading-tight">
+        Key Components of
+        <span class="bg-gradient-to-r from-blue-700 via-cyan-600 to-emerald-500 bg-clip-text text-transparent">
+          LinkedIn Marketing
+        </span> with Pencil Peel
+      </h2>
+    </div>
+
+    <!-- Components Grid -->
+    <div class="grid md:grid-cols-2 gap-10">
+      <!-- Card -->
+      <div *ngFor="let item of linkedInComponents"
+           class="group bg-white rounded-2xl shadow-md hover:shadow-xl border-2 border-gray-200 transition-all p-8 flex flex-col items-start cursor-pointer">
+        
+        <!-- Icon -->
+        <div [class]="'w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-3xl text-white ' + item.bgColor">
+          <i [class]="item.icon"></i>
+        </div>
+
+        <!-- Title -->
+        <h3 class="text-xl font-semibold text-gray-900 mb-3">
+          {{ item.title }}
+        </h3>
+
+        <!-- Description -->
+        <p class="text-gray-700 leading-relaxed font-base">
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- SECTION 2 - How Pencil Peel Can Help -->
+<section class="py-20 bg-mid">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl font-bold text-white mb-6 leading-tight">
+        How <span class="text-orange-500">Pencil Peel IMT</span> Can Help
+      </h2>
+    </div>
+
+    <!-- Help Grid -->
+    <div class="grid md:grid-cols-2 gap-10">
+      <div *ngFor="let item of linkedInHelp"
+           class="group bg-white backdrop-blur-lg rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 p-8 flex flex-col items-start cursor-pointer border border-white/10">
+        
+        <!-- Icon Container -->
+        <div [class]="'w-14 h-14 rounded-xl flex items-center justify-center mb-5 text-3xl ' + item.bgColor + ' text-white shadow-lg'">
+          <i [class]="item.icon"></i>
+        </div>
+
+        <!-- Title -->
+        <h3 class="text-xl font-semibold text-gray-700 mb-3 transition">
+          {{ item.title }}
+        </h3>
+
+        <!-- Description -->
+        <p class="text-gray-600 leading-relaxed font-base">
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-smstrategy [sheader]="sheader" [strategies]="linkedInStrategies"></app-smstrategy>
+<app-contactus [title]="contacttitle" [description]="contactdescription" />
+<app-whycpencilpeel [headerContent]="headerContent" [features]="whycfeatures"></app-whycpencilpeel>

@@ -1,0 +1,213 @@
+<section class="relative min-h-screen bg-gradient-to-br from-white via-blue-50/20 to-green-50/20 overflow-hidden py-16 lg:py-24">
+  
+  <!-- Background Elements (same as before) -->
+  <div class="absolute inset-0 pointer-events-none">
+    <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-200/20 to-blue-400/20 rounded-full blur-3xl animate-pulse-slow"></div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 bg-gradient-to-tr from-green-200/20 to-red-200/20 rounded-full blur-3xl animate-pulse-slow" style="animation-delay: 3s;"></div>
+    <div class="absolute inset-0 opacity-[0.01]" style="background-image: radial-gradient(circle at 2px 2px, rgb(71 85 105) 2px, transparent 0); background-size: 50px 50px;"></div>
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    
+    <!-- Header Section (same as before) -->
+    <div 
+      class="text-center mb-20 lg:mb-24"
+      [class.animate-hidden]="!headerVisible"
+      [class.animate-fade-in-up]="headerVisible"
+      data-animate="main-header"
+    >
+      <div class="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-100 to-green-100 border border-blue-200 rounded-full text-blue-700 text-base font-semibold mb-8 shadow-md backdrop-blur-sm">
+        <span class="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></span>
+        <span>Development Tools</span>
+      </div>
+      
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
+        Development 
+        <span class="bg-gradient-to-r from-blue-500 via-green-500 to-red-500 bg-clip-text text-transparent">Frameworks</span>
+      </h1>
+      
+      <p class="text-lg sm:text-xl lg:text-2xl text-slate-600 max-w-5xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, we utilize a range of development frameworks to build innovative and scalable software solutions.
+      </p>
+    </div>
+
+    <!-- Primary Frameworks Section -->
+    <div class="mb-20">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          Core Development Frameworks
+        </h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-blue-500 to-green-500 rounded-full mx-auto"></div>
+      </div>
+
+      <!-- Primary Frameworks Grid with Truncated Descriptions -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 lg:gap-8">
+        <div 
+          *ngFor="let framework of primaryFrameworks; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center"
+          [ngClass]="getColorClasses(framework.colorScheme).border + ' ' + getColorClasses(framework.colorScheme).hover + ' ' + getColorClasses(framework.colorScheme).shadow"
+          [class.animate-hidden-scale]="!framework.isVisible"
+          [class.animate-fade-in-scale]="framework.isVisible"
+          [attr.data-animate]="'primary-framework'"
+          [attr.data-index]="i"
+        >
+          
+          <!-- SVG Logo -->
+          <div class="mb-4">
+            <img 
+              [src]="framework.svgPath" 
+              [alt]="framework.name + ' logo'"
+              class="logo-svg group-hover:scale-110 transition-transform duration-300"
+            >
+          </div>
+
+          <!-- Name -->
+          <h3 class="text-xl font-bold text-slate-900 mb-3">
+            {{ framework.name }}
+          </h3>
+
+          <!-- Truncated Description -->
+          <p class="text-slate-600 text-sm leading-relaxed mb-6" [title]="framework.description">
+            {{ framework.description | truncate:120:true:'...' }}
+          </p>
+
+          <!-- PrimeNG Text Button -->
+          <p-button 
+            label="View Details" 
+            [text]="true"
+            icon="pi pi-external-link"
+            iconPos="right"
+            (click)="showFrameworkDetails(framework)"
+            [ngClass]="getColorClasses(framework.colorScheme).text"
+            styleClass="w-full"
+          ></p-button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Secondary Frameworks Section -->
+    <div class="mb-20">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl sm:text-4xl font-bold text-slate-900 mb-4">
+          Additional Frameworks
+        </h2>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-purple-500 to-pink-500 rounded-full mx-auto"></div>
+      </div>
+
+      <!-- Secondary Frameworks Grid with Truncated Descriptions -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div 
+          *ngFor="let framework of secondaryFrameworks; let i = index"
+          class="group bg-white border-2 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-500 hover:-translate-y-2 text-center"
+          [ngClass]="getColorClasses(framework.colorScheme).border + ' ' + getColorClasses(framework.colorScheme).hover + ' ' + getColorClasses(framework.colorScheme).shadow"
+          [class.animate-hidden-scale]="!framework.isVisible"
+          [class.animate-fade-in-scale]="framework.isVisible"
+          [attr.data-animate]="'secondary-framework'"
+          [attr.data-index]="i"
+        >
+          
+          <!-- SVG Logo -->
+          <div class="mb-4">
+            <img 
+              [src]="framework.svgPath" 
+              [alt]="framework.name + ' logo'"
+              class="logo-svg-small group-hover:scale-110 transition-transform duration-300"
+            >
+          </div>
+
+          <!-- Name -->
+          <h3 class="text-lg font-bold text-slate-900 mb-3">
+            {{ framework.name }}
+          </h3>
+
+          <!-- Truncated Description -->
+          <p class="text-slate-600 text-sm leading-relaxed mb-4" [title]="framework.description">
+            {{ framework.description | truncate:100:true:'...' }}
+          </p>
+
+          <!-- PrimeNG Text Button -->
+          <p-button 
+            label="View Details" 
+            [text]="true"
+            icon="pi pi-external-link"
+            iconPos="right"
+            (click)="showFrameworkDetails(framework)"
+            [ngClass]="getColorClasses(framework.colorScheme).text"
+            styleClass="w-full"
+          ></p-button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PrimeNG Dialog (same as before) -->
+  <p-dialog 
+    [(visible)]="displayDialog" 
+    [modal]="true"
+    responsive="true" 
+    [style]="{'width': '90vw', 'max-width': '600px'}"
+    styleClass="framework-dialog"
+  >
+    <!-- Dialog Header -->
+    <ng-template pTemplate="header">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
+          <i class="pi pi-cog text-white text-lg"></i>
+        </div>
+        <div>
+          <h3 class="text-xl font-bold text-slate-900">Framework Details</h3>
+          <p class="text-sm text-slate-600">Complete information</p>
+        </div>
+      </div>
+    </ng-template>
+
+    <!-- Dialog Content with Full Description -->
+    <div *ngIf="selectedFramework" class="space-y-6">
+      <!-- Framework SVG in Dialog -->
+      <div class="text-center bg-gradient-to-br from-slate-50 to-slate-100 rounded-xl p-8">
+        <img 
+          [src]="selectedFramework.svgPath" 
+          [alt]="selectedFramework.name + ' logo'"
+          class="logo-svg-dialog mx-auto mb-4"
+        >
+        <h2 class="text-2xl font-bold text-slate-900 mb-2">{{ selectedFramework.name }}</h2>
+        <div 
+          *ngIf="selectedFramework.badge"
+          class="inline-block px-4 py-2 bg-blue-600 text-white text-sm font-semibold rounded-full"
+        >
+          {{ selectedFramework.badge }}
+        </div>
+      </div>
+
+      <!-- Full Description (not truncated) -->
+      <div class="bg-slate-50 rounded-xl p-6">
+        <h4 class="text-lg font-bold text-slate-900 mb-3">Description</h4>
+        <p class="text-slate-700 leading-relaxed">
+          {{ selectedFramework.description }}
+        </p>
+      </div>
+
+      <!-- Features -->
+      <div class="bg-white border border-slate-200 rounded-xl p-6">
+        <h4 class="text-lg font-bold text-slate-900 mb-4">Key Features</h4>
+        <div class="space-y-3" *ngFor="let feature of selectedFramework.features">
+          <div class="bg-slate-50 rounded-lg p-4">
+            <h5 class="font-semibold text-slate-900 mb-2">{{ feature.title }}</h5>
+            <p class="text-slate-600 text-sm">{{ feature.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dialog Footer -->
+    <ng-template pTemplate="footer">
+      <p-button 
+        label="Close" 
+        icon="pi pi-times"
+        [text]="true"
+        (click)="hideDialog()"
+      ></p-button>
+    </ng-template>
+  </p-dialog>
+
+</section>

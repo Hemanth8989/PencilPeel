@@ -1,0 +1,69 @@
+<!-- <div class="max-w-7xl mx-auto mb-20">
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+        {{title}}
+      </h2>
+      <div class="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+      <p class="my-10 text-lg text-gray-700 max-w-2xl mx-auto text-center">
+        {{description}}
+      </p>
+    </div>
+    <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3" *ngIf="productcards">
+      <div *ngFor="let service of productcards; let i = index">
+        <p-card class="h-full industry-card">
+        <div class="p-6">
+            <div class="flex items-center mb-4">
+            <i [class]="service.icon + ' text-2xl mr-3'" [ngClass]="service.iconColor"></i>
+            <h3 class="text-xl font-semibold text-gray-900">{{ service.displayName }}</h3>
+            </div>
+            
+            <div class="space-y-4">
+            <div 
+                *ngFor="let item of service.items" 
+                class="border-l-4 pl-4"
+                [ngClass]="service.borderColor">
+                <h4 class="font-medium text-gray-800 mb-2">{{ item.title }}</h4>
+                <p class="text-gray-600 text-sm">{{ item.description }}</p>
+            </div>
+            </div>
+        </div>
+        </p-card>
+      </div>
+    </div>
+  </div> -->
+
+  <div class="mb-20 bg-gray-50">
+  <div class="text-center mb-12">
+    <h2
+      class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine"
+    >
+      {{ title }}
+    </h2>
+    <div class="w-24 h-1 bg-yellow-500 mx-auto rounded-full"></div>
+    <p class="my-10 text-lg text-gray-700 max-w-2xl mx-auto text-center" [innerHTML]="description"></p>
+  </div>
+  <div class="max-w-7xl mx-auto ">
+    <div class=" grid gap-8 md:grid-cols-2 lg:grid-cols-3" *ngIf="productcards">
+    <div *ngFor="let service of productcards; let i = index" class="bg-white rounded-xl shadow-2xl h-full flex flex-col border-3 border-gray-200">
+      <div class="p-6 flex items-center" [ngClass]="service.borderColor">
+        <i [class]="service.icon + ' text-3xl mr-3'" [ngClass]="service.iconColor"></i>
+        <h3 class="text-lg font-semibold text-gray-900">
+          {{ service.displayName }}
+        </h3>
+      </div>
+
+      <div class="p-6 flex-1 space-y-4">
+        <div
+          *ngFor="let item of service.items"
+          class="border-l-4 pl-4"
+          [ngClass]="service.borderColor"
+        >
+          <h4 class="font-medium text-gray-800 mb-2">{{ item.title }}</h4>
+          <p class="text-gray-600 text-sm">{{ item.description }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  
+</div>

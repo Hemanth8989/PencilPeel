@@ -1,0 +1,30 @@
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-4">
+
+    <p-carousel [value]="testimonials" [numVisible]="1" [numScroll]="1" [circular]="true" [autoplayInterval]="2500"
+      styleClass="modern-carousel">
+
+      <ng-template let-testimonial pTemplate="item">
+        <div class="px-8">
+          <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 max-w-4xl mx-auto">
+            <div class="flex items-start space-x-6">
+              <!-- Quote Icon -->
+              <div class="flex-shrink-0">
+                <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                  <i class="fas fa-quote-left text-orange-600 text-xl"></i>
+                </div>
+              </div>
+
+              <!-- Content -->
+              <div class="flex-1">
+                <p class="text-xl text-gray-700 leading-relaxed mb-6 italic">
+                  "{{testimonial.text}}"
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </p-carousel>
+  </div>
+</section>

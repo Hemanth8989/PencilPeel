@@ -1,0 +1,81 @@
+<div class="backgroundmid p-8">
+    <div class="flex items-center justify-center mb-8">
+    <h2 class="text-2xl md:text-4xl font-bold bg-gradient-to-r from-orange-600 to-yellow-500 bg-clip-text text-transparent">
+        {{title}}
+    </h2>
+</div>
+<p class="md:text-xl sm:text-sm text-gray-900 text-center mx-auto">
+        {{description}}
+</p>
+
+<!--card content-->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 md:p-8 mx-auto">
+  <ng-container *ngFor="let service of subServices;let i = index">
+        <div class="p-2">
+        <p-card class="shadow-md hover:shadow-lg transition-shadow duration-300 rounded-lg border-2 border-gray-200 bg-white h-full">
+            <div class="flex flex-col justify-between h-40">
+                <div class="text-center">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">{{ service.title }}</h3>
+                    <p class="text-sm text-gray-600">{{ service.description }}</p>
+                </div>
+                <div class="pt-4 mt-auto text-center">
+                    <p-button label="Know More" class="w-full" variant="text" (click)="openDialog(service)"></p-button>
+                </div>
+            </div>
+        </p-card>
+    </div>
+  </ng-container>
+</div>
+</div>
+
+<!-- Dialog to show full content -->
+<p-dialog  [(visible)]="displayDialog"
+  [modal]="true"
+  [style]="{ width: '768px', 'max-height': '70vh' }"
+  [contentStyle]="{ 'overflow-y': 'auto', 'max-height': 'calc(70vh - 4rem)' }"
+  [closable]="false"
+  [dismissableMask]="true"
+>
+  <!-- Custom Header -->
+  <ng-template pTemplate="header">
+    <div class="flex justify-between items-center w-full">
+        <h2 class="text-2xl font-semibold bg-gradient-to-r from-red-500 via-yellow-500 to-orange-500 bg-clip-text text-transparent">
+            {{ selService?.title }}
+        </h2>
+      <button
+        pButton
+        icon="pi pi-times"
+        class="p-button-text p-button"
+        (click)="displayDialog = false"
+        aria-label="Close"
+      ></button>
+    </div>
+  </ng-template>
+  <!-- Dialog Body -->
+  <div
+    [innerHTML]="selService?.fullDescription"
+    class="text-gray-700 leading-relaxed"
+  ></div>
+</p-dialog>
+
+
+
+
+
+<!-- <div class="group relative overflow-hidden rounded-2xl backdrop-blur-lg bg-white/10 border border-white/20 transform transition-all duration-700 hover:scale-105 hover:bg-white/20" [style.transitionDelay]="i * 150 + 'ms'">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent z-10"></div>
+        <img [src]="service.image" [alt]="service.title" class="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-700"/>
+        <div class="absolute bottom-0 left-0 right-0 p-6 z-20">
+            <div class="flex items-center justify-center gap-3 mb-3">
+            <h3 class="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors duration-300 text-center">
+                {{ service.title }}
+            </h3>
+            </div>
+            <p class="text-gray-300 text-sm leading-relaxed mb-4">
+            {{ service.description }}
+            </p>
+            <div class="text-center">
+            <button (click)="openDialog(service)" class="inline-block text-yellow-400 hover:text-yellow-300 font-semibold text-sm transition-colors duration-300"> Know More →</button>
+            </div>
+        </div>
+    </div> -->

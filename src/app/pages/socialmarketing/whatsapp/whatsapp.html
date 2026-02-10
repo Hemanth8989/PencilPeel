@@ -1,0 +1,71 @@
+<app-nocarouselherosection [herocontent]="whatsappHeroContent" />
+<section class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+        What is WhatsApp Marketing?
+    </h2>
+    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+      We will help you understand the power of WhatsApp marketing, which involves promoting your business, products, or services on WhatsApp to reach and engage with your target audience.
+    </p>
+  </div>
+</section>
+<app-whyus [whyus]="whyus" />
+<section class="py-20 bg-gray-50 min-h-screen flex items-center">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <!-- Section Heading -->
+    <h2 class="text-4xl sm:text-5xl font-bold mb-10 tracking-tight bg-gradient-to-r bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine text-transparent drop-shadow-lg">
+      How Pencil Peel IMT Will Provide WhatsApp Marketing Services
+    </h2>
+    <p class="max-w-4xl mx-auto text-lg sm:text-xl font-light text-gray-600 mb-20 leading-relaxed">
+      At Pencil Peel IMT, our team of experts delivers comprehensive WhatsApp marketing services tailored to your business goals. Here's how we help you succeed:
+    </p>
+
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+      <div *ngFor="let service of whatsappServices"
+           class="bg-slate-50 rounded-3xl border-2 border-gray-300 shadow-lg ring-1 ring-gray-200 p-8 flex flex-col items-start text-left hover:shadow-xl transition-transform duration-300 transform hover:-translate-y-1">
+        <span class="inline-flex items-center justify-center w-12 h-12 mb-5 rounded-full text-white text-2xl shadow-md"
+              [ngClass]="'bg-gradient-to-tr ' + service.colorFrom + ' ' + service.colorTo">
+          <i class="pi" [ngClass]="service.icon"></i>
+        </span>
+        <h3 class="text-2xl font-semibold mb-3" [ngClass]="service.textColor">{{ service.title }}</h3>
+        <p class="text-gray-700 leading-relaxed flex-grow">{{ service.description }}</p>
+      </div>
+    </div>
+    <p class="max-w-4xl mx-auto my-10 text-lg sm:text-xl font-light text-gray-600 mb-20 leading-relaxed">
+      By partnering with Pencil Peel IMT, you can unlock the full potential of WhatsApp marketing and drive business growth. Contact us to learn more about our WhatsApp marketing services.
+    </p>
+  </div>
+</section>
+<!-- strategies grid -->
+<section class="relative bg-white py-16 md:py-24 lg:py-32">
+  <div class="container mx-auto px-6 flex flex-col md:flex-row items-start gap-12">
+    <div class="flex-1 max-w-lg md:flex md:flex-col md:justify-center md:items-center text-center md:text-left">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+        Major Strategies of WhatsApp Marketing
+      </h2>
+      <p class="text-lg sm:text-xl text-gray-700 font-base">
+        Our team will use the following major strategies to help you succeed in WhatsApp marketing:
+      </p>
+    </div>
+    <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <ng-container *ngFor="let strategy of whatsappMarketingStrategies">
+        <div class="bg-gradient-to-br from-orange-50 via-yellow-50 to-blue-50 rounded-xl shadow-lg p-6 flex flex-col min-h-[184px]">
+          <div class="mb-4">
+            <i class="pi" [ngClass]="[strategy.icon, strategy.iconColor]" style="font-size: 2.25rem;"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-orange-600 mb-2">{{ strategy.title }}</h3>
+          <p class="text-gray-700">{{ strategy.description }}</p>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+  <!-- Decorative shapes -->
+  <div class="absolute top-0 left-0 w-44 h-44 bg-gradient-to-br from-green-200 to-cyan-100 rounded-full blur-2xl -z-10"></div>
+  <div class="absolute bottom-0 right-0 w-64 h-28 bg-gradient-to-tl from-teal-100 to-green-100 rounded-full blur-2xl -z-10"></div>
+</section>
+<app-contactus [title]="contact.title" [description]="contact.description"/>
+<app-whycpencilpeel [headerContent]="whycheader" [features]="whycFeatures"></app-whycpencilpeel>
+
+
+

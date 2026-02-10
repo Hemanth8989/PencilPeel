@@ -1,0 +1,55 @@
+<section class="py-20 bg-gradient-to-tr from-white via-slate-50 to-white min-h-screen relative">
+  <div class="max-w-7xl mx-auto px-4 sm:px-8">
+    
+    <!-- HEADER -->
+    <header class="text-center mb-20">
+      <span class="inline-block uppercase text-sm font-semibold tracking-widest text-purple-500 mb-2">
+        Our Services
+      </span>
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-5 leading-tight">
+        How We Provide
+        <span class="inline-block bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent animate-gradient-x">
+          {{sheader.title}}
+        </span>
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed font-base">
+        At <strong class="text-purple-500 font-semibold">Pencil Peel</strong>, {{sheader.description}}
+      </p>
+    </header>
+
+    <!-- STRATEGY CARDS GRID -->
+    <div class="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      <div *ngFor="let service of strategies" class="relative group rounded-3xl bg-white/75 shadow-lg ring-1 ring-slate-200 overflow-hidden transition hover:-translate-y-1 hover:shadow-2xl">
+        
+        <!-- Card Accent Bar -->
+        <div [class]="service.colorScheme.primary + ' absolute top-0 left-0 h-2 rounded-t-3xl w-full'" aria-hidden="true"></div>
+        
+        <!-- Card Content -->
+        <div class="p-7 pb-6 flex flex-col h-full">
+          <div class="flex items-center mb-5">
+            <div [class]="service.colorScheme.primary + ' flex-shrink-0 w-14 h-14 rounded-2xl flex items-center justify-center shadow-lg transition group-hover:rotate-6 group-hover:scale-105'">
+              <i [class]="service.icon + ' text-white text-2xl'"></i>
+            </div>
+            <div class="ml-5">
+              <h3 class="text-xl font-semibold text-gray-900 leading-snug mb-1">{{ service.title }}</h3>
+            </div>
+          </div>
+          <ul class="space-y-3 mt-2">
+            <li *ngFor="let item of service.items" class="flex items-center">
+              <span [class]="service.colorScheme.primary + ' w-5 h-5 rounded-full flex items-center justify-center mr-2'">
+                <i class="pi pi-check text-white text-sm"></i>
+              </span>
+              <span class="text-gray-700 font-base leading-relaxed">{{ item }}</span>
+            </li>
+          </ul>
+        </div>
+        
+        <!-- Card Hover Glow -->
+        <div class="pointer-events-none absolute inset-0 rounded-3xl border-2 border-transparent group-hover:border-purple-300/30 transition duration-500"></div>
+      </div>
+    </div>
+    <footer class="text-center my-20 text-lg text-gray-600" *ngIf="sheader?.footer">
+      <p class="mx-auto leading-relaxed font-base" [innerHTML]="sheader.footer"></p>
+    </footer>
+  </div>
+</section>

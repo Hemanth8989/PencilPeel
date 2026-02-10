@@ -1,0 +1,268 @@
+<app-nocarouselquotes [herocontent]="serviceSlides" [quotes]="quotes"></app-nocarouselquotes>
+
+<section class="relative px-6 overflow-hidden">
+    <div class="text-center max-w-4xl mx-auto mb-2">
+         <p class="mt-4 mb-4 text-gray-700 text-lg md:text-xl leading-relaxed"> At <span class="text-orange-500">Pencil Peel IMT</span>, we understand the importance of managing public
+            perception and maintaining a positive brand image. Our team of experts specializes in public relations (PR)
+            services, helping businesses like yours navigate the complexities of media relations, crisis communications,
+            and reputation management.</p>
+    </div>
+</section>
+
+<section class="relative py-24 px-6 bg-gradient-to-br from-pink-50 via-white to-yellow-50 overflow-hidden">
+
+    <!-- Section Heading -->
+    <div class="text-center max-w-4xl mx-auto mb-16">
+       
+        <h2
+            class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-pink-600 to-yellow-500">
+            Pencil Peel IMT: Crafting Unforgettable Events and Memories
+        </h2>
+        <p class="mt-4 text-gray-700 text-lg md:text-xl leading-relaxed">
+            At Pencil Peel IMT, we understand that life's precious moments can slip away unnoticed amidst
+            responsibilities and targets. That's why we're dedicated to creating unforgettable events that become
+            cherished memories for a lifetime.
+        </p>
+    </div>
+
+    <!-- 3 Column Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-6xl mx-auto">
+        <div *ngFor="let paragraph of contentParagraphs; let i = index"
+            class="relative group rounded-3xl p-8 shadow-xl transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl bg-gradient-to-br from-white/60 via-pink-50 to-yellow-50 backdrop-blur-md hover:from-pink-50 hover:via-yellow-50 hover:to-pink-50">
+
+            <!-- Icon Badge -->
+            <div
+                class="w-16 h-16 bg-gradient-to-r from-pink-500 to-yellow-400 text-white rounded-full flex items-center justify-center text-3xl mb-6 mx-auto shadow-lg group-hover:scale-110 transform transition-all duration-300">
+                <i class="pi pi-star"></i>
+            </div>
+
+            <!-- Paragraph Content -->
+            <p class="text-gray-700 group-hover:text-pink-700 text-center md:text-lg leading-relaxed">
+                {{ paragraph }}
+            </p>
+
+            <!-- Accent Gradient Stripe -->
+            <div
+                class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-pink-500 via-yellow-500 to-pink-500 rounded-b-3xl">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="relative py-24 px-6 bg-gradient-to-br from-indigo-50 via-white to-pink-50 overflow-hidden">
+
+    <!-- Section Heading -->
+    <div class="text-center max-w-4xl mx-auto mb-16">
+        <h2
+            class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-pink-500">
+            Event Management Services by Pencil Peel IMT
+        </h2>
+        <p class="mt-4 text-gray-700 text-lg md:text-xl leading-relaxed">
+            At Pencil Peel IMT, we specialize in creating unforgettable events that exceed our clients' expectations.
+            Our experienced event managers have a proven track record of delivering successful events that meet your
+            objectives.
+        </p>
+    </div>
+
+    <!-- Event Service Cards (3 Column) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div *ngFor="let service of eventServices"
+            class="relative bg-white/40 backdrop-blur-md rounded-3xl p-8 shadow-xl transform transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl group">
+
+            <!-- Icon Badge -->
+            <div
+                class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-pink-500 text-white rounded-full flex items-center justify-center text-3xl mb-6 mx-auto shadow-lg group-hover:scale-110 transform transition-all duration-300">
+                <i class="{{ service.icon }}"></i>
+            </div>
+
+            <!-- Card Content -->
+            <h3
+                class="text-xl md:text-2xl font-bold mb-3 text-gray-900 group-hover:text-indigo-600 text-center transition-colors duration-300">
+                {{ service.title }}
+            </h3>
+            <p class="text-gray-700 group-hover:text-gray-900 text-center leading-relaxed">
+                {{ service.description }}
+            </p>
+
+            <!-- Accent Stripe -->
+            <div
+                class="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-indigo-500 via-pink-500 to-indigo-500 rounded-b-3xl">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="relative py-24 px-6 overflow-hidden">
+
+    <!-- Floating abstract shapes -->
+    <div
+        class="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-purple-300 to-blue-300 rounded-full filter blur-3xl opacity-40 animate-pulse -z-10">
+    </div>
+    <div
+        class="absolute bottom-20 right-0 w-72 h-72 bg-gradient-to-br from-pink-300 to-red-300 rounded-full filter blur-3xl opacity-30 animate-pulse -z-10">
+    </div>
+    <div
+        class="absolute top-1/2 left-1/2 w-80 h-80 bg-gradient-to-br from-green-200 to-teal-300 rounded-full filter blur-2xl opacity-20 animate-pulse -z-10">
+    </div>
+
+    <!-- Section Heading -->
+    <div class="text-center max-w-4xl mx-auto mb-16 relative z-10">
+        <h2
+            class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-500">
+            Types of Events We Organize at Pencil Peel IMT
+        </h2>
+        <p class="mt-4 text-gray-700 text-lg md:text-xl leading-relaxed">
+            Pencil Peel IMT: Your Partner in Event Management. Our team of experts will work closely with you to plan
+            and execute the perfect event.
+        </p>
+    </div>
+
+    <!-- Dynamic Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto relative z-10">
+        <div *ngFor="let category of eventCategories"
+            class="relative group rounded-3xl p-8 shadow-xl hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-2 {{ category.gradient }} text-white">
+
+            <!-- Category Icon -->
+            <div
+                class="flex items-center justify-center w-16 h-16 bg-white/20 text-white rounded-full mb-6 mx-auto text-3xl shadow-lg group-hover:scale-110 transform transition-all duration-300">
+                <i class="{{ category.icon }}"></i>
+            </div>
+
+            <!-- Category Title -->
+            <h3 class="text-xl font-bold mb-6 text-center">{{ category.title }}</h3>
+
+            <!-- Items with icons -->
+            <div class="space-y-4">
+                <div *ngFor="let item of category.items" class="flex items-start space-x-3">
+                    <div class="flex-shrink-0 mt-1 text-yellow-300 text-xl md:text-2xl">
+                        <i class="pi pi-check-circle"></i>
+                    </div>
+                    <div>
+                        <span class="font-semibold">{{ item.title }}:</span>
+                        <span>{{ item.description }}</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="relative py-24 px-6 overflow-hidden bg-gradient-to-br from-cyan-50 via-white to-blue-50">
+
+    <!-- Floating abstract shapes -->
+    <div
+        class="absolute top-0 left-0 w-64 h-64 bg-gradient-to-br from-purple-300 to-indigo-300 rounded-full filter blur-3xl opacity-30 animate-pulse -z-10">
+    </div>
+    <div
+        class="absolute bottom-20 right-0 w-72 h-72 bg-gradient-to-br from-pink-300 to-red-300 rounded-full filter blur-3xl opacity-30 animate-pulse -z-10">
+    </div>
+    <div
+        class="absolute top-1/3 left-1/2 w-80 h-80 bg-gradient-to-br from-green-200 to-teal-300 rounded-full filter blur-2xl opacity-20 animate-pulse -z-10">
+    </div>
+
+    <!-- Section Heading -->
+    <div class="text-center max-w-4xl mx-auto mb-16 relative z-10">
+        <h2
+            class="text-4xl md:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-cyan-500">
+            Benefits of Working with Pencil Peel IMT
+        </h2>
+        <p class="mt-4 text-gray-700 text-lg md:text-xl leading-relaxed">
+            Discover why clients trust us to make their events unforgettable.
+        </p>
+    </div>
+
+    <!-- Benefits Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto relative z-10">
+
+        <div *ngFor="let benefit of benefits"
+            class="group relative rounded-3xl p-8 shadow-xl hover:shadow-2xl transform transition-all duration-500 hover:-translate-y-2 bg-white/30 backdrop-blur-md">
+
+            <!-- Icon Circle -->
+            <div
+                class="w-16 h-16 flex items-center justify-center rounded-full mb-6 mx-auto text-white text-2xl shadow-lg {{ benefit.gradient }} group-hover:scale-110 group-hover:shadow-xl transform transition-all duration-300">
+                <i class="{{ benefit.icon }}"></i>
+            </div>
+
+            <!-- Title -->
+            <h3
+                class="text-xl font-bold mb-3 text-gray-900 text-center group-hover:text-teal-600 transition-colors duration-300">
+                {{ benefit.title }}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-gray-700 text-center">
+                {{ benefit.description }}
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<section class="relative py-24 px-6 bg-gray-900 overflow-hidden">
+
+    <!-- Floating abstract shapes -->
+    <div
+        class="absolute -top-20 -left-20 w-72 h-72 bg-yellow-400 rounded-full filter blur-3xl opacity-30 animate-pulse -z-10">
+    </div>
+    <div
+        class="absolute -bottom-16 right-0 w-80 h-80 bg-yellow-500 rounded-full filter blur-2xl opacity-20 animate-pulse -z-10">
+    </div>
+    <div
+        class="absolute top-1/3 left-1/2 w-80 h-80 bg-yellow-300 rounded-full filter blur-2xl opacity-15 animate-pulse -z-10">
+    </div>
+
+    <!-- Section Heading -->
+    <div class="text-center max-w-4xl mx-auto mb-16 relative z-10">
+        <h2 class="text-4xl md:text-5xl font-serif font-extrabold text-yellow-400 tracking-tight">
+            Why Choose Pencil Peel IMT?
+        </h2>
+        <p class="mt-4 text-gray-200 text-lg md:text-xl leading-relaxed">
+            By partnering with Pencil Peel IMT for event management services, you can create unforgettable events that
+            exceed your expectations.
+        </p>
+    </div>
+
+    <!-- Reasons Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-6xl mx-auto relative z-10">
+
+        <div *ngFor="let reason of reasons"
+            class="relative group rounded-3xl bg-gray-800 shadow-xl hover:shadow-2xl overflow-visible transform transition-all duration-500 hover:-translate-y-2 pt-16">
+
+            <!-- Diagonal accent -->
+            <div class="absolute top-0 left-0 w-full h-16 bg-gradient-to-r from-yellow-400 to-yellow-600 skew-y-3">
+            </div>
+
+            <!-- Icon Badge -->
+            <div
+                class="absolute -top-8 left-1/2 transform -translate-x-1/2 w-16 h-16 flex items-center justify-center rounded-full bg-yellow-500 text-white text-2xl shadow-lg">
+                <i class="{{ reason.icon }}"></i>
+            </div>
+
+            <!-- Title -->
+            <h3
+                class="text-xl font-bold mt-12 mb-3 text-yellow-400 text-center font-serif group-hover:text-yellow-300 transition-colors duration-300">
+                {{ reason.title }}
+            </h3>
+
+            <!-- Description -->
+            <p class="text-gray-200 text-center px-4">
+                {{ reason.description }}
+            </p>
+
+        </div>
+
+    </div>
+
+    <!-- CTA Button -->
+    <div class="text-center max-w-3xl mx-auto mt-16 relative z-10">
+        <a href="/contact"
+            class="inline-block px-12 py-4 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white font-semibold rounded-full shadow-xl transform transition-all duration-300 hover:scale-105 hover:shadow-2xl">
+            Contact Us
+        </a>
+    </div>
+
+</section>

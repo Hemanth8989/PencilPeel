@@ -1,0 +1,58 @@
+<app-nocarouselherosection [herocontent]="youtubeHeroContent" />
+<section class="bg-white py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-7xl mx-auto text-center">
+    <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+        What is YouTube Marketing?
+    </h2>
+    <p class="mt-4 max-w-3xl mx-auto text-lg text-gray-600">
+      YouTube marketing involves promoting your business, products, or services on YouTube to reach and engage with your target audience. 
+      With over <span class="font-semibold text-red-500">2 billion</span> monthly active users, YouTube provides a vast platform for 
+      businesses to build brand awareness, drive website traffic, generate leads, and increase sales.
+    </p>
+
+    <!-- Video/Illustration
+    <div class="mt-8 flex justify-center">
+      <iframe 
+        class="w-full max-w-2xl aspect-video rounded-lg shadow-lg"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+        title="YouTube Marketing" 
+        frameborder="0" 
+        allowfullscreen>
+      </iframe>
+    </div> -->
+  </div>
+</section>
+<app-whyus [whyus]="whyus" />
+<section class="py-12 bg-mid min-h-screen flex items-center my-20">
+  <div class="max-w-7xl mx-auto px-6 text-center text-white">
+    <!-- Section Heading -->
+    <h2 class="text-5xl font-bold mb-8 tracking-tight drop-shadow-lg">
+      How 
+      <span class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+        Pencil Peel IMT
+      </span> Can Help with YouTube Marketing
+    </h2>
+    <p class="max-w-3xl mx-auto text-lg md:text-xl font-base text-blue-200 mb-16 leading-relaxed">
+      <span class="text-orange-500">At Pencil Peel IMT</span>, our team of experts is dedicated to helping you succeed with YouTube marketing. Here's how we can help:
+    </p>
+    <!-- Services Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div *ngFor="let service of youtubeServices" class="bg-gradient-to-t from-white  to-white rounded-3xl shadow-xl p-8 flex flex-col hover:scale-105 transform transition-transform duration-300 cursor-pointer">
+        <h3 class="text-gray-800 font-semibold drop-shadow-md text-2xl mb-4">
+            {{ service.title }}
+        </h3>
+        <p class="text-gray-600 font-base leading-relaxed flex-grow">
+            {{ service.description }}
+        </p>
+    </div>
+    </div>
+    <div class="max-w-3xl mx-auto text-lg md:text-xl font-base text-blue-200 my-16 leading-relaxed">
+      By partnering with Pencil Peel IMT, you can unlock the full potential of YouTube marketing and drive business growth. Contact us to learn more about our YouTube marketing services.
+    </div>
+  </div>
+</section>
+<app-industrycontent [industries]="industries" [title]="indtitle" [description]="inddescription" [footer]="indfooter"></app-industrycontent>
+<app-smstrategy [sheader]="sheader" [strategies]="strategies"></app-smstrategy>
+<app-contactus [title]="contacttitle" [description]="contactdescription"/>
+<app-whycpencilpeel [headerContent]="headerContent" [features]="youtubeFeatures"></app-whycpencilpeel>
+

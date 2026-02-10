@@ -1,0 +1,138 @@
+<section class="hero-section relative min-h-screen flex items-center overflow-hidden" data-aos="fade-left">
+
+  <!-- Background Image with Parallax & Gradient Overlay -->
+  <div class="absolute inset-0 z-0 overflow-hidden">
+    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2069&q=80" 
+         alt="Modern Business Technology" 
+         class="w-full h-full object-cover parallax-bg">
+    <div class="absolute inset-0 bg-gradient-to-r from-slate-900/85 via-slate-800/75 to-orange-900/70"></div>
+    <div class="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/30 to-slate-900/50"></div>
+
+    <!-- Floating 3D Shapes -->
+    <div class="absolute w-40 h-40 rounded-full bg-orange-500/30 top-10 left-10 animate-float-slow"></div>
+    <div class="absolute w-56 h-56 rounded-full bg-yellow-400/20 bottom-20 right-20 animate-float-slower"></div>
+  </div>
+
+  <!-- Animated Particles -->
+  <div class="particles-overlay absolute inset-0 z-5 pointer-events-none">
+    <div class="particle particle-1"></div>
+    <div class="particle particle-2"></div>
+    <div class="particle particle-3"></div>
+    <div class="particle particle-4"></div>
+    <div class="particle particle-5"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="container mx-auto px-6 relative z-10 py-20">
+    <div class="max-w-6xl mx-auto text-center space-y-16">
+      
+      <!-- Company Name with Glow & Gradient -->
+      <div class="inline-flex items-center px-8 py-4 border-2 border-orange-400/60 rounded-3xl 
+                  bg-orange-500/10 backdrop-blur-sm hover:border-orange-400/80 
+                  transition-all duration-500 hover:scale-105 mx-auto">
+        <div class="w-4 h-4 bg-orange-400 rounded-full mr-4 animate-pulse-glow"></div>
+        <span class="text-2xl md:text-3xl font-black tracking-wide bg-gradient-to-r 
+                     from-orange-300 via-orange-200 to-orange-100 bg-clip-text text-transparent drop-shadow-lg">
+          {{ companyName }}
+          <span class="typing-cursor text-orange-400" *ngIf="companyName.length < fullCompanyName.length">|</span>
+        </span>
+        <div class="w-4 h-4 bg-orange-400 rounded-full ml-4 animate-pulse-glow animation-delay-500"></div>
+      </div>
+
+      <!-- Animated Headings -->
+      <div class="space-y-8">
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight slide-in-left drop-shadow-xl">
+          <span class="bg-gradient-to-r from-white via-orange-100 to-orange-200 bg-clip-text text-transparent">
+            {{ mainHeading1 }}
+          </span>
+          <span class="typing-cursor text-orange-400" *ngIf="mainHeading1.length < fullMainHeading1.length && companyName.length >= fullCompanyName.length">|</span>
+        </h1>
+
+        <!-- Animated Divider -->
+        <div class="flex justify-center">
+          <div class="w-32 h-1 bg-gradient-to-r from-orange-400 to-orange-500 rounded-full transform scale-x-0 animate-scale-x animation-delay-2000"></div>
+        </div>
+
+        <h2 class="text-2xl md:text-3xl lg:text-4xl font-semibold leading-relaxed slide-in-right drop-shadow-lg">
+          <span class="bg-gradient-to-r from-gray-200 via-orange-100 to-white bg-clip-text text-transparent">
+            {{ mainHeading2.substring(0, 25) }}
+          </span>
+          <span class="bg-gradient-to-r from-orange-200 via-orange-300 to-orange-400 
+                     bg-clip-text text-transparent font-bold">
+            {{ mainHeading2.substring(25) }}
+          </span>
+          <span class="typing-cursor text-orange-400" 
+                *ngIf="mainHeading2.length < fullMainHeading2.length && mainHeading1.length >= fullMainHeading1.length">|</span>
+        </h2>
+
+        <!-- Hero CTA Button -->
+        <div class="mt-8 flex justify-center">
+          <a href="/contact" 
+             class="px-10 py-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-all duration-500 hover:scale-105">
+            Get Started
+          </a>
+        </div>
+      </div>
+
+      <!-- Quote Section -->
+      <div class="quote-section animate-fade-in-bottom animation-delay-3000 relative z-20">
+        <div class="max-w-4xl mx-auto">
+          <div class="flex items-start justify-center space-x-4 mb-8">
+            <div class="w-1 h-20 bg-gradient-to-b from-orange-400 to-orange-500 rounded-full flex-shrink-0 mt-2 animate-grow-height"></div>
+            <div class="text-left">
+              <p class="text-xl md:text-2xl lg:text-3xl font-medium italic leading-relaxed drop-shadow-lg">
+                <span class="bg-gradient-to-r from-orange-100 via-white to-orange-200 bg-clip-text text-transparent">
+                  "{{ typedQuote }}
+                </span>
+                <span class="typing-cursor text-orange-400" *ngIf="typedQuote">|</span>
+                <span class="bg-gradient-to-r from-orange-100 via-white to-orange-200 bg-clip-text text-transparent">
+                  "
+                </span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Quote Navigation Dots -->
+          <div class="flex justify-center space-x-3">
+            <div *ngFor="let quote of quotes; let i = index" 
+                 class="quote-dot transition-all duration-500 cursor-pointer"
+                 [class]="i === currentQuoteIndex ? 'active' : ''"
+                 (click)="currentQuoteIndex = i; typeQuote()">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Highlights -->
+      <div class="additional-highlights animate-fade-in-up animation-delay-5000">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+          <div class="text-center space-y-3 transform hover:scale-105 transition-transform duration-500">
+            <div class="text-3xl font-bold bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent drop-shadow-lg">
+              Innovation
+            </div>
+            <p class="text-base bg-gradient-to-r from-gray-300 to-orange-100 bg-clip-text text-transparent">
+              Cutting-edge solutions for modern challenges
+            </p>
+          </div>
+          <div class="text-center space-y-3 transform hover:scale-105 transition-transform duration-500">
+            <div class="text-3xl font-bold bg-gradient-to-r from-orange-400 to-orange-600 bg-clip-text text-transparent drop-shadow-lg">
+              Excellence
+            </div>
+            <p class="text-base bg-gradient-to-r from-gray-300 to-orange-100 bg-clip-text text-transparent">
+              Delivering exceptional results every time
+            </p>
+          </div>
+          <div class="text-center space-y-3 transform hover:scale-105 transition-transform duration-500">
+            <div class="text-3xl font-bold bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text text-transparent drop-shadow-lg">
+              Partnership
+            </div>
+            <p class="text-base bg-gradient-to-r from-gray-300 to-orange-100 bg-clip-text text-transparent">
+              Your trusted ally in digital transformation
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

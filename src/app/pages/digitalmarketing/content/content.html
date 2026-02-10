@@ -1,0 +1,221 @@
+<app-nocarouselherosection [herocontent]="herocontent" />
+<app-faqcards [faqcards]="faqcards" />
+<section class="p-6">
+    <h2 class="text-4xl font-bold text-center mb-6 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+       Types of Content Marketing
+    </h2>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto px-4 py-10">
+    <p-card *ngFor="let card of contentMarketingTypes" class="rounded-xl overflow-hidden transition-shadow duration-300 hover:shadow-2xl">
+        <ng-template pTemplate="header">
+        <div class="relative group">
+            <img
+            [src]="card.image"
+            [alt]="card.title"
+            class="w-full h-80 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
+            <!-- <div class="absolute inset-0 bg-black bg-opacity-10 group-hover:bg-opacity-20 transition-all duration-300"></div> -->
+        </div>
+        </ng-template>
+
+        <div class="p-5 text-left">
+        <h3 class="text-lg font-bold text-gray-800 mb-3">{{ card.title }}</h3>
+        <ul class="list-disc list-inside text-sm text-gray-600 space-y-1">
+            <li *ngFor="let item of card.items">{{ item }}</li>
+        </ul>
+        </div>
+    </p-card>
+    </div>
+</section>
+
+<section class="bg-white py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <!-- Section Header -->
+  <div class="text-center mb-10">
+    <h2 class="text-3xl sm:text-4xl font-bold text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+      Our Content Marketing Services
+    </h2>
+    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+      Partner with Pencil Peel to leverage powerful content marketing strategies that fuel growth, build trust, and position your brand as a leader in your industry.
+    </p>
+  </div>
+
+
+  <!-- Services Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+    <!-- Service Card -->
+    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+      <div class="text-orange-500 text-3xl mb-3">
+        <i class="pi pi-compass"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Content Strategy Development</h3>
+      <p class="text-gray-600">
+        We'll help you develop a customized content strategy aligned with your unique business objectives.
+      </p>
+    </div>
+
+    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+      <div class="text-teal-500 text-3xl mb-3">
+        <i class="pi pi-pencil"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Content Creation</h3>
+      <p class="text-gray-600">
+        Our experts craft engaging, high-quality content that resonates with your audience and drives results.
+      </p>
+    </div>
+
+    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+      <div class="text-indigo-500 text-3xl mb-3">
+        <i class="pi pi-send"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Content Distribution</h3>
+      <p class="text-gray-600">
+        We distribute your content across the right channels to ensure it reaches your ideal audience.
+      </p>
+    </div>
+
+    <div class="bg-gray-50 p-6 rounded-lg shadow-sm hover:shadow-md transition">
+      <div class="text-green-500 text-3xl mb-3">
+        <i class="pi pi-chart-line"></i>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Performance Analysis</h3>
+      <p class="text-gray-600">
+        We track performance and offer insights that help refine and optimize your content strategy.
+      </p>
+    </div>
+  </div>
+</section>
+<app-contactus [title]="contactustitle" [description]="contactusdescription" />
+<section class="bg-white py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-bold text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+      How We Can Help
+    </h2>
+    <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+      At Pencil Peel IMT, we’ll guide you through every step of the content marketing process to ensure your business connects with the right audience.
+    </p>
+  </div>
+
+  <!-- Service Steps -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Step 1 -->
+    <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
+      <div class="text-blue-500 text-3xl mb-4">
+        <i class="pi pi-users"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Identify Your Audience</h3>
+      <p class="text-gray-600">
+        We understand your target audience's needs, interests, and pain points to tailor content that connects.
+      </p>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
+      <div class="text-green-500 text-3xl mb-4">
+        <i class="pi pi-pencil"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Create Valuable Content</h3>
+      <p class="text-gray-600">
+        Our team develops engaging content that resonates with your audience and adds real value.
+      </p>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
+      <div class="text-orange-500 text-3xl mb-4">
+        <i class="pi pi-send"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Distribute Content</h3>
+      <p class="text-gray-600">
+        We share your content across the most effective platforms—social media, email, and your website.
+      </p>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
+      <div class="text-purple-500 text-3xl mb-4">
+        <i class="pi pi-chart-line"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Measure and Optimize</h3>
+      <p class="text-gray-600">
+        We track performance, analyze the data, and refine your strategy for even greater impact.
+      </p>
+    </div>
+
+    <!-- Step 5 -->
+    <div class="bg-gray-50 p-6 rounded-lg shadow hover:shadow-md transition">
+      <div class="text-red-500 text-3xl mb-4">
+        <i class="pi pi-comments"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Engage with Your Audience</h3>
+      <p class="text-gray-600">
+        We actively respond to comments, answer questions, and build relationships with your audience.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="bg-white py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+  <!-- Section Header -->
+  <div class="text-center mb-10">
+    <h2 class="text-3xl sm:text-4xl font-bold text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text animate-gradient-shine">
+      Why Choose Pencil Peel IMT for Your Content Marketing Services?
+    </h2>
+    <p class="mt-4 text-lg text-gray-600 max-w-3xl mx-auto">
+      At Pencil Peel IMT, we understand that content marketing is a crucial aspect of your business's online presence. Here's why you should choose us for your content marketing services:
+    </p>
+  </div>
+
+  <!-- Features Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+    <!-- Feature Card -->
+    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Expertise and Experience</h3>
+      <p class="text-gray-600">
+        Our team of experts has years of experience in creating and executing successful content marketing strategies that drive results across various industries.
+      </p>
+    </div>
+
+    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Customized Approach</h3>
+      <p class="text-gray-600">
+        Every business is unique. We craft personalized content strategies that align with your specific goals and audience needs.
+      </p>
+    </div>
+
+    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">High-Quality Content</h3>
+      <p class="text-gray-600">
+        We produce engaging, valuable, and SEO-optimized content that connects with your audience and drives action.
+      </p>
+    </div>
+
+    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Multi-Channel Distribution</h3>
+      <p class="text-gray-600">
+        We distribute content across multiple platforms—from social media to email—to maximize reach and visibility.
+      </p>
+    </div>
+
+    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Data-Driven Insights</h3>
+      <p class="text-gray-600">
+        We track and analyze performance data to continually refine and optimize your content marketing strategy.
+      </p>
+    </div>
+
+    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Personalized Service</h3>
+      <p class="text-gray-600">
+        Our team takes time to understand your business and deliver tailored support with a personal touch.
+      </p>
+    </div>
+
+    <div class="bg-gray-50 p-6 rounded-lg shadow-md hover:shadow-lg transition sm:col-span-2 lg:col-span-1">
+      <h3 class="text-xl font-semibold text-gray-800 mb-2">Results-Oriented</h3>
+      <p class="text-gray-600">
+        Our goal is simple: to deliver measurable results—whether it's traffic, leads, or sales—that support your growth.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+

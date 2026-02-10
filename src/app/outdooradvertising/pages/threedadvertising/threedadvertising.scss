@@ -1,0 +1,7 @@
+ @keyframes blob {
+    0%, 100% { transform: scale(1) translate(0,0); }
+    33% { transform: scale(1.1) translate(15px,-10px); }
+    66% { transform: scale(0.9) translate(-10px,10px); }
+  }
+  .animate-blob { animation: blob 8s infinite; }
+  .animation-delay-2000 { animation-delay: 2s; }

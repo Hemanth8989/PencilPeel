@@ -1,0 +1,9 @@
+:host ::ng-deep .p-button {
+  font-weight: 600;
+  line-height: 1.6;
+}
+
+:host ::ng-deep .pi {
+  font-weight: 900;       /* Makes them thicker */
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.3); /* Adds some weight illusion */
+}

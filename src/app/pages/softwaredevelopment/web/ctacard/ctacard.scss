@@ -1,0 +1,49 @@
+/* Animation keyframes */
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+  animation-fill-mode: both;
+}
+
+/* Enhanced button hover effects */
+button {
+  &:hover {
+    .hover\:rotate-12 {
+      transform: rotate(12deg);
+    }
+    
+    .hover\:translate-x-1 {
+      transform: translateX(0.25rem);
+    }
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .animate-fade-in-up {
+    animation-delay: 0.1s !important;
+  }
+}
+
+/* Optional: Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-in-up {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  
+  button:hover {
+    transform: none !important;
+  }
+}

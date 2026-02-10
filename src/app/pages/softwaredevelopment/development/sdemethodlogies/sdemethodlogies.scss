@@ -1,0 +1,184 @@
+/* methodologies.component.css */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -1000px 0;
+  }
+  100% {
+    background-position: 1000px 0;
+  }
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.8s ease-out forwards;
+}
+
+.animate-slide-in-up {
+  animation: slideInUp 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-pulse-slow {
+  animation: pulse 6s ease-in-out infinite;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  background-size: 1000px 100%;
+  animation: shimmer 2s infinite;
+}
+
+/* Hidden states */
+.animate-hidden {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.animate-hidden-left {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.animate-hidden-right {
+  opacity: 0;
+  transform: translateX(100px);
+}
+
+.animate-hidden-up {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/* Card enhancements */
+.methodology-card {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.methodology-card:hover {
+  transform: translateY(-10px) scale(1.02);
+}
+
+.methodology-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-image {
+  transition: transform 0.6s ease;
+}
+
+/* Badge pulse */
+.badge-pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Process flow line */
+.process-line {
+  position: relative;
+}
+
+.process-line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  width: 50px;
+  height: 2px;
+  background: linear-gradient(90deg, #f97316, #3b82f6);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.process-line::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: -8px;
+  width: 0;
+  height: 0;
+  border-left: 8px solid #3b82f6;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+@media (max-width: 1024px) {
+  .process-line::before,
+  .process-line::after {
+    display: none;
+  }
+}

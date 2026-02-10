@@ -1,0 +1,223 @@
+<app-nocarouselherosection  [herocontent]="herocontent" />
+<app-faqcards [faqcards]="faqcards"/>
+
+<section class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header Section -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+        Major Industries That Require Brand Management Services
+      </h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+        At Pencil Peel IMT, we understand that brand management is crucial for businesses across various industries. 
+        Our team of experts can help you develop a strong brand presence and achieve your marketing goals.
+      </p>
+    </div>
+
+    <!-- Industries Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div 
+        *ngFor="let industry of industries" 
+        [class]="industry.colSpan">
+        
+        <p-card class="h-full industry-card">
+          <ng-template pTemplate="header">
+            <div class="relative overflow-hidden rounded-t-lg">
+              <img 
+                [src]="industry.image" 
+                [alt]="industry.alt" 
+                class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i [class]="industry.icon + ' text-2xl ' + industry.iconColor + ' mr-3'"></i>
+              <h3 class="text-xl font-semibold text-gray-900">{{ industry.title }}</h3>
+            </div>
+            
+            <div class="space-y-4">
+              <div 
+                *ngFor="let service of industry.services" 
+                [class]="'border-l-4 pl-4 ' + industry.borderColor">
+                <h4 class="font-medium text-gray-800 mb-2">{{ service.title }}</h4>
+                <p class="text-gray-600 text-sm">{{ service.description }}</p>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</section>
+
+<app-whyus [whyus]="whyUs"/>
+<app-contactus [title]="contacttitle" [description]="contactdescription"/>
+<section class="bg-white dark:bg-gray-900 py-12 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl md:text-4xl font-bold text-center mb-10 bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+        Why Choose Pencil Peel IMT for Brand Management Services?
+    </h2>
+    <p class="text-gray-700 dark:text-gray-300 text-lg mb-8">
+      At Pencil Peel IMT, our team of experts has extensive experience in brand management services. Here's why you should choose us for your brand management needs:
+    </p>
+  </div>
+  <!-- Features -->
+  <div class="max-w-3xl mx-auto grid gap-6 sm:grid-cols-2 lg:grid-cols-3 text-center">
+    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+      <h3 class="text-xl font-semibold text-blue-600 dark:text-blue-400 mb-2">Expertise</h3>
+      <p class="text-gray-700 dark:text-gray-300">
+        Our team has extensive experience in brand management services.
+      </p>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+      <h3 class="text-xl font-semibold text-green-600 dark:text-green-400 mb-2">Customized Solutions</h3>
+      <p class="text-gray-700 dark:text-gray-300">
+        We'll develop customized brand management solutions that meet your unique business goals and objectives.
+      </p>
+    </div>
+
+    <div class="bg-gray-100 dark:bg-gray-800 rounded-lg p-6 shadow-md">
+      <h3 class="text-xl font-semibold text-purple-600 dark:text-purple-400 mb-2">Proven Results</h3>
+      <p class="text-gray-700 dark:text-gray-300">
+        Our brand management services have driven real results for our clients.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="py-16 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Why Choose 
+        <span class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+          Pencil Peel
+        </span>
+        ?
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto mb-6"></div>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, our team of experts has extensive experience in brand management services. 
+        Here's why you should choose us for your brand management needs.
+      </p>
+    </div>
+
+    <!-- Benefits Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+      <!-- Expertise Card -->
+      <div class="group">
+        <p-card class="h-full expertise-card transform transition-all duration-300 hover:scale-105">
+          <ng-template pTemplate="header">
+            <div class="relative p-8 bg-gradient-to-br from-blue-500 to-blue-600 text-white rounded-t-lg">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i class="pi pi-star-fill text-3xl text-gray-700"></i>
+                </div>
+              </div>
+              <h3 class="text-2xl font-bold text-center mb-2">Expertise</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          
+          <div class="p-8">
+            <p class="text-gray-600 text-lg leading-relaxed text-center mb-6">
+              Our team has extensive experience in brand management services across diverse industries and markets.
+            </p>
+            
+            <div class="space-y-3">
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-blue-500 mr-3"></i>
+                <span>Years of industry experience</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-blue-500 mr-3"></i>
+                <span>Certified brand strategists</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-blue-500 mr-3"></i>
+                <span>Cross-industry knowledge</span>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+      <!-- Customized Solutions Card -->
+      <div class="group">
+        <p-card class="h-full customized-card transform transition-all duration-300 hover:scale-105">
+          <ng-template pTemplate="header">
+            <div class="relative p-8 bg-gradient-to-br from-indigo-500 to-purple-600 text-white rounded-t-lg">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i class="pi pi-cog text-3xl text-gray-700"></i>
+                </div>
+              </div>
+              <h3 class="text-2xl font-bold text-center mb-2">Customized Solutions</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          
+          <div class="p-8">
+            <p class="text-gray-600 text-lg leading-relaxed text-center mb-6">
+              We develop tailored brand management solutions that align perfectly with your unique business goals and objectives.
+            </p>
+            
+            <div class="space-y-3">
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-indigo-500 mr-3"></i>
+                <span>Personalized strategies</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-indigo-500 mr-3"></i>
+                <span>Goal-oriented approach</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-indigo-500 mr-3"></i>
+                <span>Flexible implementation</span>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+      <!-- Proven Results Card -->
+      <div class="group">
+        <p-card class="h-full results-card transform transition-all duration-300 hover:scale-105">
+          <ng-template pTemplate="header">
+            <div class="relative p-8 bg-gradient-to-br from-emerald-500 to-teal-600 text-white rounded-t-lg">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i class="pi pi-chart-line text-3xl text-gray-700"></i>
+                </div>
+              </div>
+              <h3 class="text-2xl font-bold text-center mb-2">Proven Results</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          
+          <div class="p-8">
+            <p class="text-gray-600 text-lg leading-relaxed text-center mb-6">
+              Our brand management services have consistently driven real, measurable results for our clients.
+            </p>
+            
+            <div class="space-y-3">
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-emerald-500 mr-3"></i>
+                <span>Measurable ROI growth</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-emerald-500 mr-3"></i>
+                <span>Enhanced brand recognition</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-emerald-500 mr-3"></i>
+                <span>Client success stories</span>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+    </div>
+  </div>
+</section>

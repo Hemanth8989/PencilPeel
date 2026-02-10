@@ -1,0 +1,164 @@
+<app-outdoor-hero-section [config]="streetFurnitureHeroConfig" />
+<app-quotes [testimonials]="testimonials"></app-quotes>
+<!-- What is Street Furniture Advertising Section -->
+<section class="py-20 bg-gradient-to-br from-orange-50 to-amber-50 relative overflow-hidden">
+  <!-- Background Image -->
+  <div class="absolute inset-0 opacity-10">
+    <img src="/outdoor/3dbillboard/3dbillboard3.webp" alt="City Background" class="w-full h-full object-cover">
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-5xl font-bold text-gray-900 mb-6">
+        What is <span class="text-orange-600">Street Furniture Advertising?</span>
+      </h2>
+      <p class="text-xl text-gray-700 max-w-4xl mx-auto leading-relaxed">
+        Street furniture advertising refers to the use of public street elements to display advertisements. Our team
+        will help you understand the power of street furniture advertising and how it can benefit your business.
+      </p>
+    </div>
+  </div>
+</section>
+
+<app-benefitsnew [benefits]="benefitsStreetFurniture.benefits" [title]="benefitsStreetFurniture.title"
+  [description]="benefitsStreetFurniture.description"></app-benefitsnew>
+
+<section class="py-12">
+  <!-- Heading -->
+  <div class="text-center mb-12">
+    <h1
+      class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent mb-4">
+      Common Examples of Street Furniture Advertising
+    </h1>
+    <p class="text-gray-600 max-w-2xl mx-auto text-base">
+      Our team will help you utilize various types of street furniture advertising to reach your target audience
+      effectively.
+    </p>
+  </div>
+
+  <!-- Street Furniture Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+    <p-card *ngFor="let ad of streetFurnitureAds"
+      class="group relative overflow-hidden border border-orange-100 rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 hover:border-orange-300">
+      <div class="flex flex-col items-center text-center p-8 relative z-10">
+        <div
+          class="bg-orange-100 text-orange-600 rounded-full p-5 mb-4 shadow-sm group-hover:scale-110 group-hover:bg-orange-500 group-hover:text-white transition-all duration-500">
+          <i [class]="ad.icon + ' text-3xl'"></i>
+        </div>
+        <h3 class="text-lg font-semibold text-gray-800 mb-2">
+          {{ ad.title }}
+        </h3>
+        <p class="text-gray-600 text-sm mb-1">{{ ad.short }}</p>
+        <p class="text-xs text-gray-500">{{ ad.details }}</p>
+      </div>
+
+      <!-- gradient overlay glow -->
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-orange-100/0 via-orange-50/50 to-orange-100/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+      </div>
+    </p-card>
+  </div>
+
+  <!-- Why Choose Section -->
+  <div class="mt-16 max-w-5xl mx-auto text-center">
+    <h2
+      class="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent mb-8">
+      Why Choose These Examples?
+    </h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div *ngFor="let reason of whyChoose"
+        class="p-8 rounded-2xl bg-orange-50 hover:bg-white border border-orange-100 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1">
+        <div class="flex flex-col items-center text-center">
+          <div class="bg-orange-100 text-orange-600 rounded-full p-3 mb-3 shadow-sm">
+            <i [class]="reason.icon + ' text-2xl'"></i>
+          </div>
+          <h3 class="font-semibold text-gray-800 mb-2">
+            {{ reason.title }}
+          </h3>
+          <p class="text-sm text-gray-600">{{ reason.desc }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-white">
+  <!-- Heading -->
+  <div class="text-center mb-12">
+    <h1
+      class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent mb-4">
+      How Pencil Peel IMT Can Help Your Brand to Grow?
+    </h1>
+    <p class="text-gray-600 max-w-2xl mx-auto text-base">
+      Our team will work closely with you to unlock your brand’s full potential
+      through innovative street furniture advertising solutions.
+    </p>
+  </div>
+
+  <!-- Steps / Services Grid -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+    <div *ngFor="let step of brandGrowthSteps"
+      class="group bg-white border border-orange-100 rounded-2xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2">
+      <div
+        class="mx-auto mb-5 w-16 h-16 flex items-center justify-center rounded-full bg-orange-100 text-orange-600 transition-all duration-500 group-hover:bg-orange-500 group-hover:text-white">
+        <i [class]="step.icon + ' text-2xl'"></i>
+      </div>
+
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">
+        {{ step.title }}
+      </h3>
+      <p class="text-sm text-gray-600">{{ step.desc }}</p>
+    </div>
+  </div>
+</section>
+
+<section class="py-16 bg-orange-50/30">
+  <!-- Heading -->
+  <div class="text-center mb-12">
+    <h1
+      class="text-3xl md:text-4xl font-extrabold bg-gradient-to-r from-orange-500 to-orange-700 bg-clip-text text-transparent mb-4"
+    >
+      Why Choose Pencil Peel IMT for Street Furniture Advertising?
+    </h1>
+    <p class="text-gray-600 max-w-2xl mx-auto text-base">
+      Discover why leading brands trust Pencil Peel IMT to elevate their street
+      presence and maximize advertising impact.
+    </p>
+  </div>
+
+  <!-- Reasons Grid -->
+  <div
+    class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12"
+  >
+    <div
+      *ngFor="let reason of choosePencilPeel"
+      class="group bg-white border border-orange-100 rounded-2xl p-8 text-center shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+    >
+      <div
+        class="mx-auto mb-5 w-16 h-16 flex items-center justify-center rounded-full bg-orange-100 text-orange-600 transition-all duration-500 group-hover:bg-orange-500 group-hover:text-white"
+      >
+        <i [class]="reason.icon + ' text-2xl'"></i>
+      </div>
+
+      <h3 class="text-lg font-semibold text-gray-800 mb-2">
+        {{ reason.title }}
+      </h3>
+      <p class="text-sm text-gray-600">{{ reason.desc }}</p>
+    </div>
+  </div>
+
+  <div class="text-center max-w-3xl mx-auto">
+    <p class="text-gray-700 text-base mb-6">
+      By partnering with <span class="font-semibold text-orange-600">Pencil Peel IMT</span>,
+      you can unlock the full potential of street furniture advertising and
+      drive business growth.
+    </p>
+    <a
+      href="/contact"
+      class="inline-block bg-gradient-to-r from-orange-500 to-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
+    >
+      Contact Us Today
+    </a>
+  </div>
+</section>

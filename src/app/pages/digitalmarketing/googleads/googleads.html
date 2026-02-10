@@ -1,0 +1,510 @@
+<app-nocarouselherosection [herocontent]="herocontent"/>
+<app-faqcards [faqcards]="faqCards" />
+<app-subservices [title]="servicetitle" [description]="servicedescription" [subServices]="subservices"></app-subservices>
+<app-whyus [whyus]="whyUs"/>
+<section class="py-16 bg-gradient-to-br from-blue-50 via-white to-red-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Which Kind of Services Need 
+        <span class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+          Google Ads Management?
+        </span>
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-orange-500 to-yellow-500 mx-auto mb-6"></div>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, our team of experts understands that Google Ads management services can benefit 
+        a wide range of businesses and industries. Here are some examples of products, services, and 
+        companies that can benefit from our Google Ads management services.
+      </p>
+    </div>
+
+    <!-- Industries Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <!-- E-commerce Businesses -->
+      <div class="col-span-1 md:col-span-2 lg:col-span-1">
+        <p-card class="h-full google-ads-industry-card">
+          <ng-template pTemplate="header">
+            <div class="relative overflow-hidden rounded-t-lg">
+              <img 
+                src="dm/industries/iecommerce.webp" 
+                alt="E-commerce Businesses" 
+                class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i class="pi pi-shopping-bag text-2xl text-green-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-gray-900">E-commerce Businesses</h3>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="border-l-4 border-green-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Online Retailers</h4>
+                <p class="text-gray-600 text-sm">Create targeted Google Ads campaigns that drive sales and revenue for online retailers.</p>
+              </div>
+              
+              <div class="border-l-4 border-green-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">E-commerce Platforms</h4>
+                <p class="text-gray-600 text-sm">Help platforms reach their target audience and drive conversions through effective management.</p>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+      <!-- Service-Based Businesses -->
+      <div class="col-span-1">
+        <p-card class="h-full google-ads-industry-card">
+          <ng-template pTemplate="header">
+            <div class="relative overflow-hidden rounded-t-lg">
+              <img 
+                src="dm/industries/iservicebb.webp" 
+                alt="Service-Based Businesses" 
+                class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i class="pi pi-users text-2xl text-blue-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-gray-900">Service-Based Businesses</h3>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Law Firms</h4>
+                <p class="text-gray-600 text-sm">Targeted campaigns that drive leads and conversions for law firms.</p>
+              </div>
+              
+              <div class="border-l-4 border-blue-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Medical Practices</h4>
+                <p class="text-gray-600 text-sm">Reach target audience and drive patient engagement effectively.</p>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+      <!-- Technology and Software -->
+      <div class="col-span-1">
+        <p-card class="h-full google-ads-industry-card">
+          <ng-template pTemplate="header">
+            <div class="relative overflow-hidden rounded-t-lg">
+              <img 
+                src="dm/industries/itech.webp" 
+                alt="Technology and Software" 
+                class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+              />
+              <!-- <div class="absolute inset-0 bg-purple-600 bg-opacity-20"></div>
+              <div class="absolute top-4 right-4">
+                <div class="w-12 h-12 bg-white bg-opacity-90 rounded-full flex items-center justify-center">
+                  <i class="pi pi-desktop text-purple-600 text-xl"></i>
+                </div>
+              </div> -->
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i class="pi pi-code text-2xl text-purple-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-gray-900">Technology & Software</h3>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="border-l-4 border-purple-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Software Companies</h4>
+                <p class="text-gray-600 text-sm">Targeted campaigns that drive sales and revenue for software companies.</p>
+              </div>
+              
+              <div class="border-l-4 border-purple-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Tech Start-ups</h4>
+                <p class="text-gray-600 text-sm">Help startups reach target audience and drive conversions.</p>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+
+      <!-- Financial Services -->
+      <div class="col-span-1">
+        <p-card class="h-full google-ads-industry-card">
+          <ng-template pTemplate="header">
+            <div class="relative overflow-hidden rounded-t-lg">
+              <img 
+                src="dm/industries/ifinancial.webp" 
+                alt="Financial Services" 
+                class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i class="pi pi-chart-line text-2xl text-yellow-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-gray-900">Financial Services</h3>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="border-l-4 border-yellow-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Banks & Credit Unions</h4>
+                <p class="text-gray-600 text-sm">Targeted campaigns that drive leads and conversions for financial institutions.</p>
+              </div>
+              
+              <div class="border-l-4 border-yellow-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Investment Firms</h4>
+                <p class="text-gray-600 text-sm">Reach target audience and drive business growth effectively.</p>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+      <!-- Education Sector -->
+      <div class="col-span-1">
+        <p-card class="h-full google-ads-industry-card">
+          <ng-template pTemplate="header">
+            <div class="relative overflow-hidden rounded-t-lg">
+              <img 
+                src="dm/industries/ieducation.webp" 
+                alt="Education Sector" 
+                class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i class="pi pi-graduation-cap text-2xl text-indigo-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-gray-900">Education Sector</h3>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="border-l-4 border-indigo-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Universities & Colleges</h4>
+                <p class="text-gray-600 text-sm">Targeted campaigns that drive applications and enrollments.</p>
+              </div>
+              
+              <div class="border-l-4 border-indigo-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Online Course Providers</h4>
+                <p class="text-gray-600 text-sm">Reach target audience and drive sales through effective management.</p>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+      <!-- Healthcare Sector -->
+      <div class="col-span-1">
+        <p-card class="h-full google-ads-industry-card">
+          <ng-template pTemplate="header">
+            <div class="relative overflow-hidden rounded-t-lg">
+              <img src="dm/industries/ihospital.webp" alt="Healthcare Sector" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"/>
+            </div>
+          </ng-template>
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i class="pi pi-plus text-2xl text-pink-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-gray-900">Healthcare Sector</h3>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="border-l-4 border-pink-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Hospitals & Clinics</h4>
+                <p class="text-gray-600 text-sm">Targeted campaigns that drive patient engagement and conversions.</p>
+              </div>
+              
+              <div class="border-l-4 border-pink-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Medical Device Manufacturers</h4>
+                <p class="text-gray-600 text-sm">Reach target audience and drive sales through effective management.</p>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+      <!-- Automotive Industry -->
+      <div class="col-span-1">
+        <p-card class="h-full google-ads-industry-card">
+          <ng-template pTemplate="header">
+            <div class="relative overflow-hidden rounded-t-lg">
+              <img 
+                src="dm/industries/iauto.webp" 
+                alt="Automotive Industry" 
+                class="w-full h-48 object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          </ng-template>
+          
+          <div class="p-6">
+            <div class="flex items-center mb-4">
+              <i class="pi pi-cog text-2xl text-red-600 mr-3"></i>
+              <h3 class="text-xl font-semibold text-gray-900">Automotive Industry</h3>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="border-l-4 border-red-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Car Dealerships</h4>
+                <p class="text-gray-600 text-sm">Targeted campaigns that drive sales and revenue for car dealerships.</p>
+              </div>
+              
+              <div class="border-l-4 border-red-500 pl-4">
+                <h4 class="font-medium text-gray-800 mb-2">Automotive Manufacturers</h4>
+                <p class="text-gray-600 text-sm">Reach target audience and drive business growth effectively.</p>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+
+    </div>
+
+    <!-- Call-to-Action Section -->
+    <!-- <div class="text-center mt-16">
+      <div class="bg-gradient-to-r from-blue-600 to-red-600 rounded-2xl shadow-xl p-8 max-w-4xl mx-auto text-white">
+        <h3 class="text-3xl font-bold mb-4">
+          Ready to Boost Your Industry with Google Ads?
+        </h3>
+        <p class="text-blue-50 mb-8 text-lg max-w-2xl mx-auto">
+          No matter what industry you're in, our expert team can create targeted Google Ads campaigns 
+          that drive results for your specific business needs.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div class="text-center">
+            <div class="text-3xl font-bold mb-2">500+</div>
+            <div class="text-blue-100">Industries Served</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold mb-2">2M+</div>
+            <div class="text-blue-100">Ad Campaigns Managed</div>
+          </div>
+          <div class="text-center">
+            <div class="text-3xl font-bold mb-2">180%</div>
+            <div class="text-blue-100">Average ROI Increase</div>
+          </div>
+        </div>
+        
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <button 
+            pButton 
+            pRipple 
+            type="button" 
+            label="Start Your Campaign"
+            class="p-button-lg bg-white text-blue-600 border-0 px-8 py-4 text-lg font-semibold transform transition-all duration-200 hover:scale-105 hover:shadow-xl"
+          ></button>
+          <button 
+            pButton 
+            pRipple 
+            type="button" 
+            label="Industry-Specific Consultation"
+            severity="secondary"
+            class="p-button-lg p-button-outlined border-white text-white px-8 py-4 text-lg font-semibold transform transition-all duration-200 hover:scale-105 hover:bg-white hover:text-blue-600"
+          ></button>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</section>
+<app-contactus [title]="contacttitle" [description]="contactdescription"/>
+<section class="py-16 bg-gradient-to-br from-red-50 via-white to-orange-50">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Header Section -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
+        Why Choose 
+        <span class="bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
+          Pencil Peel
+        </span>
+        for Google Ads?
+      </h2>
+      <div class="w-24 h-1 bg-gradient-to-r from-red-500 to-orange-500 mx-auto mb-6"></div>
+      <p class="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
+        At Pencil Peel IMT, our team of experts has extensive experience in Google Ads management services. 
+        Here's why you should choose us for your Google Ads management needs.
+      </p>
+    </div>
+
+    <!-- Benefits Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+      
+      <!-- Expertise Card -->
+      <div class="group">
+        <p-card class="h-full ads-expertise-card transform transition-all duration-300 hover:scale-105">
+          <ng-template pTemplate="header">
+            <div class="relative p-8 bg-gradient-to-br from-red-500 to-red-600 text-white rounded-t-lg">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i class="pi pi-google text-3xl text-gray-700"></i>
+                </div>
+              </div>
+              <h3 class="text-2xl font-bold text-center mb-2">Google Ads Expertise</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          
+          <div class="p-8">
+            <p class="text-gray-600 text-lg leading-relaxed text-center mb-6">
+              Our team has extensive experience in Google Ads management services across all campaign types and industries.
+            </p>
+            
+            <div class="space-y-3">
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-red-500 mr-3"></i>
+                <span>Google Ads certified experts</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-red-500 mr-3"></i>
+                <span>Advanced campaign optimization</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-red-500 mr-3"></i>
+                <span>Multi-platform advertising</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-red-500 mr-3"></i>
+                <span>Latest Google Ads features</span>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+
+      <!-- Customized Solutions Card -->
+      <div class="group">
+        <p-card class="h-full ads-customized-card transform transition-all duration-300 hover:scale-105">
+          <ng-template pTemplate="header">
+            <div class="relative p-8 bg-gradient-to-br from-orange-500 to-yellow-600 text-white rounded-t-lg">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i class="pi pi-sliders-h text-3xl text-gray-700"></i>
+                </div>
+              </div>
+              <h3 class="text-2xl font-bold text-center mb-2">Customized Ad Solutions</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          
+          <div class="p-8">
+            <p class="text-gray-600 text-lg leading-relaxed text-center mb-6">
+              We develop customized Google Ads management solutions that meet your unique business goals and objectives.
+            </p>
+            
+            <div class="space-y-3">
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-orange-500 mr-3"></i>
+                <span>Tailored campaign strategies</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-orange-500 mr-3"></i>
+                <span>Target audience analysis</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-orange-500 mr-3"></i>
+                <span>Budget optimization</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-orange-500 mr-3"></i>
+                <span>Industry-specific approach</span>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+      <!-- Proven Results Card -->
+      <div class="group">
+        <p-card class="h-full ads-results-card transform transition-all duration-300 hover:scale-105">
+          <ng-template pTemplate="header">
+            <div class="relative p-8 bg-gradient-to-br from-green-500 to-emerald-600 text-white rounded-t-lg">
+              <div class="flex items-center justify-center mb-4">
+                <div class="w-16 h-16 bg-white bg-opacity-20 rounded-full flex items-center justify-center backdrop-blur-sm">
+                  <i class="pi pi-chart-bar text-3xl text-gray-700"></i>
+                </div>
+              </div>
+              <h3 class="text-2xl font-bold text-center mb-2">Proven Ad Results</h3>
+              <div class="w-12 h-0.5 bg-white bg-opacity-50 mx-auto"></div>
+            </div>
+          </ng-template>
+          
+          <div class="p-8">
+            <p class="text-gray-600 text-lg leading-relaxed text-center mb-6">
+              Our Google Ads management services have consistently driven real, measurable results for our clients.
+            </p>
+            
+            <div class="space-y-3">
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-green-500 mr-3"></i>
+                <span>Higher click-through rates</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-green-500 mr-3"></i>
+                <span>Reduced cost per acquisition</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-green-500 mr-3"></i>
+                <span>Increased conversion rates</span>
+              </div>
+              <div class="flex items-center text-gray-700">
+                <i class="pi pi-check-circle text-green-500 mr-3"></i>
+                <span>Improved Quality Scores</span>
+              </div>
+            </div>
+
+            <!-- Performance Stats -->
+            <div class="mt-6 pt-6 border-t border-gray-200">
+              <div class="grid grid-cols-2 gap-4 text-center">
+                <div>
+                  <div class="text-2xl font-bold text-green-600">150%</div>
+                  <div class="text-sm text-gray-500">Avg. ROI Increase</div>
+                </div>
+                <div>
+                  <div class="text-2xl font-bold text-green-600">35%</div>
+                  <div class="text-sm text-gray-500">Cost Reduction</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </p-card>
+      </div>
+    </div>
+    <!-- Google Ads Features Section -->
+    <div class="mt-16 bg-white rounded-2xl shadow-lg p-8 border-2 border-gray-200">
+      <h3 class="text-2xl font-bold text-gray-900 text-center mb-8">
+        Complete Google Ads Management Services
+      </h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="text-center p-4">
+          <div class="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <i class="pi pi-search text-red-600 text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-gray-800 mb-2">Search Campaigns</h4>
+          <p class="text-gray-600 text-sm">Target high-intent keywords</p>
+        </div>
+        
+        <div class="text-center p-4">
+          <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <i class="pi pi-images text-orange-600 text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-gray-800 mb-2">Display Campaigns</h4>
+          <p class="text-gray-600 text-sm">Visual brand awareness</p>
+        </div>
+        
+        <div class="text-center p-4">
+          <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <i class="pi pi-shopping-cart text-yellow-600 text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-gray-800 mb-2">Shopping Campaigns</h4>
+          <p class="text-gray-600 text-sm">Showcase your products</p>
+        </div>
+        
+        <div class="text-center p-4">
+          <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3">
+            <i class="pi pi-video text-green-600 text-xl"></i>
+          </div>
+          <h4 class="font-semibold text-gray-800 mb-2">Video Campaigns</h4>
+          <p class="text-gray-600 text-sm">YouTube advertising</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

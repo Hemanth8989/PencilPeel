@@ -1,0 +1,56 @@
+/* Gradient animation for heading */
+@keyframes gradient-text {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient-text {
+  background-size: 200% 200%;
+  animation: gradient-text 6s ease infinite;
+}
+
+/* Typewriter cursor */
+.cursor {
+  display: inline-block;
+  color: #ec4899; /* pink */
+  margin-left: 4px;
+  animation: blink 1s step-end infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+@keyframes fadeSlideIn {
+  0% { opacity: 0; transform: translateX(-20px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.fade-slide-in {
+  animation: fadeSlideIn 0.5s ease forwards;
+}
+
+
+.scroll-card {
+  opacity: 0;
+  transform: translateY(3rem);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.scroll-card.in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+  50% {
+    transform: scale(1.15);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulse-glow 1.5s infinite;
+}

@@ -1,0 +1,18 @@
+<app-nocarouselherosection [herocontent]="herocontent" />
+<section class="py-16 bg-gray-50">
+     <div class="max-w-7xl mx-auto px-4 text-center">
+    <!-- Heading -->
+    <h2 class="text-4xl font-bold mb-4 text-transparent bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-500 bg-clip-text">
+      What is In‑App Advertising?
+    </h2>
+
+    <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-12">
+      In‑App Advertising refers to the placement of ads within mobile apps. These ads appear while users interact with apps, enabling businesses to reach highly engaged audiences in a variety of impactful formats.
+    </p>
+  </div>
+</section>
+<app-industrycontent [industries]="adformats" [title]="inappAdFormats.title" [description]="inappAdFormats.description"></app-industrycontent>
+<app-mul-benfits [benfits]="benefits" [sectionobj]="befitsec"/>
+<app-productcard [productcards]="appCategories" [title]="promo.title" [description]="promo.description"></app-productcard>
+<app-contactus [title]="inAppContact.title" [description]="inAppContact.description"/>
+<app-whycpencilpeel [headerContent]="whycheader" [features]="whyInAppFeatures"></app-whycpencilpeel>
